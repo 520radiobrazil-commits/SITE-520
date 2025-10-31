@@ -7,6 +7,7 @@ import AdPlaceholder from './components/AdPlaceholder';
 import AudioPlayer from './components/AudioPlayer';
 import TrendingTopics from './components/TrendingTopics';
 import ArticleDetail from './components/ArticleDetail';
+import AboutUs from './components/AboutUs';
 import PromotionalAd from './components/PromotionalAd';
 import AnimatedBanner from './components/AnimatedBanner';
 import { MOCK_ARTICLES } from './constants';
@@ -15,6 +16,7 @@ import { Article } from './types';
 function App() {
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [showingAboutPage, setShowingAboutPage] = useState(false);
   const [isRadioPlaying, setIsRadioPlaying] = useState(false);
   const [siteViews, setSiteViews] = useState(0);
 
@@ -35,21 +37,8 @@ function App() {
         setSiteViews(1);
     }
 
-    const audio = radioRef.current;
-    if (audio) {
-      audio.load();
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setIsRadioPlaying(true);
-          })
-          .catch(error => {
-            console.log("Autoplay was prevented by the browser. User interaction is required to start the radio.", error);
-            setIsRadioPlaying(false);
-          });
-      }
-    }
+    // Radio autoplay is not reliable and often blocked by browsers.
+    // It will now start only with user interaction.
   }, []); // Empty dependency array ensures this runs only once on mount
 
   const handleToggleRadio = useCallback(() => {
@@ -60,7 +49,10 @@ function App() {
       audio.pause();
       setIsRadioPlaying(false);
     } else {
-      audio.load(); // Essential for live streams
+      // For live streams, it's good practice to ensure the source is set before playing.
+      if (audio.src !== radioStreamUrl) {
+          audio.src = radioStreamUrl;
+      }
       const playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise
@@ -78,20 +70,37 @@ function App() {
   }, [isRadioPlaying]);
 
 
-  const sortedArticles = [...MOCK_ARTICLES].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const sortedArticles = [...MOCK_ARTICLES].sort((a, b) => {
+    const dateB = new Date(b.date).getTime();
+    const dateA = new Date(a.date).getTime();
+    
+    if (dateB !== dateA) {
+      return dateB - dateA;
+    }
+    // If dates are the same, sort by ID descending (newest first)
+    return b.id - a.id;
+  });
+  
+  // Find the special audio article to be displayed in the sidebar player
+  const audioArticle = sortedArticles.find(a => a.audioUrl);
+
+  // Filter out the audio article from the main list to avoid duplication
+  const mainContentArticles = audioArticle
+    ? sortedArticles.filter(a => a.id !== audioArticle.id)
+    : sortedArticles;
 
   const articlesToDisplay = selectedCategory
-    ? sortedArticles.filter(article => article.category === selectedCategory)
-    : sortedArticles;
+    ? mainContentArticles.filter(article => article.category === selectedCategory)
+    : mainContentArticles;
 
   const featuredArticle = articlesToDisplay[0];
   const otherArticles = articlesToDisplay.slice(1);
-  const audioArticle = MOCK_ARTICLES.find(a => a.audioUrl);
   
   const trendingTopics = [...new Set(MOCK_ARTICLES.map(a => a.category))]
     .map(category => `#${category.replace(/\s+/g, '')}`);
 
   const handleArticleSelect = useCallback((article: Article) => {
+    setShowingAboutPage(false);
     setSelectedArticle(article);
     window.scrollTo(0, 0);
   }, []);
@@ -101,23 +110,81 @@ function App() {
   }, []);
   
   const handleCategorySelect = useCallback((category: string) => {
+    setShowingAboutPage(false);
     setSelectedCategory(category);
     setSelectedArticle(null);
     window.scrollTo(0, 0);
   }, []);
 
   const handleGoHome = useCallback(() => {
+    setShowingAboutPage(false);
     setSelectedCategory(null);
     setSelectedArticle(null);
     window.scrollTo(0, 0);
   }, []);
+  
+  const handleShowAbout = useCallback(() => {
+    setSelectedArticle(null);
+    setSelectedCategory(null);
+    setShowingAboutPage(true);
+    window.scrollTo(0, 0);
+  }, []);
+  
+  let activeNavItem = selectedCategory;
+  if(showingAboutPage) {
+    activeNavItem = 'SOBRE NÓS';
+  } else if (!selectedArticle && !selectedCategory) {
+    activeNavItem = 'HOME';
+  }
+
+  const renderMainContent = () => {
+    if (selectedArticle) {
+      return <ArticleDetail article={selectedArticle} onGoBack={handleGoBack} />;
+    }
+    if (showingAboutPage) {
+      return <AboutUs onGoBack={handleGoHome} />;
+    }
+    return (
+      <>
+        <AnimatedBanner />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-8">
+            {featuredArticle ? (
+              <>
+                <FeaturedArticle article={featuredArticle} onSelect={handleArticleSelect} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {otherArticles.map((article) => (
+                    <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <div className="flex items-center justify-center h-96 bg-gray-800 rounded-lg">
+                <p className="text-gray-400 text-lg">Nenhum artigo encontrado nesta categoria.</p>
+              </div>
+            )}
+          </div>
+
+          {/* Sidebar */}
+          <aside className="lg:col-span-4 space-y-8">
+            <PromotionalAd />
+            {audioArticle && <AudioPlayer article={audioArticle} />}
+            <TrendingTopics topics={trendingTopics} />
+            <AdPlaceholder width="w-full" height="h-60" />
+          </aside>
+        </div>
+      </>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 font-sans text-gray-100">
       <Header 
         onSelectCategory={handleCategorySelect} 
         onGoHome={handleGoHome}
-        selectedCategory={selectedCategory}
+        onShowAbout={handleShowAbout}
+        activeNavItem={activeNavItem}
         isRadioPlaying={isRadioPlaying}
         onToggleRadio={handleToggleRadio}
         siteViews={siteViews}
@@ -127,42 +194,9 @@ function App() {
       <div className="h-px w-full bg-gradient-to-r from-gray-900 via-teal-500/50 to-gray-900"></div>
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {selectedArticle ? (
-          <ArticleDetail article={selectedArticle} onGoBack={handleGoBack} />
-        ) : (
-          <>
-            <AnimatedBanner />
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-              {/* Main Content */}
-              <div className="lg:col-span-8">
-                {featuredArticle ? (
-                  <>
-                    <FeaturedArticle article={featuredArticle} onSelect={handleArticleSelect} />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {otherArticles.map((article) => (
-                        <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} />
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <div className="flex items-center justify-center h-96 bg-gray-800 rounded-lg">
-                    <p className="text-gray-400 text-lg">Nenhum artigo encontrado nesta categoria.</p>
-                  </div>
-                )}
-              </div>
-
-              {/* Sidebar */}
-              <aside className="lg:col-span-4 space-y-8">
-                <PromotionalAd />
-                {audioArticle && <AudioPlayer article={audioArticle} />}
-                <TrendingTopics topics={trendingTopics} />
-                <AdPlaceholder width="w-full" height="h-60" />
-              </aside>
-            </div>
-          </>
-        )}
+        {renderMainContent()}
       </main>
-      <Footer />
+      <Footer onShowAbout={handleShowAbout}/>
       <audio ref={radioRef} preload="none" crossOrigin="anonymous">
         {/* Provide multiple source types for better browser compatibility with live streams */}
         <source src={radioStreamUrl} type="audio/aac" />

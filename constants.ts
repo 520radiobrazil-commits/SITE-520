@@ -12,16 +12,6 @@ export const MOCK_ARTICLES: Article[] = [
     date: 'Oct 31, 2024',
   },
   {
-    id: 2,
-    category: 'LIGA 520',
-    title: 'Lakers Superam Celtics em Clássico com Prorrogação',
-    summary: 'LeBron James marca 40 pontos e lidera os Lakers a uma vitória suada por 128-124 contra seus rivais históricos.',
-    content: 'A rivalidade histórica entre Lakers e Celtics ganhou mais um capítulo clássico esta noite. LeBron James esteve imparável, contribuindo com 40 pontos, 10 rebotes e 9 assistências. O jogo foi para a prorrogação após um quarto período eletrizante. No tempo extra, a experiência dos Lakers prevaleceu, com a equipe fazendo paradas defensivas cruciais e convertendo seus lances livres para selar a vitória.',
-    imageUrl: 'https://picsum.photos/seed/basketball1/800/600',
-    author: 'Equipe RADIO520',
-    date: 'Oct 21, 2024',
-  },
-  {
     id: 3,
     category: 'ACE 520',
     title: 'Auger-Aliassime atropela Vacherot em Paris e se aproxima das ATP Finals',
@@ -33,11 +23,11 @@ export const MOCK_ARTICLES: Article[] = [
   },
   {
     id: 4,
-    category: 'Podcast',
-    title: 'O Estado do Atletismo Moderno',
-    summary: 'A convidada especial, Dra. Eva Rostova, discute o impacto da tecnologia e da análise de dados nos esportes de hoje.',
-    content: 'No episódio desta semana, conversamos com a cientista esportiva Dra. Eva Rostova. Exploramos como as equipes estão utilizando análises de dados avançadas para obter uma vantagem competitiva, desde o recrutamento de jogadores até a estratégia durante os jogos. A Dra. Rostova também esclarece sobre as mais recentes tecnologias vestíveis e como elas estão revolucionando o treinamento de atletas e a prevenção de lesões. Uma audição obrigatória para qualquer fã de esportes sério.',
-    imageUrl: 'https://picsum.photos/seed/podcast1/800/600',
+    category: 'PODCASTS 520',
+    title: 'VIVA MELHOR com LU SKYLARK',
+    summary: 'Neste episódio do Viva Melhor, Lu Skylark fala sobre as famosas barrinhas de cereal — será que elas realmente ajudam no treino? Descubra quando vale a pena incluir na rotina, quais são as melhores opções antes e depois dos exercícios e os cuidados na hora de escolher. Um papo leve, direto e cheio de dicas pra quem busca mais energia e equilíbrio no dia a dia.',
+    content: ' Neste episódio do Viva Melhor, Lu Skylark fala sobre as famosas barrinhas de cereal — será que elas realmente ajudam no treino? Descubra quando vale a pena incluir na rotina, quais são as melhores opções antes e depois dos exercícios e os cuidados na hora de escolher. Um papo leve, direto e cheio de dicas pra quem busca mais energia e equilíbrio no dia a dia.',
+    imageUrl: 'https://substackcdn.com/image/fetch/$s_!F0C7!,w_1040,h_545,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3fd5dbc1-88b0-4c62-9f56-00646e0c7360_1024x1536.jpeg',
     audioUrl: 'https://open.spotify.com/episode/7nKI5Fdpn0XdRwdvhdcAa3?si=bAGsFTWDRrmRYgrLgqKPZw',
     author: 'Esportes Semanal',
     date: 'Oct 20, 2024',
@@ -107,5 +97,60 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     imageUrl: 'https://midias.correiobraziliense.com.br/_midias/jpg/2025/10/30/1000x1000/1_verstappen-60455873.jpg',
     author: 'Equipe RADIO520',
     date: 'Oct 27, 2024',
+  },
+  {
+    id: 10,
+    category: 'CONTEÚDO ESPECIAL',
+    title: 'Mirassol: o clube do interior que virou “fábrica” de talentos',
+    summary: 'O Mirassol se tornou uma referência no futebol brasileiro, não por títulos de expressão nacional, mas por sua capacidade de revelar e exportar talentos. O clube do interior paulista desenvolveu um modelo de gestão e formação de atletas que atrai olhares de gigantes do Brasil e da Europa.',
+    content: `O Mirassol se tornou uma referência silenciosa no futebol brasileiro — não pelos títulos de expressão nacional que (ainda) não tem, mas por algo talvez mais valioso no cenário atual: a capacidade de revelar, maturar e exportar talentos.
+
+O clube do interior de São Paulo, que por décadas foi apenas mais um coadjuvante no cenário estadual, virou uma espécie de “fábrica” de jogadores, desenvolvendo um modelo de gestão e formação de atletas que atrai olhares de gigantes do Brasil e da Europa.
+
+O segredo: estrutura e captação inteligente
+
+Diferente de muitos clubes que dependem de um ou dois “achados” por geração, o Mirassol profissionalizou seu processo. A diretoria investiu em um centro de treinamento moderno, com campos de alta qualidade, hotelaria e departamentos de análise de desempenho e saúde integrados.
+
+Essa estrutura permite não apenas desenvolver os jovens da própria base, mas também atrair talentos de outras regiões — muitos deles dispensados por clubes maiores que não tiveram paciência para esperar a maturação.
+
+É o caso de Luiz Araújo, hoje no Flamengo, que passou pelo Mirassol antes de brilhar no São Paulo e no futebol europeu. Ou de Ricardo Gracino, o “Ricardo Graça”, zagueiro que se destacou no Vasco após ser formado no clube.
+
+Modelo de negócio: parceria e vitrine
+
+O Mirassol entendeu que, para competir financeiramente, precisava ser um clube vendedor. Mas não de qualquer jeito. A estratégia é clara:
+
+1. Captação: Busca por jogadores jovens (sub-17 e sub-20) com potencial técnico, mas que ainda não “explodiram”.
+2. Desenvolvimento: Oferece estrutura de ponta e, o mais importante, minutos em campo no time profissional, seja no Campeonato Paulista ou na Série B do Brasileirão.
+3. Exposição: O bom desempenho nessas competições transforma os atletas em alvos de mercado.
+4. Venda: O clube negocia uma parte dos direitos econômicos, mas quase sempre mantém um percentual para lucrar com vendas futuras — uma visão de longo prazo que garante fluxo de caixa contínuo.
+
+O resultado é um ciclo virtuoso: o dinheiro das vendas é reinvestido na estrutura e na captação de novos talentos, mantendo a “fábrica” em pleno funcionamento.
+
+Mais que um clube, uma plataforma
+
+Para muitos jogadores, o Mirassol se tornou a ponte ideal entre a base e o futebol de elite. É a chance de ganhar experiência, aparecer para o mercado e dar o salto para um time de maior expressão.
+
+Enquanto gigantes do futebol brasileiro sofrem com dívidas e gestões instáveis, o pequeno clube do interior paulista dá uma aula de como transformar organização, paciência e visão de mercado em sucesso — dentro e fora de campo.`,
+    imageUrl: 'https://substackcdn.com/image/fetch/$s_!F0C7!,w_1040,h_545,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3fd5dbc1-88b0-4c62-9f56-00646e0c7360_1024x1536.jpeg',
+    author: 'Equipe RADIO520',
+    date: 'Oct 28, 2024',
+  },
+  {
+    id: 11,
+    category: 'SPORTS BUSINESS 520',
+    title: 'Crise financeira se agrava e Botafogo vive novo impasse com elenco',
+    summary: 'A crise financeira do Botafogo se agrava com o não pagamento de premiações ao elenco, aumentando a tensão interna e a incerteza sobre a gestão da SAF de John Textor em meio a disputas judiciais e falta de receitas.',
+    content: `A crise financeira do Botafogo ganhou novos capítulos nesta quinta-feira (31). A promessa de pagamento das premiações referentes ao Mundial de Clubes venceu sem que os valores fossem quitados, e o elenco segue sem resposta definitiva da SAF sobre quando receberá.
+
+O problema se soma à falta de apoio da Eagle Holding, empresa que trava uma disputa judicial com John Textor, dono da SAF alvinegra. A ausência da parceira, que era um dos pilares financeiros do projeto, tem deixado o caixa do clube sob forte pressão.
+
+Internamente, o clima é de tensão. Jogadores aguardam um posicionamento da diretoria antes do confronto contra o Mirassol, no sábado, e a situação começa a gerar desconforto nos bastidores. Pessoas próximas ao grupo relatam preocupação com o futuro imediato da SAF, já que parte das receitas previstas não se concretizou.
+
+A dívida com o elenco reacende o debate sobre a sustentabilidade do modelo de gestão de Textor. O empresário, que prometeu revolucionar o Botafogo com investimentos de longo prazo, hoje enfrenta desconfiança até mesmo entre aliados.
+
+Enquanto isso, o clube tenta manter o foco esportivo em meio a um cenário administrativo conturbado — um retrato que destoa das expectativas criadas no início da era SAF e reforça a necessidade de ajustes urgentes na condução financeira do projeto.`,
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT614Fq8iO6Q-qT_TNliryv2vMu-IV8CQRNWQ&s',
+    author: 'Equipe RADIO520',
+    date: 'Oct 31, 2024',
   }
 ];

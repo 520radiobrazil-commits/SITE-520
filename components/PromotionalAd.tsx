@@ -8,7 +8,7 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
 
 
 const PromotionalAd: React.FC = () => {
-  const adUrl = 'https://radio520.webradiosite.com/notice/view/420852';
+  const adUrl = 'https://www.mixcloud.com/radio520/radio-520-dance-club-by-brako_dj-ep33/';
 
   return (
     <a
@@ -20,7 +20,7 @@ const PromotionalAd: React.FC = () => {
       <div className="relative">
         <img
           className="w-full h-60 object-cover"
-          src="https://picsum.photos/seed/promo-ad-radio520/600/400"
+          src="https://public-rf-upload.minhawebradio.net/249695/ad/bda4a07d7529383572a0c9cb1649bd0d.png"
           alt="Promotional Advertisement"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
@@ -29,10 +29,10 @@ const PromotionalAd: React.FC = () => {
         </div>
         <div className="absolute bottom-0 left-0 p-4 w-full">
           <h3 className="text-white font-bold text-xl leading-tight mb-2">
-            O esporte que conecta gerações
+            AQUI, SÓ TOCA BATIDÃO
           </h3>
           <div className="inline-flex items-center text-sm font-semibold bg-gray-200/90 text-gray-900 px-4 py-2 rounded-md group-hover:bg-white transition-colors duration-200">
-              CONFIRA
+              OUÇA AQUI
               <ArrowRightIcon className="w-5 h-5 ml-2" />
           </div>
         </div>

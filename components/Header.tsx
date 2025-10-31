@@ -46,21 +46,25 @@ const EyeIcon = () => (
 interface HeaderProps {
   onSelectCategory: (category: string) => void;
   onGoHome: () => void;
-  selectedCategory: string | null;
+  onShowAbout: () => void;
+  activeNavItem: string | null;
   isRadioPlaying: boolean;
   onToggleRadio: () => void;
   siteViews: number;
 }
 
-const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, selectedCategory, isRadioPlaying, onToggleRadio, siteViews }) => {
+const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, onShowAbout, activeNavItem, isRadioPlaying, onToggleRadio, siteViews }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const navItems = ['FUTEBOL SHOW 520', 'SUPERSET 520', 'LIGA 520', 'VOLTA RÁPIDA', 'ACE 520', 'MAIS'];
+  const navItems = ['HOME', 'FUTEBOL SHOW 520', 'SUPERSET 520', 'LIGA 520', 'VOLTA RÁPIDA', 'ACE 520', 'PODCASTS 520', 'SOBRE NÓS'];
 
   const handleNavClick = (item: string) => {
-    if (item === 'MAIS') {
+    if (item === 'HOME') {
       onGoHome();
-    } else {
+    } else if (item === 'SOBRE NÓS') {
+        onShowAbout();
+    }
+    else {
       onSelectCategory(item);
     }
     setIsMenuOpen(false); // Close mobile menu on navigation
@@ -102,11 +106,11 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, selectedCat
                   key={item}
                   onClick={() => handleNavClick(item)}
                   className={`relative px-4 py-2 transition-colors duration-300 text-sm font-medium focus:outline-none ${
-                    selectedCategory === item || (item === 'MAIS' && selectedCategory === null) ? 'text-teal-400' : 'text-gray-300 hover:text-white'
+                    activeNavItem === item ? 'text-teal-400' : 'text-gray-300 hover:text-white'
                   }`}
                 >
                   {item}
-                  { (selectedCategory === item || (item === 'MAIS' && selectedCategory === null)) &&
+                  { activeNavItem === item &&
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-0.5 bg-teal-400 rounded-full"></span>
                   }
                 </button>
@@ -116,7 +120,7 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, selectedCat
             <div className="flex items-center space-x-2 sm:space-x-4 z-50">
                 {/* Site Views Counter */}
                 {siteViews > 0 && (
-                    <div className="hidden sm:flex items-center space-x-1.5 text-sm text-gray-400" title="Total de visitas ao site">
+                    <div className="flex items-center space-x-1.5 text-sm text-gray-400" title="Total de visitas ao site">
                         <EyeIcon />
                         <span className="font-mono font-medium">{siteViews.toLocaleString()}</span>
                     </div>
@@ -124,19 +128,23 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, selectedCat
                {/* Radio Player Button */}
                 <button
                     onClick={onToggleRadio}
-                    className="flex items-center space-x-2 border border-gray-700 hover:border-red-500 text-white px-3 py-2 rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-red-500 group"
+                    className={`flex items-center space-x-2 px-3 py-2 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-teal-500 group ${
+                        isRadioPlaying
+                        ? 'border border-teal-500 bg-teal-500/10 shadow-lg shadow-teal-500/20'
+                        : 'border border-gray-700 hover:border-teal-500 hover:bg-gray-800'
+                    }`}
                     aria-label={isRadioPlaying ? 'Pausar rádio' : 'Ouvir rádio ao vivo'}
                 >
-                    <div className={`relative flex items-center justify-center w-5 h-5 transition-colors ${isRadioPlaying ? 'text-red-500' : 'text-gray-300 group-hover:text-white'}`}>
+                    <div className={`relative flex items-center justify-center w-5 h-5 transition-colors ${isRadioPlaying ? 'text-teal-400' : 'text-gray-300 group-hover:text-white'}`}>
                     {isRadioPlaying ? <PauseIcon /> : <PlayIcon />}
                     </div>
-                    <span className={`text-xs font-bold tracking-wider uppercase transition-colors ${isRadioPlaying ? 'text-red-500' : 'text-gray-300 group-hover:text-white'}`}>
+                    <span className={`text-xs font-bold tracking-wider uppercase transition-colors ${isRadioPlaying ? 'text-teal-400' : 'text-gray-300 group-hover:text-white'}`}>
                     {isRadioPlaying ? 'AO VIVO' : 'RÁDIO'}
                     </span>
                     {isRadioPlaying && (
                         <div className="relative flex items-center justify-center w-2 h-2 ml-1">
-                            <span className="absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75 animate-ping"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+                            <span className="absolute inline-flex h-full w-full rounded-full bg-teal-500 opacity-75 animate-ping"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-600"></span>
                         </div>
                     )}
                 </button>
@@ -172,7 +180,7 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, selectedCat
               key={item}
               onClick={() => handleNavClick(item)}
               className={`w-full py-4 text-2xl font-bold transition-colors duration-200 ${
-                selectedCategory === item || (item === 'MAIS' && selectedCategory === null) ? 'text-teal-400 bg-gray-800' : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                activeNavItem === item ? 'text-teal-400 bg-gray-800' : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
               }`}
             >
               {item}

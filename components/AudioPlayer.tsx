@@ -26,7 +26,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ article }) => {
 
   return (
     <div className="bg-gray-800 rounded-lg p-4">
-      <h3 className="text-white font-bold text-lg mb-2">Podcasts RADIO520</h3>
+      <h3 className="text-white font-bold text-lg mb-2 uppercase">{article.category}</h3>
       <p className="text-gray-300 text-sm mb-4">{article.title}</p>
       {isSpotifyLink && spotifyEmbedUrl ? (
         <iframe
