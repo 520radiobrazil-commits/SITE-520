@@ -96,8 +96,31 @@ function App() {
   const featuredArticle = articlesToDisplay[0];
   const otherArticles = articlesToDisplay.slice(1);
   
-  const trendingTopics = [...new Set(MOCK_ARTICLES.map(a => a.category))]
-    .map(category => `#${category.replace(/\s+/g, '')}`);
+  // Calculate top 3 trending articles based on view counts from localStorage
+  const getTrendingArticles = (): Article[] => {
+    let counts: { [key: number]: number } = {};
+    try {
+        const countsRaw = localStorage.getItem('articleViewCounts');
+        if (countsRaw) {
+            counts = JSON.parse(countsRaw);
+        }
+    } catch (error) {
+        console.error("Could not parse articleViewCounts from localStorage.", error);
+        counts = {};
+    }
+
+    // Sort all articles by view count in descending order
+    const sortedByViews = [...MOCK_ARTICLES].sort((a, b) => {
+        const viewsB = counts[b.id] || 0;
+        const viewsA = counts[a.id] || 0;
+        return viewsB - viewsA;
+    });
+
+    // Return the top 3
+    return sortedByViews.slice(0, 3);
+  };
+  
+  const trendingArticles = getTrendingArticles();
 
   const handleArticleSelect = useCallback((article: Article) => {
     setShowingAboutPage(false);
@@ -170,7 +193,7 @@ function App() {
           <aside className="lg:col-span-4 space-y-8">
             <PromotionalAd />
             {audioArticle && <AudioPlayer article={audioArticle} />}
-            <TrendingTopics topics={trendingTopics} />
+            <TrendingTopics trendingArticles={trendingArticles} onSelectArticle={handleArticleSelect} />
             <AdPlaceholder width="w-full" height="h-60" />
           </aside>
         </div>
