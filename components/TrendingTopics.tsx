@@ -8,7 +8,7 @@ interface TrendingTopicsProps {
 const TrendingTopics: React.FC<TrendingTopicsProps> = ({ topics }) => {
   return (
     <div className="bg-gray-800 rounded-lg p-4">
-      <h3 className="text-white font-bold text-lg mb-4">Trending Now</h3>
+      <h3 className="text-white font-bold text-lg mb-4">Em Alta</h3>
       <div className="flex flex-wrap gap-2">
         {topics.map((topic, index) => (
           <a

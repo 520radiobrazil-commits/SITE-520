@@ -55,7 +55,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, selectedCategory, isRadioPlaying, onToggleRadio, siteViews }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const navItems = ['FUTEBOL', 'VÔLEI', 'BASQUETE', 'AUTOMOBILISMO', 'TÊNIS', 'MAIS'];
+  const navItems = ['FUTEBOL SHOW 520', 'SUPERSET 520', 'LIGA 520', 'VOLTA RÁPIDA', 'ACE 520', 'MAIS'];
 
   const handleNavClick = (item: string) => {
     if (item === 'MAIS') {
@@ -146,7 +146,7 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, selectedCat
                 <div className={`relative transition-all duration-300 ${isSearchOpen ? 'w-48' : 'w-6'}`}>
                     <input 
                         type="text" 
-                        placeholder="Search..."
+                        placeholder="Buscar..."
                         className={`w-full h-9 bg-gray-700 text-white rounded-full pl-10 pr-4 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 ${isSearchOpen ? 'opacity-100' : 'opacity-0'}`}
                     />
                     <button onClick={() => setIsSearchOpen(!isSearchOpen)} className="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-gray-400 hover:text-white transition-colors">

@@ -12,28 +12,28 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h2 className="text-white text-lg font-semibold mb-4">RADIO520.COM.BR</h2>
-            <p className="text-sm">Your daily source for the latest sports news, highlights, and in-depth analysis.</p>
+            <p className="text-sm">Sua fonte diária para as últimas notícias esportivas, destaques e análises aprofundadas.</p>
           </div>
           <div>
-            <h3 className="text-white font-semibold mb-4">Sports</h3>
+            <h3 className="text-white font-semibold mb-4">Esportes</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white">Football</a></li>
-              <li><a href="#" className="hover:text-white">Basketball</a></li>
-              <li><a href="#" className="hover:text-white">Soccer</a></li>
-              <li><a href="#" className="hover:text-white">Formula 1</a></li>
+              <li><a href="#" className="hover:text-white">Futebol</a></li>
+              <li><a href="#" className="hover:text-white">Vôlei</a></li>
+              <li><a href="#" className="hover:text-white">Basquete</a></li>
+              <li><a href="#" className="hover:text-white">Automobilismo</a></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <h3 className="text-white font-semibold mb-4">Institucional</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white">About Us</a></li>
-              <li><a href="#" className="hover:text-white">Contact</a></li>
-              <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-white">Sobre Nós</a></li>
+              <li><a href="#" className="hover:text-white">Contato</a></li>
+              <li><a href="#" className="hover:text-white">Política de Privacidade</a></li>
+              <li><a href="#" className="hover:text-white">Termos de Serviço</a></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-white font-semibold mb-4">Follow Us</h3>
+            <h3 className="text-white font-semibold mb-4">Siga-nos</h3>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white"><TwitterIcon /></a>
               <a href="#" className="hover:text-white"><InstagramIcon /></a>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} RADIO520.COM.BR. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} RADIO520.COM.BR. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

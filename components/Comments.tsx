@@ -44,33 +44,33 @@ const Comments: React.FC<CommentsProps> = ({ articleId }) => {
 
   return (
     <section className="bg-gray-800 rounded-lg p-6">
-      <h3 className="text-2xl font-bold text-white mb-6">Comments ({comments.length})</h3>
+      <h3 className="text-2xl font-bold text-white mb-6">Comentários ({comments.length})</h3>
       
       <form onSubmit={handleSubmit} className="mb-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
           <div className="md:col-span-1">
             <label htmlFor="author" className="block text-sm font-medium text-gray-300 mb-1">
-              Name
+              Nome
             </label>
             <input
               type="text"
               id="author"
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
-              placeholder="Your name (optional)"
+              placeholder="Seu nome (opcional)"
               className="w-full bg-gray-700 border border-gray-600 text-white rounded-md px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:outline-none transition"
             />
           </div>
         </div>
         <div>
           <label htmlFor="comment" className="block text-sm font-medium text-gray-300 mb-1">
-            Your Comment
+            Seu Comentário
           </label>
           <textarea
             id="comment"
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder="Join the discussion..."
+            placeholder="Participe da discussão..."
             rows={4}
             required
             className="w-full bg-gray-700 border border-gray-600 text-white rounded-md px-3 py-2 focus:ring-2 focus:ring-teal-500 focus:outline-none transition"
@@ -81,7 +81,7 @@ const Comments: React.FC<CommentsProps> = ({ articleId }) => {
             type="submit"
             className="px-6 py-2 bg-teal-500 text-gray-900 font-semibold rounded-md hover:bg-teal-400 transition-colors"
           >
-            Post Comment
+            Publicar Comentário
           </button>
         </div>
       </form>
@@ -100,7 +100,7 @@ const Comments: React.FC<CommentsProps> = ({ articleId }) => {
             </div>
           ))
         ) : (
-          <p className="text-gray-400 text-center py-4">Be the first to comment.</p>
+          <p className="text-gray-400 text-center py-4">Seja o primeiro a comentar.</p>
         )}
       </div>
     </section>

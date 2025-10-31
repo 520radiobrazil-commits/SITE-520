@@ -26,8 +26,8 @@ const AiSummaryModal: React.FC<{
     <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[60] p-4" onClick={onClose}>
       <div className="bg-gray-800 rounded-xl shadow-2xl w-full max-w-2xl transform transition-all" onClick={(e) => e.stopPropagation()}>
         <div className="p-6 border-b border-gray-700">
-          <h3 className="text-xl font-bold text-white">AI-Powered Summary</h3>
-          <p className="text-sm text-gray-400 mt-1">For: "{articleTitle}"</p>
+          <h3 className="text-xl font-bold text-white">Resumo com IA</h3>
+          <p className="text-sm text-gray-400 mt-1">Para: "{articleTitle}"</p>
         </div>
         <div className="p-6 min-h-[200px] flex items-center justify-center">
           {isLoading ? (
@@ -36,7 +36,7 @@ const AiSummaryModal: React.FC<{
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                <p>Generating summary...</p>
+                <p>Gerando resumo...</p>
             </div>
           ) : (
             <div className="text-gray-200 whitespace-pre-wrap space-y-2">
@@ -49,7 +49,7 @@ const AiSummaryModal: React.FC<{
             onClick={onClose}
             className="px-4 py-2 bg-teal-500 text-gray-900 font-semibold rounded-md hover:bg-teal-400 transition-colors"
           >
-            Close
+            Fechar
           </button>
         </div>
       </div>
@@ -172,7 +172,7 @@ function App() {
       const summary = await getAiSummary(article);
       setModalContent(summary);
     } catch (error) {
-      setModalContent('Failed to generate summary. Please try again.');
+      setModalContent('Falha ao gerar o resumo. Por favor, tente novamente.');
     } finally {
       setIsSummaryLoading(false);
     }

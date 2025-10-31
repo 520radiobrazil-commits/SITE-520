@@ -26,19 +26,29 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
 
   useEffect(() => {
     const incrementViewCount = () => {
+        let counts: { [key: number]: number } = {};
         try {
             const countsRaw = localStorage.getItem('articleViewCounts');
-            const counts = countsRaw ? JSON.parse(countsRaw) : {};
-            const currentCount = counts[article.id] || 0;
-            const newCount = currentCount + 1;
-            counts[article.id] = newCount;
-            localStorage.setItem('articleViewCounts', JSON.stringify(counts));
-            setViewCount(newCount);
+            if (countsRaw) {
+                counts = JSON.parse(countsRaw);
+            }
         } catch (error) {
-            console.error("Failed to update view count:", error);
-            // Set to 1 if there's an error, as it's the first view
-            setViewCount(1);
+            console.error("Could not parse articleViewCounts from localStorage. Resetting.", error);
+            // If parsing fails, the data is corrupt. Start with a fresh object.
+            counts = {};
         }
+
+        const currentCount = counts[article.id] || 0;
+        const newCount = currentCount + 1;
+        counts[article.id] = newCount;
+
+        try {
+            localStorage.setItem('articleViewCounts', JSON.stringify(counts));
+        } catch (error) {
+            console.error("Failed to save updated view counts to localStorage:", error);
+        }
+        
+        setViewCount(newCount);
     };
 
     incrementViewCount();
@@ -56,7 +66,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
             <p className="text-teal-400 text-sm font-semibold uppercase tracking-wider mb-2">{article.category}</p>
             <h1 className="text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">{article.title}</h1>
             <div className="flex flex-wrap items-center gap-x-3 text-sm text-gray-400">
-                <span>By {article.author}</span>
+                <span>Por {article.author}</span>
                 <span className="text-gray-600">&middot;</span>
                 <span>{article.date}</span>
                 {viewCount > 0 && (

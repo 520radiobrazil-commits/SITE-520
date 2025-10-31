@@ -22,7 +22,7 @@ interface ShareButtonsProps {
 }
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ article }) => {
-  const [copyStatus, setCopyStatus] = useState('Copy Link');
+  const [copyStatus, setCopyStatus] = useState('Copiar Link');
   
   const url = typeof window !== 'undefined' ? window.location.href : '';
   const encodedUrl = encodeURIComponent(url);
@@ -38,31 +38,31 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ article }) => {
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(url).then(() => {
-      setCopyStatus('Copied!');
-      setTimeout(() => setCopyStatus('Copy Link'), 2000);
+      setCopyStatus('Copiado!');
+      setTimeout(() => setCopyStatus('Copiar Link'), 2000);
     }).catch(err => {
       console.error('Failed to copy text: ', err);
-      setCopyStatus('Failed to copy');
-       setTimeout(() => setCopyStatus('Copy Link'), 2000);
+      setCopyStatus('Falha ao copiar');
+       setTimeout(() => setCopyStatus('Copiar Link'), 2000);
     });
   };
 
   return (
     <div className="flex items-center flex-wrap gap-3">
-        <span className="text-sm font-semibold text-gray-300 mr-2">Share this article:</span>
-        <a href={shareLinks.twitter} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-sky-500 hover:text-white transition-colors duration-200" aria-label="Share on Twitter">
+        <span className="text-sm font-semibold text-gray-300 mr-2">Compartilhe este artigo:</span>
+        <a href={shareLinks.twitter} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-sky-500 hover:text-white transition-colors duration-200" aria-label="Compartilhar no Twitter">
             <TwitterIcon />
         </a>
-        <a href={shareLinks.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-blue-600 hover:text-white transition-colors duration-200" aria-label="Share on Facebook">
+        <a href={shareLinks.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-blue-600 hover:text-white transition-colors duration-200" aria-label="Compartilhar no Facebook">
             <FacebookIcon />
         </a>
-        <a href={shareLinks.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-blue-700 hover:text-white transition-colors duration-200" aria-label="Share on LinkedIn">
+        <a href={shareLinks.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-blue-700 hover:text-white transition-colors duration-200" aria-label="Compartilhar no LinkedIn">
             <LinkedInIcon />
         </a>
-        <a href={shareLinks.email} className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-gray-500 hover:text-white transition-colors duration-200" aria-label="Share via Email">
+        <a href={shareLinks.email} className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-gray-500 hover:text-white transition-colors duration-200" aria-label="Compartilhar por E-mail">
             <MailIcon />
         </a>
-        <button onClick={handleCopyLink} className="flex items-center text-sm font-semibold bg-gray-700 text-gray-300 px-4 py-2 rounded-full hover:bg-teal-500 hover:text-gray-900 transition-colors duration-200" aria-label="Copy article link">
+        <button onClick={handleCopyLink} className="flex items-center text-sm font-semibold bg-gray-700 text-gray-300 px-4 py-2 rounded-full hover:bg-teal-500 hover:text-gray-900 transition-colors duration-200" aria-label="Copiar link do artigo">
             <LinkIcon />
             <span className="ml-2">{copyStatus}</span>
         </button>
