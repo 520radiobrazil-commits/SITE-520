@@ -54,6 +54,58 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
     incrementViewCount();
   }, [article.id]);
 
+  // Effect to update meta tags for social sharing
+  useEffect(() => {
+    const defaultTitle = "RADIO520.COM.BR - Esportes e Notícias";
+    const defaultDescription = "RADIO520.COM.BR é sua fonte de notícias esportivas, com artigos, vídeos, podcasts e muito mais.";
+    const defaultImage = "https://public-rf-upload.minhawebradio.net/249695/ad/1ccbd4ef8fcc652a7e0c5c0e6215d5ae.jpeg";
+    
+    const updateMetaTag = (attrName: string, attrValue: string, content: string) => {
+        let element = document.querySelector(`meta[${attrName}='${attrValue}']`);
+        if (!element) {
+            element = document.createElement('meta');
+            element.setAttribute(attrName, attrValue);
+            document.head.appendChild(element);
+        }
+        element.setAttribute('content', content);
+    };
+
+    const setArticleTags = () => {
+        document.title = `${article.title} | RADIO520.COM.BR`;
+        // Open Graph
+        updateMetaTag('property', 'og:title', article.title);
+        updateMetaTag('property', 'og:description', article.summary);
+        updateMetaTag('property', 'og:image', article.imageUrl);
+        updateMetaTag('property', 'og:type', 'article');
+        // Twitter
+        updateMetaTag('name', 'twitter:card', 'summary_large_image');
+        updateMetaTag('name', 'twitter:title', article.title);
+        updateMetaTag('name', 'twitter:description', article.summary);
+        updateMetaTag('name', 'twitter:image', article.imageUrl);
+    };
+
+    const setDefaultTags = () => {
+        document.title = defaultTitle;
+        // Open Graph
+        updateMetaTag('property', 'og:title', defaultTitle);
+        updateMetaTag('property', 'og:description', defaultDescription);
+        updateMetaTag('property', 'og:image', defaultImage);
+        updateMetaTag('property', 'og:type', 'website');
+        // Twitter
+        updateMetaTag('name', 'twitter:card', 'summary_large_image');
+        updateMetaTag('name', 'twitter:title', defaultTitle);
+        updateMetaTag('name', 'twitter:description', defaultDescription);
+        updateMetaTag('name', 'twitter:image', defaultImage);
+    };
+
+    setArticleTags();
+
+    // Cleanup function to reset tags when component unmounts
+    return () => {
+        setDefaultTags();
+    };
+}, [article]);
+
   return (
     <div className="max-w-4xl mx-auto animate-fade-in">
       <button onClick={onGoBack} className="mb-8 inline-flex items-center space-x-2 text-teal-400 hover:text-teal-300 font-semibold transition-colors rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">

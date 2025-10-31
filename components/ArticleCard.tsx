@@ -3,7 +3,6 @@ import { Article } from '../types';
 
 interface ArticleCardProps {
   article: Article;
-  onSummarize: (article: Article) => void;
   onSelect: (article: Article) => void;
 }
 
@@ -13,13 +12,7 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
     </svg>
 );
 
-
-const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSummarize, onSelect }) => {
-    const handleSummarizeClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    onSummarize(article);
-  };
-  
+const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect }) => {
   return (
     <div 
         onClick={() => onSelect(article)}
@@ -36,7 +29,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSummarize, onSelec
         <p className="text-gray-400 text-sm mb-4">{article.summary}</p>
         <div className="mt-auto">
             <button
-                onClick={handleSummarizeClick}
+                onClick={(e) => { e.stopPropagation(); onSelect(article); }}
                 className="w-full flex items-center justify-center text-sm font-semibold bg-teal-500 hover:bg-teal-400 text-gray-900 px-4 py-2 rounded-md transition-colors duration-200"
             >
                 LEIA MAIS

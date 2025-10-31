@@ -44,12 +44,14 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect }) 
             <div className="text-xs text-gray-400">
                 <span>Por {article.author}</span> &middot; <span>{article.date}</span>
             </div>
-             <div
-                className="inline-flex items-center justify-center text-sm font-semibold bg-teal-500 hover:bg-teal-400 text-gray-900 px-5 py-2.5 rounded-md transition-colors duration-200"
-            >
-                LEIA MAIS
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
-            </div>
+            <div className="flex items-center space-x-2">
+                <div
+                    className="inline-flex items-center justify-center text-sm font-semibold bg-teal-500 hover:bg-teal-400 text-gray-900 px-5 py-2.5 rounded-md transition-colors duration-200"
+                >
+                    LEIA MAIS
+                    <ArrowRightIcon className="w-5 h-5 ml-2" />
+                </div>
+              </div>
         </div>
       </div>
     </div>
