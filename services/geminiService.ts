@@ -40,12 +40,14 @@ Summary:`;
   // Mocked response based on the article ID
   switch (article.id) {
     case 1:
-      return "• Giants defeated the Eagles 24-21.\n• The winning score was a 45-yard field goal as time expired.\n• The victory came after a tense, back-and-forth final quarter.";
+      return "• Jaqueline, bicampeã olímpica, está de volta às quadras.\n• Ela assinou com um novo clube para a próxima temporada da Superliga.\n• Aos 38 anos, sua experiência é vista como um grande trunfo para a equipe.";
     case 2:
-      return "• Lakers won against the Celtics with a score of 128-124 in overtime.\n• LeBron James had a stellar performance with 40 points, 10 rebounds, and 9 assists.\n• The Lakers' experience was key in the final minutes of overtime.";
+      return "• Lakers venceram os Celtics por 128-124 na prorrogação.\n• LeBron James teve uma atuação de destaque com 40 pontos, 10 rebotes e 9 assistências.\n• A experiência dos Lakers foi decisiva nos momentos finais da partida.";
     case 3:
-      return "• Max Verstappen won the US Grand Prix in Austin.\n• He dominated the race from pole position, leading from start to finish.\n• This win significantly extends his lead in the world championship standings.";
+      return "• Felix Auger-Aliassime venceu Valentin Vacherot em Paris.\n• A vitória por duplo 6/2 o colocou nas semifinais do Masters 1000.\n• O resultado mantém o canadense na disputa por uma vaga nas ATP Finals.";
+    case 4:
+      return "• Este podcast discute o impacto da tecnologia nos esportes modernos.\n• Os tópicos principais incluem análise de dados para estratégia e tecnologia vestível para treinamento.\n• As informações são fornecidas pela cientista esportiva Dra. Eva Rostova.";
     default:
-      return "• This article discusses the significant impact of technology on modern sports.\n• Key topics include data analytics for strategy and wearable tech for training.\n• The insights are provided by sports scientist Dr. Eva Rostova.";
+      return "• Um resumo gerado por IA sobre os destaques deste artigo.\n• Principais pontos e conclusões abordados.\n• Análise sobre o impacto do evento ou desempenho.";
   }
 };

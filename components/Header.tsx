@@ -55,7 +55,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, selectedCategory, isRadioPlaying, onToggleRadio, siteViews }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const navItems = ['FUTEBOL SHOW 520', 'MINUTO DO GOLFE', 'LIGA 520', 'VOLTA RÁPIDA', 'ACE 520', 'MAIS'];
+  const navItems = ['FUTEBOL', 'VÔLEI', 'BASQUETE', 'AUTOMOBILISMO', 'TÊNIS', 'MAIS'];
 
   const handleNavClick = (item: string) => {
     if (item === 'MAIS') {
