@@ -25,7 +25,7 @@ const PromotionalAd: React.FC = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
         <div className="absolute top-3 right-3 bg-teal-500 text-gray-900 text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wider">
-          Anúncio
+          MIXCLOUD
         </div>
         <div className="absolute bottom-0 left-0 p-4 w-full">
           <h3 className="text-white font-bold text-xl leading-tight mb-2">
