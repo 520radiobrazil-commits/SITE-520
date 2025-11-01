@@ -16,8 +16,13 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect }) 
   return (
     <div 
       onClick={() => onSelect(article)}
-      className="mb-8 rounded-lg overflow-hidden shadow-2xl bg-gray-800 transition-all duration-300 ease-in-out hover:shadow-teal-500/20 hover:-translate-y-1 cursor-pointer"
+      className="relative mb-8 rounded-lg overflow-hidden shadow-2xl bg-gray-800 transition-all duration-300 ease-in-out hover:shadow-teal-500/20 hover:-translate-y-1 cursor-pointer"
     >
+      {article.isFeatured && (
+        <div className="absolute top-4 right-4 bg-teal-500 text-gray-900 text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-lg shadow-teal-500/50 z-10">
+            Destaque
+        </div>
+      )}
       {article.videoUrl ? (
         <video
           key={article.videoUrl}

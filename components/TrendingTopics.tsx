@@ -2,17 +2,17 @@ import React from 'react';
 import { Article } from '../types';
 
 interface TrendingTopicsProps {
-  trendingArticles: Article[];
+  latestArticles: Article[];
   onSelectArticle: (article: Article) => void;
 }
 
-const TrendingTopics: React.FC<TrendingTopicsProps> = ({ trendingArticles, onSelectArticle }) => {
+const TrendingTopics: React.FC<TrendingTopicsProps> = ({ latestArticles, onSelectArticle }) => {
   return (
     <div className="bg-gray-800 rounded-lg p-4">
-      <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider">Mais Lidas</h3>
-      {trendingArticles.length > 0 ? (
+      <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider">Últimos Destaques</h3>
+      {latestArticles.length > 0 ? (
         <ul className="space-y-2">
-          {trendingArticles.map((article, index) => (
+          {latestArticles.map((article, index) => (
             <li key={article.id}>
               <button
                 onClick={() => onSelectArticle(article)}
@@ -36,7 +36,7 @@ const TrendingTopics: React.FC<TrendingTopicsProps> = ({ trendingArticles, onSel
           ))}
         </ul>
       ) : (
-        <p className="text-gray-500 text-sm">Ainda não há dados de leitura para exibir os artigos mais populares.</p>
+        <p className="text-gray-500 text-sm">Não há destaques no momento.</p>
       )}
     </div>
   );

@@ -18,25 +18,12 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [showingAboutPage, setShowingAboutPage] = useState(false);
   const [isRadioPlaying, setIsRadioPlaying] = useState(false);
-  const [siteViews, setSiteViews] = useState(0);
 
   
   const radioRef = useRef<HTMLAudioElement>(null);
   const radioStreamUrl = 'https://servidor40.brlogic.com:7054/live';
 
   useEffect(() => {
-    // Site-wide view counter
-    try {
-      const currentCount = localStorage.getItem('siteViewCount');
-      let newCount = currentCount ? parseInt(currentCount, 10) + 1 : 1;
-      if (isNaN(newCount)) newCount = 1; // Sanity check
-      localStorage.setItem('siteViewCount', newCount.toString());
-      setSiteViews(newCount);
-    } catch (error) {
-        console.error("Failed to update site view count:", error);
-        setSiteViews(1);
-    }
-
     // Radio autoplay is not reliable and often blocked by browsers.
     // It will now start only with user interaction.
   }, []); // Empty dependency array ensures this runs only once on mount
@@ -85,9 +72,17 @@ function App() {
   const audioArticle = sortedArticles.find(a => a.audioUrl);
 
   // Filter out the audio article from the main list to avoid duplication
-  const mainContentArticles = audioArticle
+  const mainContentArticlesBase = audioArticle
     ? sortedArticles.filter(a => a.id !== audioArticle.id)
     : sortedArticles;
+
+  // Prioritize the explicitly featured article
+  const explicitFeaturedArticle = mainContentArticlesBase.find(a => a.isFeatured);
+  const nonFeaturedArticles = mainContentArticlesBase.filter(a => !a.isFeatured);
+
+  const mainContentArticles = explicitFeaturedArticle 
+      ? [explicitFeaturedArticle, ...nonFeaturedArticles] 
+      : mainContentArticlesBase;
 
   const articlesToDisplay = selectedCategory
     ? mainContentArticles.filter(article => article.category === selectedCategory)
@@ -96,31 +91,8 @@ function App() {
   const featuredArticle = articlesToDisplay[0];
   const otherArticles = articlesToDisplay.slice(1);
   
-  // Calculate top 3 trending articles based on view counts from localStorage
-  const getTrendingArticles = (): Article[] => {
-    let counts: { [key: number]: number } = {};
-    try {
-        const countsRaw = localStorage.getItem('articleViewCounts');
-        if (countsRaw) {
-            counts = JSON.parse(countsRaw);
-        }
-    } catch (error) {
-        console.error("Could not parse articleViewCounts from localStorage.", error);
-        counts = {};
-    }
-
-    // Sort all articles by view count in descending order
-    const sortedByViews = [...MOCK_ARTICLES].sort((a, b) => {
-        const viewsB = counts[b.id] || 0;
-        const viewsA = counts[a.id] || 0;
-        return viewsB - viewsA;
-    });
-
-    // Return the top 3
-    return sortedByViews.slice(0, 3);
-  };
-  
-  const trendingArticles = getTrendingArticles();
+  // Get the 3 latest articles to display in the "Últimos Destaques" section
+  const latestArticles = sortedArticles.slice(0, 3);
 
   const handleArticleSelect = useCallback((article: Article) => {
     setShowingAboutPage(false);
@@ -176,6 +148,18 @@ function App() {
             {featuredArticle ? (
               <>
                 <FeaturedArticle article={featuredArticle} onSelect={handleArticleSelect} />
+                
+                {/* Promotional Banner */}
+                <div className="my-8">
+                  <a href="mailto:520radiobrazil@gmail.com">
+                    <img 
+                      src="https://public-rf-upload.minhawebradio.net/249695/ad/32dc318f7254d01a058188801d808ff5.png" 
+                      alt="Banner de Contato" 
+                      className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                    />
+                  </a>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {otherArticles.map((article) => (
                     <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} />
@@ -193,7 +177,21 @@ function App() {
           <aside className="lg:col-span-4 space-y-8">
             <PromotionalAd />
             {audioArticle && <AudioPlayer article={audioArticle} />}
-            <TrendingTopics trendingArticles={trendingArticles} onSelectArticle={handleArticleSelect} />
+            <TrendingTopics latestArticles={latestArticles} onSelectArticle={handleArticleSelect} />
+            
+            <a 
+              href="https://radiosnet.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="block rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
+            >
+              <img 
+                src="https://img.radios.com.br/divulgue/app-radiosnet-200x200-a.jpg" 
+                alt="Baixe o App RadiosNet" 
+                className="w-full h-auto"
+              />
+            </a>
+
             <AdPlaceholder width="w-full" height="h-60" />
           </aside>
         </div>
@@ -210,7 +208,6 @@ function App() {
         activeNavItem={activeNavItem}
         isRadioPlaying={isRadioPlaying}
         onToggleRadio={handleToggleRadio}
-        siteViews={siteViews}
       />
       
       {/* Modern Divider */}

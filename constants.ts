@@ -2,6 +2,25 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+    id: 13,
+    category: 'LIGA 520',
+    title: 'Blazers vencem os Nuggets no fim e Tiago Splitter emplaca terceira vitória seguida na NBA',
+    summary: 'O Portland Trail Blazers, sob o comando do técnico interino Tiago Splitter, conquistou sua terceira vitória consecutiva na NBA Cup ao vencer o Denver Nuggets em um jogo decidido nos instantes finais.',
+    content: `O Portland Trail Blazers vive um momento de empolgação sob o comando do técnico interino Tiago Splitter. A equipe venceu o Denver Nuggets por placar apertado na noite desta quinta-feira (31), conquistando a terceira vitória consecutiva na temporada da NBA Cup.
+
+O duelo foi decidido nos instantes finais, com os Blazers mostrando frieza para superar o atual campeão da NBA. A defesa funcionou bem, limitando o impacto de Nikola Jokić, que ainda assim encerrou o jogo com números expressivos — mas sem conseguir evitar o revés.
+
+Com o resultado, o time de Splitter mantém a boa fase após triunfos contra Golden State Warriors e Los Angeles Lakers, consolidando uma sequência impressionante diante de três das franquias mais fortes da liga.
+
+Splitter, que assumiu interinamente o comando técnico, vem chamando atenção pela postura enérgica à beira da quadra e pelas soluções táticas em momentos decisivos. O ex-pivô da Seleção Brasileira foi o primeiro brasileiro a assumir a beira técnica de uma equipe da NBA, e o sucesso recente vem fortalecendo sua imagem dentro da liga.
+
+Os Blazers voltam à quadra no fim de semana, quando enfrentam o Phoenix Suns, buscando ampliar a boa fase e seguir surpreendendo na competição.`,
+    imageUrl: 'https://bloximages.chicago2.vip.townnews.com/hjnews.com/content/tncms/assets/v3/editorial/d/37/d379465f-947e-5b3f-87a4-19585a42ea5d/69058896dc41d.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize',
+    author: 'Equipe RADIO520',
+    date: 'Nov 01, 2025',
+    isFeatured: true,
+  },
+    {
     id: 12,
     category: 'FUTEBOL SHOW 520',
     title: 'Dirigente do Paysandu se emociona e chora após rebaixamento à Série C',
@@ -17,7 +36,8 @@ Frontini afirmou ainda que o momento é de reflexão e reconstrução. “Precis
 Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com mensagens de apoio e esperança na volta à Série B já em 2026.`,
     imageUrl: 'https://dol.com.br/img/Artigo-Destaque/920000/WhatsApp-Image-2025-10-31-at-225408_00927351_0_.jpg?xid=3151646',
     author: 'Equipe RADIO520',
-    date: 'Nov 01, 2024',
+    date: 'Oct 31, 2025',
+    isFeatured: false,
   },
   {
     id: 1,
@@ -27,7 +47,7 @@ Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com 
     content: 'Após um período de incertezas sobre seu futuro, a ponteira Jaqueline, um dos maiores nomes do vôlei brasileiro, está de volta. A jogadora, dona de duas medalhas de ouro olímpicas (2008 e 2012), foi anunciada como o grande reforço de seu novo time, prometendo agitar a Superliga Feminina. Aos 38 anos, Jaqueline mostra que ainda tem muita lenha para queimar e sua experiência será fundamental para a equipe na busca por títulos.',
     imageUrl: 'https://p2.trrsf.com/image/fget/cf/500/0/images.terra.com/2025/10/31/1825380679-jaqueline-bicampea-olimpica-surpreende-e-fecha-com-novo-time.jpg',
     author: 'Equipe RADIO520',
-    date: 'Oct 31, 2024',
+    date: 'Oct 31, 2025',
   },
   {
     id: 3,
@@ -37,7 +57,7 @@ Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com 
     content: 'Felix Auger-Aliassime segue firme na reta final da temporada. O canadense, atual número 10 do ranking mundial, mostrou mais uma vez o bom momento e garantiu vaga nas semifinais do Masters 1000 de Paris, ao vencer o monegasco Valentin Vacherot por duplo 6/2, nesta sexta-feira (31).\n\nCom uma atuação dominante, Auger-Aliassime impôs ritmo desde o primeiro game. O saque potente e a agressividade nas devoluções deixaram Vacherot — uma das surpresas do torneio — sem espaço para reagir. O tenista de Mônaco vinha embalado após uma sequência impressionante de vitórias, mas encontrou um adversário em plena confiança.\n\nAos 25 anos, Felix vive um renascimento técnico nesta reta final de 2025. Depois de um primeiro semestre irregular, o canadense encontrou consistência desde o US Open, combinando potência com maior controle nas trocas de fundo. Seu forehand, um dos golpes mais pesados do circuito, tem funcionado como principal arma para abrir a quadra e encurtar os pontos.\n\nA vitória mantém o sonho vivo: Auger-Aliassime está a uma vitória de ultrapassar Lorenzo Musetti e assumir a oitava posição na ATP Race, o que garantiria vaga nas ATP Finals, torneio que reúne os oito melhores do ano.\n\nO próximo desafio será contra o vencedor do duelo entre Alex De Minaur e Alexander Bublik, confronto que promete testar ainda mais o nível de confiança do canadense.\n\nSe mantiver o padrão apresentado nas últimas semanas — principalmente na execução tática e no domínio de ritmo —, Auger-Aliassime chega forte não apenas para brigar por vaga em Turim, mas também para encerrar o ano como uma das grandes histórias de recuperação do circuito.',
     imageUrl: 'https://www.atptour.com/-/media/images/news/2025/03/19/19/14/auger-aliassime-feature-miami-2025.jpg',
     author: 'Equipe RADIO520',
-    date: 'Oct 31, 2024',
+    date: 'Oct 31, 2025',
   },
   {
     id: 4,
@@ -48,7 +68,7 @@ Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com 
     imageUrl: 'https://substackcdn.com/image/fetch/$s_!F0C7!,w_1040,h_545,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3fd5dbc1-88b0-4c62-9f56-00646e0c7360_1024x1536.jpeg',
     audioUrl: 'https://open.spotify.com/episode/7nKI5Fdpn0XdRwdvhdcAa3?si=bAGsFTWDRrmRYgrLgqKPZw',
     author: 'Esportes Semanal',
-    date: 'Oct 20, 2024',
+    date: 'Oct 20, 2025',
   },
   {
     id: 5,
@@ -74,7 +94,7 @@ No campo esportivo, o Monumental oferece condições ideais de gramado e estrutu
 O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida pelo Flamengo em Montevidéu. Quatro anos depois, os papéis se invertem: o time de Abel Ferreira chega com moral após uma campanha sólida e quer consolidar o domínio recente no continente.`,
     imageUrl: 'https://www.gizmodo.com.br/app/uploads/2025/08/estadio-lima.png',
     author: 'Equipe RADIO520',
-    date: 'Oct 31, 2024',
+    date: 'Oct 31, 2025',
   },
   {
     id: 6,
@@ -84,7 +104,7 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     content: 'O Baltimore Ravens conquistou uma vitória maiúscula fora de casa na noite de quinta-feira (30), ao bater o Miami Dolphins por vinte e oito a seis no Hard Rock Stadium, pela semana nove da NFL. O resultado recoloca a franquia de Baltimore na disputa por uma vaga nos playoffs, enquanto aprofunda a crise do time da Flórida.\n\nPrimeiro tempo de imposição e eficiência\n\nLogo no primeiro quarto, os Ravens mostraram a que vieram. O tight end Mark Andrews brilhou com dois touchdowns seguidos, ambos em conexões precisas de Lamar Jackson, que controlou o relógio e o ritmo da partida com maturidade.\nOs Dolphins até reagiram com dois field goals convertidos por Riley Patterson, mas o ataque liderado por Tua Tagovailoa não conseguiu transformar posse em pontos — algo que se tornaria a tônica do jogo.\n\nNo intervalo, o placar marcava quatorze a seis para Baltimore, e a defesa visitante já tinha limitado o jogo terrestre de Miami a menos de cinquenta jardas totais.\n\nLamar Jackson comanda o massacre no segundo tempo\n\nNa volta do intervalo, o domínio dos Ravens aumentou. Lamar Jackson, cada vez mais confortável no pocket, distribuiu passes com precisão e achou Charlie Kolar e Rashod Bateman para dois touchdowns consecutivos no terceiro quarto, ampliando a vantagem para vinte e oito a seis.\nCom o jogo praticamente definido, Baltimore passou a controlar o relógio, administrando a posse e evitando riscos.\n\nJackson terminou a partida com duzentas e quatro jardas aéreas, dois touchdowns e nenhuma interceptação — uma atuação sólida que reacende o moral do elenco. Já Tagovailoa acumulou duzentas e sessenta e uma jardas, mas sem anotar touchdowns e sob forte pressão da defesa adversária.\n\nPanorama e repercussão\n\nCom o resultado, os Ravens agora somam duas vitórias e cinco derrotas, subindo posições dentro da Conferência Americana. O time celebra o retorno da consistência ofensiva e o bom momento defensivo, especialmente contra o passe.\n\nJá os Dolphins, com campanha de duas vitórias e seis derrotas, voltam a ser pressionados pela torcida e pela imprensa local. O técnico Mike McDaniel admitiu em coletiva que o time “não soube responder à agressividade dos Ravens” e destacou a necessidade de ajustes na proteção de Tagovailoa.\n\nDo outro lado, John Harbaugh exaltou o desempenho coletivo da equipe:\n\n“Jogamos do jeito que treinamos. Foco, disciplina e execução. Lamar foi brilhante, mas a defesa venceu esse jogo”, afirmou o técnico dos Ravens.\n\nA próxima rodada será crucial para ambos: os Ravens encaram os Cleveland Browns em casa, enquanto os Dolphins buscam reação diante do New York Jets.',
     imageUrl: 'https://cdn.theplayoffs.news/wp-content/uploads/2025/10/USATSI_27457948_168414878_lowres-1200x790.jpg',
     author: 'Equipe RADIO520',
-    date: 'Oct 24, 2024',
+    date: 'Oct 24, 2025',
   },
   {
     id: 7,
@@ -94,7 +114,7 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     content: 'O presidente da PGA Tour Champions, Miller Brady, garantiu que o circuito sênior está totalmente pronto para receber Tiger Woods, caso o astro de quinze títulos de Major decida competir após completar cinquenta anos, em dezembro deste ano.\n\n“Estamos prontos. Muito bem preparados”, afirmou Brady em entrevista ao Golf Channel. “Fizemos todo um planejamento ao longo do último ano pensando em Tiger chegando aos cinquenta. Se e quando ele decidir jogar, nossos torneios estarão prontos para isso.”\n\nA declaração veio acompanhada de uma explicação sobre a infraestrutura que está sendo montada para o possível retorno de Woods — algo que, segundo o dirigente, exigirá uma operação muito além do padrão habitual.\n“Segurança, transporte, arquibancadas, alimentação, tudo será reforçado. Estamos falando de um evento em escala de Major”, completou.\n\nTiger Woods passou recentemente por sua sétima cirurgia nas costas, o que o tirou do PNC Championship de dezembro e coloca em dúvida até mesmo sua presença no próximo Masters, marcado para abril.\n\nApesar da incerteza sobre o futuro competitivo, o impacto do nome Tiger Woods permanece colossal. A simples possibilidade de vê-lo atuando no circuito sênior já movimenta patrocinadores, emissoras e fãs.\n\nBrady encerrou com um tom de respeito e expectativa:\n\n“Mais do que tudo, espero que Tiger volte a ficar saudável e possa jogar golfe novamente. O resto vem naturalmente.”\n\nCaso confirme a estreia, Woods deverá ser a maior atração da história da PGA Tour Champions, elevando o interesse global em um circuito que costuma reunir lendas do esporte, como Bernhard Langer, Ernie Els e Vijay Singh.',
     imageUrl: 'https://talksport.com/wp-content/uploads/sites/5/2025/08/tiger-woods-united-states-final-1017367723.jpg?w=620',
     author: 'Equipe RADIO520',
-    date: 'Oct 25, 2024',
+    date: 'Oct 25, 2025',
   },
   {
     id: 8,
@@ -104,7 +124,7 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     content: 'O Palmeiras transformou o Allianz Parque em palco de uma atuação de gala na noite desta quinta-feira (30). Precisando reverter a derrota por três a zero sofrida em Quito, o Verdão respondeu com autoridade: venceu a LDU por quatro a zero e garantiu a classificação para a final da CONMEBOL Libertadores, com placar agregado de quatro a três.\n\nLogo aos vinte minutos, Ramón Sosa abriu o caminho da virada no confronto. O atacante aproveitou passe de Allan e finalizou com precisão, incendiando o estádio. Ainda nos acréscimos do primeiro tempo, o zagueiro Bruno Fuchs ampliou de cabeça, recolocando o Palmeiras de vez na disputa pela vaga.\n\nNo segundo tempo, o domínio se tornou total. Raphael Veiga viveu mais uma noite de protagonista: marcou dois gols — um deles de pênalti — e foi eleito o melhor em campo com nota 8,6. O camisa 23 comandou o meio-campo, ditando o ritmo e desequilibrando com inteligência tática.\n\nColetivas pós-jogo\n\nNa entrevista coletiva, Abel Ferreira destacou a postura emocional da equipe e o controle do jogo desde o primeiro minuto.\n\n“A alma competitiva desse grupo apareceu quando mais precisava. Jogamos com intensidade, foco e coragem”, afirmou o treinador.\n\nDo outro lado, Tiago Nunes, técnico da LDU, reconheceu os méritos do adversário:\n\n“Pagamos caro pelos erros defensivos. O Palmeiras foi muito superior e soube aproveitar o ambiente a seu favor.”\n\nPanorama\n\nCom a classificação, o Palmeiras chega à sua quinta final de Libertadores nos últimos dez anos e mantém vivo o sonho do tetracampeonato continental. A equipe agora aguarda o vencedor do confronto entre Flamengo e River Plate para conhecer o adversário da decisão.\n\nO Verdão volta a campo no fim de semana pelo Campeonato Brasileiro, mas com os olhos voltados para a glória eterna.',
     imageUrl: 'https://uploads.metroimg.com/wp-content/uploads/2025/10/30232416/Palmeiras-x-LDU-Libertadores.jpg',
     author: 'Equipe RADIO520',
-    date: 'Oct 26, 2024',
+    date: 'Oct 26, 2025',
   },
   {
     id: 9,
@@ -114,7 +134,7 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     content: 'Após garantir mais uma vitória no Grande Prêmio do México, Max Verstappen desembarcou no Brasil para aproveitar uma semana de descanso antes da próxima etapa da Fórmula 1, em São Paulo.\n\nO tetracampeão da Red Bull escolheu Brasília como parada inicial, onde visitou a família da namorada, Kelly Piquet. Durante a passagem pela capital, o holandês foi visto em um momento descontraído ao lado do sogro, o tricampeão mundial Nelson Piquet.\n\nA imagem do encontro foi publicada pelo cantor sertanejo Gleno Rossi, que registrou Verstappen em clima de total relaxamento — de bermuda e chinelo, bem diferente do visual habitual dos paddocks da F1.\n\nO piloto deve seguir para São Paulo nos próximos dias, onde começa a preparação para o Grande Prêmio de Interlagos, marcado para o próximo fim de semana. A etapa é uma das preferidas de Verstappen, que costuma destacar o calor da torcida brasileira e a atmosfera única do autódromo paulistano.',
     imageUrl: 'https://midias.correiobraziliense.com.br/_midias/jpg/2025/10/30/1000x1000/1_verstappen-60455873.jpg',
     author: 'Equipe RADIO520',
-    date: 'Oct 27, 2024',
+    date: 'Oct 27, 2025',
   },
   {
     id: 10,
@@ -151,7 +171,7 @@ Para muitos jogadores, o Mirassol se tornou a ponte ideal entre a base e o futeb
 Enquanto gigantes do futebol brasileiro sofrem com dívidas e gestões instáveis, o pequeno clube do interior paulista dá uma aula de como transformar organização, paciência e visão de mercado em sucesso — dentro e fora de campo.`,
     imageUrl: 'https://substackcdn.com/image/fetch/$s_!F0C7!,w_1040,h_545,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3fd5dbc1-88b0-4c62-9f56-00646e0c7360_1024x1536.jpeg',
     author: 'Equipe RADIO520',
-    date: 'Oct 28, 2024',
+    date: 'Oct 28, 2025',
   },
   {
     id: 11,
@@ -169,6 +189,6 @@ A dívida com o elenco reacende o debate sobre a sustentabilidade do modelo de g
 Enquanto isso, o clube tenta manter o foco esportivo em meio a um cenário administrativo conturbado — um retrato que destoa das expectativas criadas no início da era SAF e reforça a necessidade de ajustes urgentes na condução financeira do projeto.`,
     imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT614Fq8iO6Q-qT_TNliryv2vMu-IV8CQRNWQ&s',
     author: 'Equipe RADIO520',
-    date: 'Oct 31, 2024',
+    date: 'Oct 31, 2025',
   }
 ];

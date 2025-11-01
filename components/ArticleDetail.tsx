@@ -14,45 +14,7 @@ const ArrowLeftIcon = () => (
     </svg>
 );
 
-const EyeIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-      <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-    </svg>
-);
-
 const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
-  const [viewCount, setViewCount] = useState(0);
-
-  useEffect(() => {
-    const incrementViewCount = () => {
-        let counts: { [key: number]: number } = {};
-        try {
-            const countsRaw = localStorage.getItem('articleViewCounts');
-            if (countsRaw) {
-                counts = JSON.parse(countsRaw);
-            }
-        } catch (error) {
-            console.error("Could not parse articleViewCounts from localStorage. Resetting.", error);
-            // If parsing fails, the data is corrupt. Start with a fresh object.
-            counts = {};
-        }
-
-        const currentCount = counts[article.id] || 0;
-        const newCount = currentCount + 1;
-        counts[article.id] = newCount;
-
-        try {
-            localStorage.setItem('articleViewCounts', JSON.stringify(counts));
-        } catch (error) {
-            console.error("Failed to save updated view counts to localStorage:", error);
-        }
-        
-        setViewCount(newCount);
-    };
-
-    incrementViewCount();
-  }, [article.id]);
 
   // Effect to update meta tags for social sharing
   useEffect(() => {
@@ -121,15 +83,6 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
                 <span>Por {article.author}</span>
                 <span className="text-gray-600">&middot;</span>
                 <span>{article.date}</span>
-                {viewCount > 0 && (
-                    <>
-                        <span className="text-gray-600">&middot;</span>
-                        <div className="flex items-center space-x-1.5" title={`${viewCount.toLocaleString()} visualizações`}>
-                            <EyeIcon />
-                            <span>{viewCount.toLocaleString()}</span>
-                        </div>
-                    </>
-                )}
             </div>
         </header>
 
