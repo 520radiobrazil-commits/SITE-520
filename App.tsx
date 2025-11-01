@@ -10,6 +10,7 @@ import ArticleDetail from './components/ArticleDetail';
 import AboutUs from './components/AboutUs';
 import PromotionalAd from './components/PromotionalAd';
 import AnimatedBanner from './components/AnimatedBanner';
+import BrasileiraoTable from './components/BrasileiraoTable';
 import { MOCK_ARTICLES } from './constants';
 import { Article } from './types';
 
@@ -174,6 +175,7 @@ function App() {
             <PromotionalAd />
             {audioArticle && <AudioPlayer article={audioArticle} />}
             <TrendingTopics latestArticles={latestArticles} onSelectArticle={handleArticleSelect} />
+            <BrasileiraoTable />
             
             <a 
               href="https://radiosnet.com/" 
