@@ -10,6 +10,7 @@ export interface Article {
   audioUrl?: string;
   author: string;
   date: string;
+  views: number;
   isFeatured?: boolean;
 }
 
