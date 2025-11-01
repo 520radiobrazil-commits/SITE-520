@@ -5,7 +5,7 @@ import FeaturedArticle from './components/FeaturedArticle';
 import ArticleCard from './components/ArticleCard';
 import AdPlaceholder from './components/AdPlaceholder';
 import AudioPlayer from './components/AudioPlayer';
-import MostViewed from './components/MostViewed';
+import TrendingTopics from './components/TrendingTopics';
 import ArticleDetail from './components/ArticleDetail';
 import AboutUs from './components/AboutUs';
 import PromotionalAd from './components/PromotionalAd';
@@ -15,34 +15,13 @@ import { Article } from './types';
 
 function App() {
   const [articles, setArticles] = useState<Article[]>(() => {
-    // Use a new key to reset the old, unrealistic view counts.
-    const VIEWS_STORAGE_KEY = 'article_views_v2';
-    try {
-      const storedViews = localStorage.getItem(VIEWS_STORAGE_KEY);
-      const viewsMap: { [key: number]: number } = storedViews ? JSON.parse(storedViews) : {};
-
-      const initialArticles = MOCK_ARTICLES.map(article => ({
-        ...article,
-        // Prioritize views from storage, otherwise default to 0.
-        views: viewsMap[article.id] || 0,
-      }));
-
-      return initialArticles.sort((a, b) => {
-        const dateB = new Date(b.date).getTime();
-        const dateA = new Date(a.date).getTime();
-        if (dateB !== dateA) return dateB - dateA;
-        return b.id - a.id;
-      });
-    } catch (error) {
-      console.error("Failed to load articles from localStorage", error);
-      // Fallback to mock articles if localStorage fails
-      return [...MOCK_ARTICLES].sort((a, b) => {
-        const dateB = new Date(b.date).getTime();
-        const dateA = new Date(a.date).getTime();
-        if (dateB !== dateA) return dateB - dateA;
-        return b.id - a.id;
-      });
-    }
+    // Sort articles by date on initial load
+    return [...MOCK_ARTICLES].sort((a, b) => {
+      const dateB = new Date(b.date).getTime();
+      const dateA = new Date(a.date).getTime();
+      if (dateB !== dateA) return dateB - dateA;
+      return b.id - a.id;
+    });
   });
 
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
@@ -106,33 +85,14 @@ function App() {
   const articlesToDisplay = selectedCategory
     ? mainContentArticles.filter(article => article.category === selectedCategory)
     : mainContentArticles;
-
+  
+  const latestArticles = articles.slice(0, 5);
   const featuredArticle = articlesToDisplay[0];
   const otherArticles = articlesToDisplay.slice(1);
 
   const handleArticleSelect = useCallback((article: Article) => {
-    const VIEWS_STORAGE_KEY = 'article_views_v2';
     setShowingAboutPage(false);
-  
-    const newViews = (article.views || 0) + 1;
-    const updatedArticle = { ...article, views: newViews };
-    setSelectedArticle(updatedArticle);
-  
-    setArticles(prevArticles =>
-      prevArticles.map(a =>
-        a.id === article.id ? { ...a, views: newViews } : a
-      )
-    );
-  
-    try {
-      const storedViews = localStorage.getItem(VIEWS_STORAGE_KEY);
-      const viewsMap: { [key: number]: number } = storedViews ? JSON.parse(storedViews) : {};
-      viewsMap[article.id] = newViews;
-      localStorage.setItem(VIEWS_STORAGE_KEY, JSON.stringify(viewsMap));
-    } catch (error) {
-      console.error("Failed to update views in localStorage", error);
-    }
-  
+    setSelectedArticle(article);
     window.scrollTo(0, 0);
   }, []);
   
@@ -213,7 +173,7 @@ function App() {
           <aside className="lg:col-span-4 space-y-8">
             <PromotionalAd />
             {audioArticle && <AudioPlayer article={audioArticle} />}
-            <MostViewed articles={articles} onSelectArticle={handleArticleSelect} />
+            <TrendingTopics latestArticles={latestArticles} onSelectArticle={handleArticleSelect} />
             
             <a 
               href="https://radiosnet.com/" 

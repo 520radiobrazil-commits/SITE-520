@@ -18,8 +18,8 @@ Os Blazers voltam à quadra no fim de semana, quando enfrentam o Phoenix Suns, b
     imageUrl: 'https://bloximages.chicago2.vip.townnews.com/hjnews.com/content/tncms/assets/v3/editorial/d/37/d379465f-947e-5b3f-87a4-19585a42ea5d/69058896dc41d.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize',
     author: 'Equipe RADIO520',
     date: 'Nov 01, 2025',
-    views: 0,
     isFeatured: true,
+    views: 25789,
   },
     {
     id: 12,
@@ -38,8 +38,8 @@ Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com 
     imageUrl: 'https://dol.com.br/img/Artigo-Destaque/920000/WhatsApp-Image-2025-10-31-at-225408_00927351_0_.jpg?xid=3151646',
     author: 'Equipe RADIO520',
     date: 'Oct 31, 2025',
-    views: 0,
     isFeatured: false,
+    views: 18945,
   },
   {
     id: 1,
@@ -50,7 +50,7 @@ Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com 
     imageUrl: 'https://p2.trrsf.com/image/fget/cf/500/0/images.terra.com/2025/10/31/1825380679-jaqueline-bicampea-olimpica-surpreende-e-fecha-com-novo-time.jpg',
     author: 'Equipe RADIO520',
     date: 'Oct 31, 2025',
-    views: 0,
+    views: 12456,
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com 
     imageUrl: 'https://www.atptour.com/-/media/images/news/2025/03/19/19/14/auger-aliassime-feature-miami-2025.jpg',
     author: 'Equipe RADIO520',
     date: 'Oct 31, 2025',
-    views: 0,
+    views: 11321,
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com 
     audioUrl: 'https://open.spotify.com/episode/7nKI5Fdpn0XdRwdvhdcAa3?si=bAGsFTWDRrmRYgrLgqKPZw',
     author: 'Esportes Semanal',
     date: 'Oct 20, 2025',
-    views: 0,
+    views: 5678,
   },
   {
     id: 5,
@@ -100,7 +100,7 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     imageUrl: 'https://www.gizmodo.com.br/app/uploads/2025/08/estadio-lima.png',
     author: 'Equipe RADIO520',
     date: 'Oct 31, 2025',
-    views: 0,
+    views: 8765,
   },
   {
     id: 6,
@@ -111,7 +111,7 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     imageUrl: 'https://cdn.theplayoffs.news/wp-content/uploads/2025/10/USATSI_27457948_168414878_lowres-1200x790.jpg',
     author: 'Equipe RADIO520',
     date: 'Oct 24, 2025',
-    views: 0,
+    views: 7654,
   },
   {
     id: 7,
@@ -122,7 +122,7 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     imageUrl: 'https://talksport.com/wp-content/uploads/sites/5/2025/08/tiger-woods-united-states-final-1017367723.jpg?w=620',
     author: 'Equipe RADIO520',
     date: 'Oct 25, 2025',
-    views: 0,
+    views: 6543,
   },
   {
     id: 8,
@@ -133,7 +133,7 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     imageUrl: 'https://uploads.metroimg.com/wp-content/uploads/2025/10/30232416/Palmeiras-x-LDU-Libertadores.jpg',
     author: 'Equipe RADIO520',
     date: 'Oct 26, 2025',
-    views: 0,
+    views: 14321,
   },
   {
     id: 9,
@@ -144,7 +144,7 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     imageUrl: 'https://midias.correiobraziliense.com.br/_midias/jpg/2025/10/30/1000x1000/1_verstappen-60455873.jpg',
     author: 'Equipe RADIO520',
     date: 'Oct 27, 2025',
-    views: 0,
+    views: 4321,
   },
   {
     id: 10,
@@ -182,7 +182,7 @@ Enquanto gigantes do futebol brasileiro sofrem com dívidas e gestões instávei
     imageUrl: 'https://substackcdn.com/image/fetch/$s_!F0C7!,w_1040,h_545,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3fd5dbc1-88b0-4c62-9f56-00646e0c7360_1024x1536.jpeg',
     author: 'Equipe RADIO520',
     date: 'Oct 28, 2025',
-    views: 0,
+    views: 987,
   },
   {
     id: 11,
@@ -201,6 +201,6 @@ Enquanto isso, o clube tenta manter o foco esportivo em meio a um cenário admin
     imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT614Fq8iO6Q-qT_TNliryv2vMu-IV8CQRNWQ&s',
     author: 'Equipe RADIO520',
     date: 'Oct 31, 2025',
-    views: 0,
+    views: 2345,
   }
 ];

@@ -7,8 +7,9 @@ interface MostViewedProps {
 }
 
 const MostViewed: React.FC<MostViewedProps> = ({ articles, onSelectArticle }) => {
+  // Fix: Sort articles by views, handling cases where views might be undefined by treating them as 0.
   const mostViewedArticles = [...articles]
-    .sort((a, b) => b.views - a.views)
+    .sort((a, b) => (b.views || 0) - (a.views || 0))
     .slice(0, 5); // Show top 5
 
   return (
@@ -30,9 +31,12 @@ const MostViewed: React.FC<MostViewedProps> = ({ articles, onSelectArticle }) =>
                     <p className="text-white font-semibold leading-tight group-hover:text-teal-300 transition-colors duration-200">
                       {article.title}
                     </p>
-                     <span className="text-gray-400 text-xs font-bold uppercase tracking-wider block mt-1">
-                      {article.views.toLocaleString('pt-BR')} visualizações
-                    </span>
+                    {/* Fix: Conditionally render the view count only if it's available to prevent runtime errors. */}
+                    {article.views !== undefined && (
+                        <span className="text-gray-400 text-xs font-bold uppercase tracking-wider block mt-1">
+                          {article.views.toLocaleString('pt-BR')} visualizações
+                        </span>
+                    )}
                   </div>
                 </div>
               </button>

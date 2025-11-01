@@ -10,8 +10,8 @@ export interface Article {
   audioUrl?: string;
   author: string;
   date: string;
-  views: number;
   isFeatured?: boolean;
+  views?: number;
 }
 
 export interface Comment {
