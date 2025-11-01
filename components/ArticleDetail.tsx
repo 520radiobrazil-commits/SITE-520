@@ -107,6 +107,16 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
                 <p key={index} dangerouslySetInnerHTML={{ __html: paragraph.replace(/\n/g, '<br />') }} />
             ))}
         </div>
+
+        <div className="mt-12">
+            <a href="https://www.amazon.com.br/dp/B0CDCLWBCX/" target="_blank" rel="noopener noreferrer">
+                <img 
+                    src="https://public-rf-upload.minhawebradio.net/249695/slider/cdc8d9e95a560b11b1f12b0fa79305de.jpg" 
+                    alt="Banner Promocional Amazon" 
+                    className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                />
+            </a>
+        </div>
       </article>
 
       <hr className="my-12 border-gray-700" />
