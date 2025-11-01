@@ -1,6 +1,24 @@
 import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
+    {
+    id: 12,
+    category: 'FUTEBOL SHOW 520',
+    title: 'Dirigente do Paysandu se emociona e chora após rebaixamento à Série C',
+    summary: 'O executivo de futebol do Paysandu, Frontini, emocionou-se e chorou em coletiva de imprensa após o rebaixamento do clube para a Série C, pedindo desculpas à torcida e prometendo uma reconstrução para o futuro.',
+    content: `O clima foi de profunda tristeza no Paysandu após o rebaixamento para a Série C do Campeonato Brasileiro. Durante a coletiva de imprensa, o executivo de futebol Frontini não conteve as lágrimas ao comentar o resultado que selou a queda do clube paraense.
+
+“É difícil explicar. A gente trabalhou muito, mas o futebol às vezes é cruel. Eu só quero pedir desculpas à torcida”, disse, visivelmente abalado.
+
+O Papão da Curuzu teve uma reta final de Série B complicada e acabou não conseguindo evitar o descenso. A equipe, que iniciou o campeonato com boas expectativas de permanência, acumulou resultados negativos nas últimas rodadas e viu a situação se agravar.
+
+Frontini afirmou ainda que o momento é de reflexão e reconstrução. “Precisamos repensar tudo, planejar direito e devolver o Paysandu ao seu lugar. Agora é hora de levantar a cabeça e olhar pra frente”, completou o dirigente.
+
+Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com mensagens de apoio e esperança na volta à Série B já em 2026.`,
+    imageUrl: 'https://dol.com.br/img/Artigo-Destaque/920000/WhatsApp-Image-2025-10-31-at-225408_00927351_0_.jpg?xid=3151646',
+    author: 'Equipe RADIO520',
+    date: 'Nov 01, 2024',
+  },
   {
     id: 1,
     category: 'SUPERSET 520',

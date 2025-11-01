@@ -53,19 +53,29 @@ interface HeaderProps {
   siteViews: number;
 }
 
+const navLinks = [
+    { label: 'HOME', category: 'HOME' },
+    { label: 'FUTEBOL', category: 'FUTEBOL SHOW 520' },
+    { label: 'VÔLEI', category: 'SUPERSET 520' },
+    { label: 'NFL', category: 'LIGA 520' },
+    { label: 'F1', category: 'VOLTA RÁPIDA' },
+    { label: 'TÊNIS', category: 'ACE 520' },
+    { label: 'PODCASTS', category: 'PODCASTS 520' },
+    { label: 'SOBRE NÓS', category: 'SOBRE NÓS' },
+];
+
 const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, onShowAbout, activeNavItem, isRadioPlaying, onToggleRadio, siteViews }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const navItems = ['HOME', 'FUTEBOL SHOW 520', 'SUPERSET 520', 'LIGA 520', 'VOLTA RÁPIDA', 'ACE 520', 'PODCASTS 520', 'SOBRE NÓS'];
 
-  const handleNavClick = (item: string) => {
-    if (item === 'HOME') {
+  const handleNavClick = (category: string) => {
+    if (category === 'HOME') {
       onGoHome();
-    } else if (item === 'SOBRE NÓS') {
+    } else if (category === 'SOBRE NÓS') {
         onShowAbout();
     }
     else {
-      onSelectCategory(item);
+      onSelectCategory(category);
     }
     setIsMenuOpen(false); // Close mobile menu on navigation
   };
@@ -101,16 +111,16 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, onShowAbout
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-1">
-              {navItems.map(item => (
+              {navLinks.map(link => (
                 <button
-                  key={item}
-                  onClick={() => handleNavClick(item)}
+                  key={link.label}
+                  onClick={() => handleNavClick(link.category)}
                   className={`relative px-4 py-2 transition-colors duration-300 text-sm font-medium focus:outline-none ${
-                    activeNavItem === item ? 'text-teal-400' : 'text-gray-300 hover:text-white'
+                    activeNavItem === link.category ? 'text-teal-400' : 'text-gray-300 hover:text-white'
                   }`}
                 >
-                  {item}
-                  { activeNavItem === item &&
+                  {link.label}
+                  { activeNavItem === link.category &&
                     <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-0.5 bg-teal-400 rounded-full"></span>
                   }
                 </button>
@@ -175,15 +185,15 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, onShowAbout
       {/* Mobile Navigation Menu */}
       <div className={`fixed inset-0 z-40 bg-gray-900/90 backdrop-blur-lg transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
         <nav className="flex flex-col items-center justify-center h-full pt-20">
-          {navItems.map(item => (
+          {navLinks.map(link => (
             <button
-              key={item}
-              onClick={() => handleNavClick(item)}
+              key={link.label}
+              onClick={() => handleNavClick(link.category)}
               className={`w-full py-4 text-2xl font-bold transition-colors duration-200 ${
-                activeNavItem === item ? 'text-teal-400 bg-gray-800' : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                activeNavItem === link.category ? 'text-teal-400 bg-gray-800' : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
               }`}
             >
-              {item}
+              {link.label}
             </button>
           ))}
         </nav>
