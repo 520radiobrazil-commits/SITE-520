@@ -8,7 +8,7 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
 
 
 const PromotionalAd: React.FC = () => {
-  const adUrl = 'https://www.mixcloud.com/radio520/radio-520-dance-club-by-brako_dj-ep33/';
+  const adUrl = 'https://www.mixcloud.com/radio520/radio-520-dance-club-by-brako-dj-ep34/';
 
   return (
     <a
