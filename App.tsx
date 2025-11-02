@@ -75,25 +75,27 @@ function App() {
   // Encontra o artigo especial de áudio para ser exibido no player da barra lateral
   const audioArticle = articles.find(a => a.audioUrl);
 
-  // Filtra o artigo de áudio da lista principal para evitar duplicação
-  const mainContentArticlesBase = audioArticle
-    ? articles.filter(a => a.id !== audioArticle.id)
-    : articles;
+  // Determina quais artigos serão exibidos no conteúdo principal.
+  // Se uma categoria estiver selecionada, filtra todos os artigos por essa categoria.
+  // Caso contrário (na página inicial), exibe todos os artigos, exceto o de áudio, para evitar duplicidade.
+  const baseArticlesForDisplay = selectedCategory
+    ? articles.filter(article => article.category === selectedCategory)
+    : audioArticle
+      ? articles.filter(a => a.id !== audioArticle.id)
+      : articles;
 
-  // Prioriza o artigo explicitamente destacado
-  const explicitFeaturedArticle = mainContentArticlesBase.find(a => a.isFeatured);
-  const nonFeaturedArticles = mainContentArticlesBase.filter(a => !a.isFeatured);
+  // A partir da lista base, prioriza o artigo explicitamente marcado como 'isFeatured'.
+  const explicitFeaturedArticle = baseArticlesForDisplay.find(a => a.isFeatured);
+  const nonFeaturedArticles = baseArticlesForDisplay.filter(a => !a.isFeatured);
 
-  const mainContentArticles = explicitFeaturedArticle 
-      ? [explicitFeaturedArticle, ...nonFeaturedArticles] 
-      : mainContentArticlesBase;
-
-  const articlesToDisplay = selectedCategory
-    ? mainContentArticles.filter(article => article.category === selectedCategory)
-    : mainContentArticles;
+  // Reorganiza a lista para garantir que o artigo em destaque apareça primeiro.
+  const articlesToDisplay = explicitFeaturedArticle
+    ? [explicitFeaturedArticle, ...nonFeaturedArticles]
+    : nonFeaturedArticles;
   
   const featuredArticle = articlesToDisplay[0];
   const otherArticles = articlesToDisplay.slice(1);
+
 
   const handleArticleSelect = useCallback((article: Article) => {
     setShowingAboutPage(false);
@@ -178,8 +180,8 @@ function App() {
           <aside className="lg:col-span-4 space-y-8">
             <PromotionalAd />
             {audioArticle && <AudioPlayer article={audioArticle} />}
-            <MostViewed articles={articles} onSelectArticle={handleArticleSelect} currentTime={currentTime} />
             <BrasileiraoTable currentTime={currentTime} />
+            <MostViewed articles={articles} onSelectArticle={handleArticleSelect} currentTime={currentTime} />
             
             <a 
               href="https://radiosnet.com/" 

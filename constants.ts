@@ -2,6 +2,31 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 19,
+        category: 'PODCASTS 520',
+        title: 'Barrinhas de Cereal: Aliadas ou Vilãs do seu Treino?',
+        summary: 'Neste episódio do Viva Melhor, Lu Skylark fala sobre as famosas barrinhas de cereal.',
+        content: `No novo episódio do podcast Viva Melhor, a especialista Lu Skylark mergulha no universo das barrinhas de cereal, um lanche popular entre praticantes de atividades físicas. Será que elas são realmente benéficas para o seu treino?
+
+Lu explica que a resposta depende muito da composição da barrinha e do momento em que é consumida. "Nem toda barrinha é igual. Algumas são ricas em açúcares e gorduras, funcionando mais como um doce do que como um suplemento", alerta.
+
+Durante o bate-papo, ela dá dicas práticas para escolher as melhores opções:
+
+**Pré-treino:** Busque barrinhas com carboidratos de rápida absorção para fornecer energia imediata. Frutas secas e um pouco de mel na composição são boas escolhas.
+
+**Pós-treino:** O foco deve ser na recuperação muscular. Barrinhas com maior teor de proteínas, como as que contêm whey protein ou fontes vegetais, são ideais.
+
+**Cuidado com os rótulos:** Fique de olho em ingredientes como xarope de milho, gordura hidrogenada e excesso de conservantes. Quanto mais natural a lista de ingredientes, melhor.
+
+O episódio é um guia completo para quem quer usar as barrinhas de cereal de forma inteligente, transformando-as em verdadeiras aliadas para alcançar mais energia, performance e equilíbrio na rotina de treinos. Dê o play e descubra como fazer escolhas mais saudáveis!`,
+        imageUrl: 'https://images.unsplash.com/photo-1599599810694-b5b37304c357?q=80&w=1200&auto=format&fit=crop',
+        audioUrl: 'https://open.spotify.com/episode/7nKI5Fdpn0XdRwdvhdcAa3?si=bAGsFTWDRrmRYgrLgqKPZw',
+        author: 'Lu Skylark',
+        date: '03/11/2025 - 11:00',
+        isFeatured: false,
+        views: 1250,
+    },
+    {
     id: 18,
     category: 'VOLTA RÁPIDA',
     title: 'Jesse Love vence em Phoenix e leva o título da NASCAR Xfinity 2025 com autoridade',
