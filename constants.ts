@@ -2,6 +2,43 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+    id: 18,
+    category: 'VOLTA RÁPIDA',
+    title: 'Jesse Love vence em Phoenix e leva o título da NASCAR Xfinity 2025 com autoridade',
+    summary: 'Jesse Love dominou a etapa de Phoenix, venceu a corrida e conquistou o título da NASCAR Xfinity Series 2025, confirmando o favoritismo com uma performance impecável.',
+    content: `A etapa de Phoenix da NASCAR Xfinity Series, disputada neste sábado (1º), encerrou a temporada 2025 em alto nível — e com um campeão incontestável. Jesse Love cravou uma performance dominante no deserto do Arizona, garantindo a vitória e o título da categoria com um controle impressionante de corrida do início ao fim.
+
+O jovem piloto cruzou a linha de chegada em primeiro lugar após 200 voltas perfeitas, segurando Aric Almirola e o talentoso novato Connor Zilisch, que completaram o pódio. Love, que já vinha mostrando consistência absurda nas últimas etapas, confirmou o favoritismo com uma prova limpa, estratégica e sem erros na reta final do campeonato.
+
+“Foi uma temporada incrível, e fechar com vitória em Phoenix é surreal. O carro estava perfeito, o time trabalhou demais pra isso acontecer”, disse Love, ainda emocionado após a bandeira quadriculada.
+
+Almirola, experiente e sempre competitivo, tentou forçar a disputa nas voltas finais, mas não conseguiu se aproximar o bastante para ameaçar o líder. Já Zilisch, uma das revelações do ano, garantiou o terceiro lugar com uma tocada madura e agressiva, sinalizando que pode brigar por título já em 2026.
+
+Entre os outros destaques, Justin Allgaier (5º) e Sheldon Creed (8º) tiveram boas corridas de recuperação, enquanto nomes como Austin Hill (9º) e Brandon Jones (4º) mostraram regularidade ao longo do fim de semana.
+
+A corrida foi intensa, com múltiplas trocas de posição nas relargadas e estratégias diferentes de pit stop. Love, no entanto, manteve o foco e mostrou ritmo superior em stints longos — uma marca registrada do seu estilo neste ano.
+
+Com o resultado, Jesse Love se consagra como campeão da temporada 2025 da NASCAR Xfinity, coroando uma campanha sólida e consolidando seu nome como o próximo grande talento do automobilismo norte-americano.
+
+🏁 Top 10 – Phoenix (Xfinity Series 2025)
+
+1. Jesse Love
+2. Aric Almirola
+3. Connor Zilisch
+4. Brandon Jones
+5. Justin Allgaier
+6. Sammy Smith
+7. Taylor Gray
+8. Sheldon Creed
+9. Austin Hill
+10. Justin Bonsignore`,
+    imageUrl: 'https://hips.hearstapps.com/hmg-prod/images/jesse-love-celebrates-after-winning-the-nascar-xfinity-news-photo-1739720370.pjpeg?crop=1xw:0.84375xh;center,top&resize=980:*',
+    author: 'Equipe RADIO520',
+    date: '02/11/2025 - 09:30',
+    isFeatured: false,
+    views: 15890,
+  },
+    {
     id: 17,
     category: 'SUPERSET 520',
     title: 'Suzano mostra força e bate Joinville fora de casa em jogo de alto nível pela Superliga',
