@@ -36,21 +36,27 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
     };
 
     const setArticleTags = () => {
+        const title = article.ogTitle || article.title;
+        const description = article.ogDescription || article.summary;
+        const image = article.ogImageUrl || article.imageUrl;
+        
         document.title = `${article.title} | RADIO520.COM.BR`;
+        updateMetaTag('name', 'description', article.summary); // Standard description uses summary
         // Open Graph
-        updateMetaTag('property', 'og:title', article.title);
-        updateMetaTag('property', 'og:description', article.summary);
-        updateMetaTag('property', 'og:image', article.imageUrl);
+        updateMetaTag('property', 'og:title', title);
+        updateMetaTag('property', 'og:description', description);
+        updateMetaTag('property', 'og:image', image);
         updateMetaTag('property', 'og:type', 'article');
         // Twitter
         updateMetaTag('name', 'twitter:card', 'summary_large_image');
-        updateMetaTag('name', 'twitter:title', article.title);
-        updateMetaTag('name', 'twitter:description', article.summary);
-        updateMetaTag('name', 'twitter:image', article.imageUrl);
+        updateMetaTag('name', 'twitter:title', title);
+        updateMetaTag('name', 'twitter:description', description);
+        updateMetaTag('name', 'twitter:image', image);
     };
 
     const setDefaultTags = () => {
         document.title = defaultTitle;
+        updateMetaTag('name', 'description', defaultDescription);
         // Open Graph
         updateMetaTag('property', 'og:title', defaultTitle);
         updateMetaTag('property', 'og:description', defaultDescription);

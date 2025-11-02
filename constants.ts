@@ -5,7 +5,7 @@ export const MOCK_ARTICLES: Article[] = [
         id: 20,
         category: 'ACE 520',
         title: 'Sinner soberano em Paris: a coroação de um número 1 em plena forma',
-        summary: 'Jannik Sinner conquistou o Masters 1000 de Paris e retomou o posto de número 1 do mundo, coroando uma temporada de consistência, maturidade e agressividade tática.',
+        summary: 'Jannik Sinner fecha o ano como o homem a ser batido após dominar o Masters 1000 de Paris. Confira análise completa na Rádio 520.',
         content: `Jannik Sinner viveu um domingo daqueles que marcam uma carreira. O italiano conquistou o Masters 1000 de Paris, vencendo Felix Auger-Aliassime numa final de altíssimo nível técnico e emocional. Mais do que um troféu — o quinto Masters 1000 da trajetória —, o título devolve a Sinner o posto de número 1 do mundo, coroando uma temporada que tem sido pura consistência, maturidade e agressividade tática.
 
 O jogo começou equilibrado, com o canadense tentando se impor no saque e explorando o forehand pesado. Mas Sinner respondeu no estilo que o tornou um fenômeno: devoluções profundas, movimentação impecável e uma leitura de jogo quase cirúrgica. A partir do segundo set, o italiano ditou o ritmo, acelerou quando precisou e mostrou aquele controle emocional de quem entende o tamanho do momento.
@@ -20,6 +20,9 @@ Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito,
         date: '03/11/2025 - 14:00',
         isFeatured: true,
         views: 16230,
+        ogTitle: 'Sinner soberano em Paris',
+        ogDescription: 'O número 1 do mundo confirma o domínio em Paris — veja na Rádio 520.',
+        ogImageUrl: 'https://radio520.com.br/img/sinner-paris.jpg',
     },
     {
         id: 19,

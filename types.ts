@@ -12,6 +12,9 @@ export interface Article {
   date: string;
   isFeatured?: boolean;
   views?: number;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImageUrl?: string;
 }
 
 export interface Comment {
