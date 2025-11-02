@@ -18,26 +18,26 @@ const BrasileiraoTable: React.FC = () => {
   }, []);
 
   const teams = [
-    { pos: 1, name: 'Palmeiras', pj: 29, sg: '+27', pts: 62, zone: 'libertadores' },
-    { pos: 2, name: 'Flamengo', pj: 29, sg: '+40', pts: 61, zone: 'libertadores' },
-    { pos: 3, name: 'Cruzeiro', pj: 30, sg: '+21', pts: 57, zone: 'libertadores' },
-    { pos: 4, name: 'Mirassol', pj: 30, sg: '+21', pts: 55, zone: 'libertadores' },
+    { pos: 1, name: 'Flamengo', pj: 30, sg: '+43', pts: 64, zone: 'libertadores' },
+    { pos: 2, name: 'Palmeiras', pj: 29, sg: '+27', pts: 62, zone: 'libertadores' },
+    { pos: 3, name: 'Cruzeiro', pj: 31, sg: '+23', pts: 60, zone: 'libertadores' },
+    { pos: 4, name: 'Mirassol', pj: 31, sg: '+21', pts: 56, zone: 'libertadores' },
     { pos: 5, name: 'Bahia', pj: 30, sg: '+6', pts: 49, zone: 'sulamericana' },
-    { pos: 6, name: 'Fluminense', pj: 30, sg: '+2', pts: 47, zone: 'sulamericana' },
-    { pos: 7, name: 'Botafogo', pj: 30, sg: '+13', pts: 47, zone: 'sulamericana' },
-    { pos: 8, name: 'Vasco', pj: 30, sg: '+8', pts: 42, zone: 'none' },
+    { pos: 6, name: 'Botafogo', pj: 31, sg: '+13', pts: 48, zone: 'sulamericana' },
+    { pos: 7, name: 'Fluminense', pj: 30, sg: '+2', pts: 47, zone: 'sulamericana' },
+    { pos: 8, name: 'Vasco da Gama', pj: 30, sg: '+8', pts: 42, zone: 'none' },
     { pos: 9, name: 'São Paulo', pj: 30, sg: '0', pts: 41, zone: 'none' },
     { pos: 10, name: 'Corinthians', pj: 30, sg: '-3', pts: 39, zone: 'none' },
     { pos: 11, name: 'Grêmio', pj: 30, sg: '-5', pts: 39, zone: 'none' },
-    { pos: 12, name: 'RB Bragantino', pj: 30, sg: '-13', pts: 36, zone: 'none' },
+    { pos: 12, name: 'Red Bull Bragantino', pj: 30, sg: '-13', pts: 36, zone: 'none' },
     { pos: 13, name: 'Atlético-MG', pj: 29, sg: '-5', pts: 36, zone: 'none' },
     { pos: 14, name: 'Ceará', pj: 30, sg: '-2', pts: 35, zone: 'none' },
     { pos: 15, name: 'Internacional', pj: 30, sg: '-8', pts: 35, zone: 'none' },
-    { pos: 16, name: 'Santos', pj: 29, sg: '-12', pts: 32, zone: 'none' },
-    { pos: 17, name: 'Vitória', pj: 30, sg: '-17', pts: 31, zone: 'rebaixamento' },
-    { pos: 18, name: 'Fortaleza', pj: 29, sg: '-17', pts: 27, zone: 'rebaixamento' },
+    { pos: 16, name: 'Santos', pj: 30, sg: '-12', pts: 33, zone: 'none' },
+    { pos: 17, name: 'Vitória', pj: 31, sg: '-19', pts: 31, zone: 'rebaixamento' },
+    { pos: 18, name: 'Fortaleza', pj: 30, sg: '-17', pts: 28, zone: 'rebaixamento' },
     { pos: 19, name: 'Juventude', pj: 30, sg: '-32', pts: 26, zone: 'rebaixamento' },
-    { pos: 20, name: 'Sport', pj: 29, sg: '-24', pts: 17, zone: 'rebaixamento' },
+    { pos: 20, name: 'Sport Recife', pj: 30, sg: '-27', pts: 17, zone: 'rebaixamento' },
   ];
 
   const getRowClass = (zone: string) => {
