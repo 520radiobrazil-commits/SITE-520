@@ -2,6 +2,26 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 20,
+        category: 'ACE 520',
+        title: 'Sinner soberano em Paris: a coroação de um número 1 em plena forma',
+        summary: 'Jannik Sinner conquistou o Masters 1000 de Paris e retomou o posto de número 1 do mundo, coroando uma temporada de consistência, maturidade e agressividade tática.',
+        content: `Jannik Sinner viveu um domingo daqueles que marcam uma carreira. O italiano conquistou o Masters 1000 de Paris, vencendo Felix Auger-Aliassime numa final de altíssimo nível técnico e emocional. Mais do que um troféu — o quinto Masters 1000 da trajetória —, o título devolve a Sinner o posto de número 1 do mundo, coroando uma temporada que tem sido pura consistência, maturidade e agressividade tática.
+
+O jogo começou equilibrado, com o canadense tentando se impor no saque e explorando o forehand pesado. Mas Sinner respondeu no estilo que o tornou um fenômeno: devoluções profundas, movimentação impecável e uma leitura de jogo quase cirúrgica. A partir do segundo set, o italiano ditou o ritmo, acelerou quando precisou e mostrou aquele controle emocional de quem entende o tamanho do momento.
+
+O que impressiona em Sinner é o combo mentalidade + execução. Ele não se apressa, não se desorganiza e, quando encontra a brecha, ataca com convicção. O resultado é o reflexo de uma evolução monstruosa, sustentada por um físico cada vez mais preparado e um repertório de jogadas que poucos no circuito conseguem acompanhar.
+
+Com o título em Paris, Sinner fecha o ano como o homem a ser batido. E não é só por causa do ranking: é pela solidez, pela fome competitiva e pela maturidade de quem aprendeu a lidar com a pressão de ser favorito.
+
+Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito, o ATP de Paris serviu como resposta: Jannik Sinner chegou ao topo — e, do jeito que está jogando, parece disposto a ficar por lá um bom tempo.`,
+        imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/sinner-paris.jpg?w=1200&h=900&crop=1',
+        author: 'Equipe RADIO520',
+        date: '03/11/2025 - 14:00',
+        isFeatured: true,
+        views: 16230,
+    },
+    {
         id: 19,
         category: 'PODCASTS 520',
         title: 'Barrinhas de Cereal: Aliadas ou Vilãs do seu Treino?',
@@ -158,7 +178,7 @@ No embalo da torcida e com o elenco mostrando entrosamento, o Mengão volta a ca
     imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/flamengo-sport-4-e1762048665218.jpg?w=1200&h=675&crop=1',
     author: 'Equipe RADIO520',
     date: '02/11/2025 - 06:05',
-    isFeatured: true,
+    isFeatured: false,
     views: 21543,
   },
     {
