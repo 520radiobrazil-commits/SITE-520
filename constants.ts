@@ -2,6 +2,30 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+    id: 15,
+    category: 'FUTEBOL SHOW 520',
+    title: 'Flamengo domina o Sport no Maracanã e mantém caça ao topo do Brasileirão',
+    summary: 'Com direito a show de Bruno Henrique e Arrascaeta, o Rubro-Negro atropelou o Sport Recife por três a zero e garantiu mais três pontos na briga pelo título.',
+    content: `O Flamengo mostrou mais uma vez sua força no Maracanã. Com direito a show de Bruno Henrique e Arrascaeta, o Rubro-Negro atropelou o Sport Recife por três a zero, neste sábado (1º), pela trigésima primeira rodada do Brasileirão Betano.
+
+Depois de um primeiro tempo morno, o Flamengo voltou do intervalo com outra postura. Logo aos cinquenta e um minutos, Bruno Henrique abriu o placar após boa jogada de Samuel Lino, levantando a torcida no Maraca. O camisa vinte e sete, em noite inspirada, ampliou nove minutos depois, aproveitando cruzamento preciso de De La Cruz e empurrando para o fundo da rede.
+
+O domínio carioca ficou ainda mais evidente aos sessenta e sete, quando Giorgian De Arrascaeta fechou a conta com um golaço, carimbando a vitória e sendo ovacionado pela torcida.
+
+Com o placar construído, o Flamengo administrou o jogo, viu o Sport se perder em campo e ainda contou com a solidez de Emerson Royal e Sérgio Oliveira, que controlaram bem o meio e a defesa. O rival pernambucano, que ainda teve E. Araújo expulso nos minutos finais, pouco conseguiu reagir.
+
+O destaque absoluto foi Bruno Henrique, eleito melhor em campo com nota 8.9 no Sofascore — símbolo da intensidade rubro-negra na segunda etapa.
+
+Com o resultado, o Flamengo chega a sessenta e um pontos e segue firme na vice-liderança, mantendo a pressão sobre os líderes. Já o Sport amarga a lanterna, com apenas dezessete pontos, cada vez mais distante de uma reação.
+
+No embalo da torcida e com o elenco mostrando entrosamento, o Mengão volta a campo na próxima rodada cheio de confiança — e com o título ainda no radar.`,
+    imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/flamengo-sport-4-e1762048665218.jpg?w=1200&h=675&crop=1',
+    author: 'Equipe RADIO520',
+    date: 'Nov 02, 2025',
+    isFeatured: true,
+    views: 21543,
+  },
+    {
     id: 14,
     category: 'FUTEBOL SHOW 520',
     title: 'Cruzeiro atropela o Vitória no Mineirão e segue firme no G4 do Brasileirão',
@@ -20,7 +44,7 @@ Na próxima rodada, a Raposa tenta manter o embalo e seguir sonhando alto. A tor
     imageUrl: 'https://i.metroimg.com/WS8tXANDpvFZjcurViMiMoLBIc9i8ytofZmU3pToNRA/w:1200/q:85/f:webp/plain/2025/06/13140551/kaio-jorge-cruzeiro-futebol.jpg',
     author: 'Equipe RADIO520',
     date: 'Nov 01, 2025',
-    isFeatured: true,
+    isFeatured: false,
     views: 19876,
   },
     {
