@@ -35,9 +35,6 @@ const MostViewed: React.FC<MostViewedProps> = ({ articles, onSelectArticle, curr
                     </p>
                      <div className="text-gray-400 text-xs mt-1">
                         <span>Atualizado {formatTimeAgo(parseBrazilianDate(article.date), currentTime)}</span>
-                        {article.views !== undefined && (
-                        <span className="ml-2 pl-2 border-l border-gray-600">{article.views.toLocaleString('pt-BR')} visualizações</span>
-                        )}
                     </div>
                   </div>
                 </div>

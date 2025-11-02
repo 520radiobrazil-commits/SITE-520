@@ -50,7 +50,7 @@ const navLinks = [
     { label: 'FUTEBOL', category: 'FUTEBOL SHOW 520' },
     { label: 'VÔLEI', category: 'SUPERSET 520' },
     { label: 'NFL', category: 'LIGA 520' },
-    { label: 'F1', category: 'VOLTA RÁPIDA' },
+    { label: 'AUTOMOBILISMO', category: 'VOLTA RÁPIDA' },
     { label: 'TÊNIS', category: 'ACE 520' },
     { label: 'PODCASTS', category: 'PODCASTS 520' },
     { label: 'SOBRE NÓS', category: 'SOBRE NÓS' },

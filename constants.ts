@@ -12,7 +12,7 @@ O jovem piloto cruzou a linha de chegada em primeiro lugar após 200 voltas perf
 
 “Foi uma temporada incrível, e fechar com vitória em Phoenix é surreal. O carro estava perfeito, o time trabalhou demais pra isso acontecer”, disse Love, ainda emocionado após a bandeira quadriculada.
 
-Almirola, experiente e sempre competitivo, tentou forçar a disputa nas voltas finais, mas não conseguiu se aproximar o bastante para ameaçar o líder. Já Zilisch, uma das revelações do ano, garantiou o terceiro lugar com uma tocada madura e agressiva, sinalizando que pode brigar por título já em 2026.
+Almirola, experiente e sempre competitivo, tentou forçar a disputa nas voltas finais, mas não conseguiu se aproximar o bastante para ameaçar o líder. Já Zilisch, uma das revelações do ano, garantiu o terceiro lugar com uma tocada madura e agressiva, sinalizando que pode brigar por título já em 2026.
 
 Entre os outros destaques, Justin Allgaier (5º) e Sheldon Creed (8º) tiveram boas corridas de recuperação, enquanto nomes como Austin Hill (9º) e Brandon Jones (4º) mostraram regularidade ao longo do fim de semana.
 
@@ -303,27 +303,5 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     author: 'Equipe RADIO520',
     date: '30/10/2025 - 14:52',
     views: 8765,
-  },
-  {
-    id: 3,
-    category: 'ACE 520',
-    title: 'Auger-Aliassime atropela Vacherot em Paris e se aproxima das ATP Finals',
-    summary: 'O canadense Felix Auger-Aliassime avança para as semifinais do Masters 1000 de Paris após vitória dominante sobre Valentin Vacherot, mantendo viva a esperança de classificação para as ATP Finals.',
-    content: 'Felix Auger-Aliassime segue firme na reta final da temporada. O canadense, atual número 10 do ranking mundial, mostrou mais uma vez o bom momento e garantiu vaga nas semifinais do Masters 1000 de Paris, ao vencer o monegasco Valentin Vacherot por duplo 6/2, nesta sexta-feira (31).\n\nCom uma atuação dominante, Auger-Aliassime impôs ritmo desde o primeiro game. O saque potente e a agressividade nas devoluções deixaram Vacherot — uma das surpresas do torneio — sem espaço para reagir. O tenista de Mônaco vinha embalado após uma sequência impressionante de vitórias, mas encontrou um adversário em plena confiança.\n\nAos 25 anos, Felix vive um renascimento técnico nesta reta final de 2025. Depois de um primeiro semestre irregular, o canadense encontrou consistência desde o US Open, combinando potência com maior controle nas trocas de fundo. Seu forehand, um dos golpes mais pesados do circuito, tem funcionado como principal arma para abrir a quadra e encurtar os pontos.\n\nA vitória mantém o sonho vivo: Auger-Aliassime está a uma vitória de ultrapassar Lorenzo Musetti e assumir a oitava posição na ATP Race, o que garantiria vaga nas ATP Finals, torneio que reúne os oito melhores do ano.\n\nO próximo desafio será contra o vencedor do duelo entre Alex De Minaur e Alexander Bublik, confronto que promete testar ainda mais o nível de confiança do canadense.\n\nSe mantiver o padrão apresentado nas últimas semanas — principalmente na execução tática e no domínio de ritmo —, Auger-Aliassime chega forte não apenas para brigar por vaga em Turim, mas também para encerrar o ano como uma das grandes histórias de recuperação do circuito.',
-    imageUrl: 'https://www.atptour.com/-/media/images/news/2025/03/19/19/14/auger-aliassime-feature-miami-2025.jpg',
-    author: 'Equipe RADIO520',
-    date: '30/10/2025 - 06:18',
-    views: 11321,
-  },
-  {
-    id: 1,
-    category: 'SUPERSET 520',
-    title: 'Jaqueline, bicampeã olímpica, surpreende e fecha com novo time',
-    summary: 'A bicampeã olímpica Jaqueline Carvalho anunciou seu retorno às quadras e surpreendeu o mundo do vôlei ao assinar com um novo clube para a próxima temporada.',
-    content: 'Após um período de incertezas sobre seu futuro, a ponteira Jaqueline, um of maiores nomes do vôlei brasileiro, está de volta. A jogadora, dona de duas medallas de ouro olímpicas (2008 e 2012), foi anunciada como o grande reforço de seu novo time, prometendo agitar a Superliga Feminina. Aos 38 anos, Jaqueline mostra que ainda tem muita lenha para queimar e sua experiência será fundamental para a equipe na busca por títulos.',
-    imageUrl: 'https://p2.trrsf.com/image/fget/cf/500/0/images.terra.com/2025/10/31/1825380679-jaqueline-bicampea-olimpica-surpreende-e-fecha-com-novo-time.jpg',
-    author: 'Equipe RADIO520',
-    date: '30/10/2025 - 01:21',
-    views: 12456,
   }
 ];
