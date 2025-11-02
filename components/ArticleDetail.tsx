@@ -15,27 +15,6 @@ const ArrowLeftIcon = () => (
 );
 
 const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
-  const [currentTime, setCurrentTime] = useState('');
-
-  useEffect(() => {
-    const updateClock = () => {
-        const now = new Date();
-        const formattedDate = now.toLocaleString('pt-BR', {
-          day: '2-digit',
-          month: '2-digit',
-          year: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit'
-        }).replace(', ', ' às ');
-        setCurrentTime(formattedDate);
-    }
-    
-    updateClock(); // Initial call
-    const timerId = setInterval(updateClock, 1000); // Update every second
-
-    return () => clearInterval(timerId); // Cleanup on unmount
-  }, []);
 
   // Effect to update meta tags for social sharing
   useEffect(() => {
@@ -103,7 +82,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
                 <span>Por {article.author}</span>
                 <span className="text-gray-600 hidden sm:inline">&middot;</span>
-                <span>Atualizado em: {currentTime}</span>
+                <span>{article.date}</span>
             </div>
         </header>
 
