@@ -27,9 +27,10 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ article }) => {
   const url = typeof window !== 'undefined' ? window.location.href : '';
   const encodedUrl = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(article.title);
+  const hashtags = article.hashtags?.map(tag => tag.replace('#', '')).join(',') || '';
 
   const shareLinks = {
-    x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+    x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}&hashtags=${hashtags}`,
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     whatsapp: `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`,
     telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,

@@ -18,11 +18,13 @@ Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito,
         imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/sinner-paris.jpg?w=1200&h=900&crop=1',
         author: 'Equipe RADIO520',
         date: '03/11/2025 - 14:00',
+        updatedAt: '03/11/2025 - 15:30',
         isFeatured: true,
         views: 16230,
         ogTitle: 'Sinner soberano em Paris',
         ogDescription: 'O número 1 do mundo confirma o domínio em Paris — veja na Rádio 520.',
         ogImageUrl: 'https://radio520.com.br/img/sinner-paris.jpg',
+        hashtags: ['#Sinner', '#Tênis', '#ATPParis'],
     },
     {
         id: 19,
@@ -48,6 +50,7 @@ O episódio é um guia completo para quem quer usar as barrinhas de cereal de fo
         date: '03/11/2025 - 11:00',
         isFeatured: false,
         views: 1250,
+        hashtags: ['#Nutrição', '#Podcast', '#Saúde'],
     },
     {
     id: 18,
@@ -85,6 +88,7 @@ Com o resultado, Jesse Love se consagra como campeão da temporada 2025 da NASCA
     date: '02/11/2025 - 09:30',
     isFeatured: false,
     views: 15890,
+    hashtags: ['#NASCAR', '#JesseLove', '#Automobilismo'],
   },
     {
     id: 17,
@@ -115,6 +119,7 @@ Na próxima rodada, o Suzano encara o Sesi-SP, em casa, num duelo direto na part
     date: '02/11/2025 - 08:15',
     isFeatured: false,
     views: 11234,
+    hashtags: ['#Volei', '#Superliga', '#Suzano'],
   },
     {
     id: 16,
@@ -159,6 +164,7 @@ Warriors: voltam à quadra contra o Milwaukee Bucks, também na terça, em São 
     date: '02/11/2025 - 07:30',
     isFeatured: false,
     views: 17550,
+    hashtags: ['#NBA', '#Pacers', '#Warriors'],
   },
     {
     id: 15,
@@ -183,6 +189,7 @@ No embalo da torcida e com o elenco mostrando entrosamento, o Mengão volta a ca
     date: '02/11/2025 - 06:05',
     isFeatured: false,
     views: 21543,
+    hashtags: ['#Flamengo', '#Brasileirão', '#Futebol'],
   },
     {
     id: 14,
@@ -205,6 +212,7 @@ Na próxima rodada, a Raposa tenta manter o embalo e seguir sonhando alto. A tor
     date: '01/11/2025 - 04:02',
     isFeatured: false,
     views: 19876,
+    hashtags: ['#Cruzeiro', '#Brasileirão', '#Futebol'],
   },
     {
     id: 13,
@@ -225,6 +233,7 @@ Os Blazers voltam à quadra no fim de semana, quando enfrentam o Phoenix Suns, b
     date: '31/10/2025 - 23:25',
     isFeatured: false,
     views: 25789,
+    hashtags: ['#NBA', '#Blazers', '#TiagoSplitter'],
   },
     {
     id: 12,
@@ -245,6 +254,7 @@ Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com 
     date: '31/10/2025 - 18:28',
     isFeatured: false,
     views: 18945,
+    hashtags: ['#Paysandu', '#SerieB', '#Futebol'],
   },
   {
     id: 11,
@@ -264,6 +274,7 @@ Enquanto isso, o clube tenta manter o foco esportivo em meio a um cenário admin
     author: 'Equipe RADIO520',
     date: '31/10/2025 - 15:46',
     views: 2345,
+    hashtags: ['#Botafogo', '#SAF', '#Futebol'],
   },
   {
     id: 10,
@@ -302,6 +313,7 @@ Enquanto gigantes do futebol brasileiro sofrem com dívidas e gestões instávei
     author: 'Equipe RADIO520',
     date: '31/10/2025 - 07:12',
     views: 987,
+    hashtags: ['#Mirassol', '#Futebol', '#CategoriasDeBase'],
   },
   {
     id: 9,
@@ -313,6 +325,7 @@ Enquanto gigantes do futebol brasileiro sofrem com dívidas e gestões instávei
     author: 'Equipe RADIO520',
     date: '31/10/2025 - 02:04',
     views: 4321,
+    hashtags: ['#F1', '#Verstappen', '#GPBrasil'],
   },
   {
     id: 8,
@@ -324,6 +337,7 @@ Enquanto gigantes do futebol brasileiro sofrem com dívidas e gestões instávei
     author: 'Equipe RADIO520',
     date: '30/10/2025 - 19:07',
     views: 14321,
+    hashtags: ['#Palmeiras', '#Libertadores', '#Futebol'],
   },
     {
     id: 5,
@@ -351,5 +365,6 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     author: 'Equipe RADIO520',
     date: '30/10/2025 - 14:52',
     views: 8765,
+    hashtags: ['#Libertadores', '#Conmebol', '#Futebol'],
   }
 ];

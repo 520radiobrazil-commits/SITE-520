@@ -10,11 +10,13 @@ export interface Article {
   audioUrl?: string;
   author: string;
   date: string;
+  updatedAt?: string;
   isFeatured?: boolean;
   views?: number;
   ogTitle?: string;
   ogDescription?: string;
   ogImageUrl?: string;
+  hashtags?: string[];
 }
 
 export interface Comment {
