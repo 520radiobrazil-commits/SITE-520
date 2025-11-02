@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Article } from '../types';
 
 interface FeaturedArticleProps {
@@ -13,6 +13,28 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
 );
 
 const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect }) => {
+  const [currentTime, setCurrentTime] = useState('');
+
+  useEffect(() => {
+    const updateClock = () => {
+        const now = new Date();
+        const formattedDate = now.toLocaleString('pt-BR', {
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        }).replace(', ', ' às ');
+        setCurrentTime(formattedDate);
+    }
+    
+    updateClock(); // Initial call
+    const timerId = setInterval(updateClock, 1000); // Update every second
+
+    return () => clearInterval(timerId); // Cleanup on unmount
+  }, []);
+
   return (
     <div 
       onClick={() => onSelect(article)}
@@ -47,7 +69,7 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect }) 
         <p className="text-gray-300 text-base lg:text-lg mb-6">{article.summary}</p>
          <div className="flex items-center justify-between">
             <div className="text-xs text-gray-400">
-                <span>Por {article.author}</span> &middot; <span>{article.date}</span>
+                <span>Por {article.author}</span> &middot; <span>Atualizado em: {currentTime}</span>
             </div>
             <div className="flex items-center space-x-2">
                 <div

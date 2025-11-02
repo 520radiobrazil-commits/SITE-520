@@ -16,15 +16,24 @@ const BrasileiraoTable: React.FC = () => {
 
   useEffect(() => {
     setCurrentUrl(window.location.href);
-    const now = new Date();
-    const formattedDate = now.toLocaleString('pt-BR', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    }).replace(', ', ' às ');
-    setLastUpdated(formattedDate);
+
+    const updateClock = () => {
+        const now = new Date();
+        const formattedDate = now.toLocaleString('pt-BR', {
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        }).replace(', ', ' às ');
+        setLastUpdated(formattedDate);
+    }
+    
+    updateClock(); // Initial call
+    const timerId = setInterval(updateClock, 1000); // Update every second
+
+    return () => clearInterval(timerId); // Cleanup on unmount
   }, []);
 
   const teams = [
