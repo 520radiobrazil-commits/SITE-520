@@ -8,9 +8,12 @@ import AudioPlayer from './components/AudioPlayer';
 import MostViewed from './components/MostViewed';
 import ArticleDetail from './components/ArticleDetail';
 import AboutUs from './components/AboutUs';
+import TermsOfService from './components/TermsOfService';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import PromotionalAd from './components/PromotionalAd';
 import AnimatedBanner from './components/AnimatedBanner';
 import BrasileiraoTable from './components/BrasileiraoTable';
+import YouTubePlayer from './components/YouTubePlayer';
 import { MOCK_ARTICLES } from './constants';
 import { Article } from './types';
 import { parseBrazilianDate } from './services/geminiService';
@@ -30,6 +33,8 @@ function App() {
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [showingAboutPage, setShowingAboutPage] = useState(false);
+  const [showingTermsPage, setShowingTermsPage] = useState(false);
+  const [showingPrivacyPage, setShowingPrivacyPage] = useState(false);
   const [isRadioPlaying, setIsRadioPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -99,6 +104,8 @@ function App() {
 
   const handleArticleSelect = useCallback((article: Article) => {
     setShowingAboutPage(false);
+    setShowingTermsPage(false);
+    setShowingPrivacyPage(false);
     setSelectedArticle(article);
     window.scrollTo(0, 0);
   }, []);
@@ -109,6 +116,8 @@ function App() {
   
   const handleCategorySelect = useCallback((category: string) => {
     setShowingAboutPage(false);
+    setShowingTermsPage(false);
+    setShowingPrivacyPage(false);
     setSelectedCategory(category);
     setSelectedArticle(null);
     window.scrollTo(0, 0);
@@ -116,6 +125,8 @@ function App() {
 
   const handleGoHome = useCallback(() => {
     setShowingAboutPage(false);
+    setShowingTermsPage(false);
+    setShowingPrivacyPage(false);
     setSelectedCategory(null);
     setSelectedArticle(null);
     window.scrollTo(0, 0);
@@ -124,13 +135,35 @@ function App() {
   const handleShowAbout = useCallback(() => {
     setSelectedArticle(null);
     setSelectedCategory(null);
+    setShowingTermsPage(false);
+    setShowingPrivacyPage(false);
     setShowingAboutPage(true);
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleShowTerms = useCallback(() => {
+    setSelectedArticle(null);
+    setSelectedCategory(null);
+    setShowingAboutPage(false);
+    setShowingPrivacyPage(false);
+    setShowingTermsPage(true);
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleShowPrivacy = useCallback(() => {
+    setSelectedArticle(null);
+    setSelectedCategory(null);
+    setShowingAboutPage(false);
+    setShowingTermsPage(false);
+    setShowingPrivacyPage(true);
     window.scrollTo(0, 0);
   }, []);
   
   let activeNavItem = selectedCategory;
   if(showingAboutPage) {
     activeNavItem = 'SOBRE NÓS';
+  } else if (showingTermsPage || showingPrivacyPage) {
+    activeNavItem = null; // Nenhum item de navegação ativo para páginas institucionais
   } else if (!selectedArticle && !selectedCategory) {
     activeNavItem = 'HOME';
   }
@@ -141,6 +174,12 @@ function App() {
     }
     if (showingAboutPage) {
       return <AboutUs onGoBack={handleGoHome} />;
+    }
+    if (showingTermsPage) {
+      return <TermsOfService onGoBack={handleGoHome} />;
+    }
+    if (showingPrivacyPage) {
+      return <PrivacyPolicy onGoBack={handleGoHome} />;
     }
     return (
       <>
@@ -179,6 +218,7 @@ function App() {
           {/* Barra Lateral */}
           <aside className="lg:col-span-4 space-y-8">
             <PromotionalAd />
+            <YouTubePlayer />
             {audioArticle && <AudioPlayer article={audioArticle} />}
             <BrasileiraoTable currentTime={currentTime} />
             <MostViewed articles={articles} onSelectArticle={handleArticleSelect} currentTime={currentTime} />
@@ -221,7 +261,7 @@ function App() {
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-8">
         {renderMainContent()}
       </main>
-      <Footer onShowAbout={handleShowAbout}/>
+      <Footer onShowAbout={handleShowAbout} onShowTerms={handleShowTerms} onShowPrivacy={handleShowPrivacy} />
       <audio ref={radioRef} preload="none" crossOrigin="anonymous">
         {/* Fornece múltiplos tipos de fonte para melhor compatibilidade do navegador com streams ao vivo */}
         <source src={radioStreamUrl} type="audio/aac" />

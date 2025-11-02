@@ -33,7 +33,6 @@ const AdPlaceholder: React.FC<AdPlaceholderProps> = ({ width, height }) => {
             style={{ display: 'block', width: '100%', height: '100%' }}
             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" // IMPORTANT: Replace with your Publisher ID
             data-ad-slot="YYYYYYYYYY"          // IMPORTANT: Replace with your Ad Slot ID
-            data-ad-format="auto"
         >
           {/* This content is a fallback but AdSense will typically fill the container */}
           <div className="flex items-center justify-center h-full w-full border-2 border-dashed border-gray-600">
