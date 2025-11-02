@@ -1,9 +1,11 @@
 import React from 'react';
 import { Article } from '../types';
+import { parseBrazilianDate, formatTimeAgo } from '../services/geminiService';
 
 interface FeaturedArticleProps {
   article: Article;
   onSelect: (article: Article) => void;
+  currentTime: Date;
 }
 
 const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
@@ -12,7 +14,9 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
     </svg>
 );
 
-const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect }) => {
+const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect, currentTime }) => {
+  const timeAgo = formatTimeAgo(parseBrazilianDate(article.date), currentTime);
+
   return (
     <div 
       onClick={() => onSelect(article)}
@@ -46,8 +50,8 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect }) 
         </h2>
         <p className="text-gray-300 text-base lg:text-lg mb-6">{article.summary}</p>
          <div className="flex items-center justify-between">
-            <div className="text-xs text-gray-400">
-                <span>Por {article.author}</span> &middot; <span>{article.date}</span>
+            <div className="text-sm text-gray-400">
+                <span>Por {article.author} &bull; Atualizado {timeAgo}</span>
             </div>
             <div className="flex items-center space-x-2">
                 <div

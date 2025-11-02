@@ -5,7 +5,7 @@ import FeaturedArticle from './components/FeaturedArticle';
 import ArticleCard from './components/ArticleCard';
 import AdPlaceholder from './components/AdPlaceholder';
 import AudioPlayer from './components/AudioPlayer';
-import TrendingTopics from './components/TrendingTopics';
+import MostViewed from './components/MostViewed';
 import ArticleDetail from './components/ArticleDetail';
 import AboutUs from './components/AboutUs';
 import PromotionalAd from './components/PromotionalAd';
@@ -13,13 +13,15 @@ import AnimatedBanner from './components/AnimatedBanner';
 import BrasileiraoTable from './components/BrasileiraoTable';
 import { MOCK_ARTICLES } from './constants';
 import { Article } from './types';
+import { parseBrazilianDate } from './services/geminiService';
+
 
 function App() {
   const [articles, setArticles] = useState<Article[]>(() => {
-    // Sort articles by date on initial load
+    // Ordena os artigos por data no carregamento inicial usando o novo parser
     return [...MOCK_ARTICLES].sort((a, b) => {
-      const dateB = new Date(b.date).getTime();
-      const dateA = new Date(a.date).getTime();
+      const dateB = parseBrazilianDate(b.date).getTime();
+      const dateA = parseBrazilianDate(a.date).getTime();
       if (dateB !== dateA) return dateB - dateA;
       return b.id - a.id;
     });
@@ -29,15 +31,18 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [showingAboutPage, setShowingAboutPage] = useState(false);
   const [isRadioPlaying, setIsRadioPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   
   const radioRef = useRef<HTMLAudioElement>(null);
   const radioStreamUrl = 'https://servidor40.brlogic.com:7054/live';
-
+  
   useEffect(() => {
-    // Radio autoplay is not reliable and often blocked by browsers.
-    // It will now start only with user interaction.
-  }, []); // Empty dependency array ensures this runs only once on mount
+    const timerId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000); // Atualiza a cada segundo
+    return () => clearInterval(timerId);
+  }, []);
 
   const handleToggleRadio = useCallback(() => {
     const audio = radioRef.current;
@@ -47,7 +52,7 @@ function App() {
       audio.pause();
       setIsRadioPlaying(false);
     } else {
-      // For live streams, it's good practice to ensure the source is set before playing.
+      // Para streams ao vivo, é uma boa prática garantir que a fonte esteja definida antes de tocar.
       if (audio.src !== radioStreamUrl) {
           audio.src = radioStreamUrl;
       }
@@ -55,27 +60,27 @@ function App() {
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            // Audio is playing.
+            // O áudio está tocando.
             setIsRadioPlaying(true);
           })
           .catch(error => {
-            console.error("Audio play failed:", error);
-            // Revert state if play fails.
+            console.error("Falha ao tocar áudio:", error);
+            // Reverte o estado se a reprodução falhar.
             setIsRadioPlaying(false);
           });
       }
     }
   }, [isRadioPlaying]);
   
-  // Find the special audio article to be displayed in the sidebar player
+  // Encontra o artigo especial de áudio para ser exibido no player da barra lateral
   const audioArticle = articles.find(a => a.audioUrl);
 
-  // Filter out the audio article from the main list to avoid duplication
+  // Filtra o artigo de áudio da lista principal para evitar duplicação
   const mainContentArticlesBase = audioArticle
     ? articles.filter(a => a.id !== audioArticle.id)
     : articles;
 
-  // Prioritize the explicitly featured article
+  // Prioriza o artigo explicitamente destacado
   const explicitFeaturedArticle = mainContentArticlesBase.find(a => a.isFeatured);
   const nonFeaturedArticles = mainContentArticlesBase.filter(a => !a.isFeatured);
 
@@ -87,7 +92,6 @@ function App() {
     ? mainContentArticles.filter(article => article.category === selectedCategory)
     : mainContentArticles;
   
-  const latestArticles = articles.slice(0, 5);
   const featuredArticle = articlesToDisplay[0];
   const otherArticles = articlesToDisplay.slice(1);
 
@@ -131,7 +135,7 @@ function App() {
 
   const renderMainContent = () => {
     if (selectedArticle) {
-      return <ArticleDetail article={selectedArticle} onGoBack={handleGoBack} />;
+      return <ArticleDetail article={selectedArticle} onGoBack={handleGoBack} currentTime={currentTime} />;
     }
     if (showingAboutPage) {
       return <AboutUs onGoBack={handleGoHome} />;
@@ -140,13 +144,13 @@ function App() {
       <>
         <AnimatedBanner />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Main Content */}
+          {/* Conteúdo Principal */}
           <div className="lg:col-span-8">
             {featuredArticle ? (
               <>
-                <FeaturedArticle article={featuredArticle} onSelect={handleArticleSelect} />
+                <FeaturedArticle article={featuredArticle} onSelect={handleArticleSelect} currentTime={currentTime} />
                 
-                {/* Promotional Banner */}
+                {/* Banner Promocional */}
                 <div className="my-8">
                   <a href="mailto:520radiobrazil@gmail.com">
                     <img 
@@ -170,12 +174,12 @@ function App() {
             )}
           </div>
 
-          {/* Sidebar */}
+          {/* Barra Lateral */}
           <aside className="lg:col-span-4 space-y-8">
             <PromotionalAd />
             {audioArticle && <AudioPlayer article={audioArticle} />}
-            <TrendingTopics latestArticles={latestArticles} onSelectArticle={handleArticleSelect} />
-            <BrasileiraoTable />
+            <MostViewed articles={articles} onSelectArticle={handleArticleSelect} currentTime={currentTime} />
+            <BrasileiraoTable currentTime={currentTime} />
             
             <a 
               href="https://radiosnet.com/" 
@@ -206,21 +210,22 @@ function App() {
         activeNavItem={activeNavItem}
         isRadioPlaying={isRadioPlaying}
         onToggleRadio={handleToggleRadio}
+        currentTime={currentTime}
       />
       
-      {/* Modern Divider */}
+      {/* Divisor Moderno */}
       <div className="h-px w-full bg-gradient-to-r from-gray-900 via-teal-500/50 to-gray-900"></div>
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-8">
         {renderMainContent()}
       </main>
       <Footer onShowAbout={handleShowAbout}/>
       <audio ref={radioRef} preload="none" crossOrigin="anonymous">
-        {/* Provide multiple source types for better browser compatibility with live streams */}
+        {/* Fornece múltiplos tipos de fonte para melhor compatibilidade do navegador com streams ao vivo */}
         <source src={radioStreamUrl} type="audio/aac" />
         <source src={radioStreamUrl} type="audio/aacp" />
         <source src={radioStreamUrl} type="audio/mpeg" />
-        Your browser does not support the audio element.
+        Seu navegador não suporta o elemento de áudio.
       </audio>
     </div>
   );

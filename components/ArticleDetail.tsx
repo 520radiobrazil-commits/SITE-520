@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Article } from '../types';
 import Comments from './Comments';
 import ShareButtons from './ShareButtons';
+import { parseBrazilianDate, formatTimeAgo } from '../services/geminiService';
 
 interface ArticleDetailProps {
   article: Article;
   onGoBack: () => void;
+  currentTime: Date;
 }
 
 const ArrowLeftIcon = () => (
@@ -14,9 +16,10 @@ const ArrowLeftIcon = () => (
     </svg>
 );
 
-const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
+const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, currentTime }) => {
+  const timeAgo = formatTimeAgo(parseBrazilianDate(article.date), currentTime);
 
-  // Effect to update meta tags for social sharing
+  // Efeito para atualizar meta tags para compartilhamento social
   useEffect(() => {
     const defaultTitle = "RADIO520.COM.BR - Esportes e Notícias";
     const defaultDescription = "RADIO520.COM.BR é sua fonte de notícias esportivas, com artigos, vídeos, podcasts e muito mais.";
@@ -62,7 +65,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
 
     setArticleTags();
 
-    // Cleanup function to reset tags when component unmounts
+    // Função de limpeza para resetar as tags quando o componente desmontar
     return () => {
         setDefaultTags();
     };
@@ -81,8 +84,8 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
             <h1 className="text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">{article.title}</h1>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
                 <span>Por {article.author}</span>
-                <span className="text-gray-600 hidden sm:inline">&middot;</span>
-                <span>{article.date}</span>
+                <span className="text-gray-600">&bull;</span>
+                <span>Atualizado {timeAgo}</span>
             </div>
         </header>
 
@@ -94,7 +97,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack }) => {
              {article.videoUrl ? (
                 <video key={article.videoUrl} className="w-full aspect-video object-cover" controls autoPlay muted loop playsInline>
                     <source src={article.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
+                    Seu navegador não suporta a tag de vídeo.
                 </video>
             ) : (
                 <img src={article.imageUrl} alt={article.title} className="w-full h-auto object-cover" />

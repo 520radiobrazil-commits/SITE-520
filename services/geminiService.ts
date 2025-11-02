@@ -1,2 +1,43 @@
-// Este arquivo está reservado para futuros serviços da API Gemini.
-// A função getAiSummary foi removida por não estar sendo utilizada.
+// Este arquivo agora contém funções utilitárias compartilhadas.
+
+/**
+ * Analisa uma string de data no formato "dd/MM/yyyy - HH:mm".
+ * @param dateString A string de data para analisar.
+ * @returns Um objeto Date.
+ */
+export const parseBrazilianDate = (dateString: string): Date => {
+  const parts = dateString.split(' - ');
+  if (parts.length !== 2) return new Date(0); // Data inválida
+
+  const datePart = parts[0];
+  const timePart = parts[1];
+
+  const dateSegments = datePart.split('/');
+  const timeSegments = timePart.split(':');
+
+  if (dateSegments.length !== 3 || timeSegments.length !== 2) return new Date(0);
+
+  const [day, month, year] = dateSegments.map(Number);
+  const [hours, minutes] = timeSegments.map(Number);
+
+  // O mês no Date do JavaScript é baseado em zero (0-11)
+  return new Date(year, month - 1, day, hours, minutes);
+};
+
+/**
+ * Formata a diferença de tempo entre duas datas em uma string relativa (ex: "há 5 minutos").
+ * @param articleDate A data do artigo.
+ * @param currentTime A data/hora atual para comparar.
+ * @returns Uma string representando o tempo relativo.
+ */
+export const formatTimeAgo = (articleDate: Date, currentTime: Date): string => {
+  const diffMs = currentTime.getTime() - articleDate.getTime();
+  const diffMins = Math.floor(diffMs / 60000);
+  if (diffMins < 1) return 'agora mesmo';
+  if (diffMins < 60) return `há ${diffMins} minuto${diffMins > 1 ? 's' : ''}`;
+  const diffHours = Math.floor(diffMins / 60);
+  if (diffHours < 24) return `há ${diffHours} hora${diffHours > 1 ? 's' : ''}`;
+  const diffDays = Math.floor(diffHours / 24);
+  if (diffDays === 1) return 'ontem';
+  return `há ${diffDays} dia${diffDays > 1 ? 's' : ''}`;
+};

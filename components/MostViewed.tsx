@@ -1,12 +1,14 @@
 import React from 'react';
 import { Article } from '../types';
+import { parseBrazilianDate, formatTimeAgo } from '../services/geminiService';
 
 interface MostViewedProps {
   articles: Article[];
   onSelectArticle: (article: Article) => void;
+  currentTime: Date;
 }
 
-const MostViewed: React.FC<MostViewedProps> = ({ articles, onSelectArticle }) => {
+const MostViewed: React.FC<MostViewedProps> = ({ articles, onSelectArticle, currentTime }) => {
   // Fix: Sort articles by views, handling cases where views might be undefined by treating them as 0.
   const mostViewedArticles = [...articles]
     .sort((a, b) => (b.views || 0) - (a.views || 0))
@@ -31,12 +33,12 @@ const MostViewed: React.FC<MostViewedProps> = ({ articles, onSelectArticle }) =>
                     <p className="text-white font-semibold leading-tight group-hover:text-teal-300 transition-colors duration-200">
                       {article.title}
                     </p>
-                    {/* Fix: Conditionally render the view count only if it's available to prevent runtime errors. */}
-                    {article.views !== undefined && (
-                        <span className="text-gray-400 text-xs font-bold uppercase tracking-wider block mt-1">
-                          {article.views.toLocaleString('pt-BR')} visualizações
-                        </span>
-                    )}
+                     <div className="text-gray-400 text-xs mt-1">
+                        <span>Atualizado {formatTimeAgo(parseBrazilianDate(article.date), currentTime)}</span>
+                        {article.views !== undefined && (
+                        <span className="ml-2 pl-2 border-l border-gray-600">{article.views.toLocaleString('pt-BR')} visualizações</span>
+                        )}
+                    </div>
                   </div>
                 </div>
               </button>

@@ -42,6 +42,7 @@ interface HeaderProps {
   activeNavItem: string | null;
   isRadioPlaying: boolean;
   onToggleRadio: () => void;
+  currentTime: Date;
 }
 
 const navLinks = [
@@ -55,9 +56,32 @@ const navLinks = [
     { label: 'SOBRE NÓS', category: 'SOBRE NÓS' },
 ];
 
-const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, onShowAbout, activeNavItem, isRadioPlaying, onToggleRadio }) => {
+const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, onShowAbout, activeNavItem, isRadioPlaying, onToggleRadio, currentTime }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [displayTime, setDisplayTime] = useState('');
+
+  useEffect(() => {
+    if (currentTime) {
+      // Get weekday: e.g., 'sex.'
+      const weekdayRaw = new Intl.DateTimeFormat('pt-BR', {
+        weekday: 'short',
+        timeZone: 'America/Sao_Paulo',
+      }).format(currentTime);
+
+      // Get time: e.g., '21:30'
+      const timeRaw = new Intl.DateTimeFormat('pt-BR', {
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZone: 'America/Sao_Paulo',
+      }).format(currentTime);
+
+      // Format weekday: 'sex.' -> 'SEX'
+      const weekdayFormatted = weekdayRaw.replace(/[.,]/g, '').toUpperCase();
+      
+      setDisplayTime(`${weekdayFormatted} ${timeRaw}`);
+    }
+  }, [currentTime]);
 
   const handleNavClick = (category: string) => {
     if (category === 'HOME') {
@@ -88,16 +112,22 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, onShowAbout
       <header className="bg-gray-900 bg-opacity-80 backdrop-blur-md sticky top-0 z-50 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <div onClick={onGoHome} className="flex items-center cursor-pointer z-50">
-              <img src="https://public-rf-upload.minhawebradio.net/249695/ad/1ccbd4ef8fcc652a7e0c5c0e6215d5ae.jpeg" alt="RADIO520 Logo" className="h-14 w-auto" />
-              <div className="ml-3 flex flex-col">
-                <h1 className="text-2xl sm:text-3xl font-black tracking-tighter text-white leading-tight">
-                  RADIO520
-                </h1>
-                <span className="text-sm font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent tracking-tight -mt-1">
-                  .COM.BR
-                </span>
-              </div>
+            <div className="flex items-center z-50">
+                <div onClick={onGoHome} className="flex items-center cursor-pointer">
+                    <img src="https://public-rf-upload.minhawebradio.net/249695/ad/1ccbd4ef8fcc652a7e0c5c0e6215d5ae.jpeg" alt="RADIO520 Logo" className="h-14 w-auto" />
+                    <div className="ml-3">
+                        <h1 className="text-2xl sm:text-3xl font-black tracking-tighter text-white leading-none">
+                        RADIO520
+                        </h1>
+                        <span className="block text-sm font-bold bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent tracking-tight">
+                        .COM.BR
+                        </span>
+                    </div>
+                </div>
+                 <div className="ml-10 pl-4 sm:ml-12 sm:pl-4 border-l border-gray-700">
+                    <p className="text-xs font-bold tracking-wider text-gray-300">{displayTime}</p>
+                    <p className="text-xs text-gray-500">São Paulo</p>
+                </div>
             </div>
             
             {/* Desktop Navigation */}
