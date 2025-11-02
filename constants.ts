@@ -2,6 +2,28 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+    id: 14,
+    category: 'FUTEBOL SHOW 520',
+    title: 'Cruzeiro atropela o Vitória no Mineirão e segue firme no G4 do Brasileirão',
+    summary: 'Com uma atuação segura e envolvente, a Raposa venceu o Vitória por três a um e manteve a boa fase na briga pelas primeiras posições da tabela do Brasileirão.',
+    content: `O Cruzeiro fez o torcedor sair do Mineirão com o sorriso largo neste sábado (1º). Com uma atuação segura e envolvente, a Raposa venceu o Vitória por três a um, em jogo válido pela trigésima primeira rodada do Brasileirão Betano, e manteve a boa fase na briga pelas primeiras posições da tabela.
+
+Logo nos minutos iniciais, o time mineiro mostrou quem mandava em casa. Kaio Jorge abriu o placar de pênalti aos oito minutos, após revisão do VAR. O atacante, em grande fase, voltou a balançar as redes aos vinte e três, ampliando a vantagem e incendiando a torcida azul.
+
+O domínio cruzeirense seguiu intenso, e Willian Oliveira marcou o terceiro aos trinta e sete minutos, após bela jogada de Cantalapiedra. O Vitória até reagiu antes do intervalo, com Keny Arroyo descontando aos quarenta e cinco, mas parou por aí.
+
+Na volta do segundo tempo, o Cruzeiro reduziu o ritmo, priorizando o controle do jogo. O técnico Fernando Seabra fez alterações pontuais, e o time manteve a consistência defensiva com boas atuações de Thiago Couto e Cássio, este último eleito melhor em campo, com nota 8.4 no Sofascore.
+
+Com o resultado, o Cruzeiro chegou a cinquenta e sete pontos e se consolidou na terceira colocação, firme na disputa pelo topo da tabela. Já o Vitória segue em situação delicada: com trinta e um pontos, o time baiano permanece na décima sétima posição, dentro da zona de rebaixamento.
+
+Na próxima rodada, a Raposa tenta manter o embalo e seguir sonhando alto. A torcida, empolgada, já sonha em ver o time mineiro de volta à Libertadores — e, pelo futebol que vem mostrando, motivos não faltam.`,
+    imageUrl: 'https://i.metroimg.com/WS8tXANDpvFZjcurViMiMoLBIc9i8ytofZmU3pToNRA/w:1200/q:85/f:webp/plain/2025/06/13140551/kaio-jorge-cruzeiro-futebol.jpg',
+    author: 'Equipe RADIO520',
+    date: 'Nov 01, 2025',
+    isFeatured: true,
+    views: 19876,
+  },
+    {
     id: 13,
     category: 'LIGA 520',
     title: 'Blazers vencem os Nuggets no fim e Tiago Splitter emplaca terceira vitória seguida na NBA',
@@ -18,7 +40,7 @@ Os Blazers voltam à quadra no fim de semana, quando enfrentam o Phoenix Suns, b
     imageUrl: 'https://bloximages.chicago2.vip.townnews.com/hjnews.com/content/tncms/assets/v3/editorial/d/37/d379465f-947e-5b3f-87a4-19585a42ea5d/69058896dc41d.image.jpg?crop=1763%2C926%2C0%2C124&resize=1200%2C630&order=crop%2Cresize',
     author: 'Equipe RADIO520',
     date: 'Nov 01, 2025',
-    isFeatured: true,
+    isFeatured: false,
     views: 25789,
   },
     {
@@ -64,18 +86,6 @@ Mesmo com o rebaixamento, a torcida bicolor se manifestou nas redes sociais com 
     views: 11321,
   },
   {
-    id: 4,
-    category: 'PODCASTS 520',
-    title: 'VIVA MELHOR com LU SKYLARK',
-    summary: 'Neste episódio do Viva Melhor, Lu Skylark fala sobre as famosas barrinhas de cereal — será que elas realmente ajudam no treino? Descubra quando vale a pena incluir na rotina, quais são as melhores opções antes e depois dos exercícios e os cuidados na hora de escolher. Um papo leve, direto e cheio de dicas pra quem busca mais energia e equilíbrio no dia a dia.',
-    content: ' Neste episódio do Viva Melhor, Lu Skylark fala sobre as famosas barrinhas de cereal — será que elas realmente ajudam no treino? Descubra quando vale a pena incluir na rotina, quais são as melhores opções antes e depois dos exercícios e os cuidados na hora de escolher. Um papo leve, direto e cheio de dicas pra quem busca mais energia e equilíbrio no dia a dia.',
-    imageUrl: 'https://substackcdn.com/image/fetch/$s_!F0C7!,w_1040,h_545,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3fd5dbc1-88b0-4c62-9f56-00646e0c7360_1024x1536.jpeg',
-    audioUrl: 'https://open.spotify.com/episode/7nKI5Fdpn0XdRwdvhdcAa3?si=bAGsFTWDRrmRYgrLgqKPZw',
-    author: 'Esportes Semanal',
-    date: 'Oct 20, 2025',
-    views: 5678,
-  },
-  {
     id: 5,
     category: 'REPÓRTER 520',
     title: 'Conmebol mantém final da Libertadores em Lima e ignora pedido da CBF',
@@ -103,48 +113,23 @@ O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida 
     views: 8765,
   },
   {
-    id: 6,
-    category: 'LIGA 520',
-    title: 'Ravens dominam Dolphins fora de casa e respiram na temporada da NFL',
-    summary: 'O Baltimore Ravens conquistou uma vitória maiúscula fora de casa ao bater o Miami Dolphins por 28 a 6, recolocando a franquia na disputa pelos playoffs e aprofundando a crise do time da Flórida.',
-    content: 'O Baltimore Ravens conquistou uma vitória maiúscula fora de casa na noite de quinta-feira (30), ao bater o Miami Dolphins por vinte e oito a seis no Hard Rock Stadium, pela semana nove da NFL. O resultado recoloca a franquia de Baltimore na disputa por uma vaga nos playoffs, enquanto aprofunda a crise do time da Flórida.\n\nPrimeiro tempo de imposição e eficiência\n\nLogo no primeiro quarto, os Ravens mostraram a que vieram. O tight end Mark Andrews brilhou com dois touchdowns seguidos, ambos em conexões precisas de Lamar Jackson, que controlou o relógio e o ritmo da partida com maturidade.\nOs Dolphins até reagiram com dois field goals convertidos por Riley Patterson, mas o ataque liderado por Tua Tagovailoa não conseguiu transformar posse em pontos — algo que se tornaria a tônica do jogo.\n\nNo intervalo, o placar marcava quatorze a seis para Baltimore, e a defesa visitante já tinha limitado o jogo terrestre de Miami a menos de cinquenta jardas totais.\n\nLamar Jackson comanda o massacre no segundo tempo\n\nNa volta do intervalo, o domínio dos Ravens aumentou. Lamar Jackson, cada vez mais confortável no pocket, distribuiu passes com precisão e achou Charlie Kolar e Rashod Bateman para dois touchdowns consecutivos no terceiro quarto, ampliando a vantagem para vinte e oito a seis.\nCom o jogo praticamente definido, Baltimore passou a controlar o relógio, administrando a posse e evitando riscos.\n\nJackson terminou a partida com duzentas e quatro jardas aéreas, dois touchdowns e nenhuma interceptação — uma atuação sólida que reacende o moral do elenco. Já Tagovailoa acumulou duzentas e sessenta e uma jardas, mas sem anotar touchdowns e sob forte pressão da defesa adversária.\n\nPanorama e repercussão\n\nCom o resultado, os Ravens agora somam duas vitórias e cinco derrotas, subindo posições dentro da Conferência Americana. O time celebra o retorno da consistência ofensiva e o bom momento defensivo, especialmente contra o passe.\n\nJá os Dolphins, com campanha de duas vitórias e seis derrotas, voltam a ser pressionados pela torcida e pela imprensa local. O técnico Mike McDaniel admitiu em coletiva que o time “não soube responder à agressividade dos Ravens” e destacou a necessidade de ajustes na proteção de Tagovailoa.\n\nDo outro lado, John Harbaugh exaltou o desempenho coletivo da equipe:\n\n“Jogamos do jeito que treinamos. Foco, disciplina e execução. Lamar foi brilhante, mas a defesa venceu esse jogo”, afirmou o técnico dos Ravens.\n\nA próxima rodada será crucial para ambos: os Ravens encaram os Cleveland Browns em casa, enquanto os Dolphins buscam reação diante do New York Jets.',
-    imageUrl: 'https://cdn.theplayoffs.news/wp-content/uploads/2025/10/USATSI_27457948_168414878_lowres-1200x790.jpg',
+    id: 11,
+    category: 'SPORTS BUSINESS 520',
+    title: 'Crise financeira se agrava e Botafogo vive novo impasse com elenco',
+    summary: 'A crise financeira do Botafogo se agrava com o não pagamento de premiações ao elenco, aumentando a tensão interna e a incerteza sobre a gestão da SAF de John Textor em meio a disputas judiciais e falta de receitas.',
+    content: `A crise financeira do Botafogo ganhou novos capítulos nesta quinta-feira (31). A promessa de pagamento das premiações referentes ao Mundial de Clubes venceu sem que os valores fossem quitados, e o elenco segue sem resposta definitiva da SAF sobre quando receberá.
+
+O problema se soma à falta de apoio da Eagle Holding, empresa que trava uma disputa judicial com John Textor, dono da SAF alvinegra. A ausência da parceira, que era um dos pilares financeiros do projeto, tem deixado o caixa do clube sob forte pressão.
+
+Internamente, o clima é de tensão. Jogadores aguardam um posicionamento da diretoria antes do confronto contra o Mirassol, no sábado, e a situação começa a gerar desconforto nos bastidores. Pessoas próximas ao grupo relatam preocupação com o futuro imediato da SAF, já que parte das receitas previstas não se concretizou.
+
+A dívida com o elenco reacende o debate sobre a sustentabilidade do modelo de gestão de Textor. O empresário, que prometeu revolucionar o Botafogo com investimentos de longo prazo, hoje enfrenta desconfiança até mesmo entre aliados.
+
+Enquanto isso, o clube tenta manter o foco esportivo em meio a um cenário administrativo conturbado — um retrato que destoa das expectativas criadas no início da era SAF e reforça a necessidade de ajustes urgentes na condução financeira do projeto.`,
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT614Fq8iO6Q-qT_TNliryv2vMu-IV8CQRNWQ&s',
     author: 'Equipe RADIO520',
-    date: 'Oct 24, 2025',
-    views: 7654,
-  },
-  {
-    id: 7,
-    category: 'MINUTO DO GOLFE',
-    title: 'PGA Tour Champions se prepara para a estreia de Tiger Woods no circuito sênior',
-    summary: 'O presidente da PGA Tour Champions, Miller Brady, garantiu que o circuito sênior está totalmente pronto para receber Tiger Woods, caso o astro de quinze títulos de Major decida competir após completar cinquenta anos, em dezembro deste ano.',
-    content: 'O presidente da PGA Tour Champions, Miller Brady, garantiu que o circuito sênior está totalmente pronto para receber Tiger Woods, caso o astro de quinze títulos de Major decida competir após completar cinquenta anos, em dezembro deste ano.\n\n“Estamos prontos. Muito bem preparados”, afirmou Brady em entrevista ao Golf Channel. “Fizemos todo um planejamento ao longo do último ano pensando em Tiger chegando aos cinquenta. Se e quando ele decidir jogar, nossos torneios estarão prontos para isso.”\n\nA declaração veio acompanhada de uma explicação sobre a infraestrutura que está sendo montada para o possível retorno de Woods — algo que, segundo o dirigente, exigirá uma operação muito além do padrão habitual.\n“Segurança, transporte, arquibancadas, alimentação, tudo será reforçado. Estamos falando de um evento em escala de Major”, completou.\n\nTiger Woods passou recentemente por sua sétima cirurgia nas costas, o que o tirou do PNC Championship de dezembro e coloca em dúvida até mesmo sua presença no próximo Masters, marcado para abril.\n\nApesar da incerteza sobre o futuro competitivo, o impacto do nome Tiger Woods permanece colossal. A simples possibilidade de vê-lo atuando no circuito sênior já movimenta patrocinadores, emissoras e fãs.\n\nBrady encerrou com um tom de respeito e expectativa:\n\n“Mais do que tudo, espero que Tiger volte a ficar saudável e possa jogar golfe novamente. O resto vem naturalmente.”\n\nCaso confirme a estreia, Woods deverá ser a maior atração da história da PGA Tour Champions, elevando o interesse global em um circuito que costuma reunir lendas do esporte, como Bernhard Langer, Ernie Els e Vijay Singh.',
-    imageUrl: 'https://talksport.com/wp-content/uploads/sites/5/2025/08/tiger-woods-united-states-final-1017367723.jpg?w=620',
-    author: 'Equipe RADIO520',
-    date: 'Oct 25, 2025',
-    views: 6543,
-  },
-  {
-    id: 8,
-    category: 'FUTEBOL SHOW 520',
-    title: 'Palmeiras atropela a LDU e carimba vaga na final da Libertadores',
-    summary: 'O Palmeiras transformou o Allianz Parque em palco de uma atuação de gala na noite desta quinta-feira (30). Precisando reverter a derrota por três a zero sofrida em Quito, o Verdão respondeu com autoridade: venceu a LDU por quatro a zero e garantiu a classificação para a final da CONBOL Libertadores, com placar agregado de quatro a três.',
-    content: 'O Palmeiras transformou o Allianz Parque em palco de uma atuação de gala na noite desta quinta-feira (30). Precisando reverter a derrota por três a zero sofrida em Quito, o Verdão respondeu com autoridade: venceu a LDU por quatro a zero e garantiu a classificação para a final da CONMEBOL Libertadores, com placar agregado de quatro a três.\n\nLogo aos vinte minutos, Ramón Sosa abriu o caminho da virada no confronto. O atacante aproveitou passe de Allan e finalizou com precisão, incendiando o estádio. Ainda nos acréscimos do primeiro tempo, o zagueiro Bruno Fuchs ampliou de cabeça, recolocando o Palmeiras de vez na disputa pela vaga.\n\nNo segundo tempo, o domínio se tornou total. Raphael Veiga viveu mais uma noite de protagonista: marcou dois gols — um deles de pênalti — e foi eleito o melhor em campo com nota 8,6. O camisa 23 comandou o meio-campo, ditando o ritmo e desequilibrando com inteligência tática.\n\nColetivas pós-jogo\n\nNa entrevista coletiva, Abel Ferreira destacou a postura emocional da equipe e o controle do jogo desde o primeiro minuto.\n\n“A alma competitiva desse grupo apareceu quando mais precisava. Jogamos com intensidade, foco e coragem”, afirmou o treinador.\n\nDo outro lado, Tiago Nunes, técnico da LDU, reconheceu os méritos do adversário:\n\n“Pagamos caro pelos erros defensivos. O Palmeiras foi muito superior e soube aproveitar o ambiente a seu favor.”\n\nPanorama\n\nCom a classificação, o Palmeiras chega à sua quinta final de Libertadores nos últimos dez anos e mantém vivo o sonho do tetracampeonato continental. A equipe agora aguarda o vencedor do confronto entre Flamengo e River Plate para conhecer o adversário da decisão.\n\nO Verdão volta a campo no fim de semana pelo Campeonato Brasileiro, mas com os olhos voltados para a glória eterna.',
-    imageUrl: 'https://uploads.metroimg.com/wp-content/uploads/2025/10/30232416/Palmeiras-x-LDU-Libertadores.jpg',
-    author: 'Equipe RADIO520',
-    date: 'Oct 26, 2025',
-    views: 14321,
-  },
-  {
-    id: 9,
-    category: 'VOLTA RÁPIDA',
-    title: 'Verstappen curte dias de descanso no Brasil antes do GP de São Paulo',
-    summary: 'Após garantir mais uma vitória no Grande Prêmio do México, Max Verstappen desembarcou no Brasil para aproveitar uma semana de descanso antes da próxima etapa da Fórmula 1, em São Paulo.',
-    content: 'Após garantir mais uma vitória no Grande Prêmio do México, Max Verstappen desembarcou no Brasil para aproveitar uma semana de descanso antes da próxima etapa da Fórmula 1, em São Paulo.\n\nO tetracampeão da Red Bull escolheu Brasília como parada inicial, onde visitou a família da namorada, Kelly Piquet. Durante a passagem pela capital, o holandês foi visto em um momento descontraído ao lado do sogro, o tricampeão mundial Nelson Piquet.\n\nA imagem do encontro foi publicada pelo cantor sertanejo Gleno Rossi, que registrou Verstappen em clima de total relaxamento — de bermuda e chinelo, bem diferente do visual habitual dos paddocks da F1.\n\nO piloto deve seguir para São Paulo nos próximos dias, onde começa a preparação para o Grande Prêmio de Interlagos, marcado para o próximo fim de semana. A etapa é uma das preferidas de Verstappen, que costuma destacar o calor da torcida brasileira e a atmosfera única do autódromo paulistano.',
-    imageUrl: 'https://midias.correiobraziliense.com.br/_midias/jpg/2025/10/30/1000x1000/1_verstappen-60455873.jpg',
-    author: 'Equipe RADIO520',
-    date: 'Oct 27, 2025',
-    views: 4321,
+    date: 'Oct 31, 2025',
+    views: 2345,
   },
   {
     id: 10,
@@ -185,22 +170,25 @@ Enquanto gigantes do futebol brasileiro sofrem com dívidas e gestões instávei
     views: 987,
   },
   {
-    id: 11,
-    category: 'SPORTS BUSINESS 520',
-    title: 'Crise financeira se agrava e Botafogo vive novo impasse com elenco',
-    summary: 'A crise financeira do Botafogo se agrava com o não pagamento de premiações ao elenco, aumentando a tensão interna e a incerteza sobre a gestão da SAF de John Textor em meio a disputas judiciais e falta de receitas.',
-    content: `A crise financeira do Botafogo ganhou novos capítulos nesta quinta-feira (31). A promessa de pagamento das premiações referentes ao Mundial de Clubes venceu sem que os valores fossem quitados, e o elenco segue sem resposta definitiva da SAF sobre quando receberá.
-
-O problema se soma à falta de apoio da Eagle Holding, empresa que trava uma disputa judicial com John Textor, dono da SAF alvinegra. A ausência da parceira, que era um dos pilares financeiros do projeto, tem deixado o caixa do clube sob forte pressão.
-
-Internamente, o clima é de tensão. Jogadores aguardam um posicionamento da diretoria antes do confronto contra o Mirassol, no sábado, e a situação começa a gerar desconforto nos bastidores. Pessoas próximas ao grupo relatam preocupação com o futuro imediato da SAF, já que parte das receitas previstas não se concretizou.
-
-A dívida com o elenco reacende o debate sobre a sustentabilidade do modelo de gestão de Textor. O empresário, que prometeu revolucionar o Botafogo com investimentos de longo prazo, hoje enfrenta desconfiança até mesmo entre aliados.
-
-Enquanto isso, o clube tenta manter o foco esportivo em meio a um cenário administrativo conturbado — um retrato que destoa das expectativas criadas no início da era SAF e reforça a necessidade de ajustes urgentes na condução financeira do projeto.`,
-    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT614Fq8iO6Q-qT_TNliryv2vMu-IV8CQRNWQ&s',
+    id: 9,
+    category: 'VOLTA RÁPIDA',
+    title: 'Verstappen curte dias de descanso no Brasil antes do GP de São Paulo',
+    summary: 'Após garantir mais uma vitória no Grande Prêmio do México, Max Verstappen desembarcou no Brasil para aproveitar uma semana de descanso antes da próxima etapa da Fórmula 1, em São Paulo.',
+    content: 'Após garantir mais uma vitória no Grande Prêmio do México, Max Verstappen desembarcou no Brasil para aproveitar uma semana de descanso antes da próxima etapa da Fórmula 1, em São Paulo.\n\nO tetracampeão da Red Bull escolheu Brasília como parada inicial, onde visitou a família da namorada, Kelly Piquet. Durante a passagem pela capital, o holandês foi visto em um momento descontraído ao lado do sogro, o tricampeão mundial Nelson Piquet.\n\nA imagem do encontro foi publicada pelo cantor sertanejo Gleno Rossi, que registrou Verstappen em clima de total relaxamento — de bermuda e chinelo, bem diferente do visual habitual dos paddocks da F1.\n\nO piloto deve seguir para São Paulo nos próximos dias, onde começa a preparação para o Grande Prêmio de Interlagos, marcado para o próximo fim de semana. A etapa é uma das preferidas de Verstappen, que costuma destacar o calor da torcida brasileira e a atmosfera única do autódromo paulistano.',
+    imageUrl: 'https://midias.correiobraziliense.com.br/_midias/jpg/2025/10/30/1000x1000/1_verstappen-60455873.jpg',
     author: 'Equipe RADIO520',
-    date: 'Oct 31, 2025',
-    views: 2345,
+    date: 'Oct 27, 2025',
+    views: 4321,
+  },
+  {
+    id: 8,
+    category: 'FUTEBOL SHOW 520',
+    title: 'Palmeiras atropela a LDU e carimba vaga na final da Libertadores',
+    summary: 'O Palmeiras transformou o Allianz Parque em palco de uma atuação de gala na noite desta quinta-feira (30). Precisando reverter a derrota por três a zero sofrida em Quito, o Verdão respondeu com autoridade: venceu a LDU por quatro a zero e garantiu a classificação para a final da CONBOL Libertadores, com placar agregado de quatro a três.',
+    content: 'O Palmeiras transformou o Allianz Parque em palco de uma atuação de gala na noite desta quinta-feira (30). Precisando reverter a derrota por três a zero sofrida em Quito, o Verdão respondeu com autoridade: venceu a LDU por quatro a zero e garantiu a classificação para a final da CONMEBOL Libertadores, com placar agregado de quatro a três.\n\nLogo aos vinte minutos, Ramón Sosa abriu o caminho da virada no confronto. O atacante aproveitou passe de Allan e finalizou com precisão, incendiando o estádio. Ainda nos acréscimos do primeiro tempo, o zagueiro Bruno Fuchs ampliou de cabeça, recolocando o Palmeiras de vez na disputa pela vaga.\n\nNo segundo tempo, o domínio se tornou total. Raphael Veiga viveu mais uma noite de protagonista: marcou dois gols — um deles de pênalti — e foi eleito o melhor em campo com nota 8,6. O camisa 23 comandou o meio-campo, ditando o ritmo e desequilibrando com inteligência tática.\n\nColetivas pós-jogo\n\nNa entrevista coletiva, Abel Ferreira destacou a postura emocional da equipe e o controle do jogo desde o primeiro minuto.\n\n“A alma competitiva desse grupo apareceu quando mais precisava. Jogamos com intensidade, foco e coragem”, afirmou o treinador.\n\nDo outro lado, Tiago Nunes, técnico da LDU, reconheceu os méritos do adversário:\n\n“Pagamos caro pelos erros defensivos. O Palmeiras foi muito superior e soube aproveitar o ambiente a seu favor.”\n\nPanorama\n\nCom a classificação, o Palmeiras chega à sua quinta final de Libertadores nos últimos dez anos e mantém vivo o sonho do tetracampeonato continental. A equipe agora aguarda o vencedor do confronto entre Flamengo e River Plate para conhecer o adversário da decisão.\n\nO Verdão volta a campo no fim de semana pelo Campeonato Brasileiro, mas com os olhos voltados para a glória eterna.',
+    imageUrl: 'https://uploads.metroimg.com/wp-content/uploads/2025/10/30232416/Palmeiras-x-LDU-Libertadores.jpg',
+    author: 'Equipe RADIO520',
+    date: 'Oct 26, 2025',
+    views: 14321,
   }
 ];
