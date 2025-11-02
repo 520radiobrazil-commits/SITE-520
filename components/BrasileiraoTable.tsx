@@ -12,9 +12,19 @@ const WhatsAppIcon = () => (
 
 const BrasileiraoTable: React.FC = () => {
   const [currentUrl, setCurrentUrl] = useState('');
+  const [lastUpdated, setLastUpdated] = useState('');
 
   useEffect(() => {
     setCurrentUrl(window.location.href);
+    const now = new Date();
+    const formattedDate = now.toLocaleString('pt-BR', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    }).replace(', ', ' às ');
+    setLastUpdated(formattedDate);
   }, []);
 
   const teams = [
@@ -70,7 +80,14 @@ const BrasileiraoTable: React.FC = () => {
 
   return (
     <div className="bg-gray-800 rounded-lg p-4">
-      <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider">🏆 Brasileirão 2025</h3>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-white font-bold text-lg uppercase tracking-wider">🏆 Brasileirão 2025</h3>
+        {lastUpdated && (
+            <div className="bg-teal-500 text-gray-900 text-xs font-bold px-2 py-1 rounded-md uppercase tracking-wider shadow-md shadow-teal-500/30">
+                {lastUpdated}
+            </div>
+        )}
+      </div>
       <div className="overflow-x-auto">
         <table className="w-full text-sm text-white">
             <thead>
