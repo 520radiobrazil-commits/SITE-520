@@ -28,36 +28,36 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
   const timeAgo = formatTimeAgo(parseBrazilianDate(TABLE_LAST_UPDATED), currentTime);
 
   const teams = [
-    { pos: 1, name: 'Palmeiras', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1963.png', pj: 30, sg: '+29', pts: 65, zone: 'libertadores' },
-    { pos: 2, name: 'Flamengo', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_5981.png', pj: 30, sg: '+43', pts: 64, zone: 'libertadores' },
-    { pos: 3, name: 'Cruzeiro', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1954.png', pj: 31, sg: '+23', pts: 60, zone: 'libertadores' },
-    { pos: 4, name: 'Mirassol', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_21982.png', pj: 31, sg: '+21', pts: 56, zone: 'libertadores' },
-    { pos: 5, name: 'Bahia', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1955.png', pj: 31, sg: '+7', pts: 52, zone: 'prelibertadores' },
-    { pos: 6, name: 'Botafogo', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1958.png', pj: 31, sg: '+13', pts: 48, zone: 'sulamericana' },
-    { pos: 7, name: 'Fluminense', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1961.png', pj: 31, sg: '0', pts: 47, zone: 'sulamericana' },
-    { pos: 8, name: 'São Paulo', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1981.png', pj: 31, sg: '+2', pts: 44, zone: 'sulamericana' },
-    { pos: 9, name: 'Vasco da Gama', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1974.png', pj: 31, sg: '+6', pts: 42, zone: 'none' },
-    { pos: 10, name: 'Corinthians', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1957.png', pj: 31, sg: '-1', pts: 42, zone: 'none' },
-    { pos: 11, name: 'Grêmio', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_5926.png', pj: 31, sg: '-7', pts: 39, zone: 'none' },
-    { pos: 12, name: 'Ceará', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_2001.png', pj: 31, sg: '0', pts: 38, zone: 'none' },
-    { pos: 13, name: 'Atlético-MG', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1977.png', pj: 30, sg: '-5', pts: 37, zone: 'none' },
-    { pos: 14, name: 'RB Bragantino', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1999.png', pj: 31, sg: '-14', pts: 36, zone: 'none' },
-    { pos: 15, name: 'Internacional', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1966.png', pj: 31, sg: '-8', pts: 36, zone: 'none' },
-    { pos: 16, name: 'Santos', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1968.png', pj: 30, sg: '-12', pts: 33, zone: 'none' },
-    { pos: 17, name: 'Vitória', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1962.png', pj: 31, sg: '-19', pts: 31, zone: 'rebaixamento' },
-    { pos: 18, name: 'Fortaleza', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_2020.png', pj: 30, sg: '-17', pts: 28, zone: 'rebaixamento' },
-    { pos: 19, name: 'Juventude', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1980.png', pj: 31, sg: '-34', pts: 26, zone: 'rebaixamento' },
-    { pos: 20, name: 'Sport Recife', logoUrl: 'https://assets.sofascore.com/images/team-logo/football_1959.png', pj: 30, sg: '-27', pts: 17, zone: 'rebaixamento' },
+    { pos: 1, name: 'Palmeiras', pj: 30, sg: '+29', pts: 65, zone: 'libertadores' },
+    { pos: 2, name: 'Flamengo', pj: 30, sg: '+43', pts: 64, zone: 'libertadores' },
+    { pos: 3, name: 'Cruzeiro', pj: 31, sg: '+23', pts: 60, zone: 'libertadores' },
+    { pos: 4, name: 'Mirassol', pj: 31, sg: '+21', pts: 56, zone: 'libertadores' },
+    { pos: 5, name: 'Bahia', pj: 31, sg: '+7', pts: 52, zone: 'pre-libertadores' },
+    { pos: 6, name: 'Botafogo', pj: 31, sg: '+13', pts: 48, zone: 'pre-libertadores' },
+    { pos: 7, name: 'Fluminense', pj: 31, sg: '0', pts: 47, zone: 'sulamericana' },
+    { pos: 8, name: 'São Paulo', pj: 31, sg: '+2', pts: 44, zone: 'sulamericana' },
+    { pos: 9, name: 'Vasco', pj: 31, sg: '+6', pts: 42, zone: 'sulamericana' },
+    { pos: 10, name: 'Corinthians', pj: 31, sg: '-1', pts: 42, zone: 'sulamericana' },
+    { pos: 11, name: 'Grêmio', pj: 31, sg: '-7', pts: 39, zone: 'sulamericana' },
+    { pos: 12, name: 'Ceará', pj: 31, sg: '0', pts: 38, zone: 'sulamericana' },
+    { pos: 13, name: 'Atlético-MG', pj: 30, sg: '-5', pts: 37, zone: 'none' },
+    { pos: 14, name: 'RB Bragantino', pj: 31, sg: '-14', pts: 36, zone: 'none' },
+    { pos: 15, name: 'Internacional', pj: 31, sg: '-8', pts: 36, zone: 'none' },
+    { pos: 16, name: 'Santos', pj: 30, sg: '-12', pts: 33, zone: 'none' },
+    { pos: 17, name: 'Vitória', pj: 31, sg: '-19', pts: 31, zone: 'rebaixamento' },
+    { pos: 18, name: 'Fortaleza', pj: 30, sg: '-17', pts: 28, zone: 'rebaixamento' },
+    { pos: 19, name: 'Juventude', pj: 31, sg: '-34', pts: 26, zone: 'rebaixamento' },
+    { pos: 20, name: 'Sport', pj: 30, sg: '-27', pts: 17, zone: 'rebaixamento' },
   ];
 
   const getRowClass = (zone: string) => {
     switch (zone) {
       case 'libertadores':
         return 'bg-green-600/20';
-      case 'prelibertadores':
-        return 'bg-green-500/20';
+      case 'pre-libertadores':
+        return 'bg-cyan-500/20';
       case 'sulamericana':
-        return 'bg-blue-500/20';
+        return 'bg-yellow-500/20';
       case 'rebaixamento':
         return 'bg-red-600/20';
       default:
@@ -89,8 +89,8 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
             <tr className="bg-gray-900 text-left text-gray-400">
                 <th className="p-2 font-semibold text-center">#</th>
                 <th className="p-2 font-semibold">Time</th>
-                <th className="p-2 font-semibold text-center hidden sm:table-cell">PJ</th>
-                <th className="p-2 font-semibold text-center hidden sm:table-cell">SG</th>
+                <th className="p-2 font-semibold text-center hidden sm:table-cell">P</th>
+                <th className="p-2 font-semibold text-center hidden sm:table-cell">+/-</th>
                 <th className="p-2 font-semibold text-center">Pts</th>
             </tr>
             </thead>
@@ -99,10 +99,7 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
                 <tr key={team.pos} className={`border-b border-gray-700/50 ${getRowClass(team.zone)}`}>
                 <td className="p-2 font-medium text-center">{team.pos}</td>
                 <td className="p-2 font-semibold">
-                    <div className="flex items-center gap-2">
-                        <img src={team.logoUrl} alt={team.name} className="w-5 h-5 object-contain" />
-                        <span>{team.name}</span>
-                    </div>
+                    {team.name}
                 </td>
                 <td className="p-2 text-center hidden sm:table-cell">{team.pj}</td>
                 <td className="p-2 text-center hidden sm:table-cell">{team.sg}</td>
@@ -118,11 +115,11 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
           <span>Libertadores</span>
         </div>
          <div className="flex items-center gap-1.5">
-          <span className="w-2 h-2 rounded-full bg-green-400"></span>
+          <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
           <span>Pré-Libertadores</span>
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+          <span className="w-2 h-2 rounded-full bg-yellow-500"></span>
           <span>Sul-Americana</span>
         </div>
         <div className="flex items-center gap-1.5">
