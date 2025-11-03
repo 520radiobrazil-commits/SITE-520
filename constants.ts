@@ -2,6 +2,54 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 21,
+        category: 'FUTEBOL SHOW 520',
+        title: 'Palmeiras vence o Juventude fora de casa e reassume a liderança do Brasileirão',
+        summary: 'O Palmeiras voltou ao topo do Brasileirão Betano 2025. Com atuação sólida e eficiente, o time de Abel Ferreira venceu o Juventude por 2 a 0 no Alfredo Jaconi e reassumiu a liderança do campeonato. Bruno Rodrigues e Felipe Anderson marcaram os gols da partida.',
+        content: `Verdão faz 2 a 0 em Caxias do Sul, chega a 65 pontos e ultrapassa o Flamengo; Bruno Rodrigues e Felipe Anderson marcam os gols da vitória
+
+O Palmeiras está novamente na liderança do Brasileirão Betano 2025. Neste domingo (2), o time comandado por Abel Ferreira venceu o Juventude por 2 a 0, em Caxias do Sul, e chegou a 65 pontos, ultrapassando o Flamengo, que soma 64.
+
+Com uma postura dominante desde o início, o Verdão controlou o ritmo da partida e mostrou maturidade para lidar com as condições do jogo e o gramado pesado do Alfredo Jaconi. A equipe paulista teve mais posse de bola, criou as melhores oportunidades e foi precisa nas finalizações.
+
+O primeiro gol saiu aos 24 minutos da etapa inicial. Bruno Rodrigues recebeu ótimo passe de Raphael Veiga e finalizou com categoria para abrir o placar. No segundo tempo, aos 16 minutos, Felipe Anderson ampliou após jogada pelo lado direito com Khellven, definindo o resultado.
+
+Defensivamente, o Palmeiras teve mais uma atuação segura. O goleiro Carlos Miguel foi o destaque da partida, com defesas importantes e ótima leitura de jogo. Ele recebeu nota 9.7 no Sofascore, a mais alta da rodada até o momento.
+
+O Juventude, por outro lado, segue em situação crítica. A equipe de Thiago Carpini estacionou nos 26 pontos e ocupa a décima nona colocação, dentro da zona de rebaixamento. O time gaúcho teve dificuldades para reagir e praticamente não incomodou o gol palmeirense.
+
+<strong>DESTAQUES INDIVIDUAIS</strong>
+
+Carlos Miguel (Palmeiras) – Nota 9.7. Melhor em campo, decisivo e seguro durante todo o jogo.
+Felipe Anderson – Nota 8.5. Ativo no meio-campo, autor do segundo gol.
+Bruno Rodrigues – Nota 8.0. Abriu o placar e deu trabalho à defesa do Juventude.
+Bruno Fuchs – Nota 8.2. Firme na defesa e com boa saída de bola.
+
+<strong>NÚMEROS DO JOGO</strong>
+Estatística: Juventude / Palmeiras
+Posse de bola: 42% / 58%
+Finalizações: 7 / 14
+Chutes no gol: 2 / 6
+Escanteios: 4 / 6
+Cartões amarelos: 3 / 0
+
+<strong>SITUAÇÃO NA TABELA</strong>
+
+Com a vitória, o Palmeiras chegou a 65 pontos em 30 jogos, com 21 vitórias, 2 empates e 7 derrotas, além de saldo de +29 gols. O Flamengo é o segundo, com 64 pontos e saldo +43.
+O Juventude é o décimo nono colocado, com 26 pontos e saldo de -34.
+
+<strong>PRÓXIMOS JOGOS</strong>
+
+Palmeiras x Athletico-PR — Quarta-feira (5), às 21h30, no Allianz Parque
+Cruzeiro x Juventude — Quinta-feira (6), às 19h, no Mineirão.`,
+        imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=850,quality=75,format=webp/uploads/2025/11/palmeiras_x_juventude-1920x1280.jpg',
+        author: 'Equipe RADIO520',
+        date: '02/11/2025 - 21:00',
+        isFeatured: true,
+        views: 18542,
+        hashtags: ['#Palmeiras', '#Brasileirão', '#Futebol'],
+    },
+    {
         id: 20,
         category: 'ACE 520',
         title: 'Sinner soberano em Paris: a coroação de um número 1 em plena forma',
@@ -19,7 +67,7 @@ Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito,
         author: 'Equipe RADIO520',
         date: '03/11/2025 - 14:00',
         updatedAt: '03/11/2025 - 15:30',
-        isFeatured: true,
+        isFeatured: false,
         views: 16230,
         ogTitle: 'Sinner soberano em Paris',
         ogDescription: 'O número 1 do mundo confirma o domínio em Paris — veja na Rádio 520.',

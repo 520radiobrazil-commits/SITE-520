@@ -16,7 +16,7 @@ interface BrasileiraoTableProps {
 }
 
 // Define um timestamp estático para a última atualização dos dados da tabela.
-const TABLE_LAST_UPDATED = '02/11/2025 - 08:00';
+const TABLE_LAST_UPDATED = '02/11/2025 - 22:00';
 
 const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
   const [currentUrl, setCurrentUrl] = useState('');
@@ -28,25 +28,25 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
   const timeAgo = formatTimeAgo(parseBrazilianDate(TABLE_LAST_UPDATED), currentTime);
 
   const teams = [
-    { pos: 1, name: 'Flamengo', pj: 30, sg: '+43', pts: 64, zone: 'libertadores' },
-    { pos: 2, name: 'Palmeiras', pj: 29, sg: '+27', pts: 62, zone: 'libertadores' },
+    { pos: 1, name: 'Palmeiras', pj: 30, sg: '+29', pts: 65, zone: 'libertadores' },
+    { pos: 2, name: 'Flamengo', pj: 30, sg: '+43', pts: 64, zone: 'libertadores' },
     { pos: 3, name: 'Cruzeiro', pj: 31, sg: '+23', pts: 60, zone: 'libertadores' },
     { pos: 4, name: 'Mirassol', pj: 31, sg: '+21', pts: 56, zone: 'libertadores' },
-    { pos: 5, name: 'Bahia', pj: 30, sg: '+6', pts: 49, zone: 'sulamericana' },
+    { pos: 5, name: 'Bahia', pj: 31, sg: '+7', pts: 52, zone: 'sulamericana' },
     { pos: 6, name: 'Botafogo', pj: 31, sg: '+13', pts: 48, zone: 'sulamericana' },
-    { pos: 7, name: 'Fluminense', pj: 30, sg: '+2', pts: 47, zone: 'sulamericana' },
-    { pos: 8, name: 'Vasco da Gama', pj: 30, sg: '+8', pts: 42, zone: 'none' },
-    { pos: 9, name: 'São Paulo', pj: 30, sg: '0', pts: 41, zone: 'none' },
-    { pos: 10, name: 'Corinthians', pj: 30, sg: '-3', pts: 39, zone: 'none' },
-    { pos: 11, name: 'Grêmio', pj: 30, sg: '-5', pts: 39, zone: 'none' },
-    { pos: 12, name: 'Red Bull Bragantino', pj: 30, sg: '-13', pts: 36, zone: 'none' },
-    { pos: 13, name: 'Atlético-MG', pj: 29, sg: '-5', pts: 36, zone: 'none' },
-    { pos: 14, name: 'Ceará', pj: 30, sg: '-2', pts: 35, zone: 'none' },
-    { pos: 15, name: 'Internacional', pj: 30, sg: '-8', pts: 35, zone: 'none' },
+    { pos: 7, name: 'Fluminense', pj: 31, sg: '0', pts: 47, zone: 'sulamericana' },
+    { pos: 8, name: 'São Paulo', pj: 31, sg: '+2', pts: 44, zone: 'none' },
+    { pos: 9, name: 'Vasco da Gama', pj: 31, sg: '+6', pts: 42, zone: 'none' },
+    { pos: 10, name: 'Corinthians', pj: 31, sg: '-1', pts: 42, zone: 'none' },
+    { pos: 11, name: 'Grêmio', pj: 31, sg: '-7', pts: 39, zone: 'none' },
+    { pos: 12, name: 'Ceará', pj: 31, sg: '0', pts: 38, zone: 'none' },
+    { pos: 13, name: 'Atlético-MG', pj: 30, sg: '-5', pts: 37, zone: 'none' },
+    { pos: 14, name: 'RB Bragantino', pj: 31, sg: '-14', pts: 36, zone: 'none' },
+    { pos: 15, name: 'Internacional', pj: 31, sg: '-8', pts: 36, zone: 'none' },
     { pos: 16, name: 'Santos', pj: 30, sg: '-12', pts: 33, zone: 'none' },
     { pos: 17, name: 'Vitória', pj: 31, sg: '-19', pts: 31, zone: 'rebaixamento' },
     { pos: 18, name: 'Fortaleza', pj: 30, sg: '-17', pts: 28, zone: 'rebaixamento' },
-    { pos: 19, name: 'Juventude', pj: 30, sg: '-32', pts: 26, zone: 'rebaixamento' },
+    { pos: 19, name: 'Juventude', pj: 31, sg: '-34', pts: 26, zone: 'rebaixamento' },
     { pos: 20, name: 'Sport Recife', pj: 30, sg: '-27', pts: 17, zone: 'rebaixamento' },
   ];
 
