@@ -2,6 +2,31 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 22,
+        category: 'REPÓRTER 520',
+        title: 'Ancelotti convoca Seleção para amistosos de novembro com novidades e polêmicas',
+        summary: 'Luciano Juba ganha primeira chance, Richarlison é mantido e nomes como Thiago Silva e Pedro ficam de fora da lista de Ancelotti.',
+        content: `O técnico Carlo Ancelotti divulgou nesta segunda-feira (3) a lista de convocados da Seleção Brasileira para a última Data Fifa do ano, com amistosos contra Senegal (dia 15, em Londres) e Tunísia (dia 18, em Lille). A convocação trouxe estreias, retornos e algumas decisões contestadas.
+
+Entre os destaques, o lateral Luciano Juba, do Bahia, foi chamado pela primeira vez e celebrou nas redes o “sonho de vestir a Amarelinha”. Outro nome que volta a aparecer é o volante Fabinho, agora no Al-Ittihad. No ataque, Vitor Roque, do Palmeiras, segue entre os jovens observados para o ciclo até a Copa de 2026.
+
+Mas o que mais repercutiu foi a manutenção de nomes questionados, como Richarlison e Hugo Souza, e a ausência de veteranos como Thiago Silva e Philippe Coutinho. Nas redes, torcedores reagiram com ironia à convocação, apontando “empresários fortes” por trás de algumas escolhas — crítica que vem se repetindo desde o início da gestão Ancelotti.
+
+<strong>🧠 Análise – por Equipe RADIO520, setorista da Seleção Brasileira</strong>
+
+A convocação de Ancelotti reflete um momento de transição sem ruptura. O treinador parece querer manter uma base conhecida, mesmo que parte dela não viva boa fase nos clubes. Richarlison, por exemplo, tem números modestos no Tottenham, mas segue como homem de confiança do técnico. Já o chamado de Hugo Souza, reserva no Flamengo, expõe um olhar mais interno para o grupo do que para o desempenho recente.
+
+O lado positivo está na abertura a novos nomes, como Luciano Juba e Vitor Roque, que trazem vitalidade e fome de espaço num elenco envelhecido em setores-chave. Ainda assim, a ausência de jogadores como Pedro, Rafael (São Paulo) e até Endrick, em boa fase no Real Madrid, levanta dúvidas sobre os critérios da comissão.
+
+Ancelotti deve usar os dois amistosos para definir as últimas peças do elenco rumo à Copa de 2026, mas, pela reação da torcida, a Seleção chega em novembro com mais desconfiança do que empolgação.`,
+        imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2025/11/O-tecnico-da-Selecao-Brasileira-Carlo-Ancelotti-scaled-aspect-ratio-512-320.jpg',
+        author: 'Equipe RADIO520',
+        date: '03/11/2025 - 16:00',
+        isFeatured: true,
+        views: 14500,
+        hashtags: ['#SeleçãoBrasileira', '#Ancelotti', '#Futebol'],
+    },
+    {
         id: 21,
         category: 'FUTEBOL SHOW 520',
         title: 'Palmeiras vence o Juventude fora de casa e reassume a liderança do Brasileirão',
@@ -45,7 +70,7 @@ Cruzeiro x Juventude — Quinta-feira (6), às 19h, no Mineirão.`,
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=850,quality=75,format=webp/uploads/2025/11/palmeiras_x_juventude-1920x1280.jpg',
         author: 'Equipe RADIO520',
         date: '02/11/2025 - 21:00',
-        isFeatured: true,
+        isFeatured: false,
         views: 18542,
         hashtags: ['#Palmeiras', '#Brasileirão', '#Futebol'],
     },
@@ -408,7 +433,7 @@ Para os clubes brasileiros, a decisão impõe desafios práticos. O deslocamento
 
 No campo esportivo, o Monumental oferece condições ideais de gramado e estrutura, mas o fator altitude — cerca de 500 metros acima do nível do mar — e a logística de segurança da capital peruana exigirão atenção redobrada das equipes e autoridades locais.
 
-O reencontro entre palmeirenses e rubro-negros reedita a final de 2021, vencida pelo Flamengo em Montevidéu. Quatro anos depois, os papéis se invertem: o time de Abel Ferreira chega com moral após uma campanha sólida e quer consolidar o domínio recente no continente.`,
+O reencontro entre palmeirenses e rubro-negrenses reedita a final de 2021, vencida pelo Flamengo em Montevidéu. Quatro anos depois, os papéis se invertem: o time de Abel Ferreira chega com moral após uma campanha sólida e quer consolidar o domínio recente no continente.`,
     imageUrl: 'https://www.gizmodo.com.br/app/uploads/2025/08/estadio-lima.png',
     author: 'Equipe RADIO520',
     date: '30/10/2025 - 14:52',
