@@ -41,3 +41,25 @@ export const formatTimeAgo = (articleDate: Date, currentTime: Date): string => {
   if (diffDays === 1) return 'ontem';
   return `há ${diffDays} dia${diffDays > 1 ? 's' : ''}`;
 };
+
+/**
+ * Gera uma string de data no formato "dd/MM/yyyy - HH:mm" relativa à hora atual.
+ * @param daysAgo Número de dias no passado.
+ * @param hoursAgo Número de horas no passado.
+ * @param minutesAgo Número de minutos no passado.
+ * @returns Uma string de data formatada.
+ */
+export const getRelativeDateString = (daysAgo: number, hoursAgo: number = 0, minutesAgo: number = 0): string => {
+    const now = new Date();
+    now.setDate(now.getDate() - daysAgo);
+    now.setHours(now.getHours() - hoursAgo);
+    now.setMinutes(now.getMinutes() - minutesAgo);
+    
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+
+    return `${day}/${month}/${year} - ${hours}:${minutes}`;
+};

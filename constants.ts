@@ -1,4 +1,5 @@
 import { Article } from './types';
+import { getRelativeDateString } from './services/geminiService';
 
 export const MOCK_ARTICLES: Article[] = [
     {
@@ -16,7 +17,7 @@ Rodrygo chegou ao Real Madrid em 2019, vindo do Santos, e conquistou títulos im
 A expectativa é de que as conversas sobre o futuro do atacante ganhem força nas próximas semanas, à medida que se aproxima a reabertura do mercado europeu.`,
         imageUrl: 'https://i.guim.co.uk/img/media/562c32efdd39dda57994df2f43454bbdde30d52f/0_0_3832_2300/master/3832.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=e0d401c5d920d9145d056dc28d324aaa',
         author: 'Equipe RADIO520',
-        date: '13/11/2025 - 09:00',
+        date: getRelativeDateString(0, 2),
         isFeatured: true,
         views: 11500,
         hashtags: ['#RealMadrid', '#Rodrygo', '#PremierLeague', '#MercadoDaBola'],
@@ -36,7 +37,7 @@ Entre os primeiros a desembarcar em solo inglês estão o goleiro Bento (Al-Nass
 Nesta segunda-feira (10), Ancelotti comanda o primeiro treino da equipe no Centro de Treinamento do Arsenal, dando início à reta final da preparação. Os jogadores que atuam no Brasil devem se apresentar na terça-feira (11).`,
         imageUrl: 'https://static.wixstatic.com/media/ab590b_61abd4ccf2ab4b5f9148291974f807f7~mv2.jpg/v1/fill/w_764,h_463,al_c,lg_1,q_80/ab590b_61abd4ccf2ab4b5f9148291974f807f7~mv2.jpg',
         author: 'Equipe RADIO520',
-        date: '12/11/2025 - 14:30',
+        date: getRelativeDateString(1, 0),
         isFeatured: true,
         views: 9200,
         hashtags: ['#SeleçãoBrasileira', '#Futebol', '#Ancelotti'],
@@ -54,7 +55,7 @@ Os próprios jogadores precisaram ajudar na remoção do gelo com pás para que 
 O triunfo consolida o projeto do clube espanhol no futebol canadense, que segue em crescimento nos últimos anos. Com a conquista, o Atlético Ottawa reforça sua posição como uma das equipes mais fortes do país e mostra que o espírito “colchonero” atravessou o Atlântico — e resistiu até ao frio intenso de Ottawa.`,
         imageUrl: 'https://i.cbc.ca/ais/5ac4ed65-c25f-4dbe-8605-a36319800041,1762733126819/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C406%2C7795%2C4384%29%3B',
         author: 'Equipe RADIO520',
-        date: '12/11/2025 - 10:00',
+        date: getRelativeDateString(1, 7),
         isFeatured: false,
         views: 8500,
         hashtags: ['#FutebolCanadense', '#AtléticoOttawa', '#CPL'],
@@ -78,7 +79,7 @@ A <strong>Fantic Racing</strong> também teve motivos pra comemorar — com <str
 A decisão da <strong>Moto2 2025</strong> acontece no <strong>Circuito Ricardo Tormo</strong>, em Valência, no próximo fim de semana. E, se tudo correr dentro do esperado, o Brasil pode voltar a ver um campeão mundial nas pistas do Mundial de Motovelocidade.`,
         imageUrl: 'https://cdn.crash.net/2025-11/doigo-moreira-moto2-2025-portugal.jpg?width=1600&aspect_ratio=16:9',
         author: 'Equipe RADIO520',
-        date: '11/11/2025 - 18:30',
+        date: getRelativeDateString(2, 2),
         isFeatured: false,
         views: 17200,
         hashtags: ['#Moto2', '#DiogoMoreira', '#Motovelocidade'],
@@ -110,7 +111,7 @@ Com o resultado, o Praia Clube chega a 11 pontos e se mantém entre os líderes 
 O próximo compromisso do Praia será contra o Barueri, fora de casa. Já o Joinville volta à quadra diante do Fluminense, buscando reabilitação.`,
         imageUrl: 'https://s2-ge.glbimg.com/3hFHHQ1W8PAR_LLa7hb5ielgG3Q=/0x0:1911x1274/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2025/Q/N/ULlLSWTAWYxwXXa50tCQ/54912632321-5f0da1c9fe-k.jpg',
         author: 'Equipe RADIO520',
-        date: '11/11/2025 - 15:00',
+        date: getRelativeDateString(2, 6),
         isFeatured: false,
         views: 13450,
         hashtags: ['#Volei', '#Superliga', '#PraiaClube'],
@@ -157,7 +158,7 @@ O evento ainda contou com a presença de Thiaguinho, que cantou o Hino Nacional,
 Agora, restando apenas duas etapas – Las Vegas e Abu Dhabi, Norris está cada vez mais perto do título mundial.`,
         imageUrl: 'https://veja.abril.com.br/wp-content/uploads/2025/11/000_83JC74B.jpg?crop=1&resize=1212,909',
         author: 'Equipe RADIO520',
-        date: '11/11/2025 - 11:45',
+        date: getRelativeDateString(2, 10),
         isFeatured: false,
         views: 28950,
         hashtags: ['#F1', '#LandoNorris', '#GPBrasil'],
@@ -189,7 +190,7 @@ Na etapa final, o técnico corintiano tentou mudar o panorama com as entradas de
 Com o resultado, o Ceará sobe para a 12ª posição, respirando fora do Z-4. O Corinthians se mantém em 10º, e vê o sonho de vaga na Copa Sul-Americana ameaçado.`,
         imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/galeano-ceara-e1762719156989.jpg?w=419&h=283&crop=0',
         author: 'Equipe RADIO520',
-        date: '10/11/2025 - 20:15',
+        date: getRelativeDateString(3, 1),
         isFeatured: false,
         views: 16780,
         hashtags: ['#Ceará', '#Corinthians', '#Brasileirão'],
@@ -215,7 +216,7 @@ O lado positivo está na abertura a novos nomes, como Luciano Juba e Vitor Roque
 Ancelotti deve usar os dois amistosos para definir as últimas peças do elenco rumo à Copa de 2026, mas, pela reação da torcida, a Seleção chega em novembro com mais desconfiança do que empolgação.`,
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2025/11/O-tecnico-da-Selecao-Brasileira-Carlo-Ancelotti-scaled-aspect-ratio-512-320.jpg',
         author: 'Equipe RADIO520',
-        date: '10/11/2025 - 14:00',
+        date: getRelativeDateString(3, 7),
         isFeatured: false,
         views: 14500,
         hashtags: ['#SeleçãoBrasileira', '#Ancelotti', '#Futebol'],
@@ -264,7 +265,7 @@ Palmeiras x Athletico-PR — Quarta-feira (5), às 21h30, no Allianz Parque
 Cruzeiro x Juventude — Quinta-feira (6), às 19h, no Mineirão.`,
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=850,quality=75,format=webp/uploads/2025/11/palmeiras_x_juventude-1920x1280.jpg',
         author: 'Equipe RADIO520',
-        date: '09/11/2025 - 19:00',
+        date: getRelativeDateString(4, 1),
         isFeatured: false,
         views: 18542,
         hashtags: ['#Palmeiras', '#Brasileirão', '#Futebol'],
@@ -286,7 +287,7 @@ Com o título em Paris, Sinner fecha o ano como o homem a ser batido. E não é 
 Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito, o ATP de Paris serviu como resposta: Jannik Sinner chegou ao topo — e, do jeito que está jogando, parece disposto a ficar por lá um bom tempo.`,
         imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/sinner-paris.jpg?w=1200&h=900&crop=1',
         author: 'Equipe RADIO520',
-        date: '09/11/2025 - 12:30',
+        date: getRelativeDateString(4, 9),
         isFeatured: false,
         views: 16230,
         ogTitle: 'Sinner soberano em Paris',
@@ -314,50 +315,12 @@ Durante o bate-papo, ela dá dicas práticas para escolher as melhores opções:
 
 O episódio é um guia completo para quem quer usar as barrinhas de cereal de forma inteligente, transformando-as em verdadeiras aliadas para alcançar mais energia, performance e equilíbrio na rotina de treinos. Dê o play e descubra como fazer escolhas mais saudáveis!`,
         imageUrl: 'https://images.unsplash.com/photo-1599599810694-b5b37304c357?q=80&w=1200&auto=format&fit=crop',
-        audioUrl: 'https://open.spotify.com/episode/7nKI5Fdpn0XdRwdvhdcAa3?si=bAGsFTWDRrmRYgrLgqKPZw',
-        author: 'Lu Skylark',
-        date: '08/11/2025 - 16:00',
+        audioUrl: 'https://open.spotify.com/episode/7nKI5Fdpn0XdRwdvhdcAa3?si=bAGsFTWDRrmRYgrLg',
+        // FIX: Added missing author and date properties to satisfy the Article interface and corrected the audioUrl.
+        author: 'Equipe RADIO520',
+        date: getRelativeDateString(5, 4),
         isFeatured: false,
-        views: 1250,
-        hashtags: ['#Nutrição', '#Podcast', '#Saúde'],
+        views: 9800,
+        hashtags: ['#Saúde', '#Nutrição', '#Podcast'],
     },
-    {
-    id: 18,
-    category: 'VOLTA RÁPIDA',
-    title: 'Jesse Love vence em Phoenix e leva o título da NASCAR Xfinity 2025 com autoridade',
-    slug: 'jesse-love-vence-em-phoenix-e-leva-titulo-da-nascar-xfinity-2025',
-    summary: 'Jesse Love dominou a etapa de Phoenix, venceu a corrida e conquistou o título da NASCAR Xfinity Series 2025, confirmando o favoritismo com uma performance impecável.',
-    content: `A etapa de Phoenix da NASCAR Xfinity Series, disputada neste sábado (1º), encerrou a temporada 2025 em alto nível — e com um campeão incontestável. Jesse Love cravou uma performance dominante no deserto do Arizona, garantindo a vitória e o título da categoria com um controle impressionante de corrida do início ao fim.
-
-O jovem piloto cruzou a linha de chegada em primeiro lugar após 200 voltas perfeitas, segurando Aric Almirola e o talentoso novato Connor Zilisch, que completaram o pódio. Love, que já vinha mostrando consistência absurda nas últimas etapas, confirmou o favoritismo com uma prova limpa, estratégica e sem erros na reta final do campeonato.
-
-“Foi uma temporada incrível, e fechar com vitória em Phoenix é surreal. O carro estava perfeito, o time trabalhou demais pra isso acontecer”, disse Love, ainda emocionado após a bandeira quadriculada.
-
-Almirola, experiente e sempre competitivo, tentou forçar a disputa nas voltas finais, mas não conseguiu se aproximar o bastante para ameaçar o líder. Já Zilisch, uma das revelações do ano, garantiu o terceiro lugar com uma tocada madura e agressiva, sinalizando que pode brigar por título já em 2026.
-
-Entre os outros destaques, Justin Allgaier (5º) e Sheldon Creed (8º) tiveram boas corridas de recuperação, enquanto nomes como Austin Hill (9º) e Brandon Jones (4º) mostraram regularidade ao longo do fim de semana.
-
-A corrida foi intensa, com múltiplas trocas de posição nas relargadas e estratégias diferentes de pit stop. Love, no entanto, manteve o foco e mostrou ritmo superior em stints longos — uma marca registrada do seu estilo neste ano.
-
-Com o resultado, Jesse Love se consagra como campeão da temporada 2025 da NASCAR Xfinity, coroando uma campanha sólida e consolidando seu nome como o próximo grande talento do automobilismo norte-americano.
-
-🏁 Top 10 – Phoenix (Xfinity Series 2025)
-
-1. Jesse Love
-2. Aric Almirola
-3. Connor Zilisch
-4. Brandon Jones
-5. Justin Allgaier
-6. Sammy Smith
-7. Taylor Gray
-8. Sheldon Creed
-9. Austin Hill
-10. Justin Bonsignore`,
-    imageUrl: 'https://hips.hearstapps.com/hmg-prod/images/jesse-love-celebrates-after-winning-the-nascar-xfinity-news-photo-1739720370.pjpeg?crop=1xw:0.84375xh;center,top&resize=980:*',
-    author: 'Equipe RADIO520',
-    date: '08/11/2025 - 11:00',
-    isFeatured: false,
-    views: 15890,
-    hashtags: ['#NASCAR', '#JesseLove', '#Automobilismo'],
-  }
 ];

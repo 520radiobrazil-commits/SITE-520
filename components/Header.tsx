@@ -66,14 +66,12 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, onShowAbout
       // Get weekday: e.g., 'sex.'
       const weekdayRaw = new Intl.DateTimeFormat('pt-BR', {
         weekday: 'short',
-        timeZone: 'America/Sao_Paulo',
       }).format(currentTime);
 
       // Get time: e.g., '21:30'
       const timeRaw = new Intl.DateTimeFormat('pt-BR', {
         hour: '2-digit',
         minute: '2-digit',
-        timeZone: 'America/Sao_Paulo',
       }).format(currentTime);
 
       // Format weekday: 'sex.' -> 'SEX'
@@ -126,7 +124,7 @@ const Header: React.FC<HeaderProps> = ({ onSelectCategory, onGoHome, onShowAbout
                 </div>
                  <div className="ml-10 pl-4 sm:ml-12 sm:pl-4 border-l border-gray-700">
                     <p className="text-xs font-bold tracking-wider text-gray-300">{displayTime}</p>
-                    <p className="text-xs text-gray-500">São Paulo</p>
+                    <p className="text-xs text-gray-500">HORA LOCAL</p>
                 </div>
             </div>
             
