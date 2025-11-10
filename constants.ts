@@ -2,6 +2,37 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 25,
+        category: 'SUPERSET 520',
+        title: 'Praia Clube domina Joinville Vôlei e vence por 3 a 1 na Superliga Feminina',
+        summary: 'O Praia Clube confirmou o favoritismo e derrotou o Joinville Vôlei por 3 sets a 1, mantendo a invencibilidade na competição após reagir com autoridade.',
+        content: `O Praia Clube confirmou o favoritismo e derrotou o Joinville Vôlei por 3 sets a 1 (22/25, 25/20, 25/17 e 25/19) neste domingo (9), em Uberlândia, pela 4ª rodada da Superliga Feminina 2025. Mesmo saindo atrás no placar, o time mineiro reagiu com autoridade e manteve a invencibilidade na competição.
+
+O Joinville surpreendeu no primeiro set, aproveitando erros do Praia e impondo um ritmo agressivo no saque e na defesa. Mas, a partir do segundo set, o equilíbrio se quebrou: o time da casa ajustou o passe, explorou bem as jogadas rápidas com as centrais e contou com grande atuação da ponteira dominicana Brayelin Martínez, principal destaque da partida.
+
+O técnico do Praia, Paulo Coco, elogiou a postura do grupo após o jogo:
+
+<blockquote>“Sabíamos que o Joinville vinha embalado e com muita energia. Foi importante manter a calma depois do primeiro set. A equipe reagiu bem e mostrou maturidade”, afirmou.</blockquote>
+
+Do lado catarinense, o treinador Henrique Furtado reconheceu a superioridade das adversárias:
+
+<blockquote>“Fizemos um bom primeiro set, mas o volume e a regularidade do Praia pesaram. Vamos seguir evoluindo”, disse.</blockquote>
+
+Nas redes, torcedores do Praia destacaram a consistência do time:
+
+<blockquote>“Depois que engrenou, o Praia foi avassalador”, escreveu um fã em um grupo de discussão.</blockquote><blockquote>Já entre os torcedores de Joinville, o sentimento foi de otimismo com a entrega da equipe: “Perdemos, mas mostramos que podemos competir de igual pra igual com as favoritas”.</blockquote>
+
+Com o resultado, o Praia Clube chega a 11 pontos e se mantém entre os líderes da Superliga. O Joinville, com 3 pontos, segue na parte intermediária da tabela.
+
+O próximo compromisso do Praia será contra o Barueri, fora de casa. Já o Joinville volta à quadra diante do Fluminense, buscando reabilitação.`,
+        imageUrl: 'https://s2-ge.glbimg.com/3hFHHQ1W8PAR_LLa7hb5ielgG3Q=/0x0:1911x1274/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2025/Q/N/ULlLSWTAWYxwXXa50tCQ/54912632321-5f0da1c9fe-k.jpg',
+        author: 'Equipe RADIO520',
+        date: '10/11/2025 - 21:00',
+        isFeatured: false,
+        views: 13450,
+        hashtags: ['#Volei', '#Superliga', '#PraiaClube'],
+    },
+    {
         id: 24,
         category: 'VOLTA RÁPIDA',
         title: 'Lando Norris domina o GP de São Paulo e amplia liderança no Mundial de F1 2025',
@@ -315,30 +346,5 @@ Warriors: voltam à quadra contra o Milwaukee Bucks, também na terça, em São 
     isFeatured: false,
     views: 17550,
     hashtags: ['#NBA', '#Pacers', '#Warriors'],
-  },
-    {
-    id: 15,
-    category: 'FUTEBOL SHOW 520',
-    title: 'Flamengo domina o Sport no Maracanã e mantém caça ao topo do Brasileirão',
-    summary: 'Com direito a show de Bruno Henrique e Arrascaeta, o Rubro-Negro atropelou o Sport Recife por três a zero e garantiu mais três pontos na briga pelo título.',
-    content: `O Flamengo mostrou mais uma vez sua força no Maracanã. Com direito a show de Bruno Henrique e Arrascaeta, o Rubro-Negro atropelou o Sport Recife por três a zero, neste sábado (1º), pela trigésima primeira rodada do Brasileirão Betano.
-
-Depois de um primeiro tempo morno, o Flamengo voltou do intervalo com outra postura. Logo aos cinquenta e um minutos, Bruno Henrique abriu o placar após boa jogada de Samuel Lino, levantando a torcida no Maraca. O camisa vinte e sete, em noite inspirada, ampliou nove minutos depois, aproveitando cruzamento preciso de De La Cruz e empurrando para o fundo da rede.
-
-O domínio carioca ficou ainda mais evidente aos sessenta e sete, quando Giorgian De Arrascaeta fechou a conta com um golaço, carimbando a vitória e sendo ovacionado pela torcida.
-
-Com o placar construído, o Flamengo administrou o jogo, viu o Sport se perder em campo e ainda contou com a solidez de Emerson Royal e Sérgio Oliveira, que controlaram bem o meio e a defesa. O rival pernambucano, que ainda teve E. Araújo expulso nos minutos finais, pouco conseguiu reagir.
-
-O destaque absoluto foi Bruno Henrique, eleito melhor em campo com nota 8.9 no Sofascore — símbolo da intensidade rubro-negra na segunda etapa.
-
-Com o resultado, o Flamengo chega a sessenta e um pontos e segue firme na vice-liderança, mantendo a pressão sobre os líderes. Já o Sport amarga a lanterna, com apenas dezessete pontos, cada vez mais distante de uma reação.
-
-No embalo da torcida e com o elenco mostrando entrosamento, o Mengão volta a campo na próxima rodada cheio de confiança — e com o título ainda no radar.`,
-    imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/flamengo-sport-4-e1762048665218.jpg?w=1200&h=675&crop=1',
-    author: 'Equipe RADIO520',
-    date: '02/11/2025 - 06:05',
-    isFeatured: false,
-    views: 21543,
-    hashtags: ['#Flamengo', '#Brasileirão', '#Futebol'],
   }
 ];
