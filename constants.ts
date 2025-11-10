@@ -2,6 +2,29 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 26,
+        category: 'VOLTA RÁPIDA',
+        title: 'Moreira vence e fica a um passo do título da Moto2',
+        summary: 'O brasileiro Diogo Moreira venceu o GP de Portugal e ficou a um passo do título da Moto2, abrindo 24 pontos de vantagem para a etapa final em Valência.',
+        content: `O brasileiro <strong>Diogo Moreira</strong> deu um passo gigante rumo ao título da <strong>Moto2</strong> neste domingo (9), ao vencer o <strong>Grande Prêmio de Portugal</strong>, em Portimão. A vitória colocou o piloto da <strong>Italtrans Racing Team</strong> com <strong>24 pontos de vantagem</strong> sobre <strong>Manuel Gonzalez</strong> (Liqui Moly Dynavolt Intact GP), restando apenas a etapa decisiva em <strong>Valência</strong>, no próximo fim de semana.
+
+Largando da <strong>pole position</strong>, Moreira fez uma corrida sólida e estratégica. Ele perdeu a liderança nas voltas iniciais para o holandês <strong>Collin Veijer</strong> (Red Bull KTM Ajo), mas manteve a calma e reassumiu a ponta nas voltas finais — justamente no momento em que mais precisava pontuar.
+
+Veijer ficou com o segundo lugar e conquistou seu <strong>primeiro pódio na Moto2</strong>, enquanto o colombiano <strong>David Alonso</strong> (CFMOTO Inde Aspar Team) completou o top 3, marcando o <strong>terceiro pódio consecutivo</strong> da temporada.
+
+Com o sexto lugar, Gonzalez manteve vivas as chances matemáticas de título, mas agora depende de um verdadeiro milagre em Valência: precisa vencer e torcer para que Moreira não chegue entre os 14 primeiros.
+
+A <strong>Fantic Racing</strong> também teve motivos pra comemorar — com <strong>Aron Canet</strong> em quarto e <strong>Barry Baltus</strong> em quinto, a equipe garantiu o <strong>título de construtores</strong> da categoria.
+
+A decisão da <strong>Moto2 2025</strong> acontece no <strong>Circuito Ricardo Tormo</strong>, em Valência, no próximo fim de semana. E, se tudo correr dentro do esperado, o Brasil pode voltar a ver um campeão mundial nas pistas do Mundial de Motovelocidade.`,
+        imageUrl: 'https://cdn.crash.net/2025-11/doigo-moreira-moto2-2025-portugal.jpg?width=1600&aspect_ratio=16:9',
+        author: 'Equipe RADIO520',
+        date: '09/11/2025 - 11:00',
+        isFeatured: false,
+        views: 17200,
+        hashtags: ['#Moto2', '#DiogoMoreira', '#Motovelocidade'],
+    },
+    {
         id: 25,
         category: 'SUPERSET 520',
         title: 'Praia Clube domina Joinville Vôlei e vence por 3 a 1 na Superliga Feminina',
@@ -301,50 +324,5 @@ Na próxima rodada, o Suzano encara o Sesi-SP, em casa, num duelo direto na part
     isFeatured: false,
     views: 11234,
     hashtags: ['#Volei', '#Superliga', '#Suzano'],
-  },
-    {
-    id: 16,
-    category: 'LIGA 520',
-    title: 'Pacers surpreendem e vencem os Warriors em noite de gala de Quenton Jackson',
-    summary: 'O Indiana Pacers quebrou uma sequência de derrotas e venceu o Golden State Warriors em casa, com uma atuação de destaque de Quenton Jackson, que foi decisivo nos minutos finais.',
-    content: `O Indiana Pacers quebrou uma sequência amarga de derrotas e, diante da sua torcida no Gainbridge Fieldhouse, derrotou o Golden State Warriors por 114 a 109 neste sábado (1º). O resultado marcou a primeira vitória dos Pacers na temporada (1–5), enquanto os Warriors sofreram sua segunda derrota (4–2), perdendo fôlego na disputa direta por liderança na Conferência Oeste.
-
-Jackson comanda reação histórica
-
-O nome da noite foi Quenton Jackson, que teve uma atuação completa — 25 pontos, 6 rebotes, 10 assistências e 3 roubos de bola — e foi decisivo no último quarto, quando o time da casa virou o jogo com uma sequência de bolas de três e intensidade defensiva que travou o ataque dos Warriors.
-
-O armador brilhou principalmente nos minutos finais: com menos de um minuto no relógio, converteu duas cestas seguidas e garantiu a virada definitiva por 114 a 109, levando o público de Indianápolis ao delírio.
-
-Curry pontua, mas Warriors não sustentam
-
-Do lado dos visitantes, Stephen Curry fez o que pôde — anotou 28 pontos e 7 assistências, com aproveitamento acima de 45% nas bolas de três —, mas o time comandado por Steve Kerr falhou na transição defensiva e viu a rotação secundária ser engolida pela energia dos jovens dos Pacers.
-
-Jonathan Kuminga e Pascal Siakam contribuíram com 16 pontos cada, mas erraram nos momentos decisivos. A equipe ainda sofre com inconsistências no garrafão, especialmente quando Draymond Green precisa descansar.
-
-Pacers respiram na Conferência Leste
-
-A vitória tira os Pacers da lanterna e dá novo ânimo à equipe de Rick Carlisle, que vinha sendo muito criticada pela falta de competitividade. Agora, com campanha 1–5, o time ainda está na parte de baixo da Conferência Leste, mas dá sinais de evolução coletiva e melhora no aproveitamento de arremessos, que subiu de 41% para 48% no jogo de hoje.
-
-Já os Warriors, com 4–2, seguem entre os primeiros colocados do Oeste, mas perdem terreno para times como Denver Nuggets (5–1) e Minnesota Timberwolves (4–1), que abriram vantagem na classificação.
-
-Resumo dos números
-Estatística - Pacers / Warriors
-Pontos - 114 / 109
-Rebotes - 45 / 38
-Assistências - 28 / 24
-Arremessos de 3 - 14/33 (42%) / 13/37 (35%)
-Turnovers - 9 / 14
-
-Próximos jogos
-
-Pacers: encaram o Miami Heat, fora de casa, na próxima terça-feira (4).
-
-Warriors: voltam à quadra contra o Milwaukee Bucks, também na terça, em São Francisco.`,
-    imageUrl: 'https://imageio.forbes.com/specials-images/imageserve/6747df8e0a86335d37a55fd7/0x0.jpg?format=jpg&crop=2038,1146,x0,y290,safe&height=600&width=1200&fit=bounds',
-    author: 'Equipe RADIO520',
-    date: '02/11/2025 - 07:30',
-    isFeatured: false,
-    views: 17550,
-    hashtags: ['#NBA', '#Pacers', '#Warriors'],
   }
 ];
