@@ -2,6 +2,23 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 27,
+        category: 'REPÓRTER 520',
+        title: 'Atlético Ottawa é campeão da Canadian Premier League com gol de bicicleta em meio à neve',
+        summary: 'Filial do Atlético de Madrid no Canadá conquista título inédito da Canadian Premier League em final marcada por forte nevasca e um golaço de bicicleta.',
+        content: `O Atlético Ottawa, filial do Atlético de Madrid no Canadá, viveu um dia histórico ao conquistar o título da Canadian Premier League em condições bem diferentes das tradicionais. A final foi disputada debaixo de uma forte nevasca, que chegou a interromper o jogo logo no início.
+
+Os próprios jogadores precisaram ajudar na remoção do gelo com pás para que a bola pudesse rolar novamente. E valeu a pena: a partida terminou com um golaço de bicicleta, selando o título em grande estilo.
+
+O triunfo consolida o projeto do clube espanhol no futebol canadense, que segue em crescimento nos últimos anos. Com a conquista, o Atlético Ottawa reforça sua posição como uma das equipes mais fortes do país e mostra que o espírito “colchonero” atravessou o Atlântico — e resistiu até ao frio intenso de Ottawa.`,
+        imageUrl: 'https://i.cbc.ca/ais/5ac4ed65-c25f-4dbe-8605-a36319800041,1762733126819/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C406%2C7795%2C4384%29%3B',
+        author: 'Equipe RADIO520',
+        date: '11/11/2025 - 10:00',
+        isFeatured: false,
+        views: 8500,
+        hashtags: ['#FutebolCanadense', '#AtléticoOttawa', '#CPL'],
+    },
+    {
         id: 26,
         category: 'VOLTA RÁPIDA',
         title: 'Moreira vence e fica a um passo do título da Moto2',
@@ -293,36 +310,5 @@ Com o resultado, Jesse Love se consagra como campeão da temporada 2025 da NASCA
     isFeatured: false,
     views: 15890,
     hashtags: ['#NASCAR', '#JesseLove', '#Automobilismo'],
-  },
-    {
-    id: 17,
-    category: 'SUPERSET 520',
-    title: 'Suzano mostra força e bate Joinville fora de casa em jogo de alto nível pela Superliga',
-    summary: 'O Suzano Vôlei conquistou uma vitória consistente fora de casa ao bater o Joinville Vôlei por 3 sets a 1, mostrando maturidade para superar a pressão e impor seu ritmo na Superliga Masculina.',
-    content: `O Suzano Vôlei conquistou uma vitória consistente fora de casa neste sábado (1º), ao bater o Joinville Vôlei por 3 sets a 1 (25/15, 23/25, 25/18 e 25/21), pela 3ª rodada da Superliga Masculina 2025. O confronto, disputado em Santa Catarina, mostrou a maturidade da equipe paulista, que soube reagir aos momentos de pressão e impôs seu ritmo diante de um adversário competitivo.
-
-Início dominante e reação catarinense
-
-O primeiro set foi um passeio do Suzano. Com saque agressivo e bloqueio bem ajustado, o time visitante abriu vantagem logo no início e fechou em 25 a 15, sem dar chances ao Joinville, que teve dificuldade na recepção e pouco volume ofensivo.
-No segundo set, os donos da casa reagiram — mais equilibrados e com bom aproveitamento de contra-ataques, empataram o jogo em 25 a 23, embalados pela torcida que lotou o ginásio.
-
-Suzano retoma o controle
-
-A partir do terceiro set, o time comandado por Marcelo Negrão voltou a dominar as ações. Com destaque para o oposto Felipe Roque, eficiente no ataque e decisivo nos momentos de pressão, o Suzano retomou o controle da partida, vencendo por 25 a 18. No quarto e último set, mesmo com uma boa resistência do Joinville, os visitantes mostraram equilíbrio e experiência para fechar o confronto em 25 a 21.
-
-Destaques individuais e panorama da Superliga
-
-Além de Felipe Roque, o ponteiro Guilherme Sabino também teve atuação de gala, garantindo pontos importantes e sendo peça-chave na virada de bola. Do lado catarinense, Leandro Vissotto foi o mais efetivo, mas acabou sobrecarregado diante da boa marcação do Suzano.
-Com o resultado, o Suzano Vôlei soma agora duas vitórias e uma derrota, subindo posições na tabela da Superliga e consolidando-se como um dos candidatos ao G-4 neste início de temporada. Já o Joinville amarga seu segundo revés e precisa ajustar o sistema de passe e defesa se quiser brigar pelas primeiras colocações.
-
-O que vem pela frente
-
-Na próxima rodada, o Suzano encara o Sesi-SP, em casa, num duelo direto na parte de cima da tabela. O Joinville, por sua vez, busca reabilitação diante do Minas Tênis Clube, novamente em seus domínios.`,
-    imageUrl: 'https://img.nsctotal.com.br/wp-content/uploads/2025/11/Joinville-Volei-perde-na-estreia-em-casa-pela-Superliga-202526.jpg',
-    author: 'Equipe RADIO520',
-    date: '02/11/2025 - 08:15',
-    isFeatured: false,
-    views: 11234,
-    hashtags: ['#Volei', '#Superliga', '#Suzano'],
   }
 ];
