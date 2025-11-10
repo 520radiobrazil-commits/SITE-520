@@ -11,7 +11,7 @@ interface ArticleDetailProps {
 }
 
 const ArrowLeftIcon = () => (
-    <svg xmlns="http://www.w.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
     </svg>
 );
@@ -66,11 +66,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         updateMetaTag('name', 'twitter:image', image);
 
         // Canonical URL
-        const slug = article.title.toLowerCase()
-          .replace(/[^\w\s-]/g, '') // remove non-word chars
-          .replace(/\s+/g, '-') // replace spaces with -
-          .replace(/--+/g, '-'); // replace multiple - with single -
-        const canonicalUrl = `https://radio520.com.br/${slug}`;
+        const canonicalUrl = `https://radio520.com.br/noticia/${article.slug}`;
         updateLinkTag('canonical', canonicalUrl);
     };
 

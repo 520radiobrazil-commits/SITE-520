@@ -3,6 +3,7 @@ export interface Article {
   id: number;
   category: string;
   title: string;
+  slug: string;
   summary: string;
   content: string; // Full content for AI summary
   imageUrl: string;

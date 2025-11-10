@@ -2,9 +2,30 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 28,
+        category: 'REPÓRTER 520',
+        title: 'Seleção Brasileira desembarca em Londres para os últimos amistosos de 2025',
+        slug: 'selecao-brasileira-desembarca-em-londres-para-ultimos-amistosos-de-2025',
+        summary: 'Comandados de Carlo Ancelotti se apresentam em Londres para os amistosos contra Senegal e Tunísia, fechando a temporada de 2025.',
+        content: `Os convocados da Seleção Brasileira começaram a chegar neste domingo (9) em Londres, capital da Inglaterra, para os dois últimos compromissos do ano. Sob o comando do técnico Carlo Ancelotti, o Brasil vai disputar dois amistosos que encerram a temporada 2025 e servem como preparação para a Copa do Mundo de 2026.
+
+O primeiro jogo será no próximo sábado (15), contra o Senegal, no Emirates Stadium, às 13h (horário de Brasília). Já o segundo confronto acontece no dia 18, diante da Tunísia, às 16h30 (de Brasília), em Lille, na França.
+
+Entre os primeiros a desembarcar em solo inglês estão o goleiro Bento (Al-Nassr, da Arábia Saudita) e o atacante Richarlison, que atua no Tottenham e mora em Londres. Membros da comissão técnica também chegaram à capital britânica no sábado (8), onde acompanharam partidas da Premier League.
+
+Nesta segunda-feira (10), Ancelotti comanda o primeiro treino da equipe no Centro de Treinamento do Arsenal, dando início à reta final da preparação. Os jogadores que atuam no Brasil devem se apresentar na terça-feira (11).`,
+        imageUrl: 'https://static.wixstatic.com/media/ab590b_61abd4ccf2ab4b5f9148291974f807f7~mv2.jpg/v1/fill/w_764,h_463,al_c,lg_1,q_80/ab590b_61abd4ccf2ab4b5f9148291974f807f7~mv2.jpg',
+        author: 'Equipe RADIO520',
+        date: '12/11/2025 - 14:30',
+        isFeatured: true,
+        views: 9200,
+        hashtags: ['#SeleçãoBrasileira', '#Futebol', '#Ancelotti'],
+    },
+    {
         id: 27,
         category: 'REPÓRTER 520',
         title: 'Atlético Ottawa é campeão da Canadian Premier League com gol de bicicleta em meio à neve',
+        slug: 'atletico-ottawa-e-campeao-da-canadian-premier-league-com-gol-de-bicicleta-em-meio-a-neve',
         summary: 'Filial do Atlético de Madrid no Canadá conquista título inédito da Canadian Premier League em final marcada por forte nevasca e um golaço de bicicleta.',
         content: `O Atlético Ottawa, filial do Atlético de Madrid no Canadá, viveu um dia histórico ao conquistar o título da Canadian Premier League em condições bem diferentes das tradicionais. A final foi disputada debaixo de uma forte nevasca, que chegou a interromper o jogo logo no início.
 
@@ -13,7 +34,7 @@ Os próprios jogadores precisaram ajudar na remoção do gelo com pás para que 
 O triunfo consolida o projeto do clube espanhol no futebol canadense, que segue em crescimento nos últimos anos. Com a conquista, o Atlético Ottawa reforça sua posição como uma das equipes mais fortes do país e mostra que o espírito “colchonero” atravessou o Atlântico — e resistiu até ao frio intenso de Ottawa.`,
         imageUrl: 'https://i.cbc.ca/ais/5ac4ed65-c25f-4dbe-8605-a36319800041,1762733126819/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C406%2C7795%2C4384%29%3B',
         author: 'Equipe RADIO520',
-        date: '11/11/2025 - 10:00',
+        date: '12/11/2025 - 10:00',
         isFeatured: false,
         views: 8500,
         hashtags: ['#FutebolCanadense', '#AtléticoOttawa', '#CPL'],
@@ -22,6 +43,7 @@ O triunfo consolida o projeto do clube espanhol no futebol canadense, que segue 
         id: 26,
         category: 'VOLTA RÁPIDA',
         title: 'Moreira vence e fica a um passo do título da Moto2',
+        slug: 'moreira-vence-e-fica-a-um-passo-do-titulo-da-moto2',
         summary: 'O brasileiro Diogo Moreira venceu o GP de Portugal e ficou a um passo do título da Moto2, abrindo 24 pontos de vantagem para a etapa final em Valência.',
         content: `O brasileiro <strong>Diogo Moreira</strong> deu um passo gigante rumo ao título da <strong>Moto2</strong> neste domingo (9), ao vencer o <strong>Grande Prêmio de Portugal</strong>, em Portimão. A vitória colocou o piloto da <strong>Italtrans Racing Team</strong> com <strong>24 pontos de vantagem</strong> sobre <strong>Manuel Gonzalez</strong> (Liqui Moly Dynavolt Intact GP), restando apenas a etapa decisiva em <strong>Valência</strong>, no próximo fim de semana.
 
@@ -36,7 +58,7 @@ A <strong>Fantic Racing</strong> também teve motivos pra comemorar — com <str
 A decisão da <strong>Moto2 2025</strong> acontece no <strong>Circuito Ricardo Tormo</strong>, em Valência, no próximo fim de semana. E, se tudo correr dentro do esperado, o Brasil pode voltar a ver um campeão mundial nas pistas do Mundial de Motovelocidade.`,
         imageUrl: 'https://cdn.crash.net/2025-11/doigo-moreira-moto2-2025-portugal.jpg?width=1600&aspect_ratio=16:9',
         author: 'Equipe RADIO520',
-        date: '09/11/2025 - 11:00',
+        date: '11/11/2025 - 18:30',
         isFeatured: false,
         views: 17200,
         hashtags: ['#Moto2', '#DiogoMoreira', '#Motovelocidade'],
@@ -45,6 +67,7 @@ A decisão da <strong>Moto2 2025</strong> acontece no <strong>Circuito Ricardo T
         id: 25,
         category: 'SUPERSET 520',
         title: 'Praia Clube domina Joinville Vôlei e vence por 3 a 1 na Superliga Feminina',
+        slug: 'praia-clube-domina-joinville-volei-e-vence-por-3-a-1-na-superliga-feminina',
         summary: 'O Praia Clube confirmou o favoritismo e derrotou o Joinville Vôlei por 3 sets a 1, mantendo a invencibilidade na competição após reagir com autoridade.',
         content: `O Praia Clube confirmou o favoritismo e derrotou o Joinville Vôlei por 3 sets a 1 (22/25, 25/20, 25/17 e 25/19) neste domingo (9), em Uberlândia, pela 4ª rodada da Superliga Feminina 2025. Mesmo saindo atrás no placar, o time mineiro reagiu com autoridade e manteve a invencibilidade na competição.
 
@@ -67,7 +90,7 @@ Com o resultado, o Praia Clube chega a 11 pontos e se mantém entre os líderes 
 O próximo compromisso do Praia será contra o Barueri, fora de casa. Já o Joinville volta à quadra diante do Fluminense, buscando reabilitação.`,
         imageUrl: 'https://s2-ge.glbimg.com/3hFHHQ1W8PAR_LLa7hb5ielgG3Q=/0x0:1911x1274/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2025/Q/N/ULlLSWTAWYxwXXa50tCQ/54912632321-5f0da1c9fe-k.jpg',
         author: 'Equipe RADIO520',
-        date: '10/11/2025 - 21:00',
+        date: '11/11/2025 - 15:00',
         isFeatured: false,
         views: 13450,
         hashtags: ['#Volei', '#Superliga', '#PraiaClube'],
@@ -76,6 +99,7 @@ O próximo compromisso do Praia será contra o Barueri, fora de casa. Já o Join
         id: 24,
         category: 'VOLTA RÁPIDA',
         title: 'Lando Norris domina o GP de São Paulo e amplia liderança no Mundial de F1 2025',
+        slug: 'lando-norris-domina-gp-sao-paulo-e-amplia-lideranca-f1-2025',
         summary: 'Britânico da McLaren vence em Interlagos com autoridade e se aproxima do título da temporada.',
         content: `O britânico Lando Norris foi o grande nome do fim de semana em Interlagos. O piloto da McLaren conquistou uma vitória dominante no GP de São Paulo de 2025, disputado neste domingo (9), e ampliou ainda mais sua vantagem na liderança do Campeonato Mundial de Pilotos.
 
@@ -113,8 +137,8 @@ O evento ainda contou com a presença de Thiaguinho, que cantou o Hino Nacional,
 Agora, restando apenas duas etapas – Las Vegas e Abu Dhabi, Norris está cada vez mais perto do título mundial.`,
         imageUrl: 'https://veja.abril.com.br/wp-content/uploads/2025/11/000_83JC74B.jpg?crop=1&resize=1212,909',
         author: 'Equipe RADIO520',
-        date: '10/11/2025 - 17:00',
-        isFeatured: true,
+        date: '11/11/2025 - 11:45',
+        isFeatured: false,
         views: 28950,
         hashtags: ['#F1', '#LandoNorris', '#GPBrasil'],
     },
@@ -122,6 +146,7 @@ Agora, restando apenas duas etapas – Las Vegas e Abu Dhabi, Norris está cada 
         id: 23,
         category: 'FUTEBOL SHOW 520',
         title: 'Ceará vence o Corinthians em Itaquera e respira na luta contra o rebaixamento',
+        slug: 'ceara-vence-corinthians-em-itaquera-e-respira-na-luta-contra-rebaixamento',
         summary: 'Gol de Antonio Galeano define a partida na Neo Química Arena; Timão perde invencibilidade em casa e Vozão ganha fôlego na luta contra o rebaixamento.',
         content: `O Ceará conquistou uma vitória fundamental na luta contra o rebaixamento ao bater o Corinthians por 1 a 0, neste domingo (9), na Neo Química Arena, pela trigésima terceira rodada do Brasileirão Betano 2025. O único gol da partida foi marcado por Antonio Galeano, ainda no primeiro tempo, após rápido contra-ataque.
 
@@ -144,7 +169,7 @@ Na etapa final, o técnico corintiano tentou mudar o panorama com as entradas de
 Com o resultado, o Ceará sobe para a 12ª posição, respirando fora do Z-4. O Corinthians se mantém em 10º, e vê o sonho de vaga na Copa Sul-Americana ameaçado.`,
         imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/galeano-ceara-e1762719156989.jpg?w=419&h=283&crop=0',
         author: 'Equipe RADIO520',
-        date: '09/11/2025 - 18:00',
+        date: '10/11/2025 - 20:15',
         isFeatured: false,
         views: 16780,
         hashtags: ['#Ceará', '#Corinthians', '#Brasileirão'],
@@ -153,6 +178,7 @@ Com o resultado, o Ceará sobe para a 12ª posição, respirando fora do Z-4. O 
         id: 22,
         category: 'REPÓRTER 520',
         title: 'Ancelotti convoca Seleção para amistosos de novembro com novidades e polêmicas',
+        slug: 'ancelotti-convoca-selecao-para-amistosos-de-novembro-com-novidades-e-polemicas',
         summary: 'Luciano Juba ganha primeira chance, Richarlison é mantido e nomes como Thiago Silva e Pedro ficam de fora da lista de Ancelotti.',
         content: `O técnico Carlo Ancelotti divulgou nesta segunda-feira (3) a lista de convocados da Seleção Brasileira para a última Data Fifa do ano, com amistosos contra Senegal (dia 15, em Londres) e Tunísia (dia 18, em Lille). A convocação trouxe estreias, retornos e algumas decisões contestadas.
 
@@ -169,7 +195,7 @@ O lado positivo está na abertura a novos nomes, como Luciano Juba e Vitor Roque
 Ancelotti deve usar os dois amistosos para definir as últimas peças do elenco rumo à Copa de 2026, mas, pela reação da torcida, a Seleção chega em novembro com mais desconfiança do que empolgação.`,
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2025/11/O-tecnico-da-Selecao-Brasileira-Carlo-Ancelotti-scaled-aspect-ratio-512-320.jpg',
         author: 'Equipe RADIO520',
-        date: '03/11/2025 - 16:00',
+        date: '10/11/2025 - 14:00',
         isFeatured: false,
         views: 14500,
         hashtags: ['#SeleçãoBrasileira', '#Ancelotti', '#Futebol'],
@@ -178,6 +204,7 @@ Ancelotti deve usar os dois amistosos para definir as últimas peças do elenco 
         id: 21,
         category: 'FUTEBOL SHOW 520',
         title: 'Palmeiras vence o Juventude fora de casa e reassume a liderança do Brasileirão',
+        slug: 'palmeiras-vence-juventude-fora-de-casa-e-reassume-lideranca-brasileirao',
         summary: 'O Palmeiras voltou ao topo do Brasileirão Betano 2025. Com atuação sólida e eficiente, o time de Abel Ferreira venceu o Juventude por 2 a 0 no Alfredo Jaconi e reassumiu a liderança do campeonato. Bruno Rodrigues e Felipe Anderson marcaram os gols da partida.',
         content: `Verdão faz 2 a 0 em Caxias do Sul, chega a 65 pontos e ultrapassa o Flamengo; Bruno Rodrigues e Felipe Anderson marcam os gols da vitória
 
@@ -217,7 +244,7 @@ Palmeiras x Athletico-PR — Quarta-feira (5), às 21h30, no Allianz Parque
 Cruzeiro x Juventude — Quinta-feira (6), às 19h, no Mineirão.`,
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=850,quality=75,format=webp/uploads/2025/11/palmeiras_x_juventude-1920x1280.jpg',
         author: 'Equipe RADIO520',
-        date: '02/11/2025 - 21:00',
+        date: '09/11/2025 - 19:00',
         isFeatured: false,
         views: 18542,
         hashtags: ['#Palmeiras', '#Brasileirão', '#Futebol'],
@@ -226,6 +253,7 @@ Cruzeiro x Juventude — Quinta-feira (6), às 19h, no Mineirão.`,
         id: 20,
         category: 'ACE 520',
         title: 'Sinner soberano em Paris: a coroação de um número 1 em plena forma',
+        slug: 'sinner-soberano-em-paris-a-coroacao-de-um-numero-1-em-plena-forma',
         summary: 'Jannik Sinner fecha o ano como o homem a ser batido após dominar o Masters 1000 de Paris. Confira análise completa na Rádio 520.',
         content: `Jannik Sinner viveu um domingo daqueles que marcam uma carreira. O italiano conquistou o Masters 1000 de Paris, vencendo Felix Auger-Aliassime numa final de altíssimo nível técnico e emocional. Mais do que um troféu — o quinto Masters 1000 da trajetória —, o título devolve a Sinner o posto de número 1 do mundo, coroando uma temporada que tem sido pura consistência, maturidade e agressividade tática.
 
@@ -238,8 +266,7 @@ Com o título em Paris, Sinner fecha o ano como o homem a ser batido. E não é 
 Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito, o ATP de Paris serviu como resposta: Jannik Sinner chegou ao topo — e, do jeito que está jogando, parece disposto a ficar por lá um bom tempo.`,
         imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/sinner-paris.jpg?w=1200&h=900&crop=1',
         author: 'Equipe RADIO520',
-        date: '03/11/2025 - 14:00',
-        updatedAt: '03/11/2025 - 15:30',
+        date: '09/11/2025 - 12:30',
         isFeatured: false,
         views: 16230,
         ogTitle: 'Sinner soberano em Paris',
@@ -251,6 +278,7 @@ Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito,
         id: 19,
         category: 'PODCASTS 520',
         title: 'Barrinhas de Cereal: Aliadas ou Vilãs do seu Treino?',
+        slug: 'barrinhas-de-cereal-aliadas-ou-vilas-do-seu-treino',
         summary: 'Neste episódio do Viva Melhor, Lu Skylark fala sobre as famosas barrinhas de cereal.',
         content: `No novo episódio do podcast Viva Melhor, a especialista Lu Skylark mergulha no universo das barrinhas de cereal, um lanche popular entre praticantes de atividades físicas. Será que elas são realmente benéficas para o seu treino?
 
@@ -268,7 +296,7 @@ O episódio é um guia completo para quem quer usar as barrinhas de cereal de fo
         imageUrl: 'https://images.unsplash.com/photo-1599599810694-b5b37304c357?q=80&w=1200&auto=format&fit=crop',
         audioUrl: 'https://open.spotify.com/episode/7nKI5Fdpn0XdRwdvhdcAa3?si=bAGsFTWDRrmRYgrLgqKPZw',
         author: 'Lu Skylark',
-        date: '03/11/2025 - 11:00',
+        date: '08/11/2025 - 16:00',
         isFeatured: false,
         views: 1250,
         hashtags: ['#Nutrição', '#Podcast', '#Saúde'],
@@ -277,6 +305,7 @@ O episódio é um guia completo para quem quer usar as barrinhas de cereal de fo
     id: 18,
     category: 'VOLTA RÁPIDA',
     title: 'Jesse Love vence em Phoenix e leva o título da NASCAR Xfinity 2025 com autoridade',
+    slug: 'jesse-love-vence-em-phoenix-e-leva-titulo-da-nascar-xfinity-2025',
     summary: 'Jesse Love dominou a etapa de Phoenix, venceu a corrida e conquistou o título da NASCAR Xfinity Series 2025, confirmando o favoritismo com uma performance impecável.',
     content: `A etapa de Phoenix da NASCAR Xfinity Series, disputada neste sábado (1º), encerrou a temporada 2025 em alto nível — e com um campeão incontestável. Jesse Love cravou uma performance dominante no deserto do Arizona, garantindo a vitória e o título da categoria com um controle impressionante de corrida do início ao fim.
 
@@ -306,7 +335,7 @@ Com o resultado, Jesse Love se consagra como campeão da temporada 2025 da NASCA
 10. Justin Bonsignore`,
     imageUrl: 'https://hips.hearstapps.com/hmg-prod/images/jesse-love-celebrates-after-winning-the-nascar-xfinity-news-photo-1739720370.pjpeg?crop=1xw:0.84375xh;center,top&resize=980:*',
     author: 'Equipe RADIO520',
-    date: '02/11/2025 - 09:30',
+    date: '08/11/2025 - 11:00',
     isFeatured: false,
     views: 15890,
     hashtags: ['#NASCAR', '#JesseLove', '#Automobilismo'],
