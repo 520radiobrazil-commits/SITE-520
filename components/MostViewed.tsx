@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from '../types';
-import { parseBrazilianDate, formatTimeAgo } from '../services/geminiService';
+import { parseBrazilianDate, formatTimeAgo, formatFullDateTime } from '../services/geminiService';
 
 interface MostViewedProps {
   articles: Article[];
@@ -19,28 +19,35 @@ const MostViewed: React.FC<MostViewedProps> = ({ articles, onSelectArticle, curr
       <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider">Mais Vistos</h3>
       {mostViewedArticles.length > 0 ? (
         <ul className="space-y-2">
-          {mostViewedArticles.map((article, index) => (
-            <li key={article.id}>
-              <button
-                onClick={() => onSelectArticle(article)}
-                className="w-full text-left p-2 rounded-md hover:bg-gray-700/50 transition-colors duration-200 group focus:outline-none focus:ring-2 focus:ring-teal-500"
-              >
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl font-black text-gray-600 group-hover:text-teal-400 transition-colors duration-200">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <p className="text-white font-semibold leading-tight group-hover:text-teal-300 transition-colors duration-200">
-                      {article.title}
-                    </p>
-                     <div className="text-gray-400 text-xs mt-1">
-                        <span>Atualizado {formatTimeAgo(parseBrazilianDate(article.date), currentTime)}</span>
+          {mostViewedArticles.map((article, index) => {
+            const articleDate = parseBrazilianDate(article.date);
+            const timeAgo = formatTimeAgo(articleDate, currentTime);
+            const fullDateTime = formatFullDateTime(articleDate);
+            return (
+              <li key={article.id}>
+                <button
+                  onClick={() => onSelectArticle(article)}
+                  className="w-full text-left p-2 rounded-md hover:bg-gray-700/50 transition-colors duration-200 group focus:outline-none focus:ring-2 focus:ring-teal-500"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl font-black text-gray-600 group-hover:text-teal-400 transition-colors duration-200">
+                      {index + 1}
+                    </span>
+                    <div>
+                      <p className="text-white font-semibold leading-tight group-hover:text-teal-300 transition-colors duration-200">
+                        {article.title}
+                      </p>
+                      <div className="text-gray-400 text-xs mt-1">
+                          <time dateTime={articleDate.toISOString()} title={fullDateTime} className="cursor-help">
+                              Atualizado {timeAgo}
+                          </time>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </button>
-            </li>
-          ))}
+                </button>
+              </li>
+            );
+          })}
         </ul>
       ) : (
         <p className="text-gray-500 text-sm">Não há artigos populares no momento.</p>

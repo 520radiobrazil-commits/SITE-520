@@ -201,7 +201,7 @@ function App() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {otherArticles.map((article) => (
-                    <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} />
+                    <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} currentTime={currentTime} />
                   ))}
                 </div>
               </>

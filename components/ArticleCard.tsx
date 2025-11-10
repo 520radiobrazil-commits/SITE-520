@@ -1,9 +1,11 @@
 import React from 'react';
 import { Article } from '../types';
+import { parseBrazilianDate, formatTimeAgo, formatFullDateTime } from '../services/geminiService';
 
 interface ArticleCardProps {
   article: Article;
   onSelect: (article: Article) => void;
+  currentTime: Date;
 }
 
 const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
@@ -12,11 +14,15 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
     </svg>
 );
 
-const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect }) => {
+const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTime }) => {
+  const articleDate = parseBrazilianDate(article.date);
+  const timeAgo = formatTimeAgo(articleDate, currentTime);
+  const fullDateTime = formatFullDateTime(articleDate);
+  
   return (
     <div 
         onClick={() => onSelect(article)}
-        className="bg-gray-800 rounded-lg overflow-hidden flex flex-col group transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] cursor-pointer">
+        className="bg-gray-800 rounded-lg overflow-hidden flex flex-col group transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-1 hover:scale-[1.02] cursor-pointer">
       <div className="relative">
         <img className="w-full h-48 object-cover" src={article.imageUrl} alt={article.title} />
         <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -27,6 +33,12 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect }) => {
           {article.title}
         </h3>
         <p className="text-gray-400 text-sm mb-4">{article.summary}</p>
+        <div className="text-xs text-gray-400 mb-4">
+            <span>Por {article.author} &bull; </span>
+            <time dateTime={articleDate.toISOString()} title={fullDateTime} className="cursor-help">
+                {timeAgo}
+            </time>
+        </div>
         <div className="mt-auto">
             <button
                 onClick={(e) => { e.stopPropagation(); onSelect(article); }}

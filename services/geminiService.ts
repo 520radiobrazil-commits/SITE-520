@@ -43,6 +43,23 @@ export const formatTimeAgo = (articleDate: Date, currentTime: Date): string => {
 };
 
 /**
+ * Formata um objeto Date em uma string de data e hora completa e amigável.
+ * Exemplo: "domingo, 9 de novembro de 2025, 21:30"
+ * @param date O objeto Date para formatar.
+ * @returns Uma string de data e hora formatada.
+ */
+export const formatFullDateTime = (date: Date): string => {
+    return new Intl.DateTimeFormat('pt-BR', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    }).format(date);
+  };
+
+/**
  * Gera uma string de data no formato "dd/MM/yyyy - HH:mm" relativa à hora atual.
  * @param daysAgo Número de dias no passado.
  * @param hoursAgo Número de horas no passado.
