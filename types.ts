@@ -10,8 +10,8 @@ export interface Article {
   videoUrl?: string;
   audioUrl?: string;
   author: string;
-  date: string;
-  updatedAt?: string;
+  publishedAt: string; // ISO date string
+  updatedAt?: string; // ISO date string
   isFeatured?: boolean;
   views?: number;
   ogTitle?: string;

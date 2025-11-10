@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Article } from '../types';
 import Comments from './Comments';
 import ShareButtons from './ShareButtons';
-import { parseBrazilianDate, formatTimeAgo, formatFullDateTime } from '../services/geminiService';
+import { formatRelativeTime, formatFullDateTime } from '../utils/time';
 
 interface ArticleDetailProps {
   article: Article;
@@ -17,10 +17,6 @@ const ArrowLeftIcon = () => (
 );
 
 const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, currentTime }) => {
-  const articleDate = parseBrazilianDate(article.date);
-  const timeAgo = formatTimeAgo(articleDate, currentTime);
-  const fullDateTime = formatFullDateTime(articleDate);
-
   // Efeito para atualizar meta tags para SEO e compartilhamento social
   useEffect(() => {
     const defaultTitle = "RADIO520.COM.BR - Esportes e Notícias";
@@ -117,8 +113,8 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         "url": "https://public-rf-upload.minhawebradio.net/249695/ad/1ccbd4ef8fcc652a7e0c5c0e6215d5ae.jpeg"
       }
     },
-    "datePublished": parseBrazilianDate(article.date).toISOString(),
-    "dateModified": article.updatedAt ? parseBrazilianDate(article.updatedAt).toISOString() : parseBrazilianDate(article.date).toISOString(),
+    "datePublished": article.publishedAt,
+    "dateModified": article.updatedAt || article.publishedAt,
     "description": article.summary
   };
 
@@ -142,8 +138,8 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
                   <span>Por {article.author}</span>
                   <span className="text-gray-600">&bull;</span>
-                  <time dateTime={articleDate.toISOString()} title={fullDateTime} className="cursor-help">
-                    Atualizado {timeAgo}
+                  <time dateTime={article.publishedAt} title={formatFullDateTime(article.publishedAt)} className="cursor-help">
+                    Atualizado {formatRelativeTime(article.publishedAt, currentTime)}
                   </time>
               </div>
               {article.hashtags && (

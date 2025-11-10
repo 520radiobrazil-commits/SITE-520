@@ -16,17 +16,16 @@ import BrasileiraoTable from './components/BrasileiraoTable';
 import YouTubePlayer from './components/YouTubePlayer';
 import { MOCK_ARTICLES } from './constants';
 import { Article } from './types';
-import { parseBrazilianDate } from './services/geminiService';
 
 
 function App() {
   const [articles, setArticles] = useState<Article[]>(() => {
-    // Ordena os artigos por data no carregamento inicial usando o novo parser
+    // Sort articles by published date on initial load.
     return [...MOCK_ARTICLES].sort((a, b) => {
-      const dateB = parseBrazilianDate(b.date).getTime();
-      const dateA = parseBrazilianDate(a.date).getTime();
+      const dateA = new Date(a.publishedAt).getTime();
+      const dateB = new Date(b.publishedAt).getTime();
       if (dateB !== dateA) return dateB - dateA;
-      return b.id - a.id;
+      return b.id - a.id; // Fallback sort by ID for articles with the same timestamp
     });
   });
 
@@ -45,7 +44,7 @@ function App() {
   useEffect(() => {
     const timerId = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000); // Atualiza a cada segundo
+    }, 60000); // Update every minute for relative time consistency
     return () => clearInterval(timerId);
   }, []);
 

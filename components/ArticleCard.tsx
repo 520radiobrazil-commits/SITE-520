@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from '../types';
-import { parseBrazilianDate, formatTimeAgo, formatFullDateTime } from '../services/geminiService';
+import { formatRelativeTime, formatFullDateTime } from '../utils/time';
 
 interface ArticleCardProps {
   article: Article;
@@ -15,9 +15,6 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
 );
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTime }) => {
-  const articleDate = parseBrazilianDate(article.date);
-  const timeAgo = formatTimeAgo(articleDate, currentTime);
-  const fullDateTime = formatFullDateTime(articleDate);
   
   return (
     <div 
@@ -35,8 +32,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTim
         <p className="text-gray-400 text-sm mb-4">{article.summary}</p>
         <div className="text-xs text-gray-400 mb-4">
             <span>Por {article.author} &bull; </span>
-            <time dateTime={articleDate.toISOString()} title={fullDateTime} className="cursor-help">
-                {timeAgo}
+            <time dateTime={article.publishedAt} title={formatFullDateTime(article.publishedAt)} className="cursor-help">
+                {formatRelativeTime(article.publishedAt, currentTime)}
             </time>
         </div>
         <div className="mt-auto">

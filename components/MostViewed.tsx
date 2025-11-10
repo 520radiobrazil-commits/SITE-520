@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from '../types';
-import { parseBrazilianDate, formatTimeAgo, formatFullDateTime } from '../services/geminiService';
+import { formatRelativeTime, formatFullDateTime } from '../utils/time';
 
 interface MostViewedProps {
   articles: Article[];
@@ -20,9 +20,6 @@ const MostViewed: React.FC<MostViewedProps> = ({ articles, onSelectArticle, curr
       {mostViewedArticles.length > 0 ? (
         <ul className="space-y-2">
           {mostViewedArticles.map((article, index) => {
-            const articleDate = parseBrazilianDate(article.date);
-            const timeAgo = formatTimeAgo(articleDate, currentTime);
-            const fullDateTime = formatFullDateTime(articleDate);
             return (
               <li key={article.id}>
                 <button
@@ -38,8 +35,8 @@ const MostViewed: React.FC<MostViewedProps> = ({ articles, onSelectArticle, curr
                         {article.title}
                       </p>
                       <div className="text-gray-400 text-xs mt-1">
-                          <time dateTime={articleDate.toISOString()} title={fullDateTime} className="cursor-help">
-                              Atualizado {timeAgo}
+                          <time dateTime={article.publishedAt} title={formatFullDateTime(article.publishedAt)} className="cursor-help">
+                              Atualizado {formatRelativeTime(article.publishedAt, currentTime)}
                           </time>
                       </div>
                     </div>

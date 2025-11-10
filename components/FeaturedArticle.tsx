@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from '../types';
-import { parseBrazilianDate, formatTimeAgo, formatFullDateTime } from '../services/geminiService';
+import { formatRelativeTime, formatFullDateTime } from '../utils/time';
 
 interface FeaturedArticleProps {
   article: Article;
@@ -15,9 +15,6 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
 );
 
 const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect, currentTime }) => {
-  const articleDate = parseBrazilianDate(article.date);
-  const timeAgo = formatTimeAgo(articleDate, currentTime);
-  const fullDateTime = formatFullDateTime(articleDate);
 
   return (
     <div 
@@ -54,8 +51,8 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect, cu
          <div className="flex items-center justify-between">
             <div className="text-sm text-gray-400">
                 <span>Por {article.author} &bull; </span>
-                <time dateTime={articleDate.toISOString()} title={fullDateTime} className="cursor-help">
-                    Atualizado {timeAgo}
+                <time dateTime={article.publishedAt} title={formatFullDateTime(article.publishedAt)} className="cursor-help">
+                    Atualizado {formatRelativeTime(article.publishedAt, currentTime)}
                 </time>
             </div>
             <div className="flex items-center space-x-2">
