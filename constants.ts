@@ -2,6 +2,83 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 24,
+        category: 'VOLTA RÁPIDA',
+        title: 'Lando Norris domina o GP de São Paulo e amplia liderança no Mundial de F1 2025',
+        summary: 'Britânico da McLaren vence em Interlagos com autoridade e se aproxima do título da temporada.',
+        content: `O britânico Lando Norris foi o grande nome do fim de semana em Interlagos. O piloto da McLaren conquistou uma vitória dominante no GP de São Paulo de 2025, disputado neste domingo (9), e ampliou ainda mais sua vantagem na liderança do Campeonato Mundial de Pilotos.
+
+Sob forte calor e diante de 304 mil torcedores, Norris controlou a prova do início ao fim, cruzando a linha de chegada 9,9 segundos à frente de Kimi Antonelli (Mercedes). O italiano de 19 anos subiu ao pódio pela segunda vez na temporada, enquanto Max Verstappen (Red Bull) completou em terceiro após uma impressionante recuperação — o holandês havia largado dos boxes.
+
+Com o resultado, Norris chega a 389 pontos, abrindo 52 de vantagem para Verstappen. A McLaren também manteve a ponta no Mundial de Construtores, somando agora 612 pontos, seguida por Mercedes e Red Bull.
+
+<strong>Caos na largada e domínio absoluto da McLaren</strong>
+
+A corrida começou agitada: o brasileiro Gabriel Bortoleto (Sauber) abandonou logo na primeira curva após toque com Lance Stroll (Aston Martin), o que provocou a entrada do safety car. Depois da relargada, Norris manteve a liderança sem ser ameaçado.
+
+Oscar Piastri, companheiro de equipe, cruzou em quinto mesmo após uma penalidade de 10 segundos por toque em Antonelli, garantindo pontos valiosos para a McLaren.
+
+Entre os abandonos estiveram Lewis Hamilton e Charles Leclerc, ambos da Ferrari, que enfrentaram problemas mecânicos e acidentes.
+
+<strong>Resultado final – GP de São Paulo 2025</strong>
+
+Lando Norris (McLaren) – 1h28m45s392
+Kimi Antonelli (Mercedes) – +9.980s
+Max Verstappen (Red Bull) – +10.684s
+George Russell (Mercedes) – +14.803s
+Oscar Piastri (McLaren) – +14.422s
+Oliver Bearman (Haas) – +27.611s
+Liam Lawson (Red Bull) – +48.378s
+Isack Hadjar (Racing Bulls) – +49.017s
+Nico Hulkenberg (Haas) – +49.522s
+Pierre Gasly (Alpine) – +49.994s
+
+<strong>Declarações e clima em Interlagos</strong>
+
+“O carro estava perfeito e o público brasileiro fez essa corrida ser especial. Interlagos sempre entrega algo inesquecível”, disse Norris após a vitória.
+
+O evento ainda contou com a presença de Thiaguinho, que cantou o Hino Nacional, e recorde de público no autódromo paulistano.
+
+Agora, restando apenas duas etapas – Las Vegas e Abu Dhabi, Norris está cada vez mais perto do título mundial.`,
+        imageUrl: 'https://veja.abril.com.br/wp-content/uploads/2025/11/000_83JC74B.jpg?crop=1&resize=1212,909',
+        author: 'Equipe RADIO520',
+        date: '10/11/2025 - 17:00',
+        isFeatured: true,
+        views: 28950,
+        hashtags: ['#F1', '#LandoNorris', '#GPBrasil'],
+    },
+    {
+        id: 23,
+        category: 'FUTEBOL SHOW 520',
+        title: 'Ceará vence o Corinthians em Itaquera e respira na luta contra o rebaixamento',
+        summary: 'Gol de Antonio Galeano define a partida na Neo Química Arena; Timão perde invencibilidade em casa e Vozão ganha fôlego na luta contra o rebaixamento.',
+        content: `O Ceará conquistou uma vitória fundamental na luta contra o rebaixamento ao bater o Corinthians por 1 a 0, neste domingo (9), na Neo Química Arena, pela trigésima terceira rodada do Brasileirão Betano 2025. O único gol da partida foi marcado por Antonio Galeano, ainda no primeiro tempo, após rápido contra-ataque.
+
+Com o resultado, o Vozão chegou a 38 pontos, ganhando fôlego na briga para se manter na elite. Já o Corinthians, que vinha em boa fase, perdeu a chance de encostar no G-8 e permanece com 42 pontos, em 10º.
+
+<strong>O jogo</strong>
+
+O primeiro tempo começou equilibrado, mas o Ceará se mostrou mais perigoso nas transições ofensivas. Aos <strong>31 minutos</strong>, Antonio Galeano recebeu cruzamento de Pedro Henrique e finalizou no canto direito, sem chances para o goleiro Felipe Longo.
+
+O Corinthians até chegou a balançar as redes com <strong>Gustavo Henrique</strong>, mas o gol foi anulado pelo VAR por impedimento. A partir daí, o time paulista teve mais posse, mas pouco poder de infiltração.
+
+Na etapa final, o técnico corintiano tentou mudar o panorama com as entradas de Ángel Romero e Gui Negão, mas o sistema defensivo do Ceará, bem postado com Willian Machado e Fabiano Souza, conseguiu segurar a pressão. Nos minutos finais, o goleiro Bruno Ferreira apareceu com boas defesas, garantindo os três pontos para os visitantes.
+
+<strong>Destaques da partida</strong>
+
+<strong>Antonio Galeano (Ceará)</strong> – Decisivo, marcou o gol da vitória e foi o jogador mais perigoso do ataque.
+<strong>Bruno Ferreira (Ceará)</strong> - Seguro, fez defesas importantes e passou confiança à defesa.
+<strong>Rodrigo Garro (Corinthians)</strong> – Tentou organizar o time e criou as principais jogadas ofensivas do Timão.
+
+Com o resultado, o Ceará sobe para a 12ª posição, respirando fora do Z-4. O Corinthians se mantém em 10º, e vê o sonho de vaga na Copa Sul-Americana ameaçado.`,
+        imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/galeano-ceara-e1762719156989.jpg?w=419&h=283&crop=0',
+        author: 'Equipe RADIO520',
+        date: '09/11/2025 - 18:00',
+        isFeatured: false,
+        views: 16780,
+        hashtags: ['#Ceará', '#Corinthians', '#Brasileirão'],
+    },
+    {
         id: 22,
         category: 'REPÓRTER 520',
         title: 'Ancelotti convoca Seleção para amistosos de novembro com novidades e polêmicas',
@@ -22,7 +99,7 @@ Ancelotti deve usar os dois amistosos para definir as últimas peças do elenco 
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2025/11/O-tecnico-da-Selecao-Brasileira-Carlo-Ancelotti-scaled-aspect-ratio-512-320.jpg',
         author: 'Equipe RADIO520',
         date: '03/11/2025 - 16:00',
-        isFeatured: true,
+        isFeatured: false,
         views: 14500,
         hashtags: ['#SeleçãoBrasileira', '#Ancelotti', '#Futebol'],
     },
