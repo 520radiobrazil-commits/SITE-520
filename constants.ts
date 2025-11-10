@@ -2,6 +2,26 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 29,
+        category: 'MATCHDAY 520',
+        title: 'Rodrygo pode deixar o Real Madrid e mira a Premier League',
+        slug: 'rodrygo-pode-deixar-real-madrid-e-mira-premier-league',
+        summary: 'O atacante brasileiro do Real Madrid avalia propostas da Premier League para a janela de janeiro, buscando mais minutos em campo após a chegada de novos reforços no clube espanhol.',
+        content: `O atacante Rodrygo pode estar de saída do Real Madrid. De acordo com informações da imprensa espanhola, o brasileiro vem sendo pouco aproveitado pelo técnico Carlo Ancelotti e deve avaliar novas possibilidades na janela de transferências de janeiro.
+
+Embora o jogador não esteja oficialmente no mercado, o clube merengue está disposto a ouvir propostas. Caso decida sair, Rodrygo deve priorizar uma transferência para a Premier League, onde há clubes interessados em contar com o futebol do atacante.
+
+Rodrygo chegou ao Real Madrid em 2019, vindo do Santos, e conquistou títulos importantes, como a Liga dos Campeões, o Campeonato Espanhol e o Mundial de Clubes da FIFA. No entanto, a chegada de novos nomes ofensivos ao elenco — como Kylian Mbappé e Endrick — acabou reduzindo seu espaço na equipe titular.
+
+A expectativa é de que as conversas sobre o futuro do atacante ganhem força nas próximas semanas, à medida que se aproxima a reabertura do mercado europeu.`,
+        imageUrl: 'https://i.guim.co.uk/img/media/562c32efdd39dda57994df2f43454bbdde30d52f/0_0_3832_2300/master/3832.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=e0d401c5d920d9145d056dc28d324aaa',
+        author: 'Equipe RADIO520',
+        date: '13/11/2025 - 09:00',
+        isFeatured: true,
+        views: 11500,
+        hashtags: ['#RealMadrid', '#Rodrygo', '#PremierLeague', '#MercadoDaBola'],
+    },
+    {
         id: 28,
         category: 'REPÓRTER 520',
         title: 'Seleção Brasileira desembarca em Londres para os últimos amistosos de 2025',
