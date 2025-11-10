@@ -26,6 +26,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
     const defaultTitle = "RADIO520.COM.BR - Esportes e Notícias";
     const defaultDescription = "RADIO520.COM.BR é sua fonte de notícias esportivas, com artigos, vídeos, podcasts e muito mais.";
     const defaultImage = "https://public-rf-upload.minhawebradio.net/249695/ad/1ccbd4ef8fcc652a7e0c5c0e6215d5ae.jpeg";
+    const rootUrl = "https://radio520.com.br/";
     
     const updateMetaTag = (attrName: string, attrValue: string, content: string) => {
         let element = document.querySelector(`meta[${attrName}='${attrValue}']`);
@@ -51,6 +52,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         const title = article.ogTitle || article.title;
         const description = article.ogDescription || article.summary;
         const image = article.ogImageUrl || article.imageUrl;
+        const canonicalUrl = `https://radio520.com.br/noticia/${article.slug}`;
         
         document.title = `${article.title} | RADIO520.COM.BR`;
         updateMetaTag('name', 'description', article.summary);
@@ -60,6 +62,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         updateMetaTag('property', 'og:description', description);
         updateMetaTag('property', 'og:image', image);
         updateMetaTag('property', 'og:type', 'article');
+        updateMetaTag('property', 'og:url', canonicalUrl);
         
         // Twitter
         updateMetaTag('name', 'twitter:card', 'summary_large_image');
@@ -68,7 +71,6 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         updateMetaTag('name', 'twitter:image', image);
 
         // Canonical URL
-        const canonicalUrl = `https://radio520.com.br/noticia/${article.slug}`;
         updateLinkTag('canonical', canonicalUrl);
     };
 
@@ -81,6 +83,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         updateMetaTag('property', 'og:description', defaultDescription);
         updateMetaTag('property', 'og:image', defaultImage);
         updateMetaTag('property', 'og:type', 'website');
+        updateMetaTag('property', 'og:url', rootUrl);
         
         // Twitter
         updateMetaTag('name', 'twitter:card', 'summary_large_image');
@@ -88,11 +91,8 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         updateMetaTag('name', 'twitter:description', defaultDescription);
         updateMetaTag('name', 'twitter:image', defaultImage);
 
-        // Remove canonical link
-        const canonicalLink = document.querySelector("link[rel='canonical']");
-        if (canonicalLink) {
-            document.head.removeChild(canonicalLink);
-        }
+        // Set canonical link back to root
+        updateLinkTag('canonical', rootUrl);
     };
 
     setArticleTags();
