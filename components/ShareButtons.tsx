@@ -24,11 +24,9 @@ interface ShareButtonsProps {
 const ShareButtons: React.FC<ShareButtonsProps> = ({ article }) => {
   const [copyStatus, setCopyStatus] = useState('Copiar Link');
   
-  const baseUrl = `https://radio520.com.br/noticia/${article.slug}`;
-  const utmCampaign = article.slug;
-  const urlWithUtm = `${baseUrl}?utm_source=radio520&utm_medium=site&utm_campaign=${utmCampaign}`;
+  const urlToShare = `https://radio520.com.br/noticia/${article.slug}`;
 
-  const encodedUrl = encodeURIComponent(urlWithUtm);
+  const encodedUrl = encodeURIComponent(urlToShare);
   const encodedTitle = encodeURIComponent(article.title);
   const hashtags = article.hashtags?.map(tag => tag.replace('#', '')).join(',') || '';
 
@@ -40,7 +38,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ article }) => {
   };
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(urlWithUtm).then(() => {
+    navigator.clipboard.writeText(urlToShare).then(() => {
       setCopyStatus('Copiado!');
       setTimeout(() => setCopyStatus('Copiar Link'), 2000);
     }).catch(err => {
