@@ -3,6 +3,28 @@ import { getRelativeDateString } from './services/geminiService';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 30,
+        category: 'REPÓRTER 520',
+        title: 'Brasil empata com Zâmbia, leva gol olímpico, mas termina em primeiro no grupo do Mundial Sub-17',
+        slug: 'brasil-empata-com-zambia-mas-termina-em-primeiro-grupo-mundial-sub-17',
+        summary: 'A Seleção Brasileira Sub-17 empatou com a Zâmbia por 1 a 1 e, mesmo com o tropeço, garantiu a primeira colocação do Grupo H no Mundial da categoria, avançando para o mata-mata.',
+        content: `A Seleção Brasileira Sub-17 empatou por 1 a 1 com a Zâmbia, nesta segunda-feira (10), pela terceira rodada da fase de grupos da Copa do Mundo Sub-17, disputada em Doha, no Catar.
+
+Os africanos saíram na frente com um gol olímpico de Kalimina, ainda no primeiro tempo. O Brasil reagiu na segunda etapa e buscou o empate com Dell, após jogada de Ângelo pela direita.
+
+Mesmo com o empate, o resultado foi suficiente para garantir o primeiro lugar do Grupo H. Brasil e Zâmbia terminaram empatados com sete pontos, mas a seleção brasileira ficou à frente pelo saldo de gols — 11 contra 5. Antes do duelo decisivo, a equipe comandada por Carlos Eduardo Patetuci já havia goleado Honduras (7 a 0) e Indonésia (4 a 0).
+
+Durante o jogo, o Brasil encontrou dificuldades diante da marcação intensa dos africanos. O goleiro João Pedro teve atuação decisiva, evitando o que seria o segundo gol da Zâmbia. O empate veio apenas aos 35 minutos do segundo tempo, garantindo a liderança do grupo e a tranquilidade na classificação.
+
+Com o fim da fase de grupos, o Brasil agora aguarda a definição dos confrontos da próxima fase do torneio. O formato do mata-mata reúne os dois melhores de cada grupo e os oito melhores terceiros colocados, totalizando 32 seleções.`,
+        imageUrl: 'https://www.olimpiadatododia.com.br/wp-content/uploads/2025/11/brasil-zambia-copa-mundo-sub-17.png',
+        author: 'Equipe RADIO520',
+        date: getRelativeDateString(0, 1),
+        isFeatured: true,
+        views: 12300,
+        hashtags: ['#SeleçãoSub17', '#MundialSub17', '#Futebol'],
+    },
+    {
         id: 29,
         category: 'MATCHDAY 520',
         title: 'Rodrygo pode deixar o Real Madrid e mira a Premier League',
