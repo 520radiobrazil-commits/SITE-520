@@ -7,10 +7,14 @@
  * @param isoString The date in ISO 8601 format.
  * @param locale The locale for formatting (e.g., 'pt-BR').
  * @param timeZone The target timezone (e.g., 'America/Sao_Paulo').
- * @returns A formatted date-time string.
+ * @returns A formatted date-time string or an error message.
  */
 export function formatFullDateTime(isoString: string, locale = 'pt-BR', timeZone = 'America/Sao_Paulo'): string {
   const dt = new Date(isoString);
+  if (isNaN(dt.getTime())) {
+    console.error(`Invalid date string provided to formatFullDateTime: "${isoString}"`);
+    return "Data inválida";
+  }
   return new Intl.DateTimeFormat(locale, {
     weekday: 'long',
     year: 'numeric',
@@ -28,10 +32,14 @@ export function formatFullDateTime(isoString: string, locale = 'pt-BR', timeZone
  * @param isoString The date in ISO 8601 format.
  * @param locale The locale for formatting (e.g., 'pt-BR').
  * @param timeZone The target timezone (e.g., 'America/Sao_Paulo').
- * @returns A formatted short date-time string.
+ * @returns A formatted short date-time string or an error message.
  */
 export function formatShortDateTime(isoString: string, locale = 'pt-BR', timeZone = 'America/Sao_Paulo'): string {
   const dt = new Date(isoString);
+  if (isNaN(dt.getTime())) {
+    console.error(`Invalid date string provided to formatShortDateTime: "${isoString}"`);
+    return "Data inválida";
+  }
   const formatted = new Intl.DateTimeFormat(locale, {
     day: '2-digit',
     month: '2-digit',
@@ -49,10 +57,14 @@ export function formatShortDateTime(isoString: string, locale = 'pt-BR', timeZon
  * Uses Intl.RelativeTimeFormat for accurate, localized output.
  * @param isoString The date in ISO 8601 format.
  * @param now The current date to compare against. Defaults to new Date().
- * @returns A relative time string.
+ * @returns A relative time string or an error message.
  */
 export function formatRelativeTime(isoString: string, now = new Date()): string {
   const published = new Date(isoString);
+  if (isNaN(published.getTime())) {
+    console.error(`Invalid date string provided to formatRelativeTime: "${isoString}"`);
+    return "Tempo desconhecido";
+  }
   const diffSeconds = (published.getTime() - now.getTime()) / 1000;
 
   // Intl.RelativeTimeFormat handles localization and pluralization automatically.

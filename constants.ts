@@ -404,28 +404,18 @@ Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito,
     {
         id: 19,
         category: 'PODCASTS 520',
-        title: 'Barrinhas de Cereal: Aliadas ou Vilãs do seu Treino?',
-        slug: 'barrinhas-de-cereal-aliadas-ou-vilas-do-seu-treino',
-        summary: 'Neste episódio do Viva Melhor, Lu Skylark fala sobre as famosas barrinhas de cereal.',
-        content: `No novo episódio do podcast Viva Melhor, a especialista Lu Skylark mergulha no universo das barrinhas de cereal, um lanche popular entre praticantes de atividades físicas. Será que elas são realmente benéficas para o seu treino?
+        title: 'CORPINHO NO SHAPE PARA AS FESTAS. AINDA DÁ TEMPO?',
+        slug: 'corpinho-no-shape-para-as-festas-ainda-da-tempo',
+        summary: 'Neste episódio, Lu Skylark traz dicas práticas e reais pra quem quer dar aquele gás nas próximas semanas — alimentação equilibrada, treino com propósito e rotina que cabe no seu dia.',
+        content: `Neste episódio, Lu Skylark traz dicas práticas e reais pra quem quer dar aquele gás nas próximas semanas — alimentação equilibrada, treino com propósito e rotina que cabe no seu dia. Nada de loucura, só foco, energia boa e autocuidado pra você chegar nas festas leve, confiante e cheio de disposição.
 
-Lu explica que a resposta depende muito da composição da barrinha e do momento em que é consumida. "Nem toda barrinha é igual. Algumas são ricas em açúcares e gorduras, funcionando mais como um doce do que como um suplemento", alerta.
-
-Durante o bate-papô, ela dá dicas práticas para escolher as melhores opções:
-
-**Pré-treino:** Busque barrinhas com carboidratos de rápida absorção para fornecer energia imediata. Frutas secas e um pouco de mel na composição são boas escolhas.
-
-**Pós-treino:** O foco deve ser na recuperação muscular. Barrinhas com maior teor de proteínas, como as que contêm whey protein ou fontes vegetais, são ideais.
-
-**Cuidado com os rótulos:** Fique de olho em ingredientes como xarope de milho, gordura hidrogenada e excesso de conservantes. Quanto mais natural a lista de ingredientes, melhor.
-
-O episódio é um guia completo para quem quer usar as barrinhas de cereal de forma inteligente, transformando-as em verdadeiras aliadas para alcançar mais energia, performance e equilíbrio na rotina de treinos. Dê o play e descubra como fazer escolhas mais saudáveis!`,
-        imageUrl: 'https://images.unsplash.com/photo-1599599810694-b5b37304c357?q=80&w=1200&auto=format&fit=crop',
-        audioUrl: 'https://open.spotify.com/episode/7nKI5Fdpn0XdRwdvhdcAa3?si=bAGsFTWDRrmRYgrLg',
+🌿 Vem com a gente e descubra como pequenas mudanças agora podem transformar seu fim de ano!`,
+        imageUrl: 'https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/42373070/42373070-1762867572566-14c8d66981609.jpg',
+        audioUrl: 'https://open.spotify.com/episode/7zuoyrHDwK4A4DgQ7l26q1',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-06T16:00:00Z',
+        publishedAt: '2025-11-12T12:00:00Z',
         isFeatured: false,
-        views: 9800,
-        hashtags: ['#Saúde', '#Nutrição', '#Podcast'],
+        views: 150,
+        hashtags: ['#Saude', '#Fitness', '#BemEstar', '#Podcast'],
     },
 ];

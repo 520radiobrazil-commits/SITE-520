@@ -16,6 +16,9 @@ const TelegramIcon = () => (
 const LinkIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd" /></svg>
 );
+const BlueskyIcon = () => (
+    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 fill-current"><title>Bluesky</title><path d="M19.98 6.01a6.44 6.44 0 0 0-10.2-5.24 6.44 6.44 0 0 0-6.22 8.46 6.44 6.44 0 0 0 10.2 5.24 6.44 6.44 0 0 0 6.22-8.46Z"/></svg>
+);
 
 interface ShareButtonsProps {
   article: Article;
@@ -35,6 +38,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ article }) => {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     whatsapp: `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`,
     telegram: `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`,
+    bluesky: `https://bsky.app/intent/compose?text=${encodedTitle}%20${encodedUrl}`,
   };
 
   const handleCopyLink = () => {
@@ -62,6 +66,9 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ article }) => {
         </a>
         <a href={shareLinks.telegram} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-sky-400 hover:text-white transition-colors duration-200" aria-label="Compartilhar no Telegram">
             <TelegramIcon />
+        </a>
+        <a href={shareLinks.bluesky} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 bg-gray-700 rounded-full text-gray-300 hover:bg-sky-500 hover:text-white transition-colors duration-200" aria-label="Compartilhar no Bluesky">
+            <BlueskyIcon />
         </a>
         <button onClick={handleCopyLink} className="flex items-center text-sm font-semibold bg-gray-700 text-gray-300 px-4 py-2 rounded-full hover:bg-teal-500 hover:text-gray-900 transition-colors duration-200" aria-label="Copiar link do artigo">
             <LinkIcon />
