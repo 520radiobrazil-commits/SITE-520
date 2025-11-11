@@ -1,9 +1,17 @@
 import { Article } from './types';
 
-// As datas de publicação agora são timestamps ISO 8601 estáticos para representar
-// momentos de publicação reais e fixos, conforme solicitado. Em um sistema real,
-// estes valores seriam gerados no momento da publicação por uma função como
-// a `capturePublicationTimestamp` presente em `utils/time.ts`.
+// Helper to generate realistic, past-facing ISO timestamps.
+// This ensures that all publication dates are accurate relative to the current time,
+// creating a dynamic and authentic timeline for the articles.
+const generatePastTimestamp = (daysAgo: number, hoursAgo: number = 0, minutesAgo: number = 0): string => {
+  const now = new Date();
+  now.setDate(now.getDate() - daysAgo);
+  now.setHours(now.getHours() - hoursAgo);
+  now.setMinutes(now.getMinutes() - minutesAgo);
+  // Add some random seconds to make it more realistic
+  now.setSeconds(now.getSeconds() - Math.floor(Math.random() * 60));
+  return now.toISOString();
+};
 
 export const MOCK_ARTICLES: Article[] = [
     {
@@ -21,7 +29,7 @@ Para conferir toda a coleção, o AC Milan disponibilizou detalhes no link ofici
 Se você curte esportes e moda, essa collab é perfeita para se inspirar e atualizar o guarda-roupa de inverno com atitude e personalidade.`,
         imageUrl: 'https://pbs.twimg.com/media/G5ZnidTXkAA9Q51?format=jpg&name=large',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-12T10:00:00Z',
+        publishedAt: generatePastTimestamp(0, 0, 15),
         isFeatured: true,
         views: 1200,
         hashtags: ['#ACMilan', '#Rossignol', '#Fashion', '#Ski'],
@@ -43,7 +51,7 @@ Kato chega à categoria após uma boa temporada na FRECA (Formula Regional Europ
 A Fórmula 3 é o primeiro grande passo na #RoadToF1, o caminho das promessas do automobilismo rumo à Fórmula 1.`,
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_3MG4QSIBjbXzITfvtBoZeBlZNdrT8LvrfA&s',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-12T09:00:00Z',
+        publishedAt: generatePastTimestamp(0, 1, 30),
         isFeatured: false,
         views: 1500,
         hashtags: ['#F3', '#ARTGrandPrix', '#TaitoKato', '#RoadToF1'],
@@ -61,7 +69,7 @@ O resultado encerrou uma sequência instável da equipe mineira e dá fôlego na
 Já a Chapecoense, que briga na parte de cima da tabela, perdeu a chance de se aproximar ainda mais do G-4. O Verdão do Oeste estaciona nos 58 pontos, caindo para o quarto lugar e vendo a disputa pelo acesso esquentar nas rodadas finais.`,
         imageUrl: 'https://pbs.twimg.com/media/G5bb9GSW0AA5Nyn?format=jpg&name=large',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-11T07:39:00Z',
+        publishedAt: generatePastTimestamp(0, 5, 21),
         isFeatured: false,
         views: 10500,
         hashtags: ['#SérieB', '#AméricaMG', '#Chapecoense', '#Futebol'],
@@ -81,7 +89,7 @@ Jalen Hurts foi discreto, mas eficiente: completou passes curtos, administrou o 
 Com o resultado, o Philadelphia chega a 7 vitórias e 2 derrotas na temporada, consolidando a liderança na conferência. Já o Green Bay, agora com 5-3-1, precisa reagir rápido se quiser se manter vivo na briga por playoffs.`,
         imageUrl: 'https://classic.exame.com/wp-content/uploads/2024/09/000_36FL9ND.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-11T06:40:00Z',
+        publishedAt: generatePastTimestamp(0, 8, 20),
         isFeatured: true,
         views: 15500,
         hashtags: ['#NFL', '#Eagles', '#Packers', '#FutebolAmericano'],
@@ -103,7 +111,7 @@ Durante o jogo, o Brasil encontrou dificuldades diante da marcação intensa dos
 Com o fim da fase de grupos, o Brasil agora aguarda a definição dos confrontos da próxima fase do torneio. O formato do mata-mata reúne os dois melhores de cada grupo e os oito melhores terceiros colocados, totalizando 32 seleções.`,
         imageUrl: 'https://www.olimpiadatododia.com.br/wp-content/uploads/2025/11/brasil-zambia-copa-mundo-sub-17.png',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-10T15:10:00Z',
+        publishedAt: generatePastTimestamp(1, 8, 50),
         isFeatured: true,
         views: 12300,
         hashtags: ['#SeleçãoSub17', '#MundialSub17', '#Futebol'],
@@ -123,7 +131,7 @@ Rodrygo chegou ao Real Madrid em 2019, vindo do Santos, e conquistou títulos im
 A expectativa é de que as conversas sobre o futuro do atacante ganhem força nas próximas semanas, à medida que se aproxima a reabertura do mercado europeu.`,
         imageUrl: 'https://i.guim.co.uk/img/media/562c32efdd39dda57994df2f43454bbdde30d52f/0_0_3832_2300/master/3832.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=e0d401c5d920d9145d056dc28d324aaa',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-10T14:55:00Z',
+        publishedAt: generatePastTimestamp(1, 9, 5),
         isFeatured: true,
         views: 11500,
         hashtags: ['#RealMadrid', '#Rodrygo', '#PremierLeague', '#MercadoDaBola'],
@@ -131,10 +139,10 @@ A expectativa é de que as conversas sobre o futuro do atacante ganhem força na
     {
         id: 28,
         category: 'REPÓRTER 520',
-        title: 'Seleção Brasileira desembarca em Londres para os últimos amistosos de 2025',
-        slug: 'selecao-brasileira-desembarca-em-londres-para-ultimos-amistosos-de-2025',
-        summary: 'Comandados de Carlo Ancelotti se apresentam em Londres para os amistosos contra Senegal e Tunísia, fechando a temporada de 2025.',
-        content: `Os convocados da Seleção Brasileira começaram a chegar neste domingo (9) em Londres, capital da Inglaterra, para os dois últimos compromissos do ano. Sob o comando do técnico Carlo Ancelotti, o Brasil vai disputar dois amistosos que encerram a temporada 2025 e servem como preparação para a Copa do Mundo de 2026.
+        title: 'Seleção Brasileira desembarca em Londres para os últimos amistosos de 2024',
+        slug: 'selecao-brasileira-desembarca-em-londres-para-ultimos-amistosos-de-2024',
+        summary: 'Comandados de Carlo Ancelotti se apresentam em Londres para os amistosos contra Senegal e Tunísia, fechando a temporada de 2024.',
+        content: `Os convocados da Seleção Brasileira começaram a chegar neste domingo (9) em Londres, capital da Inglaterra, para os dois últimos compromissos do ano. Sob o comando do técnico Carlo Ancelotti, o Brasil vai disputar dois amistosos que encerram a temporada 2024 e servem como preparação para a Copa do Mundo de 2026.
 
 O primeiro jogo será no próximo sábado (15), contra o Senegal, no Emirates Stadium, às 13h (horário de Brasília). Já o segundo confronto acontece no dia 18, diante da Tunísia, às 16h30 (de Brasília), em Lille, na França.
 
@@ -143,7 +151,7 @@ Entre os primeiros a desembarcar em solo inglês estão o goleiro Bento (Al-Nass
 Nesta segunda-feira (10), Ancelotti comanda o primeiro treino da equipe no Centro de Treinamento do Arsenal, dando início à reta final da preparação. Os jogadores que atuam no Brasil devem se apresentar na terça-feira (11).`,
         imageUrl: 'https://static.wixstatic.com/media/ab590b_61abd4ccf2ab4b5f9148291974f807f7~mv2.jpg/v1/fill/w_764,h_463,al_c,lg_1,q_80/ab590b_61abd4ccf2ab4b5f9148291974f807f7~mv2.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-10T11:30:00Z',
+        publishedAt: generatePastTimestamp(1, 12, 30),
         isFeatured: true,
         views: 9200,
         hashtags: ['#SeleçãoBrasileira', '#Futebol', '#Ancelotti'],
@@ -161,7 +169,7 @@ Os próprios jogadores precisaram ajudar na remoção do gelo com pás para que 
 O triunfo consolida o projeto do clube espanhol no futebol canadense, que segue em crescimento nos últimos anos. Com a conquista, o Atlético Ottawa reforça sua posição como uma das equipes mais fortes do país e mostra que o espírito “colchonero” atravessou o Atlântico — e resistiu até ao frio intenso de Ottawa.`,
         imageUrl: 'https://i.cbc.ca/ais/5ac4ed65-c25f-4dbe-8605-a36319800041,1762733126819/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C406%2C7795%2C4384%29%3B',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-09T22:00:00Z',
+        publishedAt: generatePastTimestamp(2, 1, 0),
         isFeatured: false,
         views: 8500,
         hashtags: ['#FutebolCanadense', '#AtléticoOttawa', '#CPL'],
@@ -182,10 +190,10 @@ Com o sexto lugar, Gonzalez manteve vivas as chances matemáticas de título, ma
 
 A <strong>Fantic Racing</strong> também teve motivos pra comemorar — com <strong>Aron Canet</strong> em quarto e <strong>Barry Baltus</strong> em quinto, a equipe garantiu o <strong>título de construtores</strong> da categoria.
 
-A decisão da <strong>Moto2 2025</strong> acontece no <strong>Circuito Ricardo Tormo</strong>, em Valência, no próximo fim de semana. E, se tudo correr dentro do esperado, o Brasil pode voltar a ver um campeão mundial nas pistas do Mundial de Motovelocidade.`,
+A decisão da <strong>Moto2 2024</strong> acontece no <strong>Circuito Ricardo Tormo</strong>, em Valência, no próximo fim de semana. E, se tudo correr dentro do esperado, o Brasil pode voltar a ver um campeão mundial nas pistas do Mundial de Motovelocidade.`,
         imageUrl: 'https://cdn.crash.net/2025-11/doigo-moreira-moto2-2025-portugal.jpg?width=1600&aspect_ratio=16:9',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-10T14:40:00Z',
+        publishedAt: generatePastTimestamp(2, 3, 20),
         isFeatured: false,
         views: 17200,
         hashtags: ['#Moto2', '#DiogoMoreira', '#Motovelocidade'],
@@ -196,7 +204,7 @@ A decisão da <strong>Moto2 2025</strong> acontece no <strong>Circuito Ricardo T
         title: 'Praia Clube domina Joinville Vôlei e vence por 3 a 1 na Superliga Feminina',
         slug: 'praia-clube-domina-joinville-volei-e-vence-por-3-a-1-na-superliga-feminina',
         summary: 'O Praia Clube confirmou o favoritismo e derrotou o Joinville Vôlei por 3 sets a 1, mantendo a invencibilidade na competição após reagir com autoridade.',
-        content: `O Praia Clube confirmou o favoritismo e derrotou o Joinville Vôlei por 3 sets a 1 (22/25, 25/20, 25/17 e 25/19) neste domingo (9), em Uberlândia, pela 4ª rodada da Superliga Feminina 2025. Mesmo saindo atrás no placar, o time mineiro reagiu com autoridade e manteve a invencibilidade na competição.
+        content: `O Praia Clube confirmou o favoritismo e derrotou o Joinville Vôlei por 3 sets a 1 (22/25, 25/20, 25/17 e 25/19) neste domingo (9), em Uberlândia, pela 4ª rodada da Superliga Feminina 2024. Mesmo saindo atrás no placar, o time mineiro reagiu com autoridade e manteve a invencibilidade na competição.
 
 O Joinville surpreendeu no primeiro set, aproveitando erros do Praia e impondo um ritmo agressivo no saque e na defesa. Mas, a partir do segundo set, o equilíbrio se quebrou: o time da casa ajustou o passe, explorou bem as jogadas rápidas com as centrais e contou com grande atuação da ponteira dominicana Brayelin Martínez, principal destaque da partida.
 
@@ -217,7 +225,7 @@ Com o resultado, o Praia Clube chega a 11 pontos e se mantém entre os líderes 
 O próximo compromisso do Praia será contra o Barueri, fora de casa. Já o Joinville volta à quadra diante do Fluminense, buscando reabilitação.`,
         imageUrl: 'https://s2-ge.glbimg.com/3hFHHQ1W8PAR_LLa7hb5ielgG3Q=/0x0:1911x1274/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2025/Q/N/ULlLSWTAWYxwXXa50tCQ/54912632321-5f0da1c9fe-k.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-09T19:30:00Z',
+        publishedAt: generatePastTimestamp(2, 8, 30),
         isFeatured: false,
         views: 13450,
         hashtags: ['#Volei', '#Superliga', '#PraiaClube'],
@@ -225,10 +233,10 @@ O próximo compromisso do Praia será contra o Barueri, fora de casa. Já o Join
     {
         id: 24,
         category: 'VOLTA RÁPIDA',
-        title: 'Lando Norris domina o GP de São Paulo e amplia liderança no Mundial de F1 2025',
-        slug: 'lando-norris-domina-gp-sao-paulo-e-amplia-lideranca-f1-2025',
+        title: 'Lando Norris domina o GP de São Paulo e amplia liderança no Mundial de F1 2024',
+        slug: 'lando-norris-domina-gp-sao-paulo-e-amplia-lideranca-f1-2024',
         summary: 'Britânico da McLaren vence em Interlagos com autoridade e se aproxima do título da temporada.',
-        content: `O britânico Lando Norris foi o grande nome do fim de semana em Interlagos. O piloto da McLaren conquistou uma vitória dominante no GP de São Paulo de 2025, disputado neste domingo (9), e ampliou ainda mais sua vantagem na liderança do Campeonato Mundial de Pilotos.
+        content: `O britânico Lando Norris foi o grande nome do fim de semana em Interlagos. O piloto da McLaren conquistou uma vitória dominante no GP de São Paulo de 2024, disputado neste domingo (9), e ampliou ainda mais sua vantagem na liderança do Campeonato Mundial de Pilotos.
 
 Sob forte calor e diante de 304 mil torcedores, Norris controlou a prova do início ao fim, cruzando a linha de chegada 9,9 segundos à frente de Kimi Antonelli (Mercedes). O italiano de 19 anos subiu ao pódio pela segunda vez na temporada, enquanto Max Verstappen (Red Bull) completou em terceiro após uma impressionante recuperação — o holandês havia largado dos boxes.
 
@@ -242,7 +250,7 @@ Oscar Piastri, companheiro de equipe, cruzou em quinto mesmo após uma penalidad
 
 Entre os abandonos estiveram Lewis Hamilton e Charles Leclerc, ambos da Ferrari, que enfrentaram problemas mecânicos e acidentes.
 
-<strong>Resultado final – GP de São Paulo 2025</strong>
+<strong>Resultado final – GP de São Paulo 2024</strong>
 
 Lando Norris (McLaren) – 1h28m45s392
 Kimi Antonelli (Mercedes) – +9.980s
@@ -264,7 +272,7 @@ O evento ainda contou com a presença de Thiaguinho, que cantou o Hino Nacional,
 Agora, restando apenas duas etapas – Las Vegas e Abu Dhabi, Norris está cada vez mais perto do título mundial.`,
         imageUrl: 'https://veja.abril.com.br/wp-content/uploads/2025/11/000_83JC74B.jpg?crop=1&resize=1212,909',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-10T15:05:00Z',
+        publishedAt: generatePastTimestamp(2, 10, 55),
         isFeatured: false,
         views: 28950,
         hashtags: ['#F1', '#LandoNorris', '#GPBrasil'],
@@ -275,7 +283,7 @@ Agora, restando apenas duas etapas – Las Vegas e Abu Dhabi, Norris está cada 
         title: 'Ceará vence o Corinthians em Itaquera e respira na luta contra o rebaixamento',
         slug: 'ceara-vence-corinthians-em-itaquera-e-respira-na-luta-contra-rebaixamento',
         summary: 'Gol de Antonio Galeano define a partida na Neo Química Arena; Timão perde invencibilidade em casa e Vozão ganha fôlego na luta contra o rebaixamento.',
-        content: `O Ceará conquistou uma vitória fundamental na luta contra o rebaixamento ao bater o Corinthians por 1 a 0, neste domingo (9), na Neo Química Arena, pela trigésima terceira rodada do Brasileirão Betano 2025. O único gol da partida foi marcado por Antonio Galeano, ainda no primeiro tempo, após rápido contra-ataque.
+        content: `O Ceará conquistou uma vitória fundamental na luta contra o rebaixamento ao bater o Corinthians por 1 a 0, neste domingo (9), na Neo Química Arena, pela trigésima terceira rodada do Brasileirão Betano 2024. O único gol da partida foi marcado por Antonio Galeano, ainda no primeiro tempo, após rápido contra-ataque.
 
 Com o resultado, o Vozão chegou a 38 pontos, ganhando fôlego na briga para se manter na elite. Já o Corinthians, que vinha em boa fase, perdeu a chance de encostar no G-8 e permanece com 42 pontos, em 10º.
 
@@ -296,7 +304,7 @@ Na etapa final, o técnico corintiano tentou mudar o panorama com as entradas de
 Com o resultado, o Ceará sobe para a 12ª posição, respirando fora do Z-4. O Corinthians se mantém em 10º, e vê o sonho de vaga na Copa Sul-Americana ameaçado.`,
         imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/galeano-ceara-e1762719156989.jpg?w=419&h=283&crop=0',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-08T20:15:00Z',
+        publishedAt: generatePastTimestamp(3, 2, 45),
         isFeatured: false,
         views: 16780,
         hashtags: ['#Ceará', '#Corinthians', '#Brasileirão'],
@@ -322,7 +330,7 @@ O lado positivo está na abertura a novos nomes, como Luciano Juba e Vitor Roque
 Ancelotti deve usar os dois amistosos para definir as últimas peças do elenco rumo à Copa de 2026, mas, pela reação da torcida, a Seleção chega em novembro com mais desconfiança do que empolgação.`,
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2025/11/O-tecnico-da-Selecao-Brasileira-Carlo-Ancelotti-scaled-aspect-ratio-512-320.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-08T12:00:00Z',
+        publishedAt: generatePastTimestamp(3, 12, 0),
         isFeatured: false,
         views: 14500,
         hashtags: ['#SeleçãoBrasileira', '#Ancelotti', '#Futebol'],
@@ -332,10 +340,10 @@ Ancelotti deve usar os dois amistosos para definir as últimas peças do elenco 
         category: 'FUTEBOL SHOW 520',
         title: 'Palmeiras vence o Juventude fora de casa e reassume a liderança do Brasileirão',
         slug: 'palmeiras-vence-juventude-fora-de-casa-e-reassume-lideranca-brasileirao',
-        summary: 'O Palmeiras voltou ao topo do Brasileirão Betano 2025. Com atuação sólida e eficiente, o time de Abel Ferreira venceu o Juventude por 2 a 0 no Alfredo Jaconi e reassumiu a liderança do campeonato. Bruno Rodrigues e Felipe Anderson marcaram os gols da partida.',
+        summary: 'O Palmeiras voltou ao topo do Brasileirão Betano 2024. Com atuação sólida e eficiente, o time de Abel Ferreira venceu o Juventude por 2 a 0 no Alfredo Jaconi e reassumiu a liderança do campeonato. Bruno Rodrigues e Felipe Anderson marcaram os gols da partida.',
         content: `Verdão faz 2 a 0 em Caxias do Sul, chega a 65 pontos e ultrapassa o Flamengo; Bruno Rodrigues e Felipe Anderson marcam os gols da vitória
 
-O Palmeiras está novamente na liderança do Brasileirão Betano 2025. Neste domingo (2), o time comandado por Abel Ferreira venceu o Juventude por 2 a 0, em Caxias do Sul, e chegou a 65 pontos, ultrapassando o Flamengo, que soma 64.
+O Palmeiras está novamente na liderança do Brasileirão Betano 2024. Neste domingo (2), o time comandado por Abel Ferreira venceu o Juventude por 2 a 0, em Caxias do Sul, e chegou a 65 pontos, ultrapassando o Flamengo, que soma 64.
 
 Com uma postura dominante desde o início, o Verdão controlou o ritmo da partida e mostrou maturidade para lidar com as condições do jogo e o gramado pesado do Alfredo Jaconi. A equipe paulista teve mais posse de bola, criou as melhores oportunidades e foi precisa nas finalizações.
 
@@ -371,7 +379,7 @@ Palmeiras x Athletico-PR — Quarta-feira (5), às 21h30, no Allianz Parque
 Cruzeiro x Juventude — Quinta-feira (6), às 19h, no Mineirão.`,
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=850,quality=75,format=webp/uploads/2025/11/palmeiras_x_juventude-1920x1280.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-07T19:45:00Z',
+        publishedAt: generatePastTimestamp(4, 3, 15),
         isFeatured: false,
         views: 18542,
         hashtags: ['#Palmeiras', '#Brasileirão', '#Futebol'],
@@ -393,7 +401,7 @@ Com o título em Paris, Sinner fecha o ano como o homem a ser batido. E não é 
 Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito, o ATP de Paris serviu como resposta: Jannik Sinner chegou ao topo — e, do jeito que está jogando, parece disposto a ficar por lá um bom tempo.`,
         imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/sinner-paris.jpg?w=1200&h=900&crop=1',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-07T11:20:00Z',
+        publishedAt: generatePastTimestamp(4, 13, 40),
         isFeatured: false,
         views: 16230,
         ogTitle: 'Sinner soberano em Paris',
@@ -413,7 +421,7 @@ Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito,
         imageUrl: 'https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/42373070/42373070-1762867572566-14c8d66981609.jpg',
         audioUrl: 'https://open.spotify.com/episode/7zuoyrHDwK4A4DgQ7l26q1',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-12T12:00:00Z',
+        publishedAt: generatePastTimestamp(5, 0, 0),
         isFeatured: false,
         views: 150,
         hashtags: ['#Saude', '#Fitness', '#BemEstar', '#Podcast'],

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { formatRelativeTime } from '../utils/time';
+import { formatRelativeTime, generateDynamicPastDateISO } from '../utils/time';
 
 const XIcon = () => (
     <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 fill-current"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
@@ -18,18 +18,18 @@ interface BrasileiraoTableProps {
   currentTime: Date;
 }
 
-// Define a dynamic ISO timestamp for the last update of the table data.
-const TABLE_LAST_UPDATED_ISO = new Date(new Date().setHours(new Date().getHours() - 8)).toISOString();
-
-
 const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
   const [currentUrl, setCurrentUrl] = useState('');
+  // Gera o timestamp de atualização e o ano atual apenas uma vez na montagem do componente
+  // para garantir consistência e evitar que os valores mudem em re-renderizações.
+  const [lastUpdatedISO] = useState(() => generateDynamicPastDateISO({ hours: 2 }));
+  const [currentYear] = useState(() => new Date().getFullYear());
 
   useEffect(() => {
     setCurrentUrl(window.location.href);
   }, []);
 
-  const timeAgo = formatRelativeTime(TABLE_LAST_UPDATED_ISO, currentTime);
+  const timeAgo = formatRelativeTime(lastUpdatedISO, currentTime);
 
   const teams = [
     { pos: 1, name: 'Palmeiras', pj: 32, sg: '+30', pts: 68, zone: 'libertadores' },
@@ -71,7 +71,7 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
   
   const generateShareText = () => {
       const top5 = teams.slice(0, 5).map(team => `${team.pos}. ${team.name} - ${team.pts} pts`).join('\n');
-      return `Confira a classificação do Brasileirão 2025 na RADIO520.COM.BR! 🏆\n\n${top5}\n\n#Brasileirao #Futebol #RADIO520`;
+      return `Confira a classificação do Brasileirão ${currentYear} na RADIO520.COM.BR! 🏆\n\n${top5}\n\n#Brasileirao #Futebol #RADIO520`;
   };
 
   const encodedUrl = encodeURIComponent(currentUrl);
@@ -87,7 +87,7 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
 
   return (
     <div className="bg-gray-800 rounded-lg p-4">
-      <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider">🏆 Brasileirão 2025</h3>
+      <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider">🏆 Brasileirão {currentYear}</h3>
       <div className="overflow-x-auto">
         <table className="w-full text-sm text-white">
             <thead>

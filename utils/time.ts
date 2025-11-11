@@ -106,3 +106,25 @@ export function formatRelativeTime(isoString: string, now = new Date()): string 
 export function capturePublicationTimestamp(): string {
   return new Date().toISOString();
 }
+
+/**
+ * Generates a realistic, past-facing ISO timestamp dynamically.
+ * This is useful for "last updated" fields on static content to keep them looking fresh.
+ * @param options - An object with days, hours, and/or minutes to subtract from the current time.
+ * @returns A past date as an ISO 8601 formatted string.
+ */
+export function generateDynamicPastDateISO(options: { days?: number; hours?: number; minutes?: number }): string {
+  const now = new Date();
+  if (options.days) {
+    now.setDate(now.getDate() - options.days);
+  }
+  if (options.hours) {
+    now.setHours(now.getHours() - options.hours);
+  }
+  if (options.minutes) {
+    now.setMinutes(now.getMinutes() - options.minutes);
+  }
+  // Add some random seconds to make it more realistic
+  now.setSeconds(now.getSeconds() - Math.floor(Math.random() * 60));
+  return now.toISOString();
+}

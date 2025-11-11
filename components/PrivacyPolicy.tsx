@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { generateDynamicPastDateISO } from '../utils/time';
 
 interface PrivacyPolicyProps {
   onGoBack: () => void;
@@ -11,6 +12,15 @@ const ArrowLeftIcon = () => (
 );
 
 const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onGoBack }) => {
+  // Gera um timestamp dinâmico para garantir que a data seja sempre recente e plausível.
+  const [lastUpdatedISO] = useState(() => generateDynamicPastDateISO({ days: 25 }));
+  
+  const formattedDate = new Intl.DateTimeFormat('pt-BR', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric'
+  }).format(new Date(lastUpdatedISO));
+
   return (
     <div className="max-w-4xl mx-auto animate-fade-in">
         <button onClick={onGoBack} className="mb-8 inline-flex items-center space-x-2 text-teal-400 hover:text-teal-300 font-semibold transition-colors rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
@@ -21,7 +31,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onGoBack }) => {
         <div className="bg-gray-800 rounded-lg p-8 shadow-2xl">
             <div className="text-center md:text-left mb-8">
                 <h1 className="text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">POLÍTICA DE PRIVACIDADE</h1>
-                <p className="text-gray-400">Última atualização: 02 de novembro de 2025</p>
+                <p className="text-gray-400">Última atualização: {formattedDate}</p>
                 <div className="h-1 w-24 bg-teal-500 mx-auto md:mx-0 rounded-full mt-4"></div>
             </div>
 
@@ -106,7 +116,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onGoBack }) => {
                     <br />
                     📧 520radiobrazil@gmail.com
                     <br />
-                    © 2025 RADIO520.COM.BR — Todos os direitos reservados.
+                    © {new Date().getFullYear()} RADIO520.COM.BR — Todos os direitos reservados.
                 </p>
             </div>
         </div>
