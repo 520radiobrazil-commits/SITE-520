@@ -15,6 +15,31 @@ const generatePastTimestamp = (daysAgo: number, hoursAgo: number = 0, minutesAgo
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 36,
+        category: 'ACE 520',
+        title: 'Carlos Alcaraz entra para a história com 50 vitórias sobre top 10',
+        slug: 'carlos-alcaraz-entra-para-a-historia-com-50-vitorias-sobre-top-10',
+        summary: 'O espanhol Carlos Alcaraz, aos 22 anos, se tornou o homem mais jovem a alcançar 50 vitórias contra jogadores do top 10, um feito que não acontecia desde Boris Becker.',
+        content: `O espanhol Carlos Alcaraz segue colecionando marcas impressionantes no circuito mundial. Aos 22 anos, ele se tornou o homem mais jovem a alcançar 50 vitórias contra jogadores do top 10, um feito que não acontecia desde Boris Becker.
+
+A marca reforça o domínio e a consistência do tenista, que vem se consolidando como uma das maiores estrelas da nova geração. Carismático, explosivo em quadra e dono de um estilo de jogo vibrante, Alcaraz tem conquistado fãs no mundo todo — e provado que o futuro do tênis já é o presente.
+
+A conquista foi destacada pelo perfil especializado The Tennis Letter, que celebrou o feito nas redes sociais:
+
+“Carlos Alcaraz se torna o homem mais jovem a conquistar 50 vitórias sobre top 10 desde Boris Becker. Apenas 22 anos, fazendo coisas inacreditáveis.”
+
+Com essa marca, Alcaraz reforça seu status entre os gigantes do esporte e mostra que a nova era do tênis tem um novo líder — jovem, ousado e espanhol.
+
+📻 Rádio 520 — Esporte, música e atitude.
+Siga a 520 no X e fique por dentro das maiores histórias do esporte mundial.`,
+        imageUrl: 'https://pbs.twimg.com/media/G5fGjEdbcAQ_H_N?format=jpg&name=large',
+        author: 'Equipe RADIO520',
+        publishedAt: generatePastTimestamp(0, 0, 1), // Make it the absolute latest
+        isFeatured: true,
+        views: 8800,
+        hashtags: ['#Alcaraz', '#Tênis', '#ATP', '#Recorde'],
+    },
+    {
         id: 35,
         category: 'POP NEWS',
         title: 'Roxette anuncia dois shows no Brasil em 2026',
