@@ -7,6 +7,24 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 32,
+        category: 'FUTEBOL SHOW 520',
+        title: 'América-MG vence Chapecoense fora de casa e respira na tabela',
+        slug: 'america-mg-vence-chapecoense-fora-de-casa-e-respira-na-tabela',
+        summary: 'Na noite de segunda-feira (10), o América-MG conquistou uma vitória importante sobre a Chapecoense por 1 a 0, na Arena Condá, pela trigésima sexta rodada do Brasileirão Série B.',
+        content: `Na noite de segunda-feira (10), o América-MG conquistou uma vitória importante sobre a Chapecoense por 1 a 0, na Arena Condá, pela trigésima sexta rodada do Brasileirão Série B. O único gol da partida foi marcado por Willian Bigode aos 6 minutos do segundo tempo, garantindo os três pontos para o Coelho.
+
+O resultado encerrou uma sequência instável da equipe mineira e dá fôlego na reta final do campeonato. Com o triunfo, o América chegou aos 45 pontos e subiu para a décima terceira posição, afastando-se da zona de rebaixamento.
+
+Já a Chapecoense, que briga na parte de cima da tabela, perdeu a chance de se aproximar ainda mais do G-4. O Verdão do Oeste estaciona nos 58 pontos, caindo para o quarto lugar e vendo a disputa pelo acesso esquentar nas rodadas finais.`,
+        imageUrl: 'https://pbs.twimg.com/media/G5bb9GSW0AA5Nyn?format=jpg&name=large',
+        author: 'Equipe RADIO520',
+        publishedAt: '2025-11-11T07:39:00Z',
+        isFeatured: false,
+        views: 10500,
+        hashtags: ['#SérieB', '#AméricaMG', '#Chapecoense', '#Futebol'],
+    },
+    {
         id: 31,
         category: 'LIGA 520',
         title: 'Eagles vencem Packers em jogo truncado e assumem protagonismo defensivo',
@@ -351,7 +369,7 @@ Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito,
 
 Lu explica que a resposta depende muito da composição da barrinha e do momento em que é consumida. "Nem toda barrinha é igual. Algumas são ricas em açúcares e gorduras, funcionando mais como um doce do que como um suplemento", alerta.
 
-Durante o bate-papo, ela dá dicas práticas para escolher as melhores opções:
+Durante o bate-papô, ela dá dicas práticas para escolher as melhores opções:
 
 **Pré-treino:** Busque barrinhas com carboidratos de rápida absorção para fornecer energia imediata. Frutas secas e um pouco de mel na composição são boas escolhas.
 
