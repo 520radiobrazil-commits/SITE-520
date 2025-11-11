@@ -7,6 +7,26 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 31,
+        category: 'LIGA 520',
+        title: 'Eagles vencem Packers em jogo truncado e assumem protagonismo defensivo',
+        slug: 'eagles-vencem-packers-em-jogo-truncado-e-assumem-protagonismo-defensivo',
+        summary: 'Em uma noite gelada no Lambeau Field, o Philadelphia Eagles mostrou maturidade e venceu o Green Bay Packers por 10 a 7, em uma partida marcada por defesas sólidas e pouca inspiração ofensiva.',
+        content: `Em uma noite gelada no Lambeau Field, o Philadelphia Eagles mostrou maturidade e venceu o Green Bay Packers por 10 a 7, em uma partida marcada por defesas sólidas e pouca inspiração ofensiva. O duelo, válido pela 10ª rodada da NFL, reforçou a força dos Eagles mesmo longe de casa.
+
+O primeiro tempo foi de estudo. As duas equipes se anularam ofensivamente, com marcações agressivas e pouca produção aérea. Só no terceiro quarto o placar saiu do zero, com Jake Elliott acertando um field goal de 33 jardas e colocando os Eagles na frente. No último período, DeVonta Smith brilhou em uma rota precisa para touchdown, ampliando para 10 a 0. O Packers ainda reagiu com um belo drive liderado por Jordan Love, que encontrou Josh Jacobs na end zone, mas já era tarde.
+
+Jalen Hurts foi discreto, mas eficiente: completou passes curtos, administrou o relógio e evitou turnovers. Do outro lado, Love sofreu com a pressão — foi sackado três vezes e terminou com 176 jardas aéreas, sem grandes lampejos. A defesa dos Eagles, comandada por Haason Reddick e Darius Slay, foi o grande destaque, controlando as corridas e forçando erros.
+
+Com o resultado, o Philadelphia chega a 7 vitórias e 2 derrotas na temporada, consolidando a liderança na conferência. Já o Green Bay, agora com 5-3-1, precisa reagir rápido se quiser se manter vivo na briga por playoffs.`,
+        imageUrl: 'https://classic.exame.com/wp-content/uploads/2024/09/000_36FL9ND.jpg',
+        author: 'Equipe RADIO520',
+        publishedAt: '2025-11-11T06:40:00Z',
+        isFeatured: true,
+        views: 15500,
+        hashtags: ['#NFL', '#Eagles', '#Packers', '#FutebolAmericano'],
+    },
+    {
         id: 30,
         category: 'REPÓRTER 520',
         title: 'Brasil empata com Zâmbia, leva gol olímpico, mas termina em primeiro no grupo do Mundial Sub-17',
