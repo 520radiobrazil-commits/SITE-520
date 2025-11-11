@@ -15,6 +15,28 @@ const generatePastTimestamp = (daysAgo: number, hoursAgo: number = 0, minutesAgo
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 35,
+        category: 'POP NEWS',
+        title: 'Roxette anuncia dois shows no Brasil em 2026',
+        slug: 'roxette-anuncia-dois-shows-no-brasil-em-2026',
+        summary: 'Turnê “Live – Back Again” marca o retorno triunfal de um dos nomes mais amados do pop mundial.',
+        content: `O lendário Roxette está oficialmente de volta aos palcos — e o Brasil já está no mapa da turnê! O duo sueco, agora formado por Per Gessle e a cantora Lena Philipsson, confirmou duas apresentações no país em abril de 2026, dentro da turnê “Roxette: Live – Back Again”.
+
+A nova formação celebra o legado do grupo que marcou gerações com hits como “It Must Have Been Love”, “Listen to Your Heart” e “The Look”, prometendo uma viagem nostálgica pelos anos dourados do pop, com uma produção moderna e cheia de emoção.
+
+Segundo Gessle, a ideia é revisitar a energia original do Roxette, mas com uma nova abordagem, unindo clássicos e versões repaginadas que dialogam com o público atual. Lena Philipsson, uma das grandes vozes da Suécia, assume os vocais femininos em homenagem à inesquecível Marie Fredriksson, falecida em 2019.
+
+O anúncio deixou os fãs em êxtase e reacendeu a chama de um dos nomes mais icônicos do pop internacional. Os detalhes sobre cidades, datas e venda de ingressos devem ser divulgados nas próximas semanas.
+
+🎶 “O Roxette sempre teve uma conexão especial com o público brasileiro. Estamos empolgados para sentir essa energia novamente”, disse Per Gessle em nota oficial.`,
+        imageUrl: 'https://www.estadao.com.br/resizer/v2/CUOUNI7A4JEZZAOMDNCPGEBFBQ.jpg?quality=80&auth=ecf8ffe515dff0fb38b87c777c2b4421036766812cfb0df1e8c2c5b8eba2d215&width=380',
+        author: 'Equipe RADIO520',
+        publishedAt: generatePastTimestamp(0, 0, 5),
+        isFeatured: true,
+        views: 520,
+        hashtags: ['#Roxette', '#ShowNoBrasil', '#PopNews', '#Música'],
+    },
+    {
         id: 34,
         category: 'RADIO520 FASHION LEAGUE',
         title: 'AC Milan e Rossignol lançam coleção de ski que une estilo e performance',
@@ -167,7 +189,7 @@ Nesta segunda-feira (10), Ancelotti comanda o primeiro treino da equipe no Centr
 Os próprios jogadores precisaram ajudar na remoção do gelo com pás para que a bola pudesse rolar novamente. E valeu a pena: a partida terminou com um golaço de bicicleta, selando o título em grande estilo.
 
 O triunfo consolida o projeto do clube espanhol no futebol canadense, que segue em crescimento nos últimos anos. Com a conquista, o Atlético Ottawa reforça sua posição como uma das equipes mais fortes do país e mostra que o espírito “colchonero” atravessou o Atlântico — e resistiu até ao frio intenso de Ottawa.`,
-        imageUrl: 'https://i.cbc.ca/ais/5ac4ed65-c25f-4dbe-8605-a36319800041,1762733126819/full/max/0/default.jpg?im=Crop%2Crect%3D%280%2C406%2C7795%2C4384%29%3B',
+        imageUrl: 'https://i.cbc.ca/ais/5ac4ed65-c25f-4dbe-8605-a36319800041,1762733126819/full/max/0/default.jpg?im=Crop%2Crect%3D%2C406%2C7795%2C4384%29%3B',
         author: 'Equipe RADIO520',
         publishedAt: generatePastTimestamp(2, 1, 0),
         isFeatured: false,

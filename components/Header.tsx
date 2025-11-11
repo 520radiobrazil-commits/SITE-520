@@ -54,6 +54,7 @@ const navLinks = [
     { label: 'TÊNIS', category: 'ACE 520' },
     { label: 'NFL', category: 'LIGA 520' },
     { label: 'FASHION', category: 'RADIO520 FASHION LEAGUE' },
+    { label: 'POP NEWS', category: 'POP NEWS' },
     { label: 'PODCASTS', category: 'PODCASTS 520' },
     { label: 'SOBRE NÓS', category: 'SOBRE NÓS' },
 ];
