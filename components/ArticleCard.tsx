@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from '../types';
-import { formatRelativeTime, formatFullDateTime } from '../utils/time';
+import { formatShortDateTime, formatFullDateTime } from '../utils/time';
 
 interface ArticleCardProps {
   article: Article;
@@ -15,6 +15,8 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
 );
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTime }) => {
+  const displayDate = article.updatedAt || article.publishedAt;
+  const dateLabel = article.updatedAt ? 'Atualizado' : 'Publicado';
   
   return (
     <div 
@@ -32,8 +34,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTim
         <p className="text-gray-400 text-sm mb-4">{article.summary}</p>
         <div className="text-xs text-gray-400 mb-4">
             <span>Por {article.author} &bull; </span>
-            <time dateTime={article.publishedAt} title={formatFullDateTime(article.publishedAt)} className="cursor-help">
-                {formatRelativeTime(article.publishedAt, currentTime)}
+            <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
+                {dateLabel} em {formatShortDateTime(displayDate)}
             </time>
         </div>
         <div className="mt-auto">

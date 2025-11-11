@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Article } from '../types';
 import Comments from './Comments';
 import ShareButtons from './ShareButtons';
-import { formatRelativeTime, formatFullDateTime } from '../utils/time';
+import { formatShortDateTime, formatFullDateTime } from '../utils/time';
 
 interface ArticleDetailProps {
   article: Article;
@@ -98,6 +98,9 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
     };
   }, [article]);
 
+  const displayDate = article.updatedAt || article.publishedAt;
+  const dateLabel = article.updatedAt ? 'Atualizado' : 'Publicado';
+
   // JSON-LD Schema for rich results
   const schema = {
     "@context": "https://schema.org",
@@ -138,8 +141,8 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400">
                   <span>Por {article.author}</span>
                   <span className="text-gray-600">&bull;</span>
-                  <time dateTime={article.publishedAt} title={formatFullDateTime(article.publishedAt)} className="cursor-help">
-                    Atualizado {formatRelativeTime(article.publishedAt, currentTime)}
+                  <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
+                    {dateLabel} em {formatShortDateTime(displayDate)}
                   </time>
               </div>
               {article.hashtags && (

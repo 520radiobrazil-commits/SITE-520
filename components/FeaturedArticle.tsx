@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from '../types';
-import { formatRelativeTime, formatFullDateTime } from '../utils/time';
+import { formatShortDateTime, formatFullDateTime } from '../utils/time';
 
 interface FeaturedArticleProps {
   article: Article;
@@ -15,6 +15,8 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
 );
 
 const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect, currentTime }) => {
+  const displayDate = article.updatedAt || article.publishedAt;
+  const dateLabel = article.updatedAt ? 'Atualizado' : 'Publicado';
 
   return (
     <div 
@@ -51,8 +53,8 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect, cu
          <div className="flex items-center justify-between">
             <div className="text-sm text-gray-400">
                 <span>Por {article.author} &bull; </span>
-                <time dateTime={article.publishedAt} title={formatFullDateTime(article.publishedAt)} className="cursor-help">
-                    Atualizado {formatRelativeTime(article.publishedAt, currentTime)}
+                <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
+                    {dateLabel} em {formatShortDateTime(displayDate)}
                 </time>
             </div>
             <div className="flex items-center space-x-2">

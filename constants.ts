@@ -7,6 +7,48 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 34,
+        category: 'RADIO520 FASHION LEAGUE',
+        title: 'AC Milan e Rossignol lançam coleção de ski que une estilo e performance',
+        slug: 'ac-milan-rossignol-lancam-colecao-ski-estilo-performance',
+        summary: 'O AC Milan se uniu à marca de equipamentos de inverno Rossignol para lançar uma coleção de ski que celebra a herança do clube com design moderno, combinando conforto e estilo.',
+        content: `O AC Milan, sempre ligado no lifestyle além do futebol, se juntou à marca de equipamentos de inverno Rossignol para lançar uma coleção de ski que é puro estilo. A linha completa celebra a herança do clube e aposta em design moderno, pensada tanto para quem curte esportes de montanha quanto para momentos de lazer.
+
+As peças trazem a identidade clássica do time, com o vermelho e preto predominando em jaquetas, calças e acessórios, e contam com detalhes que ressaltam a parceria, como logos visíveis da Rossignol e do AC Milan. Além da funcionalidade para quem enfrenta a neve, o destaque é a combinação de conforto e estilo, mostrando que moda e esportes podem caminhar juntos.
+
+Para conferir toda a coleção, o AC Milan disponibilizou detalhes no link oficial acmi.land/ACM--Rossignol.
+
+Se você curte esportes e moda, essa collab é perfeita para se inspirar e atualizar o guarda-roupa de inverno com atitude e personalidade.`,
+        imageUrl: 'https://pbs.twimg.com/media/G5ZnidTXkAA9Q51?format=jpg&name=large',
+        author: 'Equipe RADIO520',
+        publishedAt: '2025-11-12T10:00:00Z',
+        isFeatured: true,
+        views: 1200,
+        hashtags: ['#ACMilan', '#Rossignol', '#Fashion', '#Ski'],
+    },
+    {
+        id: 33,
+        category: 'VOLTA RÁPIDA',
+        title: 'Fórmula 3: Taito Kato é confirmado pela ART Grand Prix para a temporada 2026',
+        slug: 'formula-3-taito-kato-confirmado-art-grand-prix-temporada-2026',
+        summary: 'O piloto japonês Taito Kato foi anunciado oficialmente como novo piloto da ART Grand Prix para disputar a Fórmula 3 em 2026, reforçando a continuidade do trabalho entre piloto e equipe.',
+        content: `O japonês Taito Kato foi anunciado oficialmente como novo piloto da ART Grand Prix para disputar a Fórmula 3 em 2026. O anúncio foi feito nas redes sociais da categoria nesta terça-feira (11).
+
+Com a chegada de Kato, a equipe francesa completa sua formação para o próximo campeonato, restando apenas duas vagas em aberto no grid da F3.
+
+Kato chega à categoria após uma boa temporada na FRECA (Formula Regional European Championship by Alpine), também correndo pela ART, o que reforça a continuidade do trabalho entre piloto e equipe.
+
+“Estou muito animado com os novos desafios que nos esperam no próximo ano!”, declarou o jovem piloto.
+
+A Fórmula 3 é o primeiro grande passo na #RoadToF1, o caminho das promessas do automobilismo rumo à Fórmula 1.`,
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_3MG4QSIBjbXzITfvtBoZeBlZNdrT8LvrfA&s',
+        author: 'Equipe RADIO520',
+        publishedAt: '2025-11-12T09:00:00Z',
+        isFeatured: false,
+        views: 1500,
+        hashtags: ['#F3', '#ARTGrandPrix', '#TaitoKato', '#RoadToF1'],
+    },
+    {
         id: 32,
         category: 'FUTEBOL SHOW 520',
         title: 'América-MG vence Chapecoense fora de casa e respira na tabela',

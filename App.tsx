@@ -81,21 +81,16 @@ function App() {
 
   // Determina quais artigos serão exibidos no conteúdo principal.
   // Se uma categoria estiver selecionada, filtra todos os artigos por essa categoria.
-  // Caso contrário (na página inicial), exibe todos os artigos, exceto o de áudio, para evitar duplicidade.
+  // Caso contrário (na página inicial), exibe todos os artigos.
   const articlesToDisplay = selectedCategory
     ? articles.filter(article => article.category === selectedCategory)
-    : audioArticle
-      ? articles.filter(a => a.id !== audioArticle.id)
-      : articles;
+    : articles;
 
-  // Encontra o artigo em destaque mais recente para ser o principal.
-  const featuredArticle = articlesToDisplay.find(a => a.isFeatured);
+  // O primeiro artigo da lista ordenada é sempre o destaque principal.
+  const featuredArticle = articlesToDisplay[0];
 
-  // Todos os outros artigos são aqueles que NÃO são o destaque principal.
-  // Isso inclui corretamente outros artigos marcados como "destaque" na lista geral.
-  const otherArticles = featuredArticle
-    ? articlesToDisplay.filter(a => a.id !== featuredArticle.id)
-    : articlesToDisplay;
+  // Todos os outros artigos (a partir do segundo) são exibidos abaixo.
+  const otherArticles = articlesToDisplay.slice(1);
 
 
   const handleArticleSelect = useCallback((article: Article) => {

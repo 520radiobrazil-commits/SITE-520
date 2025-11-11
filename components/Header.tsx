@@ -53,6 +53,7 @@ const navLinks = [
     { label: 'AUTOMOBILISMO', category: 'VOLTA RÁPIDA' },
     { label: 'TÊNIS', category: 'ACE 520' },
     { label: 'NFL', category: 'LIGA 520' },
+    { label: 'FASHION', category: 'RADIO520 FASHION LEAGUE' },
     { label: 'PODCASTS', category: 'PODCASTS 520' },
     { label: 'SOBRE NÓS', category: 'SOBRE NÓS' },
 ];

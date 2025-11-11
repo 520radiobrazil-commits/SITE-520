@@ -23,6 +23,28 @@ export function formatFullDateTime(isoString: string, locale = 'pt-BR', timeZone
 }
 
 /**
+ * Formats an ISO date string into a short, localized date-time string.
+ * Example: "11/11/2025 às 07:39"
+ * @param isoString The date in ISO 8601 format.
+ * @param locale The locale for formatting (e.g., 'pt-BR').
+ * @param timeZone The target timezone (e.g., 'America/Sao_Paulo').
+ * @returns A formatted short date-time string.
+ */
+export function formatShortDateTime(isoString: string, locale = 'pt-BR', timeZone = 'America/Sao_Paulo'): string {
+  const dt = new Date(isoString);
+  const formatted = new Intl.DateTimeFormat(locale, {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    timeZone,
+  }).format(dt);
+  // Intl returns "dd/MM/yyyy, HH:mm", we want "dd/MM/yyyy às HH:mm"
+  return formatted.replace(', ', ' às ');
+}
+
+/**
  * Formats an ISO date string into a relative time string (e.g., "há 5 minutos").
  * Uses Intl.RelativeTimeFormat for accurate, localized output.
  * @param isoString The date in ISO 8601 format.
