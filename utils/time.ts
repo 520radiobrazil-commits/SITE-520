@@ -128,3 +128,28 @@ export function generateDynamicPastDateISO(options: { days?: number; hours?: num
   now.setSeconds(now.getSeconds() - Math.floor(Math.random() * 60));
   return now.toISOString();
 }
+
+/**
+ * Calculates the estimated reading time for a given text.
+ * @param text The content to be measured.
+ * @param wpm Words per minute reading speed. Defaults to 200.
+ * @returns A formatted string like "Leitura de 5 min" or an empty string if no text.
+ */
+export function calculateReadTime(text: string, wpm = 200): string {
+  if (!text || typeof text !== 'string') {
+    return '';
+  }
+  // Matches words (sequences of non-whitespace characters)
+  const words = text.trim().match(/\S+/g)?.length || 0;
+  if (words === 0) {
+    return '';
+  }
+  
+  const minutes = Math.ceil(words / wpm);
+  
+  if (minutes <= 1) {
+    return "Leitura de 1 min";
+  }
+  
+  return `Leitura de ${minutes} min`;
+}

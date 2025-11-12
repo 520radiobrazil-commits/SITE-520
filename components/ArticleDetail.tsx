@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Article } from '../types';
 import Comments from './Comments';
 import ShareButtons from './ShareButtons';
-import { formatShortDateTime, formatFullDateTime } from '../utils/time';
+import { formatShortDateTime, formatFullDateTime, calculateReadTime } from '../utils/time';
 import LikeButton from './LikeButton';
 
 interface ArticleDetailProps {
@@ -15,6 +15,12 @@ interface ArticleDetailProps {
 const ArrowLeftIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+    </svg>
+);
+
+const ClockIcon: React.FC<{className?: string}> = ({className}) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
 );
 
@@ -106,6 +112,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
 
   const displayDate = article.updatedAt || article.publishedAt;
   const dateLabel = article.updatedAt ? 'Atualizado' : 'Publicado';
+  const readTime = calculateReadTime(article.content);
 
   // JSON-LD Schema for rich results
   const schema = {
@@ -150,6 +157,15 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
                   <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
                     {dateLabel} em {formatShortDateTime(displayDate)}
                   </time>
+                  {readTime && (
+                    <>
+                      <span className="text-gray-600">&bull;</span>
+                      <div className="flex items-center gap-1">
+                        <ClockIcon className="w-4 h-4" />
+                        <span>{readTime}</span>
+                      </div>
+                    </>
+                  )}
               </div>
               {article.hashtags && (
                 <div className="flex flex-wrap gap-x-3 gap-y-1 mt-4">

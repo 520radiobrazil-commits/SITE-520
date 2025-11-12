@@ -5,7 +5,7 @@ import FeaturedArticle from './components/FeaturedArticle';
 import ArticleCard from './components/ArticleCard';
 import AdPlaceholder from './components/AdPlaceholder';
 import AudioPlayer from './components/AudioPlayer';
-import MostViewed from './components/MostViewed';
+import MostLiked from './components/MostViewed';
 import ArticleDetail from './components/ArticleDetail';
 import AboutUs from './components/AboutUs';
 import TermsOfService from './components/TermsOfService';
@@ -216,7 +216,7 @@ function App() {
             <YouTubePlayer />
             {audioArticle && <AudioPlayer article={audioArticle} />}
             <BrasileiraoTable currentTime={currentTime} />
-            <MostViewed articles={articles} onSelectArticle={handleArticleSelect} currentTime={currentTime} />
+            <MostLiked articles={articles} onSelectArticle={handleArticleSelect} currentTime={currentTime} />
             
             <a 
               href="https://radiosnet.com/" 
