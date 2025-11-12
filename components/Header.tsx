@@ -48,13 +48,7 @@ interface HeaderProps {
 const navLinks = [
     { label: 'HOME', category: 'HOME' },
     { label: 'FUTEBOL', category: 'FUTEBOL SHOW 520' },
-    { label: 'MATCHDAY', category: 'MATCHDAY 520' },
-    { label: 'VÔLEI', category: 'SUPERSET 520' },
     { label: 'AUTOMOBILISMO', category: 'VOLTA RÁPIDA' },
-    { label: 'TÊNIS', category: 'ACE 520' },
-    { label: 'NFL', category: 'LIGA 520' },
-    { label: 'FASHION', category: 'RADIO520 FASHION LEAGUE' },
-    { label: 'POP NEWS', category: 'POP NEWS' },
     { label: 'PODCASTS', category: 'PODCASTS 520' },
     { label: 'SOBRE NÓS', category: 'SOBRE NÓS' },
 ];
