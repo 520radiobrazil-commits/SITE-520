@@ -1,11 +1,13 @@
 import React from 'react';
 import { Article } from '../types';
 import { formatShortDateTime, formatFullDateTime } from '../utils/time';
+import LikeButton from './LikeButton';
 
 interface FeaturedArticleProps {
   article: Article;
   onSelect: (article: Article) => void;
   currentTime: Date;
+  onUpdateLikes: (articleId: number, newLikes: number) => void;
 }
 
 const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
@@ -14,7 +16,7 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
     </svg>
 );
 
-const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect, currentTime }) => {
+const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect, currentTime, onUpdateLikes }) => {
   const displayDate = article.updatedAt || article.publishedAt;
   const dateLabel = article.updatedAt ? 'Atualizado' : 'Publicado';
 
@@ -51,11 +53,18 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect, cu
         </h2>
         <p className="text-gray-300 text-base lg:text-lg mb-6">{article.summary}</p>
          <div className="flex items-center justify-between">
-            <div className="text-sm text-gray-400">
-                <span>Por {article.author} &bull; </span>
-                <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
-                    {dateLabel} em {formatShortDateTime(displayDate)}
-                </time>
+            <div className="flex items-center gap-4">
+                <LikeButton
+                    articleId={article.id}
+                    initialLikes={article.likes || 0}
+                    onUpdateLikes={onUpdateLikes}
+                />
+                <div className="text-sm text-gray-400 hidden sm:block">
+                    <span>Por {article.author} &bull; </span>
+                    <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
+                        {dateLabel} em {formatShortDateTime(displayDate)}
+                    </time>
+                </div>
             </div>
             <div className="flex items-center space-x-2">
                 <div

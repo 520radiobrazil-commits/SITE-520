@@ -32,6 +32,7 @@ A vitória mantém Auger-Aliassime vivo na briga por vaga nas semifinais, mostra
         publishedAt: generatePastTimestamp(0, 0, 0), // The absolute newest article
         isFeatured: true,
         views: 10500,
+        likes: 320,
         hashtags: ['#ATPFinals', '#Tênis', '#AugerAliassime', '#Shelton'],
     },
     {
@@ -54,6 +55,7 @@ Com o resultado, o Oklahoma City se consolida entre as forças do Oeste e manda 
         publishedAt: generatePastTimestamp(0, 0, 1), // The absolute newest article
         isFeatured: true,
         views: 11200,
+        likes: 278,
         hashtags: ['#NBA', '#Thunder', '#Warriors', '#Basquete'],
     },
     {
@@ -99,6 +101,7 @@ A Rádio 520 vai acompanhar de perto todas as novidades, bastidores e reações 
         publishedAt: generatePastTimestamp(0, 0, 2), 
         isFeatured: true,
         views: 9500,
+        likes: 195,
         hashtags: ['#Paulistão2026', '#FutebolPaulista', '#FPF'],
     },
     {
@@ -124,6 +127,7 @@ Siga a 520 no X e fique por dentro das maiores histórias do esporte mundial.`,
         publishedAt: generatePastTimestamp(0, 0, 3), 
         isFeatured: true,
         views: 8800,
+        likes: 410,
         hashtags: ['#Alcaraz', '#Tênis', '#ATP', '#Recorde'],
     },
     {
@@ -146,6 +150,7 @@ O anúncio deixou os fãs em êxtase e reacendeu a chama de um dos nomes mais ic
         publishedAt: generatePastTimestamp(0, 0, 5),
         isFeatured: true,
         views: 520,
+        likes: 95,
         hashtags: ['#Roxette', '#ShowNoBrasil', '#PopNews', '#Música'],
     },
     {
@@ -166,6 +171,7 @@ Se você curte esportes e moda, essa collab é perfeita para se inspirar e atual
         publishedAt: generatePastTimestamp(0, 0, 15),
         isFeatured: true,
         views: 1200,
+        likes: 112,
         hashtags: ['#ACMilan', '#Rossignol', '#Fashion', '#Ski'],
     },
     {
@@ -183,6 +189,7 @@ Se você curte esportes e moda, essa collab é perfeita para se inspirar e atual
         publishedAt: generatePastTimestamp(0, 0, 45),
         isFeatured: false,
         views: 150,
+        likes: 25,
         hashtags: ['#Saude', '#Fitness', '#BemEstar', '#Podcast'],
     },
     {
@@ -205,6 +212,7 @@ A Fórmula 3 é o primeiro grande passo na #RoadToF1, o caminho das promessas do
         publishedAt: generatePastTimestamp(0, 1, 30),
         isFeatured: false,
         views: 1500,
+        likes: 150,
         hashtags: ['#F3', '#ARTGrandPrix', '#TaitoKato', '#RoadToF1'],
     },
     {
@@ -223,6 +231,7 @@ Já a Chapecoense, que briga na parte de cima da tabela, perdeu a chance de se a
         publishedAt: generatePastTimestamp(0, 5, 21),
         isFeatured: false,
         views: 10500,
+        likes: 180,
         hashtags: ['#SérieB', '#AméricaMG', '#Chapecoense', '#Futebol'],
     },
     {
@@ -243,6 +252,7 @@ Com o resultado, o Philadelphia chega a 7 vitórias e 2 derrotas na temporada, c
         publishedAt: generatePastTimestamp(0, 8, 20),
         isFeatured: true,
         views: 15500,
+        likes: 512,
         hashtags: ['#NFL', '#Eagles', '#Packers', '#FutebolAmericano'],
     },
     {
@@ -265,6 +275,7 @@ Com o fim da fase de grupos, o Brasil agora aguarda a definição dos confrontos
         publishedAt: generatePastTimestamp(1, 8, 50),
         isFeatured: true,
         views: 12300,
+        likes: 215,
         hashtags: ['#SeleçãoSub17', '#MundialSub17', '#Futebol'],
     },
     {
@@ -285,6 +296,7 @@ A expectativa é de que as conversas sobre o futuro do atacante ganhem força na
         publishedAt: generatePastTimestamp(1, 9, 5),
         isFeatured: true,
         views: 11500,
+        likes: 388,
         hashtags: ['#RealMadrid', '#Rodrygo', '#PremierLeague', '#MercadoDaBola'],
     },
     {
@@ -305,6 +317,7 @@ Nesta segunda-feira (10), Ancelotti comanda o primeiro treino da equipe no Centr
         publishedAt: generatePastTimestamp(1, 12, 30),
         isFeatured: true,
         views: 9200,
+        likes: 190,
         hashtags: ['#SeleçãoBrasileira', '#Futebol', '#Ancelotti'],
     },
     {
@@ -323,6 +336,7 @@ O triunfo consolida o projeto do clube espanhol no futebol canadense, que segue 
         publishedAt: generatePastTimestamp(2, 1, 0),
         isFeatured: false,
         views: 8500,
+        likes: 210,
         hashtags: ['#FutebolCanadense', '#AtléticoOttawa', '#CPL'],
     },
     {
@@ -347,6 +361,7 @@ A decisão da <strong>Moto2 2024</strong> acontece no <strong>Circuito Ricardo T
         publishedAt: generatePastTimestamp(2, 3, 20),
         isFeatured: false,
         views: 17200,
+        likes: 640,
         hashtags: ['#Moto2', '#DiogoMoreira', '#Motovelocidade'],
     },
     {
@@ -379,6 +394,7 @@ O próximo compromisso do Praia será contra o Barueri, fora de casa. Já o Join
         publishedAt: generatePastTimestamp(2, 8, 30),
         isFeatured: false,
         views: 13450,
+        likes: 289,
         hashtags: ['#Volei', '#Superliga', '#PraiaClube'],
     },
     {
@@ -426,6 +442,7 @@ Agora, restando apenas duas etapas – Las Vegas e Abu Dhabi, Norris está cada 
         publishedAt: generatePastTimestamp(2, 10, 55),
         isFeatured: false,
         views: 28950,
+        likes: 1204,
         hashtags: ['#F1', '#LandoNorris', '#GPBrasil'],
     },
     {
@@ -458,6 +475,7 @@ Com o resultado, o Ceará sobe para a 12ª posição, respirando fora do Z-4. O 
         publishedAt: generatePastTimestamp(3, 2, 45),
         isFeatured: false,
         views: 16780,
+        likes: 350,
         hashtags: ['#Ceará', '#Corinthians', '#Brasileirão'],
     },
     {
@@ -484,6 +502,7 @@ Ancelotti deve usar os dois amistosos para definir as últimas peças do elenco 
         publishedAt: generatePastTimestamp(3, 12, 0),
         isFeatured: false,
         views: 14500,
+        likes: 402,
         hashtags: ['#SeleçãoBrasileira', '#Ancelotti', '#Futebol'],
     },
     {
@@ -533,6 +552,7 @@ Cruzeiro x Juventude — Quinta-feira (6), às 19h, no Mineirão.`,
         publishedAt: generatePastTimestamp(4, 3, 15),
         isFeatured: false,
         views: 18542,
+        likes: 899,
         hashtags: ['#Palmeiras', '#Brasileirão', '#Futebol'],
     },
     {
@@ -555,6 +575,7 @@ Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito,
         publishedAt: generatePastTimestamp(4, 13, 40),
         isFeatured: false,
         views: 16230,
+        likes: 753,
         ogTitle: 'Sinner soberano em Paris',
         ogDescription: 'O número 1 do mundo confirma o domínio em Paris — veja na Rádio 520.',
         ogImageUrl: 'https://radio520.com.br/img/sinner-paris.jpg',

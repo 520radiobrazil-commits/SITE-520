@@ -1,11 +1,13 @@
 import React from 'react';
 import { Article } from '../types';
 import { formatShortDateTime, formatFullDateTime } from '../utils/time';
+import LikeButton from './LikeButton';
 
 interface ArticleCardProps {
   article: Article;
   onSelect: (article: Article) => void;
   currentTime: Date;
+  onUpdateLikes: (articleId: number, newLikes: number) => void;
 }
 
 const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
@@ -14,7 +16,7 @@ const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
     </svg>
 );
 
-const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTime }) => {
+const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTime, onUpdateLikes }) => {
   const displayDate = article.updatedAt || article.publishedAt;
   const dateLabel = article.updatedAt ? 'Atualizado' : 'Publicado';
   
@@ -38,13 +40,18 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTim
                 {dateLabel} em {formatShortDateTime(displayDate)}
             </time>
         </div>
-        <div className="mt-auto">
+        <div className="mt-auto flex items-center justify-between gap-2">
+            <LikeButton 
+                articleId={article.id}
+                initialLikes={article.likes || 0}
+                onUpdateLikes={onUpdateLikes}
+            />
             <button
                 onClick={(e) => { e.stopPropagation(); onSelect(article); }}
-                className="w-full flex items-center justify-center text-sm font-semibold bg-teal-500 hover:bg-teal-400 text-gray-900 px-4 py-2 rounded-md transition-colors duration-200"
+                className="flex-grow flex items-center justify-center text-sm font-semibold bg-teal-500 hover:bg-teal-400 text-gray-900 px-4 py-2 rounded-md transition-colors duration-200"
             >
                 LEIA MAIS
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
+                <ArrowRightIcon className="w-4 h-4 ml-1" />
             </button>
         </div>
       </div>

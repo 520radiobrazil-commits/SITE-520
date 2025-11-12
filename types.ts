@@ -14,6 +14,7 @@ export interface Article {
   updatedAt?: string; // ISO date string
   isFeatured?: boolean;
   views?: number;
+  likes?: number;
   ogTitle?: string;
   ogDescription?: string;
   ogImageUrl?: string;

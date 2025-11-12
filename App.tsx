@@ -71,6 +71,14 @@ function App() {
       }
     }
   }, [isRadioPlaying]);
+
+  const handleUpdateLikes = (articleId: number, newLikes: number) => {
+    setArticles(prevArticles => 
+      prevArticles.map(article => 
+        article.id === articleId ? { ...article, likes: newLikes } : article
+      )
+    );
+  };
   
   // Encontra o artigo especial de áudio para ser exibido no player da barra lateral
   const audioArticle = articles.find(a => a.audioUrl);
@@ -157,7 +165,7 @@ function App() {
 
   const renderMainContent = () => {
     if (selectedArticle) {
-      return <ArticleDetail article={selectedArticle} onGoBack={handleGoBack} currentTime={currentTime} />;
+      return <ArticleDetail article={selectedArticle} onGoBack={handleGoBack} currentTime={currentTime} onUpdateLikes={handleUpdateLikes} />;
     }
     if (showingAboutPage) {
       return <AboutUs onGoBack={handleGoHome} />;
@@ -176,7 +184,7 @@ function App() {
           <div className="lg:col-span-8">
             {featuredArticle ? (
               <>
-                <FeaturedArticle article={featuredArticle} onSelect={handleArticleSelect} currentTime={currentTime} />
+                <FeaturedArticle article={featuredArticle} onSelect={handleArticleSelect} currentTime={currentTime} onUpdateLikes={handleUpdateLikes} />
                 
                 {/* Banner Promocional */}
                 <div className="my-8">
@@ -191,7 +199,7 @@ function App() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {otherArticles.map((article) => (
-                    <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} currentTime={currentTime} />
+                    <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} currentTime={currentTime} onUpdateLikes={handleUpdateLikes} />
                   ))}
                 </div>
               </>

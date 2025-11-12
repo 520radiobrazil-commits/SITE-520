@@ -3,11 +3,13 @@ import { Article } from '../types';
 import Comments from './Comments';
 import ShareButtons from './ShareButtons';
 import { formatShortDateTime, formatFullDateTime } from '../utils/time';
+import LikeButton from './LikeButton';
 
 interface ArticleDetailProps {
   article: Article;
   onGoBack: () => void;
   currentTime: Date;
+  onUpdateLikes: (articleId: number, newLikes: number) => void;
 }
 
 const ArrowLeftIcon = () => (
@@ -16,7 +18,7 @@ const ArrowLeftIcon = () => (
     </svg>
 );
 
-const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, currentTime }) => {
+const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, currentTime, onUpdateLikes }) => {
   // Efeito para atualizar meta tags para SEO e compartilhamento social
   useEffect(() => {
     const defaultTitle = "RADIO520.COM.BR - Esportes e Notícias";
@@ -158,8 +160,13 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
               )}
           </header>
 
-          <div className="my-8">
+          <div className="my-8 flex flex-wrap items-center gap-4 justify-between">
             <ShareButtons article={article} />
+            <LikeButton 
+              articleId={article.id}
+              initialLikes={article.likes || 0}
+              onUpdateLikes={onUpdateLikes}
+            />
           </div>
 
           <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
