@@ -15,6 +15,26 @@ const generatePastTimestamp = (daysAgo: number, hoursAgo: number = 0, minutesAgo
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 39,
+        category: 'ACE 520',
+        title: 'Auger-Aliassime supera Shelton em grande atuação e mantém chances no ATP Finals',
+        slug: 'auger-aliassime-supera-shelton-em-grande-atuacao-e-mantem-chances-no-atp-finals',
+        summary: 'O canadense Felix Auger-Aliassime mostrou força e controle emocional para vencer o norte-americano Ben Shelton, por 2 sets a 1, mantendo-se vivo na briga por uma vaga nas semifinais do ATP Finals 2025.',
+        content: `O canadense Felix Auger-Aliassime mostrou força e controle emocional para vencer o norte-americano Ben Shelton nesta quarta-feira (12), em Turim, pela segunda rodada do ATP Finals 2025. Em uma partida eletrizante, o número 8 do mundo superou o quinto colocado do ranking por 7/6 (6), 4/6 e 7/5, em 2h35 de jogo.
+
+O duelo foi equilibrado do início ao fim, com ambos apostando na potência do saque e na pressão constante em cima da devolução. Auger-Aliassime foi mais consistente nos momentos decisivos, salvando break points importantes e aproveitando as falhas do adversário na reta final do terceiro set.
+
+Nos números, o canadense foi levemente superior: 9 aces, 80% de aproveitamento no primeiro saque e 74% dos pontos ganhos com o segundo serviço. Shelton, por sua vez, marcou 7 aces, mas viu o rendimento cair nos games de maior pressão — especialmente quando sacava para forçar o tie-break no último set.
+
+A vitória mantém Auger-Aliassime vivo na briga por vaga nas semifinais, mostrando evolução no piso rápido indoor e mais confiança após uma temporada irregular. Shelton, que vinha de boa estreia, precisará reagir na última rodada para continuar sonhando com a classificação.`,
+        imageUrl: 'https://www.atptour.com/-/media/images/news/2025/11/12/15/05/auger-aliassime-turin-2025-wednesday-1.jpg',
+        author: 'Análise 520',
+        publishedAt: generatePastTimestamp(0, 0, 0), // The absolute newest article
+        isFeatured: true,
+        views: 10500,
+        hashtags: ['#ATPFinals', '#Tênis', '#AugerAliassime', '#Shelton'],
+    },
+    {
         id: 38,
         category: 'LIGA 520',
         title: 'Thunder atropela Warriors e confirma força no Oeste',
@@ -31,7 +51,7 @@ O técnico Steve Kerr até tentou mexer nas rotações, apostando em Trayce Jack
 Com o resultado, o Oklahoma City se consolida entre as forças do Oeste e manda um recado claro: a era das promessas acabou, esse time já é realidade. Já o Golden State precisa achar respostas rápido se quiser seguir competitivo num Oeste cada vez mais equilibrado.`,
         imageUrl: 'https://okcthunderwire.usatoday.com/gcdn/authoring/authoring-images/2024/11/28/SOKC/76635499007-usatsi-24866913.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp',
         author: 'Análise 520',
-        publishedAt: generatePastTimestamp(0, 0, 0), // The absolute newest article
+        publishedAt: generatePastTimestamp(0, 0, 1), // The absolute newest article
         isFeatured: true,
         views: 11200,
         hashtags: ['#NBA', '#Thunder', '#Warriors', '#Basquete'],
@@ -76,7 +96,7 @@ Com calendário enxuto, formato inspirado em competições internacionais e clá
 A Rádio 520 vai acompanhar de perto todas as novidades, bastidores e reações dos clubes ao novo modelo do campeonato paulista.`,
         imageUrl: 'https://jpimg.com.br/uploads/2025/11/paulistao-2026-750x450.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 1), 
+        publishedAt: generatePastTimestamp(0, 0, 2), 
         isFeatured: true,
         views: 9500,
         hashtags: ['#Paulistão2026', '#FutebolPaulista', '#FPF'],
@@ -101,7 +121,7 @@ Com essa marca, Alcaraz reforça seu status entre os gigantes do esporte e mostr
 Siga a 520 no X e fique por dentro das maiores histórias do esporte mundial.`,
         imageUrl: 'https://pbs.twimg.com/media/G5fGjEdbcAQ_H_N?format=jpg&name=large',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 2), 
+        publishedAt: generatePastTimestamp(0, 0, 3), 
         isFeatured: true,
         views: 8800,
         hashtags: ['#Alcaraz', '#Tênis', '#ATP', '#Recorde'],
@@ -147,6 +167,23 @@ Se você curte esportes e moda, essa collab é perfeita para se inspirar e atual
         isFeatured: true,
         views: 1200,
         hashtags: ['#ACMilan', '#Rossignol', '#Fashion', '#Ski'],
+    },
+    {
+        id: 19,
+        category: 'PODCASTS 520',
+        title: 'CORPINHO NO SHAPE PARA AS FESTAS. AINDA DÁ TEMPO?',
+        slug: 'corpinho-no-shape-para-as-festas-ainda-da-tempo',
+        summary: 'Neste episódio, Lu Skylark traz dicas práticas e reais pra quem quer dar aquele gás nas próximas semanas — alimentação equilibrada, treino com propósito e rotina que cabe no seu dia.',
+        content: `Neste episódio, Lu Skylark traz dicas práticas e reais pra quem quer dar aquele gás nas próximas semanas — alimentação equilibrada, treino com propósito e rotina que cabe no seu dia. Nada de loucura, só foco, energia boa e autocuidado pra você chegar nas festas leve, confiante e cheio de disposição.
+
+🌿 Vem com a gente e descubra como pequenas mudanças agora podem transformar seu fim de ano!`,
+        imageUrl: 'https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/42373070/42373070-1762867572566-14c8d66981609.jpg',
+        audioUrl: 'https://open.spotify.com/episode/7zuoyrHDwK4A4DgQ7l26q1',
+        author: 'Equipe RADIO520',
+        publishedAt: generatePastTimestamp(0, 0, 45),
+        isFeatured: false,
+        views: 150,
+        hashtags: ['#Saude', '#Fitness', '#BemEstar', '#Podcast'],
     },
     {
         id: 33,
@@ -522,22 +559,5 @@ Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito,
         ogDescription: 'O número 1 do mundo confirma o domínio em Paris — veja na Rádio 520.',
         ogImageUrl: 'https://radio520.com.br/img/sinner-paris.jpg',
         hashtags: ['#Sinner', '#Tênis', '#ATPParis'],
-    },
-    {
-        id: 19,
-        category: 'PODCASTS 520',
-        title: 'CORPINHO NO SHAPE PARA AS FESTAS. AINDA DÁ TEMPO?',
-        slug: 'corpinho-no-shape-para-as-festas-ainda-da-tempo',
-        summary: 'Neste episódio, Lu Skylark traz dicas práticas e reais pra quem quer dar aquele gás nas próximas semanas — alimentação equilibrada, treino com propósito e rotina que cabe no seu dia.',
-        content: `Neste episódio, Lu Skylark traz dicas práticas e reais pra quem quer dar aquele gás nas próximas semanas — alimentação equilibrada, treino com propósito e rotina que cabe no seu dia. Nada de loucura, só foco, energia boa e autocuidado pra você chegar nas festas leve, confiante e cheio de disposição.
-
-🌿 Vem com a gente e descubra como pequenas mudanças agora podem transformar seu fim de ano!`,
-        imageUrl: 'https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/42373070/42373070-1762867572566-14c8d66981609.jpg',
-        audioUrl: 'https://open.spotify.com/episode/7zuoyrHDwK4A4DgQ7l26q1',
-        author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(5, 0, 0),
-        isFeatured: false,
-        views: 150,
-        hashtags: ['#Saude', '#Fitness', '#BemEstar', '#Podcast'],
     },
 ];

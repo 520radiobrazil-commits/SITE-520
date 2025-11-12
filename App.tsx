@@ -20,13 +20,13 @@ import { Article } from './types';
 
 function App() {
   const [articles, setArticles] = useState<Article[]>(() => {
-    // Sort articles by published date on initial load.
+    // Sort articles by published date and keep only the 12 most recent.
     return [...MOCK_ARTICLES].sort((a, b) => {
       const dateA = new Date(a.publishedAt).getTime();
       const dateB = new Date(b.publishedAt).getTime();
       if (dateB !== dateA) return dateB - dateA;
       return b.id - a.id; // Fallback sort by ID for articles with the same timestamp
-    });
+    }).slice(0, 12);
   });
 
   const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
