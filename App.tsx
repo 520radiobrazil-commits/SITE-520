@@ -56,10 +56,6 @@ function App() {
       audio.pause();
       setIsRadioPlaying(false);
     } else {
-      // Para streams ao vivo, é uma boa prática garantir que a fonte esteja definida antes de tocar.
-      if (audio.src !== radioStreamUrl) {
-          audio.src = radioStreamUrl;
-      }
       const playPromise = audio.play();
       if (playPromise !== undefined) {
         playPromise
@@ -253,11 +249,7 @@ function App() {
         {renderMainContent()}
       </main>
       <Footer onShowAbout={handleShowAbout} onShowTerms={handleShowTerms} onShowPrivacy={handleShowPrivacy} />
-      <audio ref={radioRef} preload="none" crossOrigin="anonymous">
-        {/* Fornece múltiplos tipos de fonte para melhor compatibilidade do navegador com streams ao vivo */}
-        <source src={radioStreamUrl} type="audio/aac" />
-        <source src={radioStreamUrl} type="audio/aacp" />
-        <source src={radioStreamUrl} type="audio/mpeg" />
+      <audio ref={radioRef} src={radioStreamUrl} preload="none" crossOrigin="anonymous">
         Seu navegador não suporta o elemento de áudio.
       </audio>
     </div>

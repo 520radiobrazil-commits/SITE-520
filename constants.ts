@@ -15,6 +15,51 @@ const generatePastTimestamp = (daysAgo: number, hoursAgo: number = 0, minutesAgo
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 37,
+        category: 'RADIO520 NEWS',
+        title: 'PAULISTÃO 2026: novo formato, datas e bastidores do torneio mais tradicional do país',
+        slug: 'paulistao-2026-novo-formato-datas-bastidores',
+        summary: 'A FPF definiu o novo formato do Paulistão 2026, que abandona os grupos por um sistema de liga com oito jogos na primeira fase. Os oito melhores avançam para o mata-mata.',
+        content: `Os presidentes e representantes dos 16 clubes participantes do Paulistão 2026 se reuniram nesta terça-feira (11), no salão nobre da Mercado Livre Arena Pacaembu, para definir os detalhes da próxima edição do campeonato. O encontro marcou o Conselho Técnico da Federação Paulista e apresentou mudanças importantes no formato de disputa.
+
+<strong>Novo modelo de competição</strong>
+
+O Paulistão 2026 deixará de lado o formato tradicional de grupos e passará a ser disputado em um sistema de liga, com cada equipe realizando oito jogos na primeira fase. A ideia é aumentar o equilíbrio técnico e garantir confrontos diretos entre os principais clubes logo nas rodadas iniciais.
+
+Os oito melhores colocados avançam para as quartas de final, que serão disputadas em jogo único, assim como as semifinais. A final ainda tem definição pendente: pode ser realizada em uma ou duas partidas, a depender da liberação de uma data extra no calendário.
+
+Os dois últimos colocados serão rebaixados para a Série A2 do Campeonato Paulista.
+
+<strong>Calendário</strong>
+
+O torneio está previsto para começar em meados de janeiro e terminar no início de março de 2026. A competição será realizada em 11 datas, com a possibilidade de uma 12ª para a grande decisão. A federação pretende ajustar o calendário para que o Paulistão se encaixe nas novas diretrizes nacionais e internacionais do futebol.
+
+<strong>Participantes e confrontos</strong>
+
+Os 16 clubes confirmados terão confrontos equilibrados desde o início. O novo modelo garante clássicos logo na fase inicial — o que promete movimentar as torcidas e aumentar o interesse do público já nas primeiras rodadas.
+
+Além dos quatro grandes — Corinthians, Palmeiras, São Paulo e Santos —, equipes tradicionais do interior como Bragantino, Ponte Preta, Mirassol, Novorizontino, Ituano, Guarani, Botafogo-SP, Portuguesa, Santo André, São Bernardo, Água Santa e Noroeste completam a lista.
+
+<strong>Bastidores e repercussão</strong>
+
+O clima do Conselho Técnico foi de consenso entre os dirigentes. A proposta de um formato mais dinâmico foi bem recebida por quem busca um campeonato mais emocionante e competitivo, sem longas fases de classificação.
+Representantes dos clubes destacaram que o novo modelo traz mais relevância para cada jogo e reforça a tradição do Paulistão como o estadual mais disputado do país.
+
+A federação também anunciou novidades operacionais, incluindo melhorias no uso do VAR e o impedimento semiautomático, que será implementado a partir das fases eliminatórias.
+
+<strong>Expectativa</strong>
+
+Com calendário enxuto, formato inspirado em competições internacionais e clássicos logo de cara, o Paulistão 2026 promete ser um torneio de alto nível técnico e com muita emoção desde a rodada 1.
+
+A Rádio 520 vai acompanhar de perto todas as novidades, bastidores e reações dos clubes ao novo modelo do campeonato paulista.`,
+        imageUrl: 'https://jpimg.com.br/uploads/2025/11/paulistao-2026-750x450.jpg',
+        author: 'Equipe RADIO520',
+        publishedAt: generatePastTimestamp(0, 0, 0), // The absolute newest article
+        isFeatured: true,
+        views: 9500,
+        hashtags: ['#Paulistão2026', '#FutebolPaulista', '#FPF'],
+    },
+    {
         id: 36,
         category: 'ACE 520',
         title: 'Carlos Alcaraz entra para a história com 50 vitórias sobre top 10',
@@ -34,7 +79,7 @@ Com essa marca, Alcaraz reforça seu status entre os gigantes do esporte e mostr
 Siga a 520 no X e fique por dentro das maiores histórias do esporte mundial.`,
         imageUrl: 'https://pbs.twimg.com/media/G5fGjEdbcAQ_H_N?format=jpg&name=large',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 1), // Make it the absolute latest
+        publishedAt: generatePastTimestamp(0, 0, 1), 
         isFeatured: true,
         views: 8800,
         hashtags: ['#Alcaraz', '#Tênis', '#ATP', '#Recorde'],
