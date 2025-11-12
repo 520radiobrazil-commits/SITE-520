@@ -63,6 +63,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         
         // Twitter
         updateMetaTag('name', 'twitter:card', 'summary_large_image');
+        updateMetaTag('name', 'twitter:site', '@radio_520');
         updateMetaTag('name', 'twitter:title', title);
         updateMetaTag('name', 'twitter:description', description);
         updateMetaTag('name', 'twitter:image', image);
@@ -85,6 +86,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         
         // Twitter
         updateMetaTag('name', 'twitter:card', 'summary_large_image');
+        updateMetaTag('name', 'twitter:site', '@radio_520');
         updateMetaTag('name', 'twitter:title', defaultTitle);
         updateMetaTag('name', 'twitter:description', defaultDescription);
         updateMetaTag('name', 'twitter:image', defaultImage);
