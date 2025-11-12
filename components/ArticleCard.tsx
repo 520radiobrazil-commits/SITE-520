@@ -22,8 +22,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTim
     <div 
         onClick={() => onSelect(article)}
         className="bg-gray-800 rounded-lg overflow-hidden flex flex-col group transition-all duration-300 ease-in-out hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-1 hover:scale-[1.02] cursor-pointer">
-      <div className="relative">
-        <img className="w-full h-48 object-cover" src={article.imageUrl} alt={article.title} />
+      <div className="relative overflow-hidden">
+        <img className="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src={article.imageUrl} alt={article.title} />
         <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
       </div>
       <div className="p-4 flex flex-col flex-grow">
