@@ -59,6 +59,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         updateMetaTag('property', 'og:image', image);
         updateMetaTag('property', 'og:type', 'article');
         updateMetaTag('property', 'og:url', canonicalUrl);
+        updateMetaTag('property', 'og:site_name', 'RADIO520.COM.BR');
         
         // Twitter
         updateMetaTag('name', 'twitter:card', 'summary_large_image');
@@ -80,6 +81,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
         updateMetaTag('property', 'og:image', defaultImage);
         updateMetaTag('property', 'og:type', 'website');
         updateMetaTag('property', 'og:url', rootUrl);
+        updateMetaTag('property', 'og:site_name', 'RADIO520.COM.BR');
         
         // Twitter
         updateMetaTag('name', 'twitter:card', 'summary_large_image');
