@@ -15,6 +15,28 @@ const generatePastTimestamp = (daysAgo: number, hoursAgo: number = 0, minutesAgo
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 38,
+        category: 'LIGA 520',
+        title: 'Thunder atropela Warriors e confirma força no Oeste',
+        slug: 'thunder-atropela-warriors-e-confirma-forca-no-oeste',
+        summary: 'O Oklahoma City Thunder não tomou conhecimento do Golden State Warriors, vencendo por 126 a 102 e reafirmando seu ótimo momento na temporada com uma atuação dominante.',
+        content: `O Oklahoma City Thunder não tomou conhecimento do Golden State Warriors na noite desta terça-feira (11), vencendo por 126 a 102 em casa e reafirmando o ótimo momento na temporada. Foi uma atuação dominante do início ao fim — intensidade, rotação bem ajustada e um ataque que não deu descanso pra defesa californiana.
+
+O time de Shai Gilgeous-Alexander, mais uma vez o cérebro e o motor do Thunder, ditou o ritmo do jogo com leitura apurada e um controle absurdo do pace. Ao redor dele, a juventude e energia do elenco de OKC fizeram a diferença: o time marcou forte, correu em transição e matou bolas importantes pra abrir vantagem ainda no terceiro quarto.
+
+Do outro lado, os Warriors viveram uma noite pra esquecer. Mesmo com lampejos de Gary Payton II e o esforço de Gui Santos, a equipe mostrou fragilidade na defesa e pouca criatividade no ataque sem o brilho habitual de suas estrelas. A diferença física e a velocidade do Thunder pesaram — e muito.
+
+O técnico Steve Kerr até tentou mexer nas rotações, apostando em Trayce Jackson-Davis e na movimentação da segunda unidade, mas o time não conseguiu reagir. O placar final refletiu bem o que foi a partida: domínio total do Thunder, que chega a 10 vitórias e apenas 1 derrota na temporada.
+
+Com o resultado, o Oklahoma City se consolida entre as forças do Oeste e manda um recado claro: a era das promessas acabou, esse time já é realidade. Já o Golden State precisa achar respostas rápido se quiser seguir competitivo num Oeste cada vez mais equilibrado.`,
+        imageUrl: 'https://okcthunderwire.usatoday.com/gcdn/authoring/authoring-images/2024/11/28/SOKC/76635499007-usatsi-24866913.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp',
+        author: 'Análise 520',
+        publishedAt: generatePastTimestamp(0, 0, 0), // The absolute newest article
+        isFeatured: true,
+        views: 11200,
+        hashtags: ['#NBA', '#Thunder', '#Warriors', '#Basquete'],
+    },
+    {
         id: 37,
         category: 'RADIO520 NEWS',
         title: 'PAULISTÃO 2026: novo formato, datas e bastidores do torneio mais tradicional do país',
@@ -54,7 +76,7 @@ Com calendário enxuto, formato inspirado em competições internacionais e clá
 A Rádio 520 vai acompanhar de perto todas as novidades, bastidores e reações dos clubes ao novo modelo do campeonato paulista.`,
         imageUrl: 'https://jpimg.com.br/uploads/2025/11/paulistao-2026-750x450.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 0), // The absolute newest article
+        publishedAt: generatePastTimestamp(0, 0, 1), 
         isFeatured: true,
         views: 9500,
         hashtags: ['#Paulistão2026', '#FutebolPaulista', '#FPF'],
@@ -79,7 +101,7 @@ Com essa marca, Alcaraz reforça seu status entre os gigantes do esporte e mostr
 Siga a 520 no X e fique por dentro das maiores histórias do esporte mundial.`,
         imageUrl: 'https://pbs.twimg.com/media/G5fGjEdbcAQ_H_N?format=jpg&name=large',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 1), 
+        publishedAt: generatePastTimestamp(0, 0, 2), 
         isFeatured: true,
         views: 8800,
         hashtags: ['#Alcaraz', '#Tênis', '#ATP', '#Recorde'],
