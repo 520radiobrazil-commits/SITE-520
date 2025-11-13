@@ -40,8 +40,8 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
     { pos: 6, name: 'Botafogo', pj: 33, sg: '+16', pts: 52, zone: 'pre-libertadores' },
     { pos: 7, name: 'Fluminense', pj: 33, sg: '+1', pts: 51, zone: 'sulamericana' },
     { pos: 8, name: 'São Paulo', pj: 33, sg: '+1', pts: 45, zone: 'sulamericana' },
-    { pos: 9, name: 'Atlético-MG', pj: 32, sg: '0', pts: 43, zone: 'sulamericana' },
-    { pos: 10, name: 'Vasco da Gama', pj: 33, sg: '+1', pts: 42, zone: 'sulamericana' },
+    { pos: 9, name: 'Atlético-MG', pj: 33, sg: '0', pts: 44, zone: 'sulamericana' },
+    { pos: 10, name: 'Vasco', pj: 33, sg: '+1', pts: 42, zone: 'sulamericana' },
     { pos: 11, name: 'RB Bragantino', pj: 33, sg: '-12', pts: 42, zone: 'sulamericana' },
     { pos: 12, name: 'Ceará', pj: 33, sg: '+1', pts: 42, zone: 'sulamericana' },
     { pos: 13, name: 'Corinthians', pj: 33, sg: '-3', pts: 42, zone: 'none' },
@@ -50,8 +50,8 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
     { pos: 16, name: 'Vitória', pj: 33, sg: '-18', pts: 35, zone: 'none' },
     { pos: 17, name: 'Santos', pj: 32, sg: '-15', pts: 33, zone: 'rebaixamento' },
     { pos: 18, name: 'Juventude', pj: 33, sg: '-30', pts: 32, zone: 'rebaixamento' },
-    { pos: 19, name: 'Fortaleza', pj: 32, sg: '-17', pts: 30, zone: 'rebaixamento' },
-    { pos: 20, name: 'Sport Recife', pj: 32, sg: '-31', pts: 17, zone: 'rebaixamento' },
+    { pos: 19, name: 'Fortaleza', pj: 33, sg: '-17', pts: 31, zone: 'rebaixamento' },
+    { pos: 20, name: 'Sport', pj: 32, sg: '-31', pts: 17, zone: 'rebaixamento' },
   ];
 
   const getRowClass = (zone: string) => {
@@ -88,6 +88,9 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
   return (
     <div className="bg-gray-800 rounded-lg p-4">
       <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider">🏆 Brasileirão {currentYear}</h3>
+      <p className="text-sm text-gray-300 mb-4">
+        Após o encerramento da rodada, a classificação do Campeonato Brasileiro foi atualizada e segue com Palmeiras e Flamengo dividindo a liderança, enquanto Cruzeiro e Mirassol seguem firmes no G4. Na parte de baixo, Fortaleza, Juventude, Santos e Sport continuam na zona de maior pressão da competição.
+      </p>
       <div className="overflow-x-auto">
         <table className="w-full text-sm text-white">
             <thead>
