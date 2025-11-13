@@ -15,6 +15,29 @@ const generatePastTimestamp = (daysAgo: number, hoursAgo: number = 0, minutesAgo
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 43,
+        category: 'REPÓRTER 520',
+        title: 'Oscar cogita aposentadoria após detectar anomalias cardíacas; família pede que ele deixe o futebol',
+        slug: 'oscar-cogita-aposentadoria-anomalias-cardiacas',
+        summary: 'O meia Oscar, ex-Chelsea e Seleção Brasileira, foi hospitalizado com anomalias cardíacas e sua carreira pode estar em risco. A família pediu para que ele se afaste do futebol, e a aposentadoria já é avaliada.',
+        content: `O meia brasileiro Oscar, ex-Chelsea e ex-Seleção Brasileira, pode estar chegando ao fim da sua trajetória nos gramados. Segundo informações divulgadas inicialmente pelo Daily Mail, o jogador foi hospitalizado nesta semana após apresentar anomalias cardíacas, acendendo um alerta geral no seu entorno.
+
+Fontes próximas ao atleta confirmam que a família pediu para que ele se afaste do futebol imediatamente, priorizando a saúde. A possibilidade de aposentadoria já estaria sendo avaliada com seriedade pelo estafe do jogador.
+
+Oscar, atualmente no São Paulo, vinha sendo peça importante na temporada, mas a descoberta do problema cardíaco interrompeu de forma brusca sua rotina esportiva. No clube, o clima é de preocupação e cuidado — ninguém fala em retorno aos treinos neste momento.
+
+A situação reacende o debate sobre saúde cardíaca em atletas de alto rendimento, um tema que vem ganhando cada vez mais espaço no futebol mundial. Casos recentes mostraram que, por mais preparado que o atleta esteja, o corpo sempre fala antes.
+
+A Rádio 520 segue acompanhando o caso de perto e atualiza você assim que novas informações forem confirmadas.`,
+        imageUrl: 'https://pbs.twimg.com/media/G5oWEAaWcAAX-tJ?format=jpg&name=medium',
+        author: 'Equipe RADIO520',
+        publishedAt: generatePastTimestamp(0, 0, 0), // Newest article
+        isFeatured: true,
+        views: 15000,
+        likes: 780,
+        hashtags: ['#Oscar', '#Futebol', '#SãoPauloFC', '#Saúde'],
+    },
+    {
         id: 42,
         category: 'VOLTA RÁPIDA',
         title: 'Audi apresenta o conceito do carro R26 e pilotos já conferem de perto o modelo para 2026',
@@ -31,7 +54,7 @@ Com os pilotos envolvidos desde cedo na avaliação do carro e grandes marcas co
 A Rádio 520 segue colada em cada passo dessa caminhada rumo a 2026, trazendo todos os detalhes do R26, da equipe e dos bastidores desse debut tão esperado no mundial.`,
         imageUrl: 'https://pbs.twimg.com/media/G5m4sjKXsAAmbXN?format=jpg&name=medium',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 0), // Newest article
+        publishedAt: generatePastTimestamp(0, 0, 1), // Newest article
         isFeatured: true,
         views: 9800,
         likes: 250,
@@ -78,7 +101,7 @@ Knicks dependem de Jalen Brunson e sofrem com turnovers
 Karl-Anthony Towns tem atuação irregular e com faltas determinantes.`,
         imageUrl: 'https://static.independentespanol.com/2025/11/13/03/MAGIC-KNICKS_92360.jpg?width=1200&height=900&fit=crop',
         author: 'Análise 520',
-        publishedAt: generatePastTimestamp(0, 0, 1), 
+        publishedAt: generatePastTimestamp(0, 0, 2), 
         isFeatured: true,
         views: 11800,
         likes: 310,
@@ -109,7 +132,7 @@ Com o empate, o Atlético-MG perde a chance de se aproximar da parte de cima e s
 O Fortaleza valoriza o resultado. O ponto fora de casa, ainda mais revertendo um 3 a 1 contra, dá moral para o elenco e reforça a força competitiva do time. A atuação de Deyverson recoloca o atacante entre os destaques do campeonato e ajuda a equipe a se manter viva na briga por vaga em competição internacional.`,
         imageUrl: 'https://conteudo.imguol.com.br/c/esporte/4f/2025/11/12/deyverson-marcou-em-atletico-mg-x-fortaleza-duelo-do-brasileirao-1762998183176_v2_750x421.jpg',
         author: 'Análise 520',
-        publishedAt: generatePastTimestamp(0, 0, 2), 
+        publishedAt: generatePastTimestamp(0, 0, 3), 
         isFeatured: true,
         views: 12500,
         likes: 450,
@@ -130,7 +153,7 @@ Nos números, o canadense foi levemente superior: 9 aces, 80% de aproveitamento 
 A vitória mantém Auger-Aliassime vivo na briga por vaga nas semifinais, mostrando evolução no piso rápido indoor e mais confiança após uma temporada irregular. Shelton, que vinha de boa estreia, precisará reagir na última rodada para continuar sonhando com a classificação.`,
         imageUrl: 'https://www.atptour.com/-/media/images/news/2025/11/12/15/05/auger-aliassime-turin-2025-wednesday-1.jpg',
         author: 'Análise 520',
-        publishedAt: generatePastTimestamp(0, 0, 3), 
+        publishedAt: generatePastTimestamp(0, 0, 4), 
         isFeatured: true,
         views: 10500,
         likes: 320,
@@ -153,7 +176,7 @@ O técnico Steve Kerr até tentou mexer nas rotações, apostando em Trayce Jack
 Com o resultado, o Oklahoma City se consolida entre as forças do Oeste e manda um recado claro: a era das promessas acabou, esse time já é realidade. Já o Golden State precisa achar respostas rápido se quiser seguir competitivo num Oeste cada vez mais equilibrado.`,
         imageUrl: 'https://okcthunderwire.usatoday.com/gcdn/authoring/authoring-images/2024/11/28/SOKC/76635499007-usatsi-24866913.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp',
         author: 'Análise 520',
-        publishedAt: generatePastTimestamp(0, 0, 4),
+        publishedAt: generatePastTimestamp(0, 0, 5),
         isFeatured: true,
         views: 11200,
         likes: 278,
@@ -199,7 +222,7 @@ Com calendário enxuto, formato inspirado em competições internacionais e clá
 A Rádio 520 vai acompanhar de perto todas as novidades, bastidores e reações dos clubes ao novo modelo do campeonato paulista.`,
         imageUrl: 'https://jpimg.com.br/uploads/2025/11/paulistao-2026-750x450.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 5), 
+        publishedAt: generatePastTimestamp(0, 0, 6), 
         isFeatured: true,
         views: 9500,
         likes: 195,
@@ -225,7 +248,7 @@ Com essa marca, Alcaraz reforça seu status entre os gigantes do esporte e mostr
 Siga a 520 no X e fique por dentro das maiores histórias do esporte mundial.`,
         imageUrl: 'https://pbs.twimg.com/media/G5fGjEdbcAQ_H_N?format=jpg&name=large',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 6), 
+        publishedAt: generatePastTimestamp(0, 0, 7), 
         isFeatured: true,
         views: 8800,
         likes: 410,
