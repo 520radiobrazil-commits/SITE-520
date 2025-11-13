@@ -14,6 +14,7 @@ import PromotionalAd from './components/PromotionalAd';
 import AnimatedBanner from './components/AnimatedBanner';
 import BrasileiraoTable from './components/BrasileiraoTable';
 import YouTubePlayer from './components/YouTubePlayer';
+import BirthdayCard from './components/BirthdayCard';
 import { MOCK_ARTICLES } from './constants';
 import { Article } from './types';
 
@@ -212,6 +213,7 @@ function App() {
 
           {/* Barra Lateral */}
           <aside className="lg:col-span-4 space-y-8">
+            <BirthdayCard />
             <PromotionalAd />
             <YouTubePlayer />
             {audioArticle && <AudioPlayer article={audioArticle} />}
