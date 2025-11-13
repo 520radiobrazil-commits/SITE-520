@@ -8,8 +8,8 @@ const YouTubeIcon = () => (
 );
 
 const YouTubePlayer: React.FC = () => {
-    // Extracted from: https://youtube.com/shorts/mzEAK61A3js?si=CoNCrx1XQlz520Sn
-    const videoId = 'mzEAK61A3js';
+    // Extracted from: https://youtube.com/shorts/7uYjwiAA2AE?si=x6TZh9Upuz2FPyDh
+    const videoId = '7uYjwiAA2AE';
     const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
     return (
