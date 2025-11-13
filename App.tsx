@@ -16,6 +16,7 @@ import BrasileiraoTable from './components/BrasileiraoTable';
 import YouTubePlayer from './components/YouTubePlayer';
 import BirthdayCard from './components/BirthdayCard';
 import Resenha520Card from './components/Resenha520Card';
+import WebAppAd from './components/WebAppAd';
 import { MOCK_ARTICLES } from './constants';
 import { Article } from './types';
 
@@ -203,6 +204,11 @@ function App() {
                   {otherArticles.map((article) => (
                     <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} currentTime={currentTime} onUpdateLikes={handleUpdateLikes} />
                   ))}
+                </div>
+                
+                {/* Adiciona o WebAppAd no final da coluna principal */}
+                <div className="mt-8 col-span-1 md:col-span-2">
+                    <WebAppAd />
                 </div>
               </>
             ) : (
