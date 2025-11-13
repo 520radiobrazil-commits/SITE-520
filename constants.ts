@@ -15,6 +15,53 @@ const generatePastTimestamp = (daysAgo: number, hoursAgo: number = 0, minutesAgo
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 41,
+        category: 'LIGA 520',
+        title: 'NBA – Orlando Magic domina o último quarto e vence o New York Knicks por 124 a 107',
+        slug: 'nba-orlando-magic-domina-ultimo-quarto-vence-new-york-knicks',
+        summary: 'O Orlando Magic venceu o New York Knicks por 124 a 107, com uma performance dominante no último quarto. Liderados por Anthony Black e Jalen Suggs, o time da Flórida aproveitou os erros dos Knicks para garantir a vitória no Madison Square Garden.',
+        content: `O Orlando Magic construiu uma vitória sólida sobre o New York Knicks na noite desta quarta-feira, fechando o confronto em 124 a 107, no Madison Square Garden. O resultado foi definido principalmente no último período, quando a equipe da Flórida impôs ritmo mais intenso, força física e melhor execução tática.
+
+<strong>Black e Suggs comandam a arrancada</strong>
+
+O Magic acelerou o jogo no quarto decisivo e contou com uma atuação eficiente de Anthony Black, protagonista da virada de ritmo. O armador converteu infiltrações importantes, controlou o pace e distribuiu bem as posses em momento de maior pressão.
+
+Jalen Suggs também teve participação determinante, aparecendo nos dois lados da quadra: marcou bolas de três, buscou rebotes ofensivos e foi responsável por ações que quebraram a sequência defensiva dos Knicks.
+
+Além deles, Desmond Bane manteve alto aproveitamento no perímetro e ajudou a espaçar o ataque, enquanto Wendell Carter Jr. foi decisivo no trabalho físico dentro do garrafão, garantindo posses e cavando faltas em momentos-chave.
+
+<strong>Knicks dependem de Brunson e sofrem com erros</strong>
+
+Do outro lado, o Knicks novamente encontrou dificuldade para dividir a criação ofensiva. Jalen Brunson foi o principal responsável pela manutenção da competitividade da equipe, anotando lances de infiltração, floaters e arremessos contestados. Porém, a atuação não foi suficiente diante da instabilidade coletiva.
+
+Karl-Anthony Towns alternou bons momentos com desperdícios de posse e cometeu faltas importantes, especialmente no início do último quarto. A equipe de Nova York também sofreu com turnovers — repetidos ao longo de toda a parcial final — que acabaram convertidos em pontos do adversário.
+
+<strong>Momento decisivo</strong>
+
+A arrancada do Magic ganhou corpo a partir dos 9 minutos restantes no quarto período. Após cesta de Anthony Black abrindo vantagem em 95 a 81, o Knicks desperdiçou duas posses ofensivas seguidas. O Magic aproveitou cada erro, ampliou a distância e passou a controlar o jogo até o fim.
+
+<strong>Eficiência e defesa ajustada</strong>
+
+O Orlando se destacou pela consistência nas trocas defensivas e pela agressividade nas infiltrações. A equipe forçou Towns para decisões difíceis no perímetro, limitou espaços de arremesso e explorou a transição sempre que recuperava a bola.
+
+<strong>Resumo</strong>
+
+Magic vence por 124 a 107
+
+Anthony Black, Jalen Suggs e Desmond Bane lideram ofensiva decisiva
+
+Knicks dependem de Jalen Brunson e sofrem com turnovers
+
+Karl-Anthony Towns tem atuação irregular e com faltas determinantes.`,
+        imageUrl: 'https://static.independentespanol.com/2025/11/13/03/MAGIC-KNICKS_92360.jpg?width=1200&height=900&fit=crop',
+        author: 'Análise 520',
+        publishedAt: generatePastTimestamp(0, 0, 0), // Newest article
+        isFeatured: true,
+        views: 11800,
+        likes: 310,
+        hashtags: ['#NBA', '#OrlandoMagic', '#NewYorkKnicks', '#Basquete'],
+    },
+    {
         id: 40,
         category: 'FUTEBOL SHOW 520',
         title: 'Atlético-MG e Fortaleza empatam em 3 a 3 no Mineirão em jogo elétrico e com hat-trick de Deyverson',
@@ -39,7 +86,7 @@ Com o empate, o Atlético-MG perde a chance de se aproximar da parte de cima e s
 O Fortaleza valoriza o resultado. O ponto fora de casa, ainda mais revertendo um 3 a 1 contra, dá moral para o elenco e reforça a força competitiva do time. A atuação de Deyverson recoloca o atacante entre os destaques do campeonato e ajuda a equipe a se manter viva na briga por vaga em competição internacional.`,
         imageUrl: 'https://conteudo.imguol.com.br/c/esporte/4f/2025/11/12/deyverson-marcou-em-atletico-mg-x-fortaleza-duelo-do-brasileirao-1762998183176_v2_750x421.jpg',
         author: 'Análise 520',
-        publishedAt: generatePastTimestamp(0, 0, 0), // Newest article
+        publishedAt: generatePastTimestamp(0, 0, 1), 
         isFeatured: true,
         views: 12500,
         likes: 450,
@@ -60,7 +107,7 @@ Nos números, o canadense foi levemente superior: 9 aces, 80% de aproveitamento 
 A vitória mantém Auger-Aliassime vivo na briga por vaga nas semifinais, mostrando evolução no piso rápido indoor e mais confiança após uma temporada irregular. Shelton, que vinha de boa estreia, precisará reagir na última rodada para continuar sonhando com a classificação.`,
         imageUrl: 'https://www.atptour.com/-/media/images/news/2025/11/12/15/05/auger-aliassime-turin-2025-wednesday-1.jpg',
         author: 'Análise 520',
-        publishedAt: generatePastTimestamp(0, 0, 1), 
+        publishedAt: generatePastTimestamp(0, 0, 2), 
         isFeatured: true,
         views: 10500,
         likes: 320,
@@ -83,7 +130,7 @@ O técnico Steve Kerr até tentou mexer nas rotações, apostando em Trayce Jack
 Com o resultado, o Oklahoma City se consolida entre as forças do Oeste e manda um recado claro: a era das promessas acabou, esse time já é realidade. Já o Golden State precisa achar respostas rápido se quiser seguir competitivo num Oeste cada vez mais equilibrado.`,
         imageUrl: 'https://okcthunderwire.usatoday.com/gcdn/authoring/authoring-images/2024/11/28/SOKC/76635499007-usatsi-24866913.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp',
         author: 'Análise 520',
-        publishedAt: generatePastTimestamp(0, 0, 2),
+        publishedAt: generatePastTimestamp(0, 0, 3),
         isFeatured: true,
         views: 11200,
         likes: 278,
@@ -129,7 +176,7 @@ Com calendário enxuto, formato inspirado em competições internacionais e clá
 A Rádio 520 vai acompanhar de perto todas as novidades, bastidores e reações dos clubes ao novo modelo do campeonato paulista.`,
         imageUrl: 'https://jpimg.com.br/uploads/2025/11/paulistao-2026-750x450.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 3), 
+        publishedAt: generatePastTimestamp(0, 0, 4), 
         isFeatured: true,
         views: 9500,
         likes: 195,
@@ -155,7 +202,7 @@ Com essa marca, Alcaraz reforça seu status entre os gigantes do esporte e mostr
 Siga a 520 no X e fique por dentro das maiores histórias do esporte mundial.`,
         imageUrl: 'https://pbs.twimg.com/media/G5fGjEdbcAQ_H_N?format=jpg&name=large',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 4), 
+        publishedAt: generatePastTimestamp(0, 0, 5), 
         isFeatured: true,
         views: 8800,
         likes: 410,
@@ -178,7 +225,7 @@ O anúncio deixou os fãs em êxtase e reacendeu a chama de um dos nomes mais ic
 🎶 “O Roxette sempre teve uma conexão especial com o público brasileiro. Estamos empolgados para sentir essa energia novamente”, disse Per Gessle em nota oficial.`,
         imageUrl: 'https://www.estadao.com.br/resizer/v2/CUOUNI7A4JEZZAOMDNCPGEBFBQ.jpg?quality=80&auth=ecf8ffe515dff0fb38b87c777c2b4421036766812cfb0df1e8c2c5b8eba2d215&width=380',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 6),
+        publishedAt: generatePastTimestamp(0, 0, 7),
         isFeatured: true,
         views: 520,
         likes: 95,
@@ -199,7 +246,7 @@ Para conferir toda a coleção, o AC Milan disponibilizou detalhes no link ofici
 Se você curte esportes e moda, essa collab é perfeita para se inspirar e atualizar o guarda-roupa de inverno com atitude e personalidade.`,
         imageUrl: 'https://pbs.twimg.com/media/G5ZnidTXkAA9Q51?format=jpg&name=large',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 16),
+        publishedAt: generatePastTimestamp(0, 0, 17),
         isFeatured: true,
         views: 1200,
         likes: 112,
@@ -217,7 +264,7 @@ Se você curte esportes e moda, essa collab é perfeita para se inspirar e atual
         imageUrl: 'https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/staging/podcast_uploaded_episode400/42373070/42373070-1762867572566-14c8d66981609.jpg',
         audioUrl: 'https://open.spotify.com/episode/7zuoyrHDwK4A4DgQ7l26q1',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 0, 46),
+        publishedAt: generatePastTimestamp(0, 0, 47),
         isFeatured: false,
         views: 150,
         likes: 25,
@@ -240,7 +287,7 @@ Kato chega à categoria após uma boa temporada na FRECA (Formula Regional Europ
 A Fórmula 3 é o primeiro grande passo na #RoadToF1, o caminho das promessas do automobilismo rumo à Fórmula 1.`,
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_3MG4QSIBjbXzITfvtBoZeBlZNdrT8LvrfA&s',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 1, 31),
+        publishedAt: generatePastTimestamp(0, 1, 32),
         isFeatured: false,
         views: 1500,
         likes: 150,
@@ -259,7 +306,7 @@ O resultado encerrou uma sequência instável da equipe mineira e dá fôlego na
 Já a Chapecoense, que briga na parte de cima da tabela, perdeu a chance de se aproximar ainda mais do G-4. O Verdão do Oeste estaciona nos 58 pontos, caindo para o quarto lugar e vendo a disputa pelo acesso esquentar nas rodadas finais.`,
         imageUrl: 'https://pbs.twimg.com/media/G5bb9GSW0AA5Nyn?format=jpg&name=large',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 5, 22),
+        publishedAt: generatePastTimestamp(0, 5, 23),
         isFeatured: false,
         views: 10500,
         likes: 180,
@@ -280,7 +327,7 @@ Jalen Hurts foi discreto, mas eficiente: completou passes curtos, administrou o 
 Com o resultado, o Philadelphia chega a 7 vitórias e 2 derrotas na temporada, consolidando a liderança na conferência. Já o Green Bay, agora com 5-3-1, precisa reagir rápido se quiser se manter vivo na briga por playoffs.`,
         imageUrl: 'https://classic.exame.com/wp-content/uploads/2024/09/000_36FL9ND.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(0, 8, 21),
+        publishedAt: generatePastTimestamp(0, 8, 22),
         isFeatured: true,
         views: 15500,
         likes: 512,
@@ -303,7 +350,7 @@ Durante o jogo, o Brasil encontrou dificuldades diante da marcação intensa dos
 Com o fim da fase de grupos, o Brasil agora aguarda a definição dos confrontos da próxima fase do torneio. O formato do mata-mata reúne os dois melhores de cada grupo e os oito melhores terceiros colocados, totalizando 32 seleções.`,
         imageUrl: 'https://www.olimpiadatododia.com.br/wp-content/uploads/2025/11/brasil-zambia-copa-mundo-sub-17.png',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(1, 8, 51),
+        publishedAt: generatePastTimestamp(1, 8, 52),
         isFeatured: true,
         views: 12300,
         likes: 215,
@@ -324,7 +371,7 @@ Rodrygo chegou ao Real Madrid em 2019, vindo do Santos, e conquistou títulos im
 A expectativa é de que as conversas sobre o futuro do atacante ganhem força nas próximas semanas, à medida que se aproxima a reabertura do mercado europeu.`,
         imageUrl: 'https://i.guim.co.uk/img/media/562c32efdd39dda57994df2f43454bbdde30d52f/0_0_3832_2300/master/3832.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=e0d401c5d920d9145d056dc28d324aaa',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(1, 9, 6),
+        publishedAt: generatePastTimestamp(1, 9, 7),
         isFeatured: true,
         views: 11500,
         likes: 388,
@@ -345,7 +392,7 @@ Entre os primeiros a desembarcar em solo inglês estão o goleiro Bento (Al-Nass
 Nesta segunda-feira (10), Ancelotti comanda o primeiro treino da equipe no Centro de Treinamento do Arsenal, dando início à reta final da preparação. Os jogadores que atuam no Brasil devem se apresentar na terça-feira (11).`,
         imageUrl: 'https://static.wixstatic.com/media/ab590b_61abd4ccf2ab4b5f9148291974f807f7~mv2.jpg/v1/fill/w_764,h_463,al_c,lg_1,q_80/ab590b_61abd4ccf2ab4b5f9148291974f807f7~mv2.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(1, 12, 31),
+        publishedAt: generatePastTimestamp(1, 12, 32),
         isFeatured: true,
         views: 9200,
         likes: 190,
@@ -364,7 +411,7 @@ Os próprios jogadores precisaram ajudar na remoção do gelo com pás para que 
 O triunfo consolida o projeto do clube espanhol no futebol canadense, que segue em crescimento nos últimos anos. Com a conquista, o Atlético Ottawa reforça sua posição como uma das equipes mais fortes do país e mostra que o espírito “colchonero” atravessou o Atlântico — e resistiu até ao frio intenso de Ottawa.`,
         imageUrl: 'https://i.cbc.ca/ais/5ac4ed65-c25f-4dbe-8605-a36319800041,1762733126819/full/max/0/default.jpg?im=Crop%2Crect%3D%2C406%2C7795%2C4384%29%3B',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(2, 1, 1),
+        publishedAt: generatePastTimestamp(2, 1, 2),
         isFeatured: false,
         views: 8500,
         likes: 210,
@@ -389,7 +436,7 @@ A <strong>Fantic Racing</strong> também teve motivos pra comemorar — com <str
 A decisão da <strong>Moto2 2024</strong> acontece no <strong>Circuito Ricardo Tormo</strong>, em Valência, no próximo fim de semana. E, se tudo correr dentro do esperado, o Brasil pode voltar a ver um campeão mundial nas pistas do Mundial de Motovelocidade.`,
         imageUrl: 'https://cdn.crash.net/2025-11/doigo-moreira-moto2-2025-portugal.jpg?width=1600&aspect_ratio=16:9',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(2, 3, 21),
+        publishedAt: generatePastTimestamp(2, 3, 22),
         isFeatured: false,
         views: 17200,
         likes: 640,
@@ -422,7 +469,7 @@ Com o resultado, o Praia Clube chega a 11 pontos e se mantém entre os líderes 
 O próximo compromisso do Praia será contra o Barueri, fora de casa. Já o Joinville volta à quadra diante do Fluminense, buscando reabilitação.`,
         imageUrl: 'https://s2-ge.glbimg.com/3hFHHQ1W8PAR_LLa7hb5ielgG3Q=/0x0:1911x1274/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2025/Q/N/ULlLSWTAWYxwXXa50tCQ/54912632321-5f0da1c9fe-k.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(2, 8, 31),
+        publishedAt: generatePastTimestamp(2, 8, 32),
         isFeatured: false,
         views: 13450,
         likes: 289,
@@ -470,7 +517,7 @@ O evento ainda contou com a presença de Thiaguinho, que cantou o Hino Nacional,
 Agora, restando apenas duas etapas – Las Vegas e Abu Dhabi, Norris está cada vez mais perto do título mundial.`,
         imageUrl: 'https://veja.abril.com.br/wp-content/uploads/2025/11/000_83JC74B.jpg?crop=1&resize=1212,909',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(2, 10, 56),
+        publishedAt: generatePastTimestamp(2, 10, 57),
         isFeatured: false,
         views: 28950,
         likes: 1204,
@@ -503,7 +550,7 @@ Na etapa final, o técnico corintiano tentou mudar o panorama com as entradas de
 Com o resultado, o Ceará sobe para a 12ª posição, respirando fora do Z-4. O Corinthians se mantém em 10º, e vê o sonho de vaga na Copa Sul-Americana ameaçado.`,
         imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/galeano-ceara-e1762719156989.jpg?w=419&h=283&crop=0',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(3, 2, 46),
+        publishedAt: generatePastTimestamp(3, 2, 47),
         isFeatured: false,
         views: 16780,
         likes: 350,
@@ -530,7 +577,7 @@ O lado positivo está na abertura a novos nomes, como Luciano Juba e Vitor Roque
 Ancelotti deve usar os dois amistosos para definir as últimas peças do elenco rumo à Copa de 2026, mas, pela reação da torcida, a Seleção chega em novembro com mais desconfiança do que empolgação.`,
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2025/11/O-tecnico-da-Selecao-Brasileira-Carlo-Ancelotti-scaled-aspect-ratio-512-320.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(3, 12, 1),
+        publishedAt: generatePastTimestamp(3, 12, 2),
         isFeatured: false,
         views: 14500,
         likes: 402,
@@ -580,7 +627,7 @@ Palmeiras x Athletico-PR — Quarta-feira (5), às 21h30, no Allianz Parque
 Cruzeiro x Juventude — Quinta-feira (6), às 19h, no Mineirão.`,
         imageUrl: 'https://lncimg.lance.com.br/cdn-cgi/image/width=850,quality=75,format=webp/uploads/2025/11/palmeiras_x_juventude-1920x1280.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(4, 3, 16),
+        publishedAt: generatePastTimestamp(4, 3, 17),
         isFeatured: false,
         views: 18542,
         likes: 899,
@@ -603,7 +650,7 @@ Com o título em Paris, Sinner fecha o ano como o homem a ser batido. E não é 
 Se antes havia dúvida sobre quem seria o próximo grande dominador do circuito, o ATP de Paris serviu como resposta: Jannik Sinner chegou ao topo — e, do jeito que está jogando, parece disposto a ficar por lá um bom tempo.`,
         imageUrl: 'https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/11/sinner-paris.jpg?w=1200&h=900&crop=1',
         author: 'Equipe RADIO520',
-        publishedAt: generatePastTimestamp(4, 13, 41),
+        publishedAt: generatePastTimestamp(4, 13, 42),
         isFeatured: false,
         views: 16230,
         likes: 753,
