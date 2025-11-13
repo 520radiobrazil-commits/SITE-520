@@ -24,7 +24,7 @@ const Resenha520Card: React.FC = () => {
     const content = [
       "A internet entrou no modo loucura total nas últimas horas com aquele papo de que o Fluminense estaria de olho em Neymar. Mas, como sempre, o hype foi maior que a realidade. O presidente tricolor, Mário Bittencourt, botou a bola no chão e já mandou a real: não rolou contato nenhum. Zero. Nadinha.",
       "O mais curioso é que essa novela tá começando a virar praticamente um multiverso do futebol brasileiro. Cada hora aparece um clube diferente sendo “o possível destino” do camisa 10.",
-      "A grande questão é que Neymar ainda é, tecnicamente, jogador do Al-Hilal. Mas tá se recuperando de lesão, tem contrato longo e um salário astronômico — tipo, completamente fora da realidade brasileira.",
+      "A grande questão é que Neymar, que acertou seu retorno ao Santos, ainda se recupera de lesão e tem um contrato com salário completamente fora da realidade brasileira. Mesmo assim, o nome dele não para de esquentar o mercado.",
       "No momento, Neymar no Fluminense é ficção científica. Mas o jogador segue sendo o maior gerador de rumores do país — qualquer movimento, qualquer fala, qualquer like vira manchete. O que dá pra dizer é: 2026 promete ser um ano importante pra redefinir a reta final da carreira dele.",
     ];
     const footerText = "Se tem novela no futebol brasileiro, a gente tá dentro!";
