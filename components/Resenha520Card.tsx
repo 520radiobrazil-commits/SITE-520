@@ -20,6 +20,7 @@ const Resenha520Card: React.FC = () => {
     const imageUrl = "https://www.infomoney.com.br/wp-content/uploads/2025/01/Neymar.jpg?fit=1024%2C683&quality=50&strip=all";
     const title = "Neymar no Fluminense? Calma aí, galera…";
     const author = "Rudy Da Galera";
+    const subtitle = "Opinião sem papas na língua";
     const content = [
       "A internet entrou no modo loucura total nas últimas horas com aquele papo de que o Fluminense estaria de olho em Neymar. Mas, como sempre, o hype foi maior que a realidade. O presidente tricolor, Mário Bittencourt, botou a bola no chão e já mandou a real: não rolou contato nenhum. Zero. Nadinha.",
       "O mais curioso é que essa novela tá começando a virar praticamente um multiverso do futebol brasileiro. Cada hora aparece um clube diferente sendo “o possível destino” do camisa 10.",
@@ -60,9 +61,10 @@ const Resenha520Card: React.FC = () => {
                 <img src={imageUrl} alt={title} className="w-full h-auto object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
-                    <h4 className="text-2xl font-black text-indigo-400 leading-tight drop-shadow-lg">
+                    <h4 className="text-2xl font-black text-white leading-tight drop-shadow-lg">
                         {title}
                     </h4>
+                    <p className="text-indigo-400 font-semibold text-sm drop-shadow-md">{subtitle}</p>
                 </div>
             </div>
             
