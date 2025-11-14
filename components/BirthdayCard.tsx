@@ -18,23 +18,23 @@ const BlueskyIcon = () => (
 
 const BirthdayCard: React.FC = () => {
     // Card Content
-    const imageUrl = "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/11/lando_norris-e1732205769891.jpg?w=1200&h=1200&crop=1";
-    const name = "LANDO NORRIS";
-    const headline = "comemora 26 anos liderando o Mundial";
-    const text1 = "O piloto da McLaren vive uma das fases mais brilhantes da carreira e sopra as velinhas como líder do campeonato. Aos 26 anos, Lando Norris combina talento, consistência e aquela confiança tranquila que virou marca registrada no paddock.";
-    const text2 = "Na temporada atual, o britânico tem mostrado ritmo forte, corridas sólidas e uma maturidade que colocou seu nome de vez na disputa pelo título. A equipe também vive grande momento, entregando um carro competitivo e permitindo que Norris brilhe ainda mais.";
-    const text3 = "Hoje, o grid inteiro celebra, mas a pressão também aumenta: o líder do Mundial tá inspirado.";
+    const imageUrl = "https://res.cloudinary.com/prod-f2f3/ar_16:9,c_fill,dpr_1.0,f_auto,g_auto,h_563,w_1000/v1/f3/global/drivers/2025/2025%20Driver%20profiles/11_Inthraphuvasak";
+    const name = "TASANAPOL INTHRAPHUVASAK";
+    const headline = "piloto da F3, completa 20 anos";
+    const text1 = "Hoje é dia de celebrar mais um talento no grid: Tasanapol Inthraphuvasak, piloto da Fórmula 3, completando 20 anos.";
+    const text2 = "O tailandês segue firme na jornada rumo à elite do automobilismo, mostrando evolução, foco e aquele gás de quem tá no corre pra chegar à Fórmula 1.";
+    const text3 = "A Rádio 520 deseja muita velocidade na pista e sabedoria nas curvas da vida. Parabéns, Tasanapol! Keep pushing!";
     const footerText = "RÁDIO520 - ONDE A VELOCIDADE VIRA NOTÍCIA!";
 
     // Like Button State
-    const [likes, setLikes] = useState(2024); // Initial likes count
+    const [likes, setLikes] = useState(520); // Initial likes count
     const handleUpdateLikes = (id: number, newLikes: number) => {
         setLikes(newLikes);
     };
 
     // Share Button Logic
     const urlToShare = 'https://radio520.com.br/';
-    const shareText = `Feliz aniversário, Lando Norris! O líder do mundial comemora 26 anos. Confira a homenagem na RÁDIO520! #LandoNorris #F1`;
+    const shareText = `Feliz aniversário, Tasanapol Inthraphuvasak! O piloto da F3 comemora 20 anos. Confira a homenagem na RÁDIO520! #F3 #RoadToF1`;
     const encodedUrl = encodeURIComponent(urlToShare);
     const encodedText = encodeURIComponent(shareText);
 
