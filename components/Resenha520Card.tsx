@@ -17,27 +17,27 @@ const BlueskyIcon = () => (
 
 const Resenha520Card: React.FC = () => {
     // Card Content
-    const imageUrl = "https://www.infomoney.com.br/wp-content/uploads/2025/01/Neymar.jpg?fit=1024%2C683&quality=50&strip=all";
-    const title = "Neymar no Fluminense? Calma aí, galera…";
+    const imageUrl = "https://www.motoo.com.br/fotos/2025/11/960_720/diogo-moreira-9_14112025_66460_960_720.jpg";
+    const title = "Diogo Moreira: O Título da Moto2 já tem dono";
     const author = "Rudy Da Galera";
     const subtitle = "Opinião sem papas na língua";
     const content = [
-      "A internet entrou no modo loucura total nas últimas horas com aquele papo de que o Fluminense estaria de olho em Neymar. Mas, como sempre, o hype foi maior que a realidade. O presidente tricolor, Mário Bittencourt, botou a bola no chão e já mandou a real: não rolou contato nenhum. Zero. Nadinha.",
-      "O mais curioso é que essa novela tá começando a virar praticamente um multiverso do futebol brasileiro. Cada hora aparece um clube diferente sendo “o possível destino” do camisa 10.",
-      "A grande questão é que Neymar, que acertou seu retorno ao Santos, ainda se recupera de lesão e tem um contrato com salário completamente fora da realidade brasileira. Mesmo assim, o nome dele não para de esquentar o mercado.",
-      "No momento, Neymar no Fluminense é ficção científica. Mas o jogador segue sendo o maior gerador de rumores do país — qualquer movimento, qualquer fala, qualquer like vira manchete. O que dá pra dizer é: 2026 promete ser um ano importante pra redefinir a reta final da carreira dele.",
+      "Mano… vamos falar a real: o título da Moto2 já tem dono, e ele atende por Diogo Moreira. A etapa de Valencia virou protocolo, porque o brasileiro chega com 24 pontos de vantagem e um rival que só pode torcer por um milagre.",
+      "A matemática é brutal: González precisa vencer. Não é 'brigar pela vitória', é vencer. Ponto. Se ele não vencer, Diogo é campeão mesmo se assistir a corrida da arquibancada.",
+      "E mesmo no único cenário onde o espanhol vence, Moreira ainda tem caminho de sobra: chegar entre os 14 primeiros já garante o título. O risco real só existe se ele ficar fora dos pontos.",
+      "O paddock pode inventar tensão, mas a verdade é uma só: Diogo Moreira chega em Valencia com o campeonato na mão. Valencia 2025 não é uma final. É um carimbo."
     ];
-    const footerText = "Se tem novela no futebol brasileiro, a gente tá dentro!";
+    const footerText = "Se tem brasileiro brilhando, a gente tá de olho!";
 
     // Like Button State
-    const [likes, setLikes] = useState(1850); // Initial likes count
+    const [likes, setLikes] = useState(1950); // Initial likes count from the article
     const handleUpdateLikes = (id: number, newLikes: number) => {
         setLikes(newLikes);
     };
 
     // Share Button Logic
     const urlToShare = 'https://radio520.com.br/';
-    const shareText = `Resenha 520 por Rudy Da Galera: ${title} #Neymar #Fluminense #MercadoDaBola`;
+    const shareText = `Resenha 520 por Rudy Da Galera: ${title} #DiogoMoreira #Moto2 #Motovelocidade`;
     const encodedUrl = encodeURIComponent(urlToShare);
     const encodedText = encodeURIComponent(shareText);
 
@@ -53,7 +53,7 @@ const Resenha520Card: React.FC = () => {
                 <SpeechBubbleIcon className="h-6 w-6 mr-3 text-indigo-400"/>
                 <div>
                     <h3 className="text-white font-bold text-lg uppercase tracking-wider">RESENHA 520</h3>
-                    <span className="text-xs text-gray-400 font-semibold">por {author}</span>
+                    <span className="text-xs text-indigo-400 font-bold tracking-wider">por {author}</span>
                 </div>
             </div>
             
