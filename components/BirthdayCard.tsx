@@ -18,23 +18,23 @@ const BlueskyIcon = () => (
 
 const BirthdayCard: React.FC = () => {
     // Card Content
-    const imageUrl = "https://res.cloudinary.com/prod-f2f3/ar_16:9,c_fill,dpr_1.0,f_auto,g_auto,h_563,w_1000/v1/f3/global/drivers/2025/2025%20Driver%20profiles/11_Inthraphuvasak";
-    const name = "TASANAPOL INTHRAPHUVASAK";
-    const headline = "piloto da F3, completa 20 anos";
-    const text1 = "Hoje é dia de celebrar mais um talento no grid: Tasanapol Inthraphuvasak, piloto da Fórmula 3, completando 20 anos.";
-    const text2 = "O tailandês segue firme na jornada rumo à elite do automobilismo, mostrando evolução, foco e aquele gás de quem tá no corre pra chegar à Fórmula 1.";
-    const text3 = "A Rádio 520 deseja muita velocidade na pista e sabedoria nas curvas da vida. Parabéns, Tasanapol! Keep pushing!";
-    const footerText = "RÁDIO520 - ONDE A VELOCIDADE VIRA NOTÍCIA!";
+    const imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60L4DV-1xbQ4mUVn6a1yzFk6oqwc2KrebHzzKc4xExeIwWynGg85_RxYgy3L8uz2rSp0&usqp=CAU";
+    const name = "PIPOKA";
+    const headline = "lenda do basquete brasileiro, completa mais um ano de vida!";
+    const text1 = "Hoje é dia de celebrar uma lenda do basquete brasileiro: Pipoka tá completando mais um ano de vida e, claro, merece aquele spotlight brabo!";
+    const text2 = "O cara deixou sua marca passando pela NBA, brilhou com a seleção brasileira sendo campeão no Pan de 1987, e ainda colecionou quatro títulos do Campeonato Brasileiro jogando pelo Monte Líbano. Currículo pesadíssimo, né?";
+    const text3 = "Parabéns, Pipoka! Valeu demais por tudo que você representou e segue representando pro nosso basquete.";
+    const footerText = "RÁDIO520 - CELEBRANDO OS ÍDOLOS DO ESPORTE!";
 
     // Like Button State
-    const [likes, setLikes] = useState(520); // Initial likes count
+    const [likes, setLikes] = useState(1987); // Initial likes count
     const handleUpdateLikes = (id: number, newLikes: number) => {
         setLikes(newLikes);
     };
 
     // Share Button Logic
     const urlToShare = 'https://radio520.com.br/';
-    const shareText = `Feliz aniversário, Tasanapol Inthraphuvasak! O piloto da F3 comemora 20 anos. Confira a homenagem na RÁDIO520! #F3 #RoadToF1`;
+    const shareText = `Feliz aniversário, Pipoka! A lenda do basquete brasileiro comemora mais um ano. Confira a homenagem na RÁDIO520! #Pipoka #BasqueteBrasil #NBA`;
     const encodedUrl = encodeURIComponent(urlToShare);
     const encodedText = encodeURIComponent(shareText);
 
