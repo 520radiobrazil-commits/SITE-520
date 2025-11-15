@@ -47,7 +47,7 @@ Mesmo com equilíbrio nas divididas e tackles, a Seleção mostrou mais qualidad
 Com esse resultado, o Brasil segue firme na preparação para os próximos compromissos da Data FIFA e alimenta a expectativa em cima da nova geração — Estêvão, mais uma vez, entregou presença, ímpeto e decisão.`,
         imageUrl: 'https://conteudo.imguol.com.br/c/esporte/98/2025/11/15/jogadores-da-selecao-brasileira-comemoram-gol-de-estevao-contra-senegal-1763225498349_v2_450x450.jpg',
         author: 'Equipe RADIO520',
-        publishedAt: '2025-11-15T11:15:00Z',
+        publishedAt: '2025-11-15T15:00:00Z',
         isFeatured: true,
         views: 22000,
         likes: 1100,
