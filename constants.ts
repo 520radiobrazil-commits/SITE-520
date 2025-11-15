@@ -3,7 +3,7 @@ import { Article } from './types';
 export const MOCK_ARTICLES: Article[] = [
     {
         id: 52,
-        category: 'POP NEWS',
+        category: 'RÁDIO 520 POP NEWS',
         title: 'Da polêmica ao pódio: MotoGP transforma Ana Peleteiro em recado vivo à mídia espanhola',
         slug: 'motogp-ana-peleteiro-polemica-podio',
         summary: 'A atleta espanhola Ana Peleteiro deu a bandeirada final na sprint da MotoGP em Valência, um gesto visto como homenagem após meses de atritos com a imprensa espanhola e debates sobre racismo no esporte.',
@@ -477,7 +477,7 @@ Siga a 520 no X e fique por dentro das maiores histórias do esporte mundial.`,
     },
     {
         id: 35,
-        category: 'POP NEWS',
+        category: 'RÁDIO 520 POP NEWS',
         title: 'Roxette anuncia dois shows no Brasil em 2026',
         slug: 'roxette-anuncia-dois-shows-no-brasil-em-2026',
         summary: 'Turnê “Live – Back Again” marca o retorno triunfal de um dos nomes mais amados do pop mundial.',
