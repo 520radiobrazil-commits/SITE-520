@@ -2,6 +2,29 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 52,
+        category: 'POP NEWS',
+        title: 'Da polêmica ao pódio: MotoGP transforma Ana Peleteiro em recado vivo à mídia espanhola',
+        slug: 'motogp-ana-peleteiro-polemica-podio',
+        summary: 'A atleta espanhola Ana Peleteiro deu a bandeirada final na sprint da MotoGP em Valência, um gesto visto como homenagem após meses de atritos com a imprensa espanhola e debates sobre racismo no esporte.',
+        content: `A sprint da MotoGP em Valência contou com um momento especial neste fim de semana: a atleta espanhola <strong>Ana Peleteiro</strong> foi a responsável por acenar a bandeirada final da prova, gesto que rapidamente ganhou destaque nas redes e na imprensa local. Para muitos fãs, a presença da medalhista olímpica não foi apenas uma participação simbólica, mas também uma forma de homenagem em meio ao período turbulento que ela viveu nos últimos meses.
+
+Peleteiro esteve envolvida recentemente em uma série de atritos com a imprensa espanhola. O episódio mais marcante ocorreu durante o Campeonato Europeu Indoor de Atletismo, quando a atleta criticou publicamente a <strong>RTVE/Teledeporte</strong> por priorizar a transmissão de uma partida de futebol feminino no horário em que competiria. A queixa repercutiu amplamente e gerou resposta de profissionais da emissora, que alegaram que a atleta teria se recusado a atender uma equipe de reportagem no local.
+
+Além disso, Peleteiro se tornou alvo de ataques e polêmicas nas redes sociais ao comentar episódios de <strong>racismo</strong> na Espanha. A atleta expôs mensagens ofensivas que recebeu e precisou se posicionar novamente quando um vídeo antigo, editado fora de contexto, voltou a circular e gerou acusações infundadas. Ela denunciou o “linchamento virtual” e reforçou a importância de discussões sérias sobre representatividade e respeito no esporte.
+
+Com esse cenário, a escolha de Ana Peleteiro para dar a bandeirada final em Valência ganhou outra camada de significado. Para muitos, a MotoGP enviou um gesto claro de apoio e reconhecimento à atleta, que segue se destacando não apenas pelos resultados esportivos, mas também por sua postura firme diante de temas sensíveis.
+
+A participação de Peleteiro tornou o encerramento da sprint ainda mais simbólico, marcando um encontro entre dois mundos esportivos e reforçando sua força como figura pública na Espanha.`,
+        imageUrl: 'https://estaticos-cdn.prensaiberica.es/clip/45c94026-408a-4c77-85cf-e6dee9ded336_16-9-discover-aspect-ratio_default_0.jpg',
+        author: 'Equipe RADIO520',
+        publishedAt: '2025-11-15T16:00:00Z',
+        isFeatured: true,
+        views: 13500,
+        likes: 680,
+        hashtags: ['#MotoGP', '#AnaPeleteiro', '#EsporteEspanhol', '#Representatividade'],
+    },
+    {
         id: 51,
         category: 'ACE 520',
         title: 'Sinner domina e carimba vaga na final em Turim',
