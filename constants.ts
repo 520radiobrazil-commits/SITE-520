@@ -2,6 +2,29 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 55,
+        category: 'PÓDIO 520',
+        title: 'Lucas Pinheiro faz história e se torna o primeiro brasileiro campeão em etapa da Copa do Mundo de Esqui Alpino',
+        slug: 'lucas-pinheiro-historia-esqui-alpino',
+        summary: 'O esquiador Lucas Pinheiro fez história ao se tornar o primeiro brasileiro a vencer uma etapa da Copa do Mundo de Esqui Alpino, com uma performance dominante na Finlândia.',
+        content: `O esporte brasileiro amanheceu com um feito simplesmente gigante neste domingo. O esquiador Lucas Pinheiro escreveu seu nome na história ao conquistar uma vitória inédita para o país: ele se tornou o primeiro brasileiro campeão de uma etapa da Copa do Mundo de Esqui Alpino.
+
+A conquista rolou em Levi, na Finlândia, durante a prova de Slalom. Lucas mandou super bem nas duas descidas e garantiu o melhor tempo na soma geral — performance de gente grande, mostrando que o Brasil também sabe brilhar no gelo.
+
+A vitória não é só um marco pessoal, mas um recado pro mundo: o Brasil segue abrindo caminho em modalidades onde, por anos, ninguém imaginava ver nossa bandeira no topo.
+
+O Time Brasil celebrou o resultado nas redes sociais com uma mensagem que resumiu o sentimento de todo mundo que acompanha esportes olímpicos: “É o Brasil rasgando a neve e mostrando que não existe limite pra nossa bandeira!”
+
+A foto oficial do momento, publicada pelo Time Brasil, é da Getty Images.`,
+        imageUrl: 'https://imagens.ebc.com.br/DuBanIOfEeZ4hR-3p0Q4W1OBBoQ=/1170x700/smart/https://agenciabrasil.ebc.com.br/sites/default/files/thumbnails/image/2025/11/16/2025-11-16t150442z_1_lynxmpelaf08e_rtroptp_4_alpine-skiing-men.jpg?itok=aL2wdkH4',
+        author: 'Equipe RADIO520',
+        publishedAt: '2025-11-17T20:00:00Z',
+        isFeatured: true,
+        views: 24500,
+        likes: 1650,
+        hashtags: ['#EsquiAlpino', '#LucasPinheiro', '#EsportesDeInverno', '#TimeBrasil'],
+    },
+    {
         id: 54,
         category: 'ACE 520',
         title: 'Sinner conquista segundo ATP Finals seguido e consolida domínio na nova geração',

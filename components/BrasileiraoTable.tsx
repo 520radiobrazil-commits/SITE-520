@@ -32,8 +32,8 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
   const timeAgo = formatRelativeTime(lastUpdatedISO, currentTime);
 
   const teams = [
-    { pos: 1, name: 'Palmeiras', pj: 32, sg: '+30', pts: 68, zone: 'libertadores' },
-    { pos: 2, name: 'Flamengo', pj: 32, sg: '+44', pts: 68, zone: 'libertadores' },
+    { pos: 1, name: 'Flamengo', pj: 33, sg: '+48', pts: 71, zone: 'libertadores' },
+    { pos: 2, name: 'Palmeiras', pj: 33, sg: '+29', pts: 68, zone: 'libertadores' },
     { pos: 3, name: 'Cruzeiro', pj: 33, sg: '+24', pts: 64, zone: 'libertadores' },
     { pos: 4, name: 'Mirassol', pj: 33, sg: '+21', pts: 59, zone: 'libertadores' },
     { pos: 5, name: 'Bahia', pj: 33, sg: '+4', pts: 53, zone: 'pre-libertadores' },
@@ -47,11 +47,11 @@ const BrasileiraoTable: React.FC<BrasileiraoTableProps> = ({ currentTime }) => {
     { pos: 13, name: 'Corinthians', pj: 33, sg: '-3', pts: 42, zone: 'none' },
     { pos: 14, name: 'Grêmio', pj: 33, sg: '-8', pts: 40, zone: 'none' },
     { pos: 15, name: 'Internacional', pj: 33, sg: '-9', pts: 37, zone: 'none' },
-    { pos: 16, name: 'Vitória', pj: 33, sg: '-18', pts: 35, zone: 'none' },
-    { pos: 17, name: 'Santos', pj: 32, sg: '-15', pts: 33, zone: 'rebaixamento' },
+    { pos: 16, name: 'Santos', pj: 33, sg: '-14', pts: 36, zone: 'none' },
+    { pos: 17, name: 'Vitória', pj: 33, sg: '-18', pts: 35, zone: 'rebaixamento' },
     { pos: 18, name: 'Juventude', pj: 33, sg: '-30', pts: 32, zone: 'rebaixamento' },
     { pos: 19, name: 'Fortaleza', pj: 33, sg: '-17', pts: 31, zone: 'rebaixamento' },
-    { pos: 20, name: 'Sport', pj: 32, sg: '-31', pts: 17, zone: 'rebaixamento' },
+    { pos: 20, name: 'Sport', pj: 33, sg: '-35', pts: 17, zone: 'rebaixamento' },
   ];
 
   const getRowClass = (zone: string) => {
