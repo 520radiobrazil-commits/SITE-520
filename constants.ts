@@ -2,6 +2,33 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 53,
+        category: 'VOLTA RÁPIDA',
+        title: 'Brasil no topo: Diogo Moreira comemora título mundial ao som de “Charlie Brown”, clássico de Benito de Paula',
+        slug: 'diogo-moreira-comemora-titulo-mundial-charlie-brown',
+        summary: 'O motociclismo brasileiro vive um momento histórico com a conquista do primeiro título mundial de Diogo Moreira na Moto2, celebrada ao som de "Charlie Brown" e com homenagens à Seleção Brasileira.',
+        content: `O motociclismo brasileiro vive um momento que muda a história do esporte no país. <strong>Diogo Moreira</strong> conquistou o primeiro título mundial do Brasil, encerrando sua temporada da Moto2 com uma performance sólida em Valência — e uma comemoração absolutamente brasileira dentro do paddock.
+
+A festa que tomou conta do box teve como trilha sonora “Charlie Brown”, clássico de Benito de Paula, num clima que misturava emoção, saudade e identidade nacional. Enquanto a música ecoava, a equipe celebrava com bandeiras e abraços, transformando o momento em uma cena marcante para os fãs.
+
+O tom patriótico ficou ainda mais forte quando os membros da equipe apareceram usando camisas da Seleção Brasileira de futebol, todas com a icônica camisa 10 nas costas — homenageando quatro lendas eternas: Pelé, Ronaldo, Ronaldinho e Neymar.
+
+E claro, o campeão também entrou na onda: Diogo, que compete com o número 10, vestiu uma camisa da Seleção personalizada com “MOREIRA 10”. A imagem viralizou imediatamente, simbolizando um elo perfeito entre o título nas motos e a tradição do futebol brasileiro.
+
+Aos 20 anos, Moreira encerra uma temporada que o coloca num patamar histórico. Sua consistência e maturidade ao longo do ano pavimentam não só um título inédito, mas também a expectativa por uma nova geração de pilotos brasileiros em ascensão — justamente às vésperas do retorno do Mundial ao Brasil em 2026.
+
+Um campeão mundial.<br>
+Um novo “camisa 10”.<br>
+E um dia que colocou o Brasil no topo das motos.`,
+        imageUrl: 'https://pbs.twimg.com/media/G539Wp0WUAASsDL?format=jpg&name=large',
+        author: 'Equipe RADIO520',
+        publishedAt: '2025-11-17T12:00:00Z',
+        isFeatured: true,
+        views: 21000,
+        likes: 1250,
+        hashtags: ['#DiogoMoreira', '#Moto2', '#CampeãoMundial', '#Motociclismo'],
+    },
+    {
         id: 52,
         category: 'RÁDIO 520 POP NEWS',
         title: 'Da polêmica ao pódio: MotoGP transforma Ana Peleteiro em recado vivo à mídia espanhola',
