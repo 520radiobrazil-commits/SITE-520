@@ -2,6 +2,31 @@ import { Article } from './types';
 
 export const MOCK_ARTICLES: Article[] = [
     {
+        id: 54,
+        category: 'ACE 520',
+        title: 'Sinner conquista segundo ATP Finals seguido e consolida domínio na nova geração',
+        slug: 'sinner-conquista-segundo-atp-finals-seguido-e-consolida-dominio-na-nova-geracao',
+        summary: 'Jannik Sinner vence Carlos Alcaraz, conquista o bicampeonato do ATP Finals em Turim e consolida seu domínio na nova geração do tênis masculino.',
+        content: `Jannik Sinner confirmou, neste domingo, a fase dominante que vive no circuito ao conquistar seu segundo título consecutivo do Nitto ATP Finals, derrotando Carlos Alcaraz por 7-6 e 7-5, em Turim. O resultado consolida a temporada mais consistente da carreira do italiano e reforça sua ascensão como nome central da nova era do tênis masculino.
+
+A partida foi marcada pelo equilíbrio, mas também pela evolução técnica de Sinner — especialmente no saque, ponto que se tornou alvo de ajustes após a eliminação no US Open. As mudanças surtiram efeito: mais potência, maior precisão e controle emocional nos momentos decisivos. O desempenho permitiu que o italiano atravessasse o torneio sem perder sets, algo raro no evento que reúne os oito melhores da temporada.
+
+Mesmo diante de um adversário que costuma elevar o nível em jogos grandes, Sinner ditou o ritmo. Nos ralis longos, conseguiu assumir a iniciativa com agressividade controlada; nos pontos curtos, mostrou frieza para executar. A leitura tática, somada à solidez mental, empurrou o número 2 do mundo para novo título em casa — com a torcida italiana transformando o Pala Alpitour em um ambiente quase intransponível.
+
+Alcaraz também deixou bons sinais. O espanhol apresentou melhora no piso indoor ao longo do torneio, mas ainda encontra dificuldades para manter intensidade e regularidade nesse tipo de superfície. A derrota, embora dura, faz parte do processo de adaptação do jogador mais jovem do Top 5.
+
+O circuito observa atentamente essa rivalidade, que já é tratada como o eixo competitivo da geração pós-Big 3. E se ambos têm potencial para polarizar o topo do ranking pelos próximos anos, o momento atual aponta para uma liderança clara: Sinner está um passo à frente, técnica e mentalmente.
+
+Com o bicampeonato em Turim, o italiano fecha a temporada no auge, mais maduro, mais completo — e cada vez mais favorito a comandar a nova era do tênis.`,
+        imageUrl: 'https://c.files.bbci.co.uk/23a9/live/eb0ee790-a51a-11ef-8901-a18a6eb097bd.jpg',
+        author: 'Análise 520',
+        publishedAt: '2025-11-17T19:00:00Z',
+        isFeatured: true,
+        views: 23000,
+        likes: 1400,
+        hashtags: ['#ATPFinals', '#Tênis', '#Sinner', '#Alcaraz'],
+    },
+    {
         id: 53,
         category: 'VOLTA RÁPIDA',
         title: 'Brasil no topo: Diogo Moreira comemora título mundial ao som de “Charlie Brown”, clássico de Benito de Paula',
