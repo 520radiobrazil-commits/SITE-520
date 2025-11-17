@@ -179,6 +179,11 @@ function App() {
     if (showingPrivacyPage) {
       return <PrivacyPolicy onGoBack={handleGoHome} />;
     }
+
+    // Separa os artigos para inserir banners de forma mais orgânica
+    const articlesPart1 = otherArticles.slice(0, 4);
+    const articlesPart2 = otherArticles.slice(4);
+    
     return (
       <>
         <AnimatedBanner />
@@ -189,25 +194,37 @@ function App() {
               <>
                 <FeaturedArticle article={featuredArticle} onSelect={handleArticleSelect} currentTime={currentTime} onUpdateLikes={handleUpdateLikes} />
                 
-                {/* Banner Promocional */}
-                <div className="my-8">
-                  <a href="mailto:520radiobrazil@gmail.com">
-                    <img 
-                      src="https://public-rf-upload.minhawebradio.net/249695/ad/32dc318f7254d01a058188801d808ff5.png" 
-                      alt="Banner de Contato" 
-                      className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-                    />
-                  </a>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {otherArticles.map((article) => (
-                    <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} currentTime={currentTime} onUpdateLikes={handleUpdateLikes} />
-                  ))}
-                </div>
+                {articlesPart1.length > 0 && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        {articlesPart1.map((article) => (
+                            <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} currentTime={currentTime} onUpdateLikes={handleUpdateLikes} />
+                        ))}
+                    </div>
+                )}
+                
+                {/* Banner Promocional inserido de forma mais orgânica */}
+                {articlesPart1.length > 0 && (
+                    <div className="my-8">
+                        <a href="mailto:520radiobrazil@gmail.com">
+                            <img 
+                            src="https://public-rf-upload.minhawebradio.net/249695/ad/32dc318f7254d01a058188801d808ff5.png" 
+                            alt="Banner de Contato" 
+                            className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+                            />
+                        </a>
+                    </div>
+                )}
+                
+                {articlesPart2.length > 0 && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {articlesPart2.map((article) => (
+                        <ArticleCard key={article.id} article={article} onSelect={handleArticleSelect} currentTime={currentTime} onUpdateLikes={handleUpdateLikes} />
+                        ))}
+                    </div>
+                )}
                 
                 {/* Adiciona o WebAppAd no final da coluna principal */}
-                <div className="mt-8 col-span-1 md:col-span-2">
+                <div className="mt-8">
                     <WebAppAd />
                 </div>
               </>
@@ -218,16 +235,15 @@ function App() {
             )}
           </div>
 
-          {/* Barra Lateral */}
+          {/* Barra Lateral Reorganizada */}
           <aside className="lg:col-span-4 space-y-8">
             <BirthdayCard />
             <Resenha520Card />
-            <PromotionalAd />
-            <YouTubePlayer />
-            {audioArticle && <AudioPlayer article={audioArticle} />}
             <BrasileiraoTable currentTime={currentTime} />
             <MostLiked articles={articles} onSelectArticle={handleArticleSelect} currentTime={currentTime} />
-            
+            <YouTubePlayer />
+            {audioArticle && <AudioPlayer article={audioArticle} />}
+            <PromotionalAd />
             <a 
               href="https://radiosnet.com/" 
               target="_blank" 
@@ -240,8 +256,7 @@ function App() {
                 className="w-full h-auto"
               />
             </a>
-
-            <AdPlaceholder width="w-full" height="h-60" />
+            <AdPlaceholder slot="5136894528" />
           </aside>
         </div>
       </>

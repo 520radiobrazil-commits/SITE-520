@@ -53,6 +53,29 @@ export function formatShortDateTime(isoString: string, locale = 'pt-BR', timeZon
 }
 
 /**
+ * Formats an ISO date string into a short, localized date string (without time).
+ * Example: "11/11/2025"
+ * @param isoString The date in ISO 8601 format.
+ * @param locale The locale for formatting (e.g., 'pt-BR').
+ * @param timeZone The target timezone (e.g., 'America/Sao_Paulo').
+ * @returns A formatted short date string or an error message.
+ */
+export function formatShortDate(isoString: string, locale = 'pt-BR', timeZone = 'America/Sao_Paulo'): string {
+  const dt = new Date(isoString);
+  if (isNaN(dt.getTime())) {
+    console.error(`Invalid date string provided to formatShortDate: "${isoString}"`);
+    return "Data inválida";
+  }
+  return new Intl.DateTimeFormat(locale, {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    timeZone,
+  }).format(dt);
+}
+
+
+/**
  * Formats an ISO date string into a relative time string (e.g., "há 5 minutos").
  * Uses Intl.RelativeTimeFormat for accurate, localized output.
  * @param isoString The date in ISO 8601 format.

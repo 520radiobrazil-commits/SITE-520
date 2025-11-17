@@ -1,23 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-// Note: The live Google AdSense functionality has been replaced with a static
-// placeholder. The placeholder publisher ID ("ca-pub-XXXXXXXXXXXXXXXX") causes
-// script errors. To enable live ads, a valid AdSense script must be added back
-// to index.html, and this component should be updated to render the ad tag.
-
-interface AdPlaceholderProps {
-  width: string;
-  height: string;
+// Informa ao TypeScript sobre a existência do objeto adsbygoogle no window
+declare global {
+  interface Window {
+    adsbygoogle?: object[];
+  }
 }
 
-const AdPlaceholder: React.FC<AdPlaceholderProps> = ({ width, height }) => {
+interface AdPlaceholderProps {
+  slot: string;
+  format?: string;
+  responsive?: boolean;
+}
+
+const AdPlaceholder: React.FC<AdPlaceholderProps> = ({
+  slot,
+  format = 'auto',
+  responsive = true
+}) => {
+
+  useEffect(() => {
+    // Tenta carregar o anúncio. O script do AdSense procura por elementos com a classe .adsbygoogle
+    // e os preenche. O .push({}) na array adsbygoogle aciona essa verificação.
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (err) {
+      console.error("Erro ao carregar o anúncio do AdSense:", err);
+    }
+  }, [slot]); // Re-executa se o slot do anúncio mudar
+
   return (
-    // This outer div maintains the layout space and shows a placeholder style
-    // in case the ad script is blocked or fails to load an ad.
-    <div className={`bg-gray-800 flex items-center justify-center ${width} ${height} rounded-lg text-gray-500 overflow-hidden`}>
-      <div className="flex items-center justify-center h-full w-full border-2 border-dashed border-gray-600">
-          <span className="text-sm">Publicidade</span>
-      </div>
+    // Um contêiner para o anúncio. O AdSense ajustará o tamanho.
+    <div className="w-full flex flex-col items-center justify-center bg-gray-800/50 rounded-lg text-center my-4 overflow-hidden" style={{ minHeight: '280px' }}>
+      <ins
+        className="adsbygoogle"
+        style={{ display: 'block', width: '100%' }}
+        data-ad-client="ca-pub-3940256099942544" // Este é um ID de editor de TESTE
+        data-ad-slot={slot}
+        data-ad-format={format}
+        data-full-width-responsive={responsive.toString()}
+      ></ins>
+       <span className="text-xs text-gray-600 mt-1">Publicidade</span>
     </div>
   );
 };

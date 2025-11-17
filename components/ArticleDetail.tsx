@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Article } from '../types';
 import Comments from './Comments';
 import ShareButtons from './ShareButtons';
-import { formatShortDateTime, formatFullDateTime, calculateReadTime } from '../utils/time';
+import { formatShortDate, formatFullDateTime, calculateReadTime } from '../utils/time';
 import LikeButton from './LikeButton';
 
 interface ArticleDetailProps {
@@ -155,7 +155,7 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ article, onGoBack, curren
                   <span>Por {article.author}</span>
                   <span className="text-gray-600">&bull;</span>
                   <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
-                    {dateLabel} em {formatShortDateTime(displayDate)}
+                    {dateLabel} em {formatShortDate(displayDate)}
                   </time>
                   {readTime && (
                     <>

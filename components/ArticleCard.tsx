@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from '../types';
-import { formatShortDateTime, formatFullDateTime, calculateReadTime } from '../utils/time';
+import { formatShortDate, formatFullDateTime, calculateReadTime } from '../utils/time';
 import LikeButton from './LikeButton';
 
 interface ArticleCardProps {
@@ -45,7 +45,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onSelect, currentTim
             <span>Por {article.author}</span>
             <span className="text-gray-600">&bull;</span>
             <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
-                {dateLabel} em {formatShortDateTime(displayDate)}
+                {dateLabel} em {formatShortDate(displayDate)}
             </time>
             {readTime && (
               <>

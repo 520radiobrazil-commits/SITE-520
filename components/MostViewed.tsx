@@ -1,6 +1,6 @@
 import React from 'react';
 import { Article } from '../types';
-import { formatShortDateTime, formatFullDateTime } from '../utils/time';
+import { formatShortDate, formatFullDateTime } from '../utils/time';
 
 interface MostLikedProps {
   articles: Article[];
@@ -47,7 +47,7 @@ const MostLiked: React.FC<MostLikedProps> = ({ articles, onSelectArticle, curren
                       </p>
                       <div className="text-gray-400 text-xs mt-1 flex items-center gap-2">
                           <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
-                              {dateLabel} em {formatShortDateTime(displayDate)}
+                              {dateLabel} em {formatShortDate(displayDate)}
                           </time>
                           <span className="text-gray-600">&bull;</span>
                           <div className="flex items-center text-pink-400">
