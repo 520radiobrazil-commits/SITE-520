@@ -13,7 +13,7 @@ const TrendingTopics: React.FC<TrendingTopicsProps> = ({ latestArticles, onSelec
       {latestArticles.length > 0 ? (
         <ul className="space-y-2">
           {latestArticles.map((article, index) => (
-            <li key={article.id}>
+            <li key={article.slug}>
               <button
                 onClick={() => onSelectArticle(article)}
                 className="w-full text-left p-2 rounded-md hover:bg-gray-700/50 transition-colors duration-200 group focus:outline-none focus:ring-2 focus:ring-teal-500"

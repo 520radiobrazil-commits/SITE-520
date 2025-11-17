@@ -1,7 +1,8 @@
 
+
 export interface Article {
-  id: number;
   category: string;
+  topic: 'sport' | 'special';
   title: string;
   slug: string;
   summary: string;
@@ -12,18 +13,18 @@ export interface Article {
   author: string;
   publishedAt: string; // ISO date string
   updatedAt?: string; // ISO date string
-  isFeatured?: boolean;
   views?: number;
   likes?: number;
   ogTitle?: string;
   ogDescription?: string;
   ogImageUrl?: string;
   hashtags?: string[];
+  isFeatured?: boolean;
 }
 
 export interface Comment {
   id: string;
-  articleId: number;
+  articleId: string;
   author: string;
   text: string;
   timestamp: string;

@@ -25,7 +25,8 @@ interface ShareButtonsProps {
 const ShareButtons: React.FC<ShareButtonsProps> = ({ article }) => {
   const [copyStatus, setCopyStatus] = useState('Copiar Link');
   
-  const urlToShare = 'https://radio520.com.br/';
+  // FIX: Use the specific article URL for sharing, not the homepage URL.
+  const urlToShare = `https://radio520.com.br/noticia/${article.slug}`;
 
   const encodedUrl = encodeURIComponent(urlToShare);
   const encodedTitle = encodeURIComponent(article.title);

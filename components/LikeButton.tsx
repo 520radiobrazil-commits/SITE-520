@@ -7,9 +7,9 @@ const HeartIcon = ({ filled }: { filled: boolean }) => (
 );
 
 interface LikeButtonProps {
-  articleId: number;
+  articleId: string;
   initialLikes: number;
-  onUpdateLikes: (articleId: number, newLikes: number) => void;
+  onUpdateLikes: (articleId: string, newLikes: number) => void;
 }
 
 const LikeButton: React.FC<LikeButtonProps> = ({ articleId, initialLikes, onUpdateLikes }) => {

@@ -1,100 +1,59 @@
 import React from 'react';
-import { Article } from '../types';
-import { formatShortDate, formatFullDateTime, calculateReadTime } from '../utils/time';
-import LikeButton from './LikeButton';
 
-interface FeaturedArticleProps {
-  article: Article;
-  onSelect: (article: Article) => void;
-  currentTime: Date;
-  onUpdateLikes: (articleId: number, newLikes: number) => void;
-}
-
-const ArrowRightIcon: React.FC<{className?: string}> = ({className}) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={className}>
-      <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+const MusicNoteIcon: React.FC<{className?: string}> = ({className}) => (
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 20 20" fill="currentColor">
+        <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3V4a1 1 0 00-1-1z" />
     </svg>
 );
 
-const ClockIcon: React.FC<{className?: string}> = ({className}) => (
-    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-);
+const hits = [
+    { pos: 1, title: 'LUNCH', artist: 'Billie Eilish' },
+    { pos: 2, title: 'Espresso', artist: 'Sabrina Carpenter' },
+    { pos: 3, title: 'Not Like Us', artist: 'Kendrick Lamar' },
+    { pos: 4, title: 'I Had Some Help', artist: 'Post Malone ft. Morgan Wallen' },
+    { pos: 5, title: 'A Bar Song (Tipsy)', artist: 'Shaboozey' },
+];
 
-const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ article, onSelect, currentTime, onUpdateLikes }) => {
-  const displayDate = article.updatedAt || article.publishedAt;
-  const dateLabel = article.updatedAt ? 'Atualizado' : 'Publicado';
-  const readTime = calculateReadTime(article.content);
-
-  return (
-    <div 
-      onClick={() => onSelect(article)}
-      className="relative mb-8 rounded-lg overflow-hidden shadow-2xl bg-gray-800 transition-all duration-300 ease-in-out hover:shadow-teal-500/20 hover:-translate-y-1 cursor-pointer"
-    >
-      {article.isFeatured && (
-        <div className="absolute top-4 right-4 bg-teal-500 text-gray-900 text-xs font-bold px-3 py-1.5 rounded-md uppercase tracking-wider shadow-lg shadow-teal-500/50 z-10">
-            Destaque
+const TopHits520: React.FC = () => {
+    return (
+        <div className="bg-gray-800 rounded-lg p-4">
+            <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider flex items-center font-heading">
+                <MusicNoteIcon className="h-5 w-5 mr-2 text-cyan-400"/>
+                Top Hits 520
+            </h3>
+            {hits.length > 0 ? (
+                <ul className="space-y-3">
+                    {hits.map((hit) => (
+                        <li key={hit.pos}>
+                            <a
+                                href={`https://www.youtube.com/results?search_query=${encodeURIComponent(hit.title + ' ' + hit.artist)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full text-left p-2 rounded-md hover:bg-gray-700/50 transition-colors duration-200 group focus:outline-none focus:ring-2 focus:ring-cyan-500 flex items-center gap-4"
+                            >
+                                <span className="text-3xl font-black text-gray-600 group-hover:text-cyan-400 transition-colors duration-200">
+                                    {hit.pos}
+                                </span>
+                                <div>
+                                    <p className="text-white font-semibold leading-tight group-hover:text-cyan-300 transition-colors duration-200">
+                                        {hit.title}
+                                    </p>
+                                    <span className="text-gray-400 text-xs font-medium block">
+                                        {hit.artist}
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p className="text-gray-500 text-sm">O ranking está sendo atualizado.</p>
+            )}
+            <p className="text-center text-cyan-400 text-xs font-bold italic mt-4 border-t border-gray-700 pt-3">
+                As mais tocadas na programação da Rádio 520!
+            </p>
         </div>
-      )}
-      {article.videoUrl ? (
-        <video
-          key={article.videoUrl}
-          className="w-full aspect-video object-cover"
-          controls
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src={article.videoUrl} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      ) : (
-        <img src={article.imageUrl} alt={article.title} className="w-full h-auto object-cover" />
-      )}
-      <div className="p-6">
-        <p className="text-teal-400 text-sm font-semibold uppercase tracking-wider mb-2">{article.category}</p>
-        <h2 className="text-3xl lg:text-4xl font-black text-white mb-3 leading-tight">
-          {article.title}
-        </h2>
-        <p className="text-gray-300 text-base lg:text-lg mb-6">{article.summary}</p>
-         <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-                <LikeButton
-                    articleId={article.id}
-                    initialLikes={article.likes || 0}
-                    onUpdateLikes={onUpdateLikes}
-                />
-                <div className="text-sm text-gray-400 hidden sm:flex sm:flex-wrap sm:items-center sm:gap-x-2">
-                    <span>Por {article.author}</span>
-                    <span className="text-gray-600">&bull;</span>
-                    <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
-                        {dateLabel} em {formatShortDate(displayDate)}
-                    </time>
-                    {readTime && (
-                      <>
-                        <span className="text-gray-600">&bull;</span>
-                        <div className="flex items-center gap-1">
-                            <ClockIcon className="w-4 h-4" />
-                            <span>{readTime}</span>
-                        </div>
-                      </>
-                    )}
-                </div>
-            </div>
-            <div className="flex items-center space-x-2">
-                <div
-                    className="inline-flex items-center justify-center text-sm font-semibold bg-teal-500 hover:bg-teal-400 text-gray-900 px-5 py-2.5 rounded-md transition-colors duration-200"
-                >
-                    LEIA MAIS
-                    <ArrowRightIcon className="w-5 h-5 ml-2" />
-                </div>
-              </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
-export default FeaturedArticle;
+export default TopHits520;

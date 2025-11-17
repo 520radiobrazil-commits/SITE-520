@@ -17,7 +17,9 @@ const BlueskyIcon = () => (
 
 const Resenha520Card: React.FC = () => {
     // Card Content
-    const imageUrl = "https://www.motoo.com.br/fotos/2025/11/960_720/diogo-moreira-9_14112025_66460_960_720.jpg";
+    // FIX: Explicitly type imageUrl as string to prevent TypeScript from inferring
+    // a literal type, which causes a comparison error with an empty string.
+    const imageUrl: string = "https://www.motoo.com.br/fotos/2025/11/960_720/diogo-moreira-9_14112025_66460_960_720.jpg";
     const title = "Diogo Moreira: O Título da Moto2 já tem dono";
     const author = "Rudy Da Galera";
     const subtitle = "Opinião sem papas na língua";
@@ -31,7 +33,7 @@ const Resenha520Card: React.FC = () => {
 
     // Like Button State
     const [likes, setLikes] = useState(1950); // Initial likes count from the article
-    const handleUpdateLikes = (id: number, newLikes: number) => {
+    const handleUpdateLikes = (id: string, newLikes: number) => {
         setLikes(newLikes);
     };
 
@@ -47,6 +49,11 @@ const Resenha520Card: React.FC = () => {
         bluesky: `https://bsky.app/intent/compose?text=${encodedText}`,
     };
 
+    const validImageUrl =
+      imageUrl?.trim() && imageUrl !== ""
+        ? imageUrl
+        : "/placeholder.jpg";
+
     return (
         <div className="bg-gray-800 rounded-lg p-4 border border-indigo-500/30 shadow-lg shadow-indigo-500/10">
             <div className="flex items-center mb-4">
@@ -58,7 +65,14 @@ const Resenha520Card: React.FC = () => {
             </div>
             
             <div className="relative rounded-lg overflow-hidden mb-4">
-                <img src={imageUrl} alt={title} className="w-full h-auto object-cover" />
+                <img
+                    src={validImageUrl}
+                    alt={title}
+                    className="w-full aspect-video object-cover rounded-lg"
+                    onError={(e) => {
+                        e.currentTarget.src = "/placeholder.jpg";
+                    }}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                     <h4 className="text-2xl font-black text-white leading-tight drop-shadow-lg">
@@ -76,7 +90,7 @@ const Resenha520Card: React.FC = () => {
             
             <div className="mt-4 pt-4 border-t border-gray-700/50 flex items-center justify-between">
                 <LikeButton 
-                    articleId={99998} // Static unique ID for this card
+                    articleId={"resenha-card-diogo-moreira"} // Static unique ID for this card
                     initialLikes={likes}
                     onUpdateLikes={handleUpdateLikes}
                 />

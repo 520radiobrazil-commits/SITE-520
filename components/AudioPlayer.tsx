@@ -46,7 +46,8 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ article }) => {
     }, 10000); // Timeout de 10 segundos
 
     return () => clearTimeout(timer);
-  }, [article.id]); // Reexecuta o efeito se o ID do artigo mudar
+    // FIX: The 'Article' type does not have an 'id' property. Changed to 'slug' which is the unique identifier.
+  }, [article.slug]); // Reexecuta o efeito se o ID do artigo mudar
 
   // Trunca o resumo para evitar que textos longos quebrem o layout.
   const truncatedSummary = article.summary.length > 180

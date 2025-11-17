@@ -1,12 +1,5 @@
 import React from 'react';
-import { Article } from '../types';
-import { formatShortDate, formatFullDateTime } from '../utils/time';
-
-interface MostLikedProps {
-  articles: Article[];
-  onSelectArticle: (article: Article) => void;
-  currentTime: Date;
-}
+import { useAppContext } from '../context/AppContext';
 
 const HeartIcon: React.FC<{className?: string}> = ({className}) => (
     <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -14,27 +7,25 @@ const HeartIcon: React.FC<{className?: string}> = ({className}) => (
     </svg>
 );
 
-const MostLiked: React.FC<MostLikedProps> = ({ articles, onSelectArticle, currentTime }) => {
-  // Sort articles by likes, handling cases where likes might be undefined by treating them as 0.
+const MostLikedArticles: React.FC = () => {
+  const { articles, handleSelectArticle } = useAppContext();
+  
   const mostLikedArticles = [...articles]
     .sort((a, b) => (b.likes || 0) - (a.likes || 0))
-    .slice(0, 5); // Show top 5
+    .slice(0, 5);
 
   return (
     <div className="bg-gray-800 rounded-lg p-4">
-      <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider flex items-center">
+      <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider flex items-center font-heading">
         <HeartIcon className="h-5 w-5 mr-2 text-pink-500"/>
         Mais Curtidas
       </h3>
       {mostLikedArticles.length > 0 ? (
         <ul className="space-y-2">
-          {mostLikedArticles.map((article, index) => {
-            const displayDate = article.updatedAt || article.publishedAt;
-            const dateLabel = article.updatedAt ? 'Atualizado' : 'Publicado';
-            return (
-              <li key={article.id}>
+          {mostLikedArticles.map((article, index) => (
+              <li key={article.slug}>
                 <button
-                  onClick={() => onSelectArticle(article)}
+                  onClick={() => handleSelectArticle(article.slug)}
                   className="w-full text-left p-2 rounded-md hover:bg-gray-700/50 transition-colors duration-200 group focus:outline-none focus:ring-2 focus:ring-pink-500"
                 >
                   <div className="flex items-start gap-4">
@@ -45,22 +36,15 @@ const MostLiked: React.FC<MostLikedProps> = ({ articles, onSelectArticle, curren
                       <p className="text-white font-semibold leading-tight group-hover:text-pink-300 transition-colors duration-200">
                         {article.title}
                       </p>
-                      <div className="text-gray-400 text-xs mt-1 flex items-center gap-2">
-                          <time dateTime={displayDate} title={formatFullDateTime(displayDate)} className="cursor-help">
-                              {dateLabel} em {formatShortDate(displayDate)}
-                          </time>
-                          <span className="text-gray-600">&bull;</span>
-                          <div className="flex items-center text-pink-400">
-                            <HeartIcon className="h-4 w-4 mr-1"/>
-                            <span className="font-bold">{article.likes || 0}</span>
-                          </div>
+                      <div className="flex items-center text-pink-400 text-xs mt-1">
+                        <HeartIcon className="h-4 w-4 mr-1"/>
+                        <span className="font-bold">{article.likes || 0} curtidas</span>
                       </div>
                     </div>
                   </div>
                 </button>
               </li>
-            );
-          })}
+            ))}
         </ul>
       ) : (
         <p className="text-gray-500 text-sm">Não há artigos curtidos no momento.</p>
@@ -69,4 +53,4 @@ const MostLiked: React.FC<MostLikedProps> = ({ articles, onSelectArticle, curren
   );
 };
 
-export default MostLiked;
+export default MostLikedArticles;

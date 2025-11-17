@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Comment } from '../types';
 
 interface CommentsProps {
-  articleId: number;
+  articleId: string;
 }
 
 const Comments: React.FC<CommentsProps> = ({ articleId }) => {

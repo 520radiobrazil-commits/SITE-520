@@ -18,7 +18,9 @@ const BlueskyIcon = () => (
 
 const BirthdayCard: React.FC = () => {
     // Card Content
-    const imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60L4DV-1xbQ4mUVn6a1yzFk6oqwc2KrebHzzKc4xExeIwWynGg85_RxYgy3L8uz2rSp0&usqp=CAU";
+    // FIX: Explicitly type imageUrl as string to prevent TypeScript from inferring
+    // a literal type, which causes a comparison error with an empty string.
+    const imageUrl: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60L4DV-1xbQ4mUVn6a1yzFk6oqwc2KrebHzzKc4xExeIwWynGg85_RxYgy3L8uz2rSp0&usqp=CAU";
     const name = "PIPOKA";
     const headline = "lenda do basquete brasileiro, completa mais um ano de vida!";
     const text1 = "Hoje é dia de celebrar uma lenda do basquete brasileiro: Pipoka tá completando mais um ano de vida e, claro, merece aquele spotlight brabo!";
@@ -28,7 +30,7 @@ const BirthdayCard: React.FC = () => {
 
     // Like Button State
     const [likes, setLikes] = useState(1987); // Initial likes count
-    const handleUpdateLikes = (id: number, newLikes: number) => {
+    const handleUpdateLikes = (id: string, newLikes: number) => {
         setLikes(newLikes);
     };
 
@@ -44,6 +46,11 @@ const BirthdayCard: React.FC = () => {
         bluesky: `https://bsky.app/intent/compose?text=${encodedText}`,
     };
 
+    const validImageUrl =
+      imageUrl?.trim() && imageUrl !== ""
+        ? imageUrl
+        : "/placeholder.jpg";
+
     return (
         <div className="bg-gray-800 rounded-lg p-4 border border-yellow-400/30 shadow-lg shadow-yellow-500/10">
             <h3 className="text-white font-bold text-lg mb-4 uppercase tracking-wider flex items-center">
@@ -51,7 +58,14 @@ const BirthdayCard: React.FC = () => {
                 Aniversariante do Dia
             </h3>
             <div className="relative rounded-lg overflow-hidden mb-4">
-                <img src={imageUrl} alt={`Homenagem de aniversário para ${name}`} className="w-full h-auto object-cover" />
+                <img
+                    src={validImageUrl}
+                    alt={`Homenagem de aniversário para ${name}`}
+                    className="w-full aspect-video object-cover rounded-lg"
+                    onError={(e) => {
+                        e.currentTarget.src = "/placeholder.jpg";
+                    }}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
                      <h4 className="text-2xl font-black text-white leading-tight drop-shadow-lg">
@@ -68,7 +82,7 @@ const BirthdayCard: React.FC = () => {
             
             <div className="mt-4 pt-4 border-t border-gray-700/50 flex items-center justify-between">
                 <LikeButton 
-                    articleId={99999} // Static unique ID for this card
+                    articleId={"birthday-card-pipoka"} // Static unique ID for this card
                     initialLikes={likes}
                     onUpdateLikes={handleUpdateLikes}
                 />
